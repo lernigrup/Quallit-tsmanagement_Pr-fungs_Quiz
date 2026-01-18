@@ -126,16 +126,6 @@
     "hint": ""
   },
   {
-    "id": 8,
-    "type": "open",
-    "question": "Nennen Sie vier Wirkfaktoren für gelingende Hilfe zur Erziehung:",
-    "options": [],
-    "solution": "sozialpädagogische Diagnostik, Indikation, Hilfedauer, wirkungsorientierte Verlaufsplanung",
-    "hint": "",
-    "source": "from_docx",
-    "explanation": "Wirkfaktoren zielen darauf, warum Hilfen zur Erziehung gelingen: Eine solide sozialpädagogische Diagnostik klärt Bedarf und Ausgangslage, die Indikation begründet, welche Hilfe passt. Hilfedauer/Passung sorgt dafür, dass die Unterstützung nicht zu kurz/zu lang oder am Bedarf vorbei läuft. Wirkungsorientierte Verlaufsplanung überprüft Ziele und Fortschritt und steuert nach. Diese Faktoren greifen ineinander: Diagnose → passende Maßnahme → angemessene Dauer → kontinuierliche Reflexion/Steuerung."
-  },
-  {
     "id": 9,
     "type": "mc",
     "question": "Raithel (2008) bezieht sich in Kapitel 3 „Phasen des Forschungsprozesses im Überblick“ auf drei Zusammenhangsbereiche. Welcher Zusammenhangsbereich gehört nicht dazu?",
