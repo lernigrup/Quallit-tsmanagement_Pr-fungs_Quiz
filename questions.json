@@ -1,0 +1,1411 @@
+[
+  {
+    "id": 1,
+    "type": "mc",
+    "question": "Welches der nachfolgenden Verfahren wird auch den qualitativen Erhebungsmethoden zugerechnet?",
+    "options": [
+      "Ethnographie",
+      "Experiment",
+      "Typenbildung",
+      "Transkription"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Ethnographie. Ethnographie ist eine qualitative Feldforschungsstrategie, die Alltagspraktiken im natürlichen Kontext untersucht.",
+    "hint": ""
+  },
+  {
+    "id": 2,
+    "type": "mc",
+    "question": "Mit welchem Begriff wird nicht der Hypothesenbezug qualitativer Sozialforschung\ngekennzeichnet?",
+    "options": [
+      "Hypothesengenerierung",
+      "Hypothesenentwicklung",
+      "Hypothesentestung",
+      "Hypothesenentfaltung"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Hypothesentestung. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 3,
+    "type": "mc",
+    "question": "Welches der nachfolgenden Verfahren ist keine qualitative Analysemethode?",
+    "options": [
+      "Dokumentarische Methode",
+      "Typologie",
+      "Objektive Hermeneutik",
+      "Ethnographische Notizen"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Typologie. Ethnographie ist eine qualitative Feldforschungsstrategie, die Alltagspraktiken im natürlichen Kontext untersucht.",
+    "hint": ""
+  },
+  {
+    "id": 4,
+    "type": "mc",
+    "question": "„Verstehend“ bezieht sich im Sinne qualitativer Sozialforschung nicht auf….",
+    "options": [
+      "die Erklärung von Ursache-Wirkung-Zusammenhänge",
+      "Strukturmerkmale",
+      "Deutungsmuster",
+      "die Beschreibung der Lebenswelt aus Sicht der handelnden Menschen"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: die Erklärung von Ursache-Wirkung-Zusammenhänge. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 5,
+    "type": "mc",
+    "question": "Welches der nachfolgenden Verfahren bezeichnet ein Gruppenverfahren qualitativer Interviewforschung?",
+    "options": [
+      "Experteninterview",
+      "Fokus-Group",
+      "Kontroll-Group",
+      "Narratives Interview"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Fokus-Group. Fokusgruppe/Group Discussion: moderierte Gruppendiskussion als qualitative Erhebungsmethode.",
+    "hint": ""
+  },
+  {
+    "id": 6,
+    "type": "mc",
+    "question": "Welche der nachfolgenden Verfahren wird nicht der qualitativen Inhaltsanalyse zugerechnet?",
+    "options": [
+      "Zusammenfassung",
+      "Sampling",
+      "Strukturierung",
+      "Explikation"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Sampling. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 7,
+    "type": "mc",
+    "question": "Mit welchem der nachfolgenden Begriffe wird die wörtliche Verschriftlichung qualitativer Interviews bezeichnet?",
+    "options": [
+      "Transition",
+      "Postskription",
+      "Transkription",
+      "Exegese"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Transkription. Transkription ist die Verschriftlichung gesprochener Sprache und damit ein Arbeitsschritt, keine Auswertungsmethode.",
+    "hint": ""
+  },
+  {
+    "id": 8,
+    "type": "open",
+    "question": "Nennen Sie vier Wirkfaktoren für gelingende Hilfe zur Erziehung:",
+    "options": [],
+    "solution": "sozialpädagogische Diagnostik, Indikation, Hilfedauer, wirkungsorientierte Verlaufsplanung",
+    "hint": "",
+    "source": "from_docx",
+    "explanation": "Musterlösung: sozialpädagogische Diagnostik, Indikation, Hilfedauer, wirkungsorientierte Verlaufsplanung (Nutze die Stichworte/Definitionen aus dem Skript als Begründung.)"
+  },
+  {
+    "id": 9,
+    "type": "mc",
+    "question": "Raithel (2008) bezieht sich in Kapitel 3 „Phasen des Forschungsprozesses im Überblick“ auf drei Zusammenhangsbereiche. Welcher Zusammenhangsbereich gehört nicht dazu?",
+    "options": [
+      "Entdeckungszusammenhang",
+      "Begründungszusammenhang",
+      "Interpretationszusammenhang",
+      "Verwertungszusammenhang"
+    ],
+    "correct": [
+      3
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Verwertungszusammenhang. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 10,
+    "type": "mc",
+    "question": "Laut Franzen ist die optimale Anzahl an Antwortkategorien:",
+    "options": [
+      "6 plus/minus 2",
+      "7 plus/minus 2",
+      "8 plus/minus 2",
+      "9 plus/minus 2"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: 7 plus/minus 2. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 11,
+    "type": "mc",
+    "question": "Laut Klöckner und Friedrichs sollten die zentralen Fragen und Themenkomplexe…",
+    "options": [
+      "am Anfang eines Fragebogens stehen",
+      "in der Mitte eines Fragebogens stehen",
+      "am Ende eines Fragebogens stehen",
+      "am Anfang und am Ende eines Fragebogens stehen"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: in der Mitte eines Fragebogens stehen. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 12,
+    "type": "mc",
+    "question": "Laut Klöckner und Friedrichs gilt:",
+    "options": [
+      "je „heikler“ eine Frage ist, desto näher sollte sie am Anfang eines Fragebogens stehen",
+      "„heikle“ Fragen sollten im Fragebogen gleichmäßig verteilt werden",
+      "„heikle“ Fragen sollten immer vermieden werden",
+      "Je „heikler“ eine Frage ist, desto näher sollte sie am Ende eines Fragebogens stehen"
+    ],
+    "correct": [
+      3
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Je „heikler“ eine Frage ist, desto näher sollte sie am Ende eines Fragebogens stehen. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 13,
+    "type": "mc",
+    "question": "Entsprechend der 10 Gebote von Porst zur Formulierung von Fragen, sollte…",
+    "options": [
+      "suggestive Fragen vermieden werden, falls sie zu lang und komplex sind",
+      "lange Fragen nur dann vermieden werden, wenn sie suggestiv sind",
+      "suggestive sowie lange und komplexe Fragen grundsätzlich vermieden werden",
+      "weder suggestive noch lange und komplexe Fragen grundsätzlich vermieden werden"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: suggestive sowie lange und komplexe Fragen grundsätzlich vermieden werden. Porst betont u.a. klare, kurze Fragen, keine Suggestion, keine doppelten Stimuli und disjunkte/erschöpfende Antwortkategorien.",
+    "hint": ""
+  },
+  {
+    "id": 14,
+    "type": "mc",
+    "question": "Laut Franzen gilt, dass…",
+    "options": [
+      "schriftliche Befragungen mehr Antwortkategorien erlauben als mündliche oder telefonische Befragungen",
+      "je mehr Abstufungen der Antwortmöglichkeiten vorhanden sind, desto geringer sind die kognitiven Anforderungen für die Befragten",
+      "von einer Verbalisierung der Kategorien einer Anwortskala grundsätzlich abgesehen werden sollte",
+      "bei einer ungeraden Skala immer eine „weiß-nicht-Kategorie“ verwendet werden sollte"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: schriftliche Befragungen mehr Antwortkategorien erlauben als mündliche oder telefonische Befragungen. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 15,
+    "type": "mc",
+    "question": "Welche Aussage ist nach Klöckner und Freidrichs mit Blick auf die Gestaltung eines Fragebogens nicht richtig?",
+    "options": [
+      "Das Anschreiben sollte die Anonymität der Befragung und die Dauer der Teilnahme beinhalten",
+      "Das Anschreiben sollte die wichtigsten Informationen zur Befragung, eine Beschreibung des Vorhabens und ggf. die Kontaktdaten der Forscher enthalten",
+      "Die Information des Anschreibens sollte sich auf dem Titelblatt nicht wiederholen",
+      "Ein ansprechendes Logo und/oder Titelblatt kann die Teilnahmemotivation erhöhen"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Die Information des Anschreibens sollte sich auf dem Titelblatt nicht wiederholen. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 16,
+    "type": "open",
+    "question": "Nennen Sie ein Beispiel für nicht disjunkte Antwortmöglichkeiten zu der Frage „Wie alt sind Sie?“ – Vorgegeben ist, dass die erste Antwortmöglichkeit „unter 20 Jahre“ und die letzte Antwortmöglichkeit „50 Jahre und älter“ lauten soll. \nÜberlegen Sie sich drei weitere Antwortmöglichkeiten zu dieser Frage und notieren Sie folglich insgesamt fünf Antwortmöglichkeiten.",
+    "options": [],
+    "solution": "Unter 20 Jahre; 18-29 Jahre; 30-39 Jahre; 40-50 Jahre; 50 Jahre und älter",
+    "hint": "",
+    "source": "from_docx",
+    "explanation": "Musterlösung: Unter 20 Jahre; 18-29 Jahre; 30-39 Jahre; 40-50 Jahre; 50 Jahre und älter (Nutze die Stichworte/Definitionen aus dem Skript als Begründung.)"
+  },
+  {
+    "id": 17,
+    "type": "mc",
+    "question": "Welcher Begriff passt, nicht zur Haltung partizipativer Aktionsforschung:",
+    "options": [
+      "Community-based",
+      "Evidenzbasiert",
+      "Intervenierend",
+      "Partizipativ",
+      "Zu Frage 17 Quelle https://coactproject.univie.ac.at/wien-par/was-ist-partizipative-aktionsforschung/",
+      "Austausch:",
+      "Alle Mitglieder der Forschungsgruppe bringen Erfahrungen mit. PAR braucht und fördert den Austausch zwischen Menschen.",
+      "Partizipation:",
+      "Jugendliche und junge Erwachsene erforschen selbständig Themen, die für sie und ihr Umfeld wichtig sind! Forschung gemeinsam mit und nicht über Menschen ist ein wichtiger Leitsatz.",
+      "Aktion:",
+      "Wir wollen mit sozialwissenschaftlicher Forschung Gesellschaft verändern! Die Ergebnisse der Forschungsprojekte werden mit Verantwortlichen aus Administration, sozialen Einrichtungen und Politik diskutiert und wenn möglich in die Praxis umgesetzt."
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Evidenzbasiert. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 18,
+    "type": "mc",
+    "question": "Wofür kann Photovoice in der Sozialen Arbeit nicht angewandt werden. Kreuzen Sie die zutreffenden Satz an:",
+    "options": [
+      "Als Methode partizipativen-mitbestimmende und mitmachenden-Fotografie für soziale Veränderungen",
+      "Als Methode die Personen mit wenig Macht, Geld oder gesellschaftlichem Ansehen über Missstände aber auch Stärken ihrer Lebenswelt schließen lässt, um damit und in den daran anschließenden Diskussionen, die Bedürfnisse einer marginalisierten Gruppe herauszuarbeiten",
+      "Als Methode, um den Menschen, die sonst keine Stimme haben, eine Stimme zu geben",
+      "Als Methode, um eine Ursache-Wirkungszusammenhang aufzudecken und quantitativ fassbar machen"
+    ],
+    "correct": [
+      3
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Als Methode, um eine Ursache-Wirkungszusammenhang aufzudecken und quantitativ fassbar machen. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 19,
+    "type": "mc",
+    "question": "Die Partizipative Forschung unterscheidet sich von anderen Forschungsansätzen. Welche der folgenden Antwortmöglichkeiten ist charakteristisch für die partizipative Forschung?",
+    "options": [
+      "Alle Forschungsakteure können ihre eigenen Interessen in das Forschungsprojekt miteinbringen",
+      "Die ForscherInnen entwickeln selbst standardisierte Fragebögen und befragen die ForschungsteilnehmerInnen",
+      "Die ForscherInnen erheben Daten, um ausschließlich ihre Ergebnisse zu publizieren",
+      "Die ForschungsteilnehmerInnen erhalten Anweisungen der ForscherInnen"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Alle Forschungsakteure können ihre eigenen Interessen in das Forschungsprojekt miteinbringen. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 20,
+    "type": "mc",
+    "question": "Bei der Formulierung von Fragebogen-Fragen gilt es bestimmte Regeln zu beachten. Welche der folgenden Antwortmöglichkeiten stellt keines der 10 Gebote der Frageformulierung von Porst dar?",
+    "options": [
+      "Du sollst lange und komplexe Fragen vermeiden",
+      "Du sollst die Antworten möglichst ausführlich formulieren und bewusst wichtige Aspekte wiederholen, damit die Befragten die Frage auch wirklich verstehen",
+      "Du sollst Unterstellungen und suggestive Fragen vermeiden",
+      "Du sollst Antwortkategorien verwenden, die erschöpfend und disjunkt (überschneidungsfrei) sind"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Du sollst die Antworten möglichst ausführlich formulieren und bewusst wichtige Aspekte wiederholen, damit die Befragten die Frage auch wirklich verstehen. Porst betont u.a. klare, kurze Fragen, keine Suggestion, keine doppelten Stimuli und disjunkte/erschöpfende Antwortkategorien.",
+    "hint": ""
+  },
+  {
+    "id": 21,
+    "type": "open",
+    "question": "Nennen Sie die vier im Skript angeführten Formen der standardisierten Befragung",
+    "options": [],
+    "solution": "online Befragung, schriftlich-postalische Befragung, persönlich-mündliche Befragung, Telefonbefragung",
+    "hint": "",
+    "source": "from_docx",
+    "explanation": "Musterlösung: online Befragung, schriftlich-postalische Befragung, persönlich-mündliche Befragung, Telefonbefragung (Nutze die Stichworte/Definitionen aus dem Skript als Begründung.)"
+  },
+  {
+    "id": 22,
+    "type": "mc",
+    "question": "Welche der folgenden Basisanforderungen an empirisches Forschen ist nicht korrekt?",
+    "options": [
+      "Anpassung der Vorgangsweise an Fragen, Ziele, Rahmenbedingungen",
+      "Begründete Auswahl eines Forschungsdesigns und passender Forschungsmethoden",
+      "Entwicklung professionsspezifischer Handlungstheorien",
+      "Beachtung der Gütekriterien"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Entwicklung professionsspezifischer Handlungstheorien. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 23,
+    "type": "mc",
+    "question": "Im Rahmen der (qualitativen und quantitativen) Sozialforschung gibt es verschiedene Auswertungsmethoden. Welcher der folgenden Begriffe bezeichnet keine Auswertungsmethode?",
+    "options": [
+      "Signifikanztest",
+      "Diskursanalyse",
+      "Grounded Theory",
+      "Transkription"
+    ],
+    "correct": [
+      3
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Transkription. Grounded Theory ist eine qualitative Auswertungsstrategie zur theoriegeleiteten Kategorienbildung aus Daten.",
+    "hint": ""
+  },
+  {
+    "id": 24,
+    "type": "mc",
+    "question": "Welche der folgenden begrifflichen Gegenüberstellungen bezieht sich auf einen Unterschied zwischen qualitativer und quantitativer Sozialforschung",
+    "options": [
+      "Forschungsdesign vs. Forschungsablauf",
+      "Theorie vs. Empirie",
+      "Triangulation vs. Generalisierung",
+      "Deduktive Forschungslogik vs. induktive Forschungslogik"
+    ],
+    "correct": [
+      3
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Deduktive Forschungslogik vs. induktive Forschungslogik. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 25,
+    "type": "mc",
+    "question": "Welcher der folgenden Begrifflichkeiten benennt eine Methode zur Datenerhebung?",
+    "options": [
+      "Selegierung",
+      "Beobachtung",
+      "Dokumentarische Methode",
+      "Varianzanalyse"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Beobachtung. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 26,
+    "type": "mc",
+    "question": "Welche der folgenden Begrifflichkeiten benennt kein Modell zur Integration quantitativer und qualitativer Methoden?",
+    "options": [
+      "Vertiefungsmodell",
+      "Triangulationsmodell",
+      "Effizienzmodell",
+      "Vorstufenmodell"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Effizienzmodell. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 27,
+    "type": "mc",
+    "question": "Welcher der folgenden Begriffe bezeichnet ein Gütekriterium in der empirischen Sozialforschung?",
+    "options": [
+      "Redundanz",
+      "Akzeptanz",
+      "Validität",
+      "Evidenz"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Validität. Validität bedeutet, dass ein Messinstrument wirklich das misst, was es messen soll.",
+    "hint": ""
+  },
+  {
+    "id": 28,
+    "type": "open",
+    "question": "Was versteht man in der empirischen Sozialforschung unter einem Forschungsdesign?",
+    "options": [],
+    "solution": "Das Forschungsdesign in der empirischen Sozialforschung ist der methodische Plan einer Studie, der die Vorgehensweise zur Untersuchung einer Forschungsfrage, die Auswahl der Stichprobe, die Datenerhebungsmethoden, die Variablen und Messinstrumente sowie den Forschungsablauf umfasst.",
+    "hint": "",
+    "source": "from_docx",
+    "explanation": "Musterlösung: Das Forschungsdesign in der empirischen Sozialforschung ist der methodische Plan einer Studie, der die Vorgehensweise zur Untersuchung einer Forschungsfrage, die Auswahl der Stichprobe, die Datenerhebungsmethoden, die Variablen und Messinstrumente sowie den Forschungsablauf umfasst. (Nutze die Stichworte/Definitionen aus dem Skript als Begründung.)"
+  },
+  {
+    "id": 29,
+    "type": "mc",
+    "question": "Was ist nicht kennzeichnend für quantitative Forschung?",
+    "options": [
+      "Quantifizierung von Sachverhalten",
+      "Große Stichproben",
+      "Iterativer, zirkulärer Ablauf",
+      "Standardisiertes Vorgehen"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Iterativer, zirkulärer Ablauf. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 30,
+    "type": "mc",
+    "question": "In der quantitativen Sozialforschung werden mit dem Forschungsablauf drei Zusammenhangsbereiche und entsprechende Leitfragen verbunden. Welche der Antwortmöglichkeiten bildet keinen solchen Zusammenhangsbereich ab?",
+    "options": [
+      "Begründungszusammenhang (Wie soll etwas erforscht werden?)",
+      "Durchführungszusammenhang (Wer bzw. von wem soll etwas erforscht werden?)",
+      "Entdeckungszusammenhang (Was soll erforscht werden?)",
+      "Verwertungszusammenhang (Warum, zu welchem Zeitpunkt soll etwas erforscht werden?)"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Durchführungszusammenhang (Wer bzw. von wem soll etwas erforscht werden?). Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 31,
+    "type": "mc",
+    "question": "Welche Gegenüberstellung bezieht sich nicht auf unterschiedliche Konstruktionsmöglichkeiten einer Antwortskala mit ausschließlich vorgegebenen Antwortmöglichkeiten?",
+    "options": [
+      "Fragen mit einer unipolaren Antwortskala vs. Fragen mit einer bipolaren Antwortskala",
+      "Fragen mit einer geraden Antwortskala vs. Fragen mit einer ungeraden Antwortskala",
+      "Geschlossene Fragen vs. offene Fragen",
+      "Fragen mit einer verbalisierten Antwortskala vs. Fragen mit einer endpunktbenannten Antwortskala"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Geschlossene Fragen vs. offene Fragen. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 32,
+    "type": "mc",
+    "question": "Welche der folgenden Fragebogenfragen verstößt nicht gegen das Gebot „Du sollst doppelte Stimuli und Verneinungen vermeiden“?",
+    "options": [
+      "Gehören zu den Bands, die Sie gern hören, „Die Toten Hosen“ und „Die Ärzte“?",
+      "Gehören zu den Bands, die Sie gern hören, „Die Toten Ärzte“?",
+      "Gehören zu den Bands, die Sie nicht gern hören, nicht „Die Toten Hosen“?",
+      "Gehören zu den Bands, die Sie nicht gern hören, nicht „Die Toten Hosen“ und „Die Ärzte“?"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Gehören zu den Bands, die Sie gern hören, „Die Toten Ärzte“?. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 33,
+    "type": "mc",
+    "question": "Was kennzeichnet eine teilnehmende Beobachtung nicht?",
+    "options": [
+      "Bei der teilnehmenden Beobachtung nimmt der Forscher/die Forscherin bis zu einem gewissen Grad selbst am Alltag der beforschten Subjekte teil, um denen Handlungen wahrnehmen zu können",
+      "Die teilnehmende Beobachtung wird eingesetzt, um Interpretationen von Ergebnissen früherer Studien von den Teilnehmenden validieren zu lassen",
+      "Die teilnehmende Beobachtung richtet ihren Fokus nicht nur auf verbal-sprachliche Daten, sondern auch auf die Verhaltensweisen und Handlungen der Menschen",
+      "Durch die Beobachtung im natürlichen Umfeld will der Forscher/die Forscherin verstehen, welche Bedeutung Alltagssituationen für die Beteiligten haben"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Die teilnehmende Beobachtung wird eingesetzt, um Interpretationen von Ergebnissen früherer Studien von den Teilnehmenden validieren zu lassen. Fokusgruppe/Group Discussion: moderierte Gruppendiskussion als qualitative Erhebungsmethode.",
+    "hint": ""
+  },
+  {
+    "id": 34,
+    "type": "mc",
+    "question": "Welcher Satz passt nicht in den wissenschaftstheoretischen Zusammenhang, in dem sich die Qualitative Sozialforschung bewegt?",
+    "options": [
+      "Ohne Nähe wird man von der Situation zu wenig verstehen, ohne Distanz wird man nicht in der Lage sein, sie sozialwissenschaftlich zu reflektieren",
+      "Die Hypothesen werden an der Wirklichkeit überprüft, indem der Versuch unternommen wird, die Hypothesen zu widerlegen (Falsifikationsprinzip)",
+      "Soziale Wirklichkeit gibt es nicht von sich aus, sondern nur durch das wechselseitige aneinander orientierte und interpretierte Handeln von Individuen",
+      "Die Hermeneutik hat die Aufgabe, das je eigene Dasein in seinem Seinscharakter diesem Dasein selbst zugänglich zu machen, mitzuteilen, der Selbstentfremdung, mit der das Dasein geschlagen ist, nachzugehen"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Die Hypothesen werden an der Wirklichkeit überprüft, indem der Versuch unternommen wird, die Hypothesen zu widerlegen (Falsifikationsprinzip). Falsifikation: Hypothesen werden an der Wirklichkeit geprüft, indem man versucht, sie zu widerlegen.",
+    "hint": ""
+  },
+  {
+    "id": 35,
+    "type": "open",
+    "question": "Nennen Sie vier qualitative Erhebungsmethoden.",
+    "options": [],
+    "solution": "Fokusgruppen, Qualitative Interviews, Teilnehmende Beobachtung, Qualitative Inhaltsanalyse",
+    "hint": "",
+    "source": "from_docx",
+    "explanation": "Musterlösung: Fokusgruppen, Qualitative Interviews, Teilnehmende Beobachtung, Qualitative Inhaltsanalyse (Nutze die Stichworte/Definitionen aus dem Skript als Begründung.)"
+  },
+  {
+    "id": 36,
+    "type": "mc",
+    "question": "Welche Aussage ist richtig? Die Leistung in der Sozialen Arbeit zu messen ist schwer. Die gesellschaftliche Wirkung einer Maßnahme (z.B. Präventive Soziale Arbeit bei Suchtproblemen) misst man mit:",
+    "options": [
+      "Output",
+      "Outcome",
+      "Effect",
+      "Impact"
+    ],
+    "correct": [
+      3
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Impact. Output=Leistung/Menge; Outcome=kurz-/mittelfristige Veränderungen; Impact=langfristige gesellschaftliche Wirkung.",
+    "hint": ""
+  },
+  {
+    "id": 37,
+    "type": "mc",
+    "question": "Welche Eigenschaft der Zusammenarbeit zwischen Dienstleister und Kunden/Klient treffen insbesondere für Soziale Arbeit zu?",
+    "options": [
+      "Der externe Faktor ist beteiligt",
+      "Das Ergebnis kann man wegen seiner Immaterialität nur schwer messen",
+      "Das Austauschverhältnis besteht zwischen mehreren Parteien (nicht schlüssiges Austauschverhältnis)",
+      "Man kann nur subjektive Qualitätsmaßstäben anlegen"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Das Ergebnis kann man wegen seiner Immaterialität nur schwer messen. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 38,
+    "type": "mc",
+    "question": "Zum Prozessmodell der ISO-Norm in der Qualitätssicherung zählen zwingend dazu:",
+    "options": [
+      "Die Ermittlung der Kundenzufriedenheit",
+      "Die Durchführung von Pre-Test bei empirischen Auswertungen",
+      "Die Verwendung anerkannter Methodiken in der Beratung",
+      "Die Output/Outcome/Effect-Messung"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Die Ermittlung der Kundenzufriedenheit. Output=Leistung/Menge; Outcome=kurz-/mittelfristige Veränderungen; Impact=langfristige gesellschaftliche Wirkung.",
+    "hint": ""
+  },
+  {
+    "id": 39,
+    "type": "mc",
+    "question": "Welcher ist der richtige Ablauf der Phasen einer teilnehmenden Beobachtung?",
+    "options": [
+      "Fokussierte Beobachtung - Selektierte Beobachtung - Deskriptive Beobachtung",
+      "Deskriptive Beobachtung - Fokussierte Beobachtung - Selektierte Beobachtung",
+      "Selektierte Beobachtung - Deskriptive Beobachtung - Fokussierte Beobachtung",
+      "Deskriptive Beobachtung - Selektierte Beobachtung - Fokussierte Beobachtung"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Deskriptive Beobachtung - Fokussierte Beobachtung - Selektierte Beobachtung. Fokusgruppe/Group Discussion: moderierte Gruppendiskussion als qualitative Erhebungsmethode.",
+    "hint": ""
+  },
+  {
+    "id": 40,
+    "type": "mc",
+    "question": "Welche Frage ist hinsichtlich ihrer Formulierung sinnvoll bzw. entspricht den 10 Geboten der Frageformulierung?",
+    "options": [
+      "Wie oft sind Sie im Mai 2021 in ein Restaurant zum Essen gegangen?",
+      "Gehen Sie gerne ins Kino und ins Theater?",
+      "Führende Wissenschaftler sind der Ansicht, dass die Krise in der Wasserwirtschaft dringend gelöst werden muss. Was meinen Sie dazu?",
+      "Was wissen Sie über Extinktion?"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Wie oft sind Sie im Mai 2021 in ein Restaurant zum Essen gegangen?. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 41,
+    "type": "mc",
+    "question": "Was ist das arithmetische Mittel folgender Zahlenreihe?",
+    "options": [
+      "10 – 5 – 1 – 2 – 9 – 3 – 2 – 6 – 7 – 5",
+      "Das arithmetische Mittel beträgt 6",
+      "Das arithmetische Mittel beträgt 10",
+      "Das arithmetische Mittel beträgt 9",
+      "Das arithmetische Mittel beträgt 5",
+      "Erklärung: alles addieren und durch die Anzahl der Zahlen dividieren"
+    ],
+    "correct": [
+      4
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Das arithmetische Mittel beträgt 5. Arithmetisches Mittel: Summe aller Werte geteilt durch Anzahl der Werte.",
+    "hint": ""
+  },
+  {
+    "id": 42,
+    "type": "mc",
+    "question": "Welches der folgenden Forschungsdesigns sieht eine Befragung zu mehreren Zeitpunkten vor?",
+    "options": [
+      "Querschnittstudie",
+      "Einzelfallanalyse",
+      "Feldforschung",
+      "Panel"
+    ],
+    "correct": [
+      3
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Panel. Panel bedeutet: gleiche Personen werden zu mehreren Zeitpunkten befragt.",
+    "hint": ""
+  },
+  {
+    "id": 43,
+    "type": "mc",
+    "question": "Was sind wichtige Streuungsmaße?",
+    "options": [
+      "Spannweite, Varianz und Standardabweichung",
+      "Standardabweichung, Spannweite und Median",
+      "Spannweite, arithmetisches Mittel und Median",
+      "Standardabweichung, arithmetisches Mittel und Varianz"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Spannweite, Varianz und Standardabweichung. Median ist der mittlere Wert einer sortierten Zahlenreihe (bei gerader Anzahl der Mittelwert der zwei mittleren Werte).",
+    "hint": ""
+  },
+  {
+    "id": 44,
+    "type": "mc",
+    "question": "Was kann man unter dem Begriff „empirisch Forschen“ verstehen?",
+    "options": [
+      "Es ist eine Sammelbezeichnung für anwendungsorientierte Forschungsmethoden",
+      "Es ist eine Sammelbezeichnung für zufällig ausgewählte Forschungsmethoden zur Bearbeitung einer wissenschaftlichen Fragestellung",
+      "Es ist eine Sammelbezeichnung für unterschiedliche Formen der institutionalisierten zielgerichteten und begründeten Anwendung wissenschaftlicher Methoden und Techniken",
+      "Es ist eine Sammelbezeichnung für Methoden quantitativer Forschungsmethoden"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Es ist eine Sammelbezeichnung für unterschiedliche Formen der institutionalisierten zielgerichteten und begründeten Anwendung wissenschaftlicher Methoden und Techniken. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 45,
+    "type": "mc",
+    "question": "Was ist der Modus der folgenden Zahlenreihe?",
+    "options": [
+      "2 – 7 – 8 – 4 – 3 – 8 – 9 – 2 – 6 – 8",
+      "Der Modus beträgt 5",
+      "Der Modus beträgt 8",
+      "Der Modus beträgt 3",
+      "Der Modus beträgt 2",
+      "Erklärung: Um den Modus zu bestimmen, schauen wir uns an, welche Zahl am häufigsten in der Zahlenreihe vorkommt. In diesem Fall ist die Zahl 8 am häufigsten (dreimal), also ist der Modus der Zahlenreihe 8.",
+      "Also lautet die richtige Antwort: Der Modus beträgt 8."
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Der Modus beträgt 8. Modus ist der am häufigsten vorkommende Wert.",
+    "hint": ""
+  },
+  {
+    "id": 46,
+    "type": "mc",
+    "question": "Was sollte eine Einstiegsfrage in einem Fragebogen NICHT sein?",
+    "options": [
+      "Sie sollte technisch einfach sein",
+      "Sie sollte themenbezogen sein",
+      "Sie sollte spannend sein",
+      "Sie sollte personenbezogen sein"
+    ],
+    "correct": [
+      3
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Sie sollte personenbezogen sein. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 47,
+    "type": "mc",
+    "question": "Welche „Blindheit“ gehört NICHT zu den „Blindheiten“ in der wissenschaftlichen Forschung?",
+    "options": [
+      "Geschlechtsblindheit",
+      "Generationenblindheit",
+      "Gesellschaftsblindheit",
+      "Geschichtsblindheit"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Generationenblindheit. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 48,
+    "type": "mc",
+    "question": "Wann ist ein qualitatives Interview NICHT sinnvoll?",
+    "options": [
+      "Zur Erforschung des subjektiven Sinns",
+      "Zur Erforschung von Beziehungen",
+      "Zur Erforschung von Motiven",
+      "Zur Erforschung von Handlungen"
+    ],
+    "correct": [
+      3
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Zur Erforschung von Handlungen. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 49,
+    "type": "mc",
+    "question": "Was ist kennzeichnend für ein „problemzentriertes Interview“?",
+    "options": [
+      "Offene, unstrukturierte Befragung für die Erhebung von biographischen Problemen",
+      "Offene, teilstrukturierte Befragungen für die Erhebung subjektiver Einstellungen in Bezug auf ein gesellschaftliches Problem",
+      "Offene Befragung von Personen, die sich durch eine besondere Expertise über einen problematischen Forschungsgegenstand auszeichnen",
+      "Offene, nur wenig strukturierte Befragung zur Aufdeckung problematischer Strukturen"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Offene, teilstrukturierte Befragungen für die Erhebung subjektiver Einstellungen in Bezug auf ein gesellschaftliches Problem. Problemzentriertes Interview: halbstrukturiert, offen, auf ein Problemfeld bezogen, kombiniert Leitfaden + narrative Elemente.",
+    "hint": ""
+  },
+  {
+    "id": 50,
+    "type": "mc",
+    "question": "Was ist keine der „sieben goldenen Regeln“ der Interviewtechnik?",
+    "options": [
+      "Verständlichkeit beachten",
+      "Vertrauen aufbauen",
+      "Gespräch steuern",
+      "Leitfadenbürokratie beachten"
+    ],
+    "correct": [
+      3
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Leitfadenbürokratie beachten. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 51,
+    "type": "mc",
+    "question": "Bei welchem der folgenden Sätze handelt es sich um eine wissenschaftliche Hypothese?",
+    "options": [
+      "Wenn Hunde ein bestimmtes Futter bekommen, ist ihr Fell schöner.",
+      "Bei starkem Zigarettenkonsum kann es zu einem Herzinfarkt kommen.",
+      "Je länger die Mediennutzung, desto höher ist die Wahrscheinlichkeit einer psychischen Erkrankung.",
+      "Je moralischer Menschen handeln, desto eher kommen sie in den Himmel."
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Je länger die Mediennutzung, desto höher ist die Wahrscheinlichkeit einer psychischen Erkrankung.. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 52,
+    "type": "mc",
+    "question": "Was meint der Mixed-Methodologies Ansatz?",
+    "options": [
+      "Die Kombination verschiedener quantitativer Forschungsmethoden",
+      "Die Kombination qualitativer und quantitativer Forschungsmethoden",
+      "Die Kombination verschiedener qualitativer Forschungsmethoden",
+      "Den Begriff gibt es nicht"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Die Kombination qualitativer und quantitativer Forschungsmethoden. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 53,
+    "type": "mc",
+    "question": "Welche der folgenden Antworten enthält ausschließlich qualitative Auswertungsmethoden?",
+    "options": [
+      "Grounded Theory - Diskursanalyse - Zusammenhangsanalyse - qualitative Inhaltsanalyse",
+      "Dokumentarische Methode - Typenbildung - Grounded Theory - Clusteranalyse",
+      "Clusteranalyse - Typenbildung - qualitative Inhaltsanalyse - Diskursanalyse",
+      "Diskursanalyse - Grounded Theory - Typenbildung - qualitative Inhaltsanalyse"
+    ],
+    "correct": [
+      3
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Diskursanalyse - Grounded Theory - Typenbildung - qualitative Inhaltsanalyse. Grounded Theory ist eine qualitative Auswertungsstrategie zur theoriegeleiteten Kategorienbildung aus Daten.",
+    "hint": ""
+  },
+  {
+    "id": 54,
+    "type": "mc",
+    "question": "Was ist der Median folgender Zahlenreihe?",
+    "options": [
+      "3 – 4 – 9 – 6 – 1 – 8 – 6 – 3 – 10 – 8",
+      "Der Median beträgt 6",
+      "Der Median beträgt 1",
+      "Der Median beträgt 5",
+      "Der Median beträgt 8",
+      "Erklärung: \nUm den Median zu finden, ordnen wir die Zahlen in aufsteigender Reihenfolge:1 – 3 – 3 – 4 – 6 – 6 – 8 – 8 – 9 – 10. Da die Anzahl der Zahlen gerade ist (10 Zahlen), liegt der Median in der Mitte der Reihe. In diesem Fall ist es die 6., da es genau fünf Zahlen auf jeder Seite gibt. Also beträgt der Median 6.",
+      "Da die Zahlenreihe aus einer geraden Anzahl von Werten (n = 10) besteht, wird der Median als arithmetisches Mittel der beiden mittleren Werte berechnet. Diese sind 6 und 6, somit beträgt der Median 6."
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Der Median beträgt 6. Median ist der mittlere Wert einer sortierten Zahlenreihe (bei gerader Anzahl der Mittelwert der zwei mittleren Werte).",
+    "hint": ""
+  },
+  {
+    "id": 55,
+    "type": "mc",
+    "question": "Was ist die richtige Reihenfolge des Ablaufmodells eines Forschungsprojekts?",
+    "options": [
+      "Planung – Vorbereitung – Erhebung – Aufbereitung – Auswertung – Präsentation",
+      "Vorbereitung – Planung – Erhebung – Auswertung – Aufbereitung –Präsentation",
+      "Planung – Vorbereitung – Erhebung – Auswertung –Aufbereitung– Präsentation",
+      "Vorbereitung – Planung – Erhebung – Aufbereitung – Auswertung – Präsentation"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Planung – Vorbereitung – Erhebung – Aufbereitung – Auswertung – Präsentation. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 56,
+    "type": "mc",
+    "question": "Wobei handelt es nicht NICHT um eine Basisanforderung an die Wissenschaftlichkeit?",
+    "options": [
+      "Verfügung über ausreichend finanzielle Mittel",
+      "Eindeutig sprachliche und mediale Darstellung der Methoden und Resultate",
+      "Beschreibung der Erkenntnisinteressen und Ziele",
+      "Kritisierbarkeit der Methode, Konzepte, Ansprüche, Prozesse und Ergebnisse"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Verfügung über ausreichend finanzielle Mittel. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 57,
+    "type": "mc",
+    "question": "Es gibt (nach Franzen) verschiedene Regeln zur Gestaltung von Antwortkategorien. Welche der folgenden Regeln gehört NICHT zu seinen Empfehlungen bzw. Zu den Empfehlungen aus dem Skript?",
+    "options": [
+      "Alles in allem sprechen die einschlägigen Ergebnisse dafür, in allgemeinen Bevölkerungsbefragungen fünfstufige oder siebenstufige Skalen zu verwenden.",
+      "Empirisch sprechen die Ergebnisse aus der Forschung dafür, grundsätzlich gerade Skalen zu verwenden.",
+      "Falls eine Beschriftung aufgrund der Abstufungen möglich ist, dann sollte sie auch gewählt werden.",
+      "Der Grundsatz, die Befragung für die Befragten möglichst einfach zu halten, spricht für die Verwendung von unipolaren Skalen."
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Empirisch sprechen die Ergebnisse aus der Forschung dafür, grundsätzlich gerade Skalen zu verwenden.. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 58,
+    "type": "mc",
+    "question": "Welche Gruppenformen finden bei einer Gruppendiskussion Anwendung?",
+    "options": [
+      "Homogene Gruppen – Heterogene Gruppen – Formale Gruppen – Kontingente Gruppen",
+      "Große Gruppen – Kleine Gruppen – Homogene Gruppen – Heterogene Gruppen",
+      "Natürliche Gruppen – Künstliche Gruppen – Explizite Gruppen – Implizite Gruppen",
+      "Natürliche Gruppen – Künstliche Gruppen – Homogene Gruppen – Heterogene Gruppen"
+    ],
+    "correct": [
+      3
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Natürliche Gruppen – Künstliche Gruppen – Homogene Gruppen – Heterogene Gruppen. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 59,
+    "type": "mc",
+    "question": "Wie viele Antwortkategorien sollte eine Ratingskala (nach Franzen) haben?",
+    "options": [
+      "Fünf oder sieben",
+      "Drei oder sieben",
+      "Sieben oder elf",
+      "Drei oder fünf"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Fünf oder sieben. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 60,
+    "type": "mc",
+    "question": "Welche der folgenden Begriffe beschreiben den methodischen Dreischritt der empirischen Forschung?",
+    "options": [
+      "Vorbereitung – Auswertung – Präsentation",
+      "Erhebung – Auswertung – Präsentation",
+      "Vorbereitung – Erhebung – Auswertung",
+      "Erhebung – Aufbereitung – Auswertung"
+    ],
+    "correct": [
+      3
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Erhebung – Aufbereitung – Auswertung. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 61,
+    "type": "mc",
+    "question": "Was versteht Mayring unter dem Analyseschritt der Zusammenfassung?",
+    "options": [
+      "Ziel der Analyse ist es, verschiedene Auswertungseinheiten miteinander in Verbindung zu setzen.",
+      "Ziel der Analyse ist es, zu einzelnen fraglichen Textteilen zusätzliches Material heranzutragen, welches das Verständnis erweitert",
+      "Ziel der Analyse ist es, bestimmte Aspekte aus dem Material herauszufiltern, unter vorher festgelegten Ordnungskriterien",
+      "Ziel der Analyse ist es, das Material so zu reduzieren, dass die wesentlichen Inhalte erhalten bleiben"
+    ],
+    "correct": [
+      3
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Ziel der Analyse ist es, das Material so zu reduzieren, dass die wesentlichen Inhalte erhalten bleiben. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 62,
+    "type": "mc",
+    "question": "Welche Empfehlung gibt Franzen für die Erstellung von Antwortskalen?",
+    "options": [
+      "Er empfiehlt vollständig beschriftete und unipolare Skalen",
+      "Er empfiehlt vollständig beschriftete und bipolare Skalen",
+      "Er empfiehlt gerade und bipolare Skalen",
+      "Er empfiehlt ungerade und unvollständig beschriftete Skalen"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Er empfiehlt vollständig beschriftete und unipolare Skalen. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 63,
+    "type": "mc",
+    "question": "Was ist das wesentliche Kennzeichen eines offenen Interviews?",
+    "options": [
+      "Die Gesprächsteilnehmer*innen sind vorab nicht festgelegt",
+      "Der Forschende stellt die Frage anhand eines Interviewleitfadens",
+      "Weder die Formulierung der einzelnen Fragen noch der Ablauf der Befragung ist vorab festgelegt",
+      "Es hat keine zeitliche Beschränkung"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Weder die Formulierung der einzelnen Fragen noch der Ablauf der Befragung ist vorab festgelegt. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 64,
+    "type": "mc",
+    "question": "Welche der Antworten zum Thema „Bücher lesen in einem Monat“ ist disjunkt und erschöpfend?",
+    "options": [
+      "0 Bücher / 1-3 Bücher / 3 Bücher oder mehr",
+      "0 Bücher / 1-2 Bücher / 3 Bücher",
+      "0-1 Bücher / 2-4 Bücher / 5 oder mehr Bücher",
+      "1-2 Bücher / 3-4 Bücher / 5 Bücher",
+      "Erklärung: Diese Antwortoptionen sind disjunkt, da sich die Kategorien nicht überschneiden, und erschöpfend, da alle möglichen Fälle von 0 Büchern bis zu 5 oder mehr Büchern abgedeckt sind."
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: 0-1 Bücher / 2-4 Bücher / 5 oder mehr Bücher. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 65,
+    "type": "mc",
+    "question": "Welche drei Arten der qualitativen Datenerhebung sind die wichtigsten?",
+    "options": [
+      "Interview, Gruppendiskussion, geheime Beobachtung",
+      "Interview, Gruppendiskussion, teilnehmende Beobachtung",
+      "Befragung, Gruppendiskussion, teilnehmende Beobachtung",
+      "Interview, Fokusbefragung, teilnehmende Beobachtung"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Interview, Gruppendiskussion, teilnehmende Beobachtung. Fokusgruppe/Group Discussion: moderierte Gruppendiskussion als qualitative Erhebungsmethode.",
+    "hint": ""
+  },
+  {
+    "id": 66,
+    "type": "mc",
+    "question": "Was ist kennzeichnend für Expert*inneninterview?",
+    "options": [
+      "Ausgangspunkt ist die regelmäßige Aufforderung zum Erzählen von Situationen",
+      "Die befragte Person verfügt über Wissen zu einem spezifischen Handlungsfeld",
+      "Es gibt eine Problemzentrierung, Gegenstandsorientierung und Prozessorientierung",
+      "Interviewer*in soll affektive Reaktionen hervorlocken"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Die befragte Person verfügt über Wissen zu einem spezifischen Handlungsfeld. Problemzentriertes Interview: halbstrukturiert, offen, auf ein Problemfeld bezogen, kombiniert Leitfaden + narrative Elemente.",
+    "hint": ""
+  },
+  {
+    "id": 67,
+    "type": "mc",
+    "question": "Wann handelt es sich um eine repräsentative Stichprobe?",
+    "options": [
+      "Wenn die Stichprobe sehr groß ist",
+      "Nur wenn es sich um eine Vollerhebung handelt",
+      "Wenn die Stichprobe bei Männern und Frauen durchgeführt wurde",
+      "Wenn die Stichprobe ein Miniaturbild der Grundgesamtheit darstellt"
+    ],
+    "correct": [
+      3
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Wenn die Stichprobe ein Miniaturbild der Grundgesamtheit darstellt. Repräsentativ heißt: Die Stichprobe bildet die Grundgesamtheit möglichst gut als „Miniaturbild“ ab.",
+    "hint": ""
+  },
+  {
+    "id": 68,
+    "type": "mc",
+    "question": "Was ist keine Evaluationsform?",
+    "options": [
+      "Selbstevaluation",
+      "Qualitätsmanagement",
+      "Begleitforschung",
+      "Wirkungsanalyse"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Qualitätsmanagement. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 69,
+    "type": "mc",
+    "question": "Was trifft auf quantitative Forschung (nach Hug und Poscheschnik) zu?",
+    "options": [
+      "Sie ist eher an subjektiven Sichtweisen interessiert",
+      "Sie geht hypothesengenerierend vor",
+      "Ihr Ablauf ist zirkulär",
+      "Sie strebt Repräsentativität an"
+    ],
+    "correct": [
+      3
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Sie strebt Repräsentativität an. Repräsentativ heißt: Die Stichprobe bildet die Grundgesamtheit möglichst gut als „Miniaturbild“ ab.",
+    "hint": ""
+  },
+  {
+    "id": 70,
+    "type": "mc",
+    "question": "Welche Frage entspricht den 10 Geboten der Frageformulierung?",
+    "options": [
+      "Wie oft sind Sie im zurückliegenden Monat in ein Restaurant zum Essen gegangen?",
+      "Wie oft gehen Sie ins Kino und ins Theater?",
+      "Sicherlich gehen Sie bei der nächsten Bundestagswahl wählen, welche Partei wählen Sie?",
+      "Was wissen Sie über Extinktion?",
+      "Erklärung der 10 Gebote:",
+      "Stelle nur eine Frage auf einmal.",
+      "Vermeide Doppelte Verneinung.",
+      "Verwende klare und präzise Sprache.",
+      "Vermeide führende oder suggestive Fragen.",
+      "Vermeide Doppelte Fragen.",
+      "Vermeide Ambiguität (Mehrdeutigkeit).",
+      "Wähle passende Antwortoptionen.",
+      "Vermeide Überforderung der Befragten.",
+      "Vermeide Vorannahmen.",
+      "Achte auf die Reihenfolge der Fragen."
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Wie oft sind Sie im zurückliegenden Monat in ein Restaurant zum Essen gegangen?. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 71,
+    "type": "mc",
+    "question": "Was macht sozialpädagogische Praxisforschung (nach König) nicht aus?",
+    "options": [
+      "Umfassendes Controlling",
+      "Transparenz schaffen",
+      "Personalisierung vorantreiben",
+      "Legitimierung herbeiführen"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Umfassendes Controlling. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 72,
+    "type": "mc",
+    "question": "Was meint das Falsifikationsprinzip (kritischer Rationalismus)?",
+    "options": [
+      "Die Hypothesen werden an einem Gedankenkonstrukt überprüft, indem der Versuch unternommen wird, die Hypothese zu widerlegen.",
+      "Die Hypothesen werden an der Wirklichkeit überprüft, indem der Versuch unternommen wird, die Hypothese zu bestätigen.",
+      "Die Hypothesen werden an der Wirklichkeit überprüft, indem der Versuch unternommen wird, die Hypothese zu widerlegen.",
+      "Die Theorie wird an der Wirklichkeit überprüft, indem der Versuch unternommen wird, die Theorie zu bestätigen."
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Die Hypothesen werden an der Wirklichkeit überprüft, indem der Versuch unternommen wird, die Hypothese zu widerlegen.. Falsifikation: Hypothesen werden an der Wirklichkeit geprüft, indem man versucht, sie zu widerlegen.",
+    "hint": ""
+  },
+  {
+    "id": 73,
+    "type": "mc",
+    "question": "Was sind Deutungsmuster?",
+    "options": [
+      "Deutungsmuster sind sozial geltende, mit Anleitungen zum Handeln verbundene Interpretationen der Umwelt und das Selbst.",
+      "Deutungsmuster sind Musterlösungen für sozialpädagogisches Handeln.",
+      "Deutungsmuster sind Ergebnisse einer statistischen Auswertung in einem standardisierten Verfahren.",
+      "Deutungsmuster sind normative Vorgaben in Institutionen, die interpretiert und verändert werden können."
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Deutungsmuster sind sozial geltende, mit Anleitungen zum Handeln verbundene Interpretationen der Umwelt und das Selbst.. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 74,
+    "type": "mc",
+    "question": "Welche der folgenden Aussagen passt nicht zur Logik des Symbolischen Interaktionismus?",
+    "options": [
+      "Menschen handeln „Dingen“ gegenüber aufgrund der Bedeutungen, die diese Dinge für sie besitzen, dabei sind „Dinge“ auch Menschen, Situationen und Institution",
+      "Beim Symbolischen Interaktionismus geht es um Verallgemeinerungen, d.h. um Aussagen, die möglichst über die untersuchten Personen hinaus Geltung haben.",
+      "Soziale Wirklichkeit gibt es nicht von sich aus, sondern nur durch das wechselseitig aneinander orientierte und interpretierte Handeln von Individuen.",
+      "Die Bedeutung von Dingen ist aus der sozialen Interaktion, dir man mit seinen Mitmenschen eingeht, abgeleitet, oder es entsteht aus ihr."
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Beim Symbolischen Interaktionismus geht es um Verallgemeinerungen, d.h. um Aussagen, die möglichst über die untersuchten Personen hinaus Geltung haben.. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 75,
+    "type": "mc",
+    "question": "Was bedeutet „Offenheit“ in der Qualitativen Sozialforschung?",
+    "options": [
+      "Vermeidung von Einschränkungen durch rein methodische Vorentscheidungen",
+      "Offenheit in Bezug auf den Einsatz beliebiger Erhebungs- und Interpretationsmethoden",
+      "Offenheit beim Erzählen von Erfahrungen und Lebensereignissen",
+      "Offenheit bedeutet, dass die Auswertungen in einem partizipativen Prozess mit den Befragten vorgenommen werden."
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: Vermeidung von Einschränkungen durch rein methodische Vorentscheidungen. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 76,
+    "type": "mc",
+    "question": "Welche Gefahren sind mit dem Phänomen des „going native“ verbunden?",
+    "options": [
+      "… das Feld nur vom Schreibtisch aus zu analysieren.",
+      "… die notwendige Distanz zum Beforschten nicht aufrecht zu erhalten.",
+      "… sich im Feld nicht natürlich zu verhalten.",
+      "… das natürliche Feld im Forschungsbericht nicht zu anonymisieren."
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "confidence": "from_docx_highlight",
+    "explanation": "Richtig ist: … das Feld nur vom Schreibtisch aus zu analysieren.. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "hint": ""
+  },
+  {
+    "id": 77,
+    "type": "mc",
+    "question": "Was ist kennzeichnend für eine Fremdevaluation?",
+    "options": [
+      "Steuerung des laufenden Projekts",
+      "Neutraler Nachweis der Wirksamkeit",
+      "Rechenschaft ablegen über die Verwendung der eingesetzten Mittel",
+      "Unterstützte Selbstevaluation"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "user_added",
+    "hint": "„Fremd-“ = von außen, unabhängig.",
+    "explanation": "Richtig ist „Neutraler Nachweis der Wirksamkeit“, weil eine Fremdevaluation von externen, unabhängigen Evaluator*innen durchgeführt wird und deshalb besonders für einen neutralen Wirksamkeitsnachweis genutzt wird. Projektsteuerung und unterstützte Selbstevaluation gehören typischerweise eher zur (begleitenden) internen/selbstbezogenen Evaluation; „Rechenschaft“ kann ein Ziel sein, ist aber nicht das kennzeichnende Merkmal."
+  },
+  {
+    "id": 78,
+    "type": "mc",
+    "question": "Was meint Karl Popper mit systematischem Raten?",
+    "options": [
+      "Es kann lediglich eine Annäherung an die Wahrheit erreicht werden, nie die Wahrheit selbst.",
+      "Vernünftiges Raten ist die Grundlage einer guten Theorie",
+      "Operationalisierung der Wirklichkeit lassen sich nur durch systematisches Raten erzielen",
+      "Eine Methode kann niemals objektiv sein, daher lassen sich auch keine verlässlichen Aussagen über die Wirklichkeit aufstellen"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "confidence": "user_added",
+    "hint": "Popper: Fallibilismus – Wissen ist vorläufig.",
+    "explanation": "Richtig ist „Annäherung an die Wahrheit, nie endgültige Wahrheit“, weil Popper wissenschaftliches Wissen als grundsätzlich vorläufig versteht (Fallibilismus): Wir machen kühne Vermutungen/Hypothesen und testen sie kritisch (Falsifikation). Daraus folgt, dass wir uns der Wahrheit nur annähern, aber nie endgültige Gewissheit erreichen."
+  },
+  {
+    "id": 79,
+    "type": "mc",
+    "question": "Welches ist kein Kennzeichen für eine Einstiegsfrage?",
+    "options": [
+      "Sie soll spannend sein",
+      "Sie sollte personenbezogen sein",
+      "Sie sollte technisch einfach sein",
+      "Sie sollte themenbezogen sein"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "user_added",
+    "hint": "Einstieg: leicht, unverfänglich, motivierend.",
+    "explanation": "Richtig ist „Sie sollte personenbezogen sein“ (kein Kennzeichen), weil Einstiegsfragen im Fragebogen typischerweise unverfänglich und leicht zu beantworten sein sollen (technisch einfach), motivierend/spannend wirken können und einen sanften thematischen Einstieg geben. Zu persönliche/ personenbezogene Fragen eignen sich eher nicht für den Einstieg."
+  }
+]
