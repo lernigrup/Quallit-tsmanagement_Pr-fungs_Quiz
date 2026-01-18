@@ -345,17 +345,24 @@ def ensure_daily_order(state: dict, player: str, questions: list[dict]):
     ids = [int(q["id"]) for q in questions]
     ids_set = set(ids)
 
+    # A nonce lets us restart "from the beginning" with a different shuffle on the same day.
+    # Keep it stable until the user explicitly chooses "Alle von vorne".
+    nonce = int(state.get("shuffle_nonce", 0) or 0)
+
     order = state.get("order") or []
     order_date = state.get("order_date") or ""
 
     # Regenerate if new day, missing order, or order doesn't match current question set
-    if order_date != today or not order or set(order) != ids_set or len(order) != len(ids):
-        state["order_date"] = today
-        state["order"] = deterministic_shuffle(player, today, ids)
+    # Mix seed includes nonce.
+    mix_key = f"{today}#{nonce}"
+
+    if order_date != mix_key or not order or set(order) != ids_set or len(order) != len(ids):
+        state["order_date"] = mix_key
+        state["order"] = deterministic_shuffle(player, mix_key, ids)
         state["cursor"] = 0
     else:
         # Keep cursor in range
-        state["cursor"] = max(0, min(int(state.get("cursor", 0)), len(order) - 1))
+        state["cursor"] = max(0, min(int(state.get("cursor", 0)), len(order)))
 
 def bump_daily(state, correct=None, skipped=False):
     key = str(date.today())
@@ -451,7 +458,8 @@ with st.sidebar:
 
 order = state.get("order") or [int(q["id"]) for q in questions]
 cursor_pos = int(state.get("cursor", 0))
-cursor_pos = max(0, min(cursor_pos, len(order)-1))
+# cursor may be == len(order) to indicate "finished"
+cursor_pos = max(0, min(cursor_pos, len(order)))
 
 # Optional: nur unbeantwortete Fragen üben (springt zur nächsten unbeantworteten in der heutigen Reihenfolge)
 only_unanswered = st.toggle("Nur unbeantwortete Fragen", value=False)
@@ -463,15 +471,85 @@ if only_unanswered:
     else:
         st.success("Du hast alle Fragen einmal beantwortet 🎉")
 
+# Finished screen: show overview and next actions
+all_answered = all(str(qid0) in state.get("answered", {}) for qid0 in order)
+if cursor_pos >= len(order) or all_answered:
+    d = format_daily(state)
+    st.success("🎉 Wow, du bist durch! Alle Fragen in diesem Durchlauf erledigt.")
+    st.markdown(
+        f"**Heute:** ✅ {d['correct']}  ·  ❌ {d['wrong']}  ·  🤷 {d['skipped']}  ·  🧮 {d['total']}"
+    )
+
+    # Collect wrong/unknown questions for a targeted session
+    wrong_ids = []
+    for qid0 in order:
+        a = state.get("answered", {}).get(str(qid0)) or {}
+        # Treat skipped as "to practice"; open questions (correct=None) are not counted as wrong
+        if a.get("skipped") is True or a.get("correct") is False:
+            wrong_ids.append(int(qid0))
+
+    colA, colB = st.columns(2)
+    with colA:
+        if st.button("🔁 Nur die Falschen üben", use_container_width=True, disabled=(len(wrong_ids) == 0)):
+            # New session order based on wrong questions
+            state["practice_mode"] = "wrong_only"
+            state["order"] = deterministic_shuffle(player, state.get("order_date", str(date.today())) + "|wrong", wrong_ids)
+            state["cursor"] = 0
+            save_json(player_file(player), state)
+            st.rerun()
+        if len(wrong_ids) == 0:
+            st.caption("Keine falschen/übersprungenen Fragen — stark! 💪")
+
+    with colB:
+        if st.button("🎲 Alle von vorne (neu gemischt)", use_container_width=True):
+            state["practice_mode"] = "all"
+            state["shuffle_nonce"] = int(state.get("shuffle_nonce", 0) or 0) + 1
+            # Reset daily order for the new nonce
+            ensure_daily_order(state, player, questions)
+            state["cursor"] = 0
+            save_json(player_file(player), state)
+            st.rerun()
+
+    st.stop()
+
 # Build quick lookup
 by_id = {int(q["id"]): q for q in questions}
 qid = int(order[cursor_pos])
 q = by_id[qid]
 
 st.progress((cursor_pos+1)/len(order))
-st.write(f"**Frage {cursor_pos+1} von {len(order)}**  ·  ID: **{qid}**")
+nav1, nav2, nav3 = st.columns([1, 4, 1])
+with nav1:
+    if st.button("⬅ Zurück", disabled=(cursor_pos <= 0)):
+        state["cursor"] = max(0, cursor_pos - 1)
+        save_json(player_file(player), state)
+        st.rerun()
+with nav2:
+    st.write(f"**Frage {cursor_pos+1} von {len(order)}**  ·  ID: **{qid}**")
+with nav3:
+    # Small helper button to go forward without changing the answer (useful when reviewing)
+    if st.button("Weiter ➡", disabled=(cursor_pos >= len(order)-1)):
+        state["cursor"] = min(cursor_pos + 1, len(order))
+        save_json(player_file(player), state)
+        st.rerun()
 
 st.markdown(f"### {q['question']}")
+
+answered_current = state.get("answered", {}).get(str(qid))
+if answered_current:
+    st.caption("✅ Diese Frage wurde bereits beantwortet. Du kannst die Erklärung erneut anzeigen oder mit \"Weiter\" navigieren.")
+    cexp, _ = st.columns([1, 3])
+    with cexp:
+        if st.button("📌 Erklärung anzeigen", key=f"exp_{qid}"):
+            st.session_state["pending"] = {
+                "qid": qid,
+                "kind": "review",
+                "title": "Lösung + Erklärung",
+                "no_advance": True,
+                # reuse stored payload so selected answers stay consistent
+                "payload": answered_current,
+            }
+            st.rerun()
 
 # Session state per question (to allow explanation popup after submit)
 key_prefix = f"q{qid}"
@@ -489,7 +567,8 @@ def persist_and_advance(result_dict):
     first_time = str(qid) not in state.get("answered", {})
 
     state["answered"][str(qid)] = result_dict
-    state["cursor"] = min(cursor_pos+1, len(order)-1)
+    # allow cursor == len(order) to represent "finished"
+    state["cursor"] = min(cursor_pos+1, len(order))
     save_json(player_file(player), state)
 
     if first_time:
@@ -534,6 +613,8 @@ def show_feedback_modal(pending: dict):
 
     title = pending.get("title", "Feedback")
 
+    no_advance = bool(pending.get("no_advance"))
+
     if HAS_DIALOG:
         @st.dialog(title)
         def _dlg():
@@ -557,8 +638,13 @@ def show_feedback_modal(pending: dict):
             st.markdown("**Erklärung:**")
             st.write(exp_text)
 
-            if st.button("Weiter"):
-                persist_and_advance(pending["payload"])
+            if no_advance:
+                if st.button("Schließen"):
+                    st.session_state["pending"] = None
+                    st.rerun()
+            else:
+                if st.button("Weiter"):
+                    persist_and_advance(pending["payload"])
 
         _dlg()
     else:
@@ -573,8 +659,13 @@ def show_feedback_modal(pending: dict):
             st.markdown("\n".join(solution_lines))
         st.markdown("### 📌 Erklärung")
         st.write(exp_text)
-        if st.button("Weiter"):
-            persist_and_advance(pending["payload"])
+        if no_advance:
+            if st.button("Schließen"):
+                st.session_state["pending"] = None
+                st.rerun()
+        else:
+            if st.button("Weiter"):
+                persist_and_advance(pending["payload"])
 
 
 # If a modal is pending for THIS question, render it now and stop.
@@ -589,15 +680,33 @@ if q["type"] == "mc":
     if not opts:
         st.warning("Diese Frage hat keine Antwortoptionen (Datenproblem).")
     else:
+        prev_selected = []
+        if answered_current and isinstance(answered_current.get("selected"), list):
+            prev_selected = answered_current.get("selected") or []
+        locked = bool(answered_current)
+
         if multi:
-            selected = st.multiselect("Wähle alle zutreffenden Antworten:", list(range(len(opts))), format_func=lambda i: opts[i])
+            selected = st.multiselect(
+                "Wähle alle zutreffenden Antworten:",
+                list(range(len(opts))),
+                format_func=lambda i: opts[i],
+                default=[i for i in prev_selected if isinstance(i, int)],
+                disabled=locked,
+            )
         else:
-            selected_one = st.radio("Wähle eine Antwort:", list(range(len(opts))), format_func=lambda i: opts[i], index=None)
+            prev_index = prev_selected[0] if (prev_selected and isinstance(prev_selected[0], int)) else None
+            selected_one = st.radio(
+                "Wähle eine Antwort:",
+                list(range(len(opts))),
+                format_func=lambda i: opts[i],
+                index=prev_index,
+                disabled=locked,
+            )
             selected = [] if selected_one is None else [selected_one]
 
         col1, col2, col3 = st.columns([1,1,1])
         with col1:
-            if st.button("Antwort abgeben", disabled=(not selected)):
+            if st.button("Antwort abgeben", disabled=(not selected) or locked):
                 correct = is_correct_mc(q, selected)
                 st.session_state["pending"] = {
                     "qid": qid,
@@ -612,7 +721,7 @@ if q["type"] == "mc":
                 }
                 st.rerun()
         with col2:
-            if st.button("Ich weiß nicht 🤷"):
+            if st.button("Ich weiß nicht 🤷", disabled=locked):
                 st.session_state["pending"] = {
                     "qid": qid,
                     "kind": "skip",
@@ -632,11 +741,15 @@ if q["type"] == "mc":
 
 elif q["type"] == "open":
     st.caption("Offene Frage: tippe deine Antwort (Stichpunkte reichen). Danach bekommst du Lösung + Hinweise.")
-    user_answer = st.text_area("Deine Antwort", height=140)
+    prev_txt = ""
+    if answered_current and answered_current.get("freeText") is not None:
+        prev_txt = str(answered_current.get("freeText") or "")
+    locked = bool(answered_current)
+    user_answer = st.text_area("Deine Antwort", height=140, value=prev_txt, disabled=locked)
 
     col1, col2 = st.columns([1,1])
     with col1:
-        if st.button("Antwort speichern & Lösung anzeigen"):
+        if st.button("Antwort speichern & Lösung anzeigen", disabled=locked):
             st.session_state["pending"] = {
                 "qid": qid,
                 "kind": "open",
@@ -649,7 +762,7 @@ elif q["type"] == "open":
             }
             st.rerun()
     with col2:
-        if st.button("Ich weiß nicht 🤷"):
+        if st.button("Ich weiß nicht 🤷", disabled=locked):
             st.session_state["pending"] = {
                 "qid": qid,
                 "kind": "skip",
