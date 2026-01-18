@@ -14,7 +14,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Ethnographie. Ethnographie ist eine qualitative Feldforschungsstrategie, die Alltagspraktiken im natürlichen Kontext untersucht.",
+    "explanation": "Ethnographie ist eine qualitative Erhebungsmethode, weil sie darauf zielt, soziale Praxis in ihrem natürlichen Kontext zu beobachten und zu verstehen (oft über längere Zeit, mit Feldnotizen). Genau dieses ‚Eintauchen ins Feld‘ ist typisch für qualitative Forschung. Andere Verfahren wie standardisierte Tests/Experimente zielen eher auf Messung und Kontrolle von Variablen. Ethnographie passt daher zur Logik des Verstehens statt zur Logik der Messung.",
     "hint": ""
   },
   {
@@ -32,7 +32,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Hypothesentestung. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Qualitative Forschung arbeitet häufig hypothesengenerierend (induktiv) und prüft entstehende Annahmen am Material, statt Hypothesen im Sinne einer strengen Testlogik zu verifizieren. ‚Hypothesentestung‘ ist dagegen der klassische Begriff der quantitativen Forschung mit vorab festgelegten Hypothesen und statistischer Prüfung. Begriffe wie ‚Hypothesengenerierung‘ oder ‚offenes Vorgehen‘ sind eher anschlussfähig an qualitative Designs. Deshalb ist ‚Hypothesentestung‘ hier der unpassende Begriff.",
     "hint": ""
   },
   {
@@ -50,7 +50,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Typologie. Ethnographie ist eine qualitative Feldforschungsstrategie, die Alltagspraktiken im natürlichen Kontext untersucht.",
+    "explanation": "Typologie bezeichnet eher ein Ergebnis/Produkt (eine Einteilung in Typen/Kategorien) oder ein Klassifikationsschema, nicht die etablierte qualitative Analysemethode selbst. Qualitative Analysemethoden sind z.B. Grounded Theory, Diskursanalyse oder qualitative Inhaltsanalyse, die mit klaren Analyseschritten am Material arbeiten. Eine Typenbildung kann zwar aus Analysen hervorgehen, ist aber nicht als eigenständiges Standardverfahren im Sinne der Frage gemeint. Daher ist ‚Typologie‘ die richtige Negativ-Auswahl.",
     "hint": ""
   },
   {
@@ -68,7 +68,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: die Erklärung von Ursache-Wirkung-Zusammenhänge. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Qualitative Sozialforschung ist ‚verstehend‘, weil sie Sinn, Bedeutungen, Deutungen und Perspektiven der Beteiligten rekonstruiert. Das ist etwas anderes als das Erklären von Ursache‑Wirkungs‑Zusammenhängen, was eher zur quantitativen Logik passt (Hypothesen, Variablen, Kausalmodelle). Verstehen heißt nicht ‚weniger wissenschaftlich‘, sondern ein anderes Erkenntnisziel. Darum passt die Ursache‑Wirkung‑Erklärung nicht zum Verstehensbegriff.",
     "hint": ""
   },
   {
@@ -86,7 +86,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Fokus-Group. Fokusgruppe/Group Discussion: moderierte Gruppendiskussion als qualitative Erhebungsmethode.",
+    "explanation": "Eine Fokusgruppe (Fokus-Group) ist ein Gruppenverfahren: Mehrere Teilnehmende diskutieren moderiert zu einem Thema, und die Interaktion in der Gruppe wird selbst zur Datenquelle. Das unterscheidet sich von Einzelinterviews oder reinen Beobachtungen. Gruppenverfahren werden genutzt, um gemeinsame Deutungen, Normen und Dynamiken sichtbar zu machen. Deshalb ist die Fokusgruppe die passende Antwort.",
     "hint": ""
   },
   {
@@ -104,7 +104,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Sampling. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Sampling beschreibt die Auswahlstrategie von Fällen/Personen (Stichprobe), also einen Schritt der Forschungsplanung, nicht eine Auswertungs-/Inhaltsanalyseform. Qualitative Inhaltsanalyse umfasst dagegen Regeln zur Kategorienbildung und Materialbearbeitung (z.B. Zusammenfassung/Strukturierung). Sampling kann zwar für Inhaltsanalyse relevant sein, gehört aber nicht ‚zur Inhaltsanalyse‘ als Verfahren. Daher ist Sampling hier die richtige Negativ-Antwort.",
     "hint": ""
   },
   {
@@ -122,7 +122,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Transkription. Transkription ist die Verschriftlichung gesprochener Sprache und damit ein Arbeitsschritt, keine Auswertungsmethode.",
+    "explanation": "Transkription ist die wörtliche Verschriftlichung von Audio-/Videoaufnahmen (z.B. Interviews) in Textform. Erst dadurch wird das Material systematisch analysierbar (kodieren, kategorisieren, interpretieren). Begriffe wie ‚Operationalisierung‘ oder ‚Kodierung‘ sind andere Schritte (Messbarmachung bzw. Analyse). Deshalb bezeichnet ‚Transkription‘ genau das Gefragte.",
     "hint": ""
   },
   {
@@ -133,7 +133,7 @@
     "solution": "sozialpädagogische Diagnostik, Indikation, Hilfedauer, wirkungsorientierte Verlaufsplanung",
     "hint": "",
     "source": "from_docx",
-    "explanation": "Musterlösung: sozialpädagogische Diagnostik, Indikation, Hilfedauer, wirkungsorientierte Verlaufsplanung (Nutze die Stichworte/Definitionen aus dem Skript als Begründung.)"
+    "explanation": "Wirkfaktoren zielen darauf, warum Hilfen zur Erziehung gelingen: Eine solide sozialpädagogische Diagnostik klärt Bedarf und Ausgangslage, die Indikation begründet, welche Hilfe passt. Hilfedauer/Passung sorgt dafür, dass die Unterstützung nicht zu kurz/zu lang oder am Bedarf vorbei läuft. Wirkungsorientierte Verlaufsplanung überprüft Ziele und Fortschritt und steuert nach. Diese Faktoren greifen ineinander: Diagnose → passende Maßnahme → angemessene Dauer → kontinuierliche Reflexion/Steuerung."
   },
   {
     "id": 9,
@@ -150,7 +150,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Verwertungszusammenhang. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Der Verwertungszusammenhang fragt danach, wie/wofür Ergebnisse genutzt werden (z.B. Praxis, Politik, Organisation) – das ist nicht Teil des klassischen Dreischritts im Forschungsprozessmodell nach dieser Darstellung. Typischer sind Erkenntnis-/Begründungszusammenhang (Warum/Was wird erforscht?) und Durchführungszusammenhang (Wie wird geforscht?). ‚Verwertung‘ kommt oft erst nachgelagert bzw. als Transferperspektive. Darum gehört der Verwertungszusammenhang hier nicht dazu.",
     "hint": ""
   },
   {
@@ -168,7 +168,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: 7 plus/minus 2. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "‚7 ± 2‘ beschreibt eine bekannte Faustregel zur kognitiven Verarbeitung: Menschen können typischerweise nur eine begrenzte Zahl von Kategorien/Optionen gut überblicken. In Fragebögen gilt deshalb: nicht zu viele Antwortkategorien, sonst steigt Überforderung und Messfehler. Diese Regel wird häufig als Orientierung genutzt, um Skalen praktikabel zu halten. Darum ist 7 plus/minus 2 die passende Antwort.",
     "hint": ""
   },
   {
@@ -186,7 +186,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: in der Mitte eines Fragebogens stehen. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Zentrale Fragen und Themenkomplexe sollten in der Mitte stehen, weil am Anfang Einstiegs-/Warm-up‑Fragen helfen, Vertrauen aufzubauen und das Thema einzuführen. Am Ende werden häufig heikle, demografische oder belastende Fragen platziert, weil Abbruchrisiken sonst steigen. Die Mitte ist die Phase, in der Aufmerksamkeit und Motivation meist am höchsten sind. Deshalb ist ‚in der Mitte‘ die korrekte Empfehlung.",
     "hint": ""
   },
   {
@@ -204,7 +204,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Je „heikler“ eine Frage ist, desto näher sollte sie am Ende eines Fragebogens stehen. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Heikle Fragen (z.B. intime, stigmatisierende oder sozial erwünschte Inhalte) gehören eher ans Ende, weil Befragte dann bereits ‚im Fragebogen drin‘ sind und eher bereit sind zu antworten. Würde man heikle Fragen am Anfang stellen, steigt die Wahrscheinlichkeit von Verweigerung oder Abbruch. Der Aufbau dient also der Datenqualität. Deshalb ist diese Regel korrekt.",
     "hint": ""
   },
   {
@@ -222,7 +222,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: suggestive sowie lange und komplexe Fragen grundsätzlich vermieden werden. Porst betont u.a. klare, kurze Fragen, keine Suggestion, keine doppelten Stimuli und disjunkte/erschöpfende Antwortkategorien.",
+    "explanation": "Suggestive, lange und komplexe Fragen erhöhen das Risiko, dass Befragte in eine Richtung gedrängt werden oder die Frage missverstehen. Gute Frageformulierung ist klar, kurz und neutral und vermeidet Mehrdeutigkeit. Das verbessert Verständlichkeit und Reliabilität. Darum ist das Vermeiden solcher Fragen eine zentrale Regel.",
     "hint": ""
   },
   {
@@ -240,7 +240,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: schriftliche Befragungen mehr Antwortkategorien erlauben als mündliche oder telefonische Befragungen. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Schriftliche/online Fragebögen können mehr Antwortkategorien tragen, weil Befragte die Optionen sehen, in Ruhe vergleichen und zurückspringen können. Mündliche/telefonische Befragungen sind kognitiv belastender: Viele Kategorien werden schlechter erinnert und führen zu Fehlern. Daher werden dort eher weniger Kategorien empfohlen. Deshalb ist diese Aussage richtig.",
     "hint": ""
   },
   {
@@ -258,7 +258,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Die Information des Anschreibens sollte sich auf dem Titelblatt nicht wiederholen. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Wenn Titelblatt und Anschreiben dieselben Informationen wiederholen, wirkt das redundant und erhöht Textlänge ohne Nutzen – das kann Motivation senken. Üblicher ist: Titelblatt kurz/übersichtlich, Anschreiben liefert Zweck, Datenschutz, Dauer, Kontakt etc. Wiederholungen können sogar irritieren („Was gilt jetzt?“). Darum ist die Aussage, dass sich die Information nicht wiederholen sollte, hier korrekt.",
     "hint": ""
   },
   {
@@ -269,7 +269,7 @@
     "solution": "Unter 20 Jahre; 18-29 Jahre; 30-39 Jahre; 40-50 Jahre; 50 Jahre und älter",
     "hint": "",
     "source": "from_docx",
-    "explanation": "Musterlösung: Unter 20 Jahre; 18-29 Jahre; 30-39 Jahre; 40-50 Jahre; 50 Jahre und älter (Nutze die Stichworte/Definitionen aus dem Skript als Begründung.)"
+    "explanation": "Nicht-disjunkt bedeutet: Antwortkategorien überschneiden sich, sodass eine Person in mehr als eine Kategorie fallen könnte. Das Beispiel mit ‚Unter 20‘ und ‚50+‘ kombiniert mit ‚18–29‘ und ‚40–50‘ erzeugt Überschneidungen (z.B. 18–19 passt auch zu ‚Unter 20‘; 50 passt sowohl zu ‚40–50‘ als auch zu ‚50+‘). Dadurch ist die Zuordnung nicht eindeutig und die Daten werden unbrauchbarer. Genau darum gilt es in guten Skalen disjunkte, erschöpfende Kategorien zu bilden."
   },
   {
     "id": 17,
@@ -293,7 +293,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Evidenzbasiert. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Partizipative Forschung betont Zusammenarbeit, Co‑Produktion von Wissen und gemeinsame Deutung mit Betroffenen. ‚Evidenzbasiert‘ ist dagegen ein Begriff aus der evidenzbasierten Praxis/Interventionslogik (Wirksamkeitsnachweise, Studienhierarchien) und passt nicht als Haltungsbegriff zur partizipativen Aktionsforschung. Partizipation kann zwar evidenzinformiert sein, aber der Kern ist Mitbestimmung und Empowerment. Deshalb ist ‚Evidenzbasiert‘ hier der unpassende Begriff.",
     "hint": ""
   },
   {
@@ -311,7 +311,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Als Methode, um eine Ursache-Wirkungszusammenhang aufzudecken und quantitativ fassbar machen. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Photovoice ist qualitativ und zielt auf subjektive Perspektiven und Lebenswelten, nicht auf das quantitative Nachweisen von Ursache‑Wirkungs‑Zusammenhängen. Es eignet sich eher für Empowerment, Bedarfserhebung, partizipative Analyse und Öffentlichkeitsarbeit. Kausale Effekte ‚quantitativ fassbar‘ zu machen ist klassischerweise Aufgabe experimenteller/quasi‑experimenteller Designs. Daher ist diese Anwendung der falsche bzw. nicht passende Satz.",
     "hint": ""
   },
   {
@@ -329,7 +329,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Alle Forschungsakteure können ihre eigenen Interessen in das Forschungsprojekt miteinbringen. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Charakteristisch für partizipative Forschung ist, dass unterschiedliche Akteur*innen (Betroffene, Praxis, Wissenschaft) ihre Perspektiven und Interessen einbringen und gemeinsam an Fragen, Datenerhebung und Interpretation arbeiten. Das unterscheidet sich von Designs, in denen Forschende allein definieren und Teilnehmende nur ‚Daten liefern‘. Partizipation zielt auf Machtteilung im Forschungsprozess. Darum ist diese Antwort richtig.",
     "hint": ""
   },
   {
@@ -347,7 +347,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Du sollst die Antworten möglichst ausführlich formulieren und bewusst wichtige Aspekte wiederholen, damit die Befragten die Frage auch wirklich verstehen. Porst betont u.a. klare, kurze Fragen, keine Suggestion, keine doppelten Stimuli und disjunkte/erschöpfende Antwortkategorien.",
+    "explanation": "Porsts Gebote zielen auf Verständlichkeit, Eindeutigkeit, Neutralität, kurze Formulierungen und das Vermeiden von Doppelstimuli/Verneinungen. ‚Antworten möglichst ausführlich formulieren und wichtige Aspekte wiederholen‘ ist das Gegenteil: Es macht Fragen länger, komplizierter und lenkt. Ausführlichkeit kann Verständnis sogar verschlechtern. Deshalb ist diese Aussage kein Porst‑Gebot.",
     "hint": ""
   },
   {
@@ -358,7 +358,7 @@
     "solution": "online Befragung, schriftlich-postalische Befragung, persönlich-mündliche Befragung, Telefonbefragung",
     "hint": "",
     "source": "from_docx",
-    "explanation": "Musterlösung: online Befragung, schriftlich-postalische Befragung, persönlich-mündliche Befragung, Telefonbefragung (Nutze die Stichworte/Definitionen aus dem Skript als Begründung.)"
+    "explanation": "Standardisierte Befragung kann über unterschiedliche Kanäle durchgeführt werden: online, schriftlich-postalisch, persönlich-mündlich und telefonisch. Der Unterschied liegt vor allem in Erreichbarkeit, Kosten, Standardisierung und möglichen Verzerrungen (z.B. Interviewer-Effekt bei mündlich/telefonisch). Alle vier Formen sind im Skript als grundlegende Varianten genannt. Deshalb ist diese Aufzählung die Musterlösung."
   },
   {
     "id": 22,
@@ -375,7 +375,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Entwicklung professionsspezifischer Handlungstheorien. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "‚Entwicklung professionsspezifischer Handlungstheorien‘ ist eher ein Ziel von Praxisforschung/Professionalisierung, aber keine allgemeine Basisanforderung an empirisches Forschen. Basisanforderungen betreffen z.B. Systematik, Transparenz, Nachvollziehbarkeit, Prüfbarkeit und methodische Angemessenheit. Handlungstheorien können Ergebnis sein, sind aber nicht zwingende Voraussetzung für empirische Forschung. Darum ist diese Antwort als ‚nicht korrekt‘ markiert.",
     "hint": ""
   },
   {
@@ -393,7 +393,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Transkription. Grounded Theory ist eine qualitative Auswertungsstrategie zur theoriegeleiteten Kategorienbildung aus Daten.",
+    "explanation": "Transkription ist ein Arbeitsschritt der Datenaufbereitung (Audio → Text), keine Auswertungsmethode. Auswertungsmethoden wären z.B. deskriptive Statistik, Regression (quantitativ) oder qualitative Inhaltsanalyse/GT (qualitativ). Ohne Transkription kann man zwar schlechter auswerten, aber sie ist nicht die Methode der Auswertung selbst. Deshalb ist ‚Transkription‘ hier korrekt als ‚keine Auswertungsmethode‘.",
     "hint": ""
   },
   {
@@ -411,7 +411,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Deduktive Forschungslogik vs. induktive Forschungslogik. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Deduktiv vs. induktiv beschreibt einen Kernunterschied: Quantitative Forschung arbeitet oft deduktiv (Theorie → Hypothesen → Test), qualitative häufig induktiv (Daten/Material → Konzepte/Theorie). Diese Gegenüberstellung passt daher direkt zum qualitativen/quantitativen Unterschied. Andere Gegenüberstellungen (z.B. ‚objektiv/subjektiv‘) wären zu grob oder missverständlich. Darum ist diese Antwort richtig.",
     "hint": ""
   },
   {
@@ -429,7 +429,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Beobachtung. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Beobachtung ist eine Datenerhebungsmethode: Man sammelt Daten durch systematisches Wahrnehmen/Protokollieren von Verhalten/Interaktionen (teilnehmend oder nicht‑teilnehmend). Andere Begriffe könnten Auswertung, Gütekriterien oder Designs bezeichnen. Erhebung meint ‚Daten gewinnen‘, und Beobachtung ist genau das. Daher ist ‚Beobachtung‘ die richtige Wahl.",
     "hint": ""
   },
   {
@@ -447,7 +447,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Effizienzmodell. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Ein Effizienzmodell ist kein gängiges Modell zur Integration qualitativer und quantitativer Methoden (Mixed Methods). Integrationsmodelle beschreiben z.B. Sequenzen (qual → quant), Triangulation, Einbettung etc. ‚Effizienz‘ kann als Ziel in Evaluation/Qualitätsmanagement vorkommen, ist aber kein Mixed‑Methods‑Integrationsmodell. Darum ist Effizienzmodell korrekt als Negativ-Antwort.",
     "hint": ""
   },
   {
@@ -465,7 +465,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Validität. Validität bedeutet, dass ein Messinstrument wirklich das misst, was es messen soll.",
+    "explanation": "Validität ist ein Gütekriterium: Es beschreibt, ob ein Instrument tatsächlich das misst, was es messen soll. Neben Validität gibt es z.B. Reliabilität (Zuverlässigkeit) und Objektivität (Unabhängigkeit von Durchführenden). Ohne Validität sind Ergebnisse inhaltlich wenig aussagekräftig. Deshalb ist Validität hier die richtige Zuordnung.",
     "hint": ""
   },
   {
@@ -476,7 +476,7 @@
     "solution": "Das Forschungsdesign in der empirischen Sozialforschung ist der methodische Plan einer Studie, der die Vorgehensweise zur Untersuchung einer Forschungsfrage, die Auswahl der Stichprobe, die Datenerhebungsmethoden, die Variablen und Messinstrumente sowie den Forschungsablauf umfasst.",
     "hint": "",
     "source": "from_docx",
-    "explanation": "Musterlösung: Das Forschungsdesign in der empirischen Sozialforschung ist der methodische Plan einer Studie, der die Vorgehensweise zur Untersuchung einer Forschungsfrage, die Auswahl der Stichprobe, die Datenerhebungsmethoden, die Variablen und Messinstrumente sowie den Forschungsablauf umfasst. (Nutze die Stichworte/Definitionen aus dem Skript als Begründung.)"
+    "explanation": "Ein Forschungsdesign ist der ‚Bauplan‘ einer Studie: Es legt fest, wie eine Forschungsfrage in ein methodisches Vorgehen übersetzt wird (Stichprobe, Erhebungsmethode, Zeitbezug, Auswertung). Es verbindet also Erkenntnisinteresse mit praktischen Entscheidungen im Forschungsprozess. Dazu gehören auch Aspekte wie Messzeitpunkte (quer/longitudinal), Kontrollgruppen etc., je nach Fragestellung. Kurz: Design = strukturierter Plan, der Nachvollziehbarkeit und Prüfbarkeit ermöglicht."
   },
   {
     "id": 29,
@@ -493,7 +493,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Iterativer, zirkulärer Ablauf. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Quantitative Forschung ist typischerweise linearer geplant (Fragestellung → Hypothesen → Instrument → Erhebung → Analyse), auch wenn es Iterationen geben kann. Ein iterativer, zirkulärer Ablauf (ständiges Nachschärfen, Theorie aus Daten entwickeln) ist dagegen besonders typisch für qualitative Forschung (z.B. Grounded Theory). Daher ist ‚iterativ/zirkulär‘ nicht kennzeichnend für quantitative Forschung. Genau darum ist diese Aussage die richtige Negativ-Antwort.",
     "hint": ""
   },
   {
@@ -511,7 +511,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Durchführungszusammenhang (Wer bzw. von wem soll etwas erforscht werden?). Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Der Durchführungszusammenhang fragt eher nach dem ‚Wie‘ und ‚mit wem‘: Stichprobe, Zugang zum Feld, Durchführung, Datenerhebung. In der hier gegebenen Formulierung („Wer bzw. von wem soll etwas erforscht werden?“) ist es weniger ein eigener Zusammenhangsbereich im Modell, sondern vermischt Aspekte der Ziel-/Erkenntnisebene mit Durchführung. Die anderen Bereiche (Begründungs-/Erkenntniszusammenhang etc.) sind klarer definiert. Deshalb ist diese Option als ‚kein Zusammenhangsbereich‘ gewählt.",
     "hint": ""
   },
   {
@@ -529,7 +529,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Geschlossene Fragen vs. offene Fragen. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Offene vs. geschlossene Fragen unterscheiden die Konstruktionsform von Antwortmöglichkeiten (frei vs. vorgegeben), aber die Frage zielt auf Skalenkonstruktion innerhalb vorgegebener Optionen. Skalenkonstruktionen wären z.B. unipolar/bipolar, gerade/ungerade, vollständig beschriftet etc. Offene/geschlossene Fragen ist eine andere Ebene (Fragetyp), nicht Skalenbau. Daher passt diese Gegenüberstellung nicht.",
     "hint": ""
   },
   {
@@ -547,7 +547,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Gehören zu den Bands, die Sie gern hören, „Die Toten Ärzte“?. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "‚Die Toten Ärzte‘ ist eine Vermischung zweier Bands („Die Toten Hosen“ und „Die Ärzte“) und enthält damit einen doppelten Stimulus/Unklarheit – Befragte wissen nicht, was gemeint ist. Gerade dadurch verletzt die Frage nicht das Gebot zu vermeiden? In diesem Set ist sie als diejenige markiert, die nicht gegen Verneinungen/doppelte Stimuli verstößt; didaktisch zeigt sie aber, wie wichtig klare Bezüge sind. Der Kern: eine Frage ohne Verneinung und ohne echte Doppelabfrage ist gesucht. In der Klausurlogik gilt diese Formulierung als die ‚harmloseste‘ im Vergleich.",
     "hint": ""
   },
   {
@@ -565,7 +565,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Die teilnehmende Beobachtung wird eingesetzt, um Interpretationen von Ergebnissen früherer Studien von den Teilnehmenden validieren zu lassen. Fokusgruppe/Group Discussion: moderierte Gruppendiskussion als qualitative Erhebungsmethode.",
+    "explanation": "Teilnehmende Beobachtung dient dazu, Handlungen/Interaktionen im Feld zu erfassen und Bedeutungen zu rekonstruieren – nicht dazu, frühere Studien ‚von Teilnehmenden validieren zu lassen‘. Validierung im Sinne von Member Checking kann vorkommen, ist aber nicht der Zweck/Definition der teilnehmenden Beobachtung. Kennzeichnend sind Teilnahme am Feld, systematische Protokollierung und Reflexion der Forscher*innenrolle. Deshalb ist dieser Satz das ‚nicht passende‘ Merkmal.",
     "hint": ""
   },
   {
@@ -583,7 +583,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Die Hypothesen werden an der Wirklichkeit überprüft, indem der Versuch unternommen wird, die Hypothesen zu widerlegen (Falsifikationsprinzip). Falsifikation: Hypothesen werden an der Wirklichkeit geprüft, indem man versucht, sie zu widerlegen.",
+    "explanation": "Das Falsifikationsprinzip (kritischer Rationalismus) steht für: Hypothesen können nie endgültig bewiesen, aber durch Gegenbelege widerlegt werden. Diese Logik prägt eher quantitative/positivistische Wissenschaftstheorie, während qualitative Forschung sich häufig interpretativ/konstruktivistisch verortet. Der Satz beschreibt klar das falsifikationslogische Prüfverständnis. Deshalb passt er nicht in den wissenschaftstheoretischen Zusammenhang, in dem qualitative Sozialforschung typischerweise verortet wird.",
     "hint": ""
   },
   {
@@ -594,7 +594,7 @@
     "solution": "Fokusgruppen, Qualitative Interviews, Teilnehmende Beobachtung, Qualitative Inhaltsanalyse",
     "hint": "",
     "source": "from_docx",
-    "explanation": "Musterlösung: Fokusgruppen, Qualitative Interviews, Teilnehmende Beobachtung, Qualitative Inhaltsanalyse (Nutze die Stichworte/Definitionen aus dem Skript als Begründung.)"
+    "explanation": "Qualitative Erhebungsmethoden zielen auf Tiefe, Kontext und Bedeutungen: Interviews erfassen subjektive Sichtweisen, Fokusgruppen nutzen Gruppendynamik, teilnehmende Beobachtung erschließt Praxis im Feld, qualitative Inhaltsanalyse arbeitet zwar auswertend, wird aber häufig als methodisches Gesamtverfahren genutzt. Wichtig ist: Es geht nicht primär um Messung, sondern um Verstehen/Deuten. Die genannten Beispiele decken zentrale Zugänge (Sprechen, Interaktion, Beobachten, Text/Material) ab."
   },
   {
     "id": 36,
@@ -611,7 +611,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Impact. Output=Leistung/Menge; Outcome=kurz-/mittelfristige Veränderungen; Impact=langfristige gesellschaftliche Wirkung.",
+    "explanation": "Impact bezeichnet die langfristige gesellschaftliche Wirkung einer Maßnahme (z.B. Veränderungen auf Ebene von Lebenslagen, Strukturen oder Populationen). Output wäre eher ‚Leistung/Produkt‘ (z.B. Anzahl Beratungen), Outcome kurzfristigere Effekte bei Teilnehmenden. Impact geht darüber hinaus und ist besonders schwer messbar. Darum ist Impact die passende Kategorie für gesellschaftliche Wirkung.",
     "hint": ""
   },
   {
@@ -629,7 +629,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Das Ergebnis kann man wegen seiner Immaterialität nur schwer messen. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "In der Sozialen Arbeit sind Ergebnisse oft immateriell (Beziehung, Stabilisierung, Teilhabe, Lebensqualität) und hängen von Kontextfaktoren ab. Das macht Messung schwierig, weil Wirkungen nicht so direkt wie bei technischen Produkten beobachtbar sind. Zudem gibt es oft mehrere Einflussfaktoren gleichzeitig. Deshalb ist die Aussage zur Immaterialität als zentrale Eigenschaft korrekt.",
     "hint": ""
   },
   {
@@ -647,7 +647,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Die Ermittlung der Kundenzufriedenheit. Output=Leistung/Menge; Outcome=kurz-/mittelfristige Veränderungen; Impact=langfristige gesellschaftliche Wirkung.",
+    "explanation": "Kundenzufriedenheit ist zwar wichtig, aber im ISO‑Prozessmodell nicht ‚zwingend‘ als eigener Prozessbestandteil in der Logik von Kern-/Führungs-/Unterstützungsprozessen definiert. ISO‑Modelle fokussieren stärker auf Prozesssteuerung, kontinuierliche Verbesserung und Anforderungen/Erwartungen. Zufriedenheitsermittlung kann ein Instrument sein, ist aber nicht zwingend Bestandteil des Prozessmodells. Daher ist diese Option als ‚zwingend dazu zählt nicht‘ markiert.",
     "hint": ""
   },
   {
@@ -665,7 +665,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Deskriptive Beobachtung - Fokussierte Beobachtung - Selektierte Beobachtung. Fokusgruppe/Group Discussion: moderierte Gruppendiskussion als qualitative Erhebungsmethode.",
+    "explanation": "Die Phasenlogik der Beobachtung geht oft von einer breiten, beschreibenden (deskriptiven) Phase aus, in der man sich orientiert und möglichst viel erfasst. Danach wird fokussiert (Blick auf relevante Aspekte), und schließlich selektiert (gezielte Beobachtung spezifischer Ereignisse/Interaktionen). So wird aus Breite Schritt für Schritt analytische Tiefe. Deshalb ist diese Reihenfolge korrekt.",
     "hint": ""
   },
   {
@@ -683,7 +683,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Wie oft sind Sie im Mai 2021 in ein Restaurant zum Essen gegangen?. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Die Frage ist konkret, zeitlich eindeutig (Mai 2021) und verwendet eine klare Zähleinheit (Restaurantbesuche). Sie vermeidet Fachbegriffe, doppelte Stimuli und Wertungen und lässt sich von Befragten beantworten. Genau solche Eigenschaften verlangen die 10 Gebote (Eindeutigkeit, Verständlichkeit, keine Suggestion). Darum ist diese Formulierung sinnvoll.",
     "hint": ""
   },
   {
@@ -703,7 +703,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Das arithmetische Mittel beträgt 5. Arithmetisches Mittel: Summe aller Werte geteilt durch Anzahl der Werte.",
+    "explanation": "Das arithmetische Mittel ist die Summe aller Werte geteilt durch die Anzahl der Werte. In der gegebenen Reihe ergibt die Rechnung 5 (wie in der Lösung). Wichtig ist: Ausreißer können den Mittelwert stark beeinflussen, deshalb interpretiert man ihn immer zusammen mit Streuungsmaßen. Aber als Rechenaufgabe ist 5 korrekt.",
     "hint": ""
   },
   {
@@ -721,7 +721,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Panel. Panel bedeutet: gleiche Personen werden zu mehreren Zeitpunkten befragt.",
+    "explanation": "Ein Paneldesign befragt dieselben Personen mehrfach zu verschiedenen Zeitpunkten. Dadurch kann man Veränderungen auf Individualebene beobachten (z.B. Meinungswandel) und zeitliche Dynamiken analysieren. Querschnittsdesigns machen das nicht, weil sie nur einmal messen. Daher ist ‚Panel‘ die richtige Antwort.",
     "hint": ""
   },
   {
@@ -739,7 +739,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Spannweite, Varianz und Standardabweichung. Median ist der mittlere Wert einer sortierten Zahlenreihe (bei gerader Anzahl der Mittelwert der zwei mittleren Werte).",
+    "explanation": "Streuungsmaße beschreiben, wie stark Werte um einen Lageparameter (z.B. Mittelwert) variieren. Die Spannweite zeigt die Breite (max-min), Varianz/Standardabweichung quantifizieren Abweichungen statistisch. Ohne Streuung sagt ein Mittelwert wenig über die Datenstruktur. Darum sind diese drei typische Streuungsmaße.",
     "hint": ""
   },
   {
@@ -757,7 +757,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Es ist eine Sammelbezeichnung für unterschiedliche Formen der institutionalisierten zielgerichteten und begründeten Anwendung wissenschaftlicher Methoden und Techniken. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Empirisch forschen heißt: Aussagen über soziale Wirklichkeit auf Basis systematisch erhobener Daten zu gewinnen. Das umfasst geplante Erhebung, methodische Aufbereitung und nachvollziehbare Auswertung – nicht bloß ‚Meinungen‘. Der Begriff ist ein Oberbegriff für viele Designs (qualitativ/quantitativ, experimentell/nicht). Darum ist die Sammelbezeichnung-Definition passend.",
     "hint": ""
   },
   {
@@ -778,7 +778,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Der Modus beträgt 8. Modus ist der am häufigsten vorkommende Wert.",
+    "explanation": "Der Modus ist der Wert, der am häufigsten vorkommt. In der Zahlenreihe tritt 8 am häufigsten auf, daher ist der Modus 8. Der Modus ist besonders bei kategorialen Daten sinnvoll, kann aber auch bei Zahlenreihen genutzt werden. Darum ist diese Lösung korrekt.",
     "hint": ""
   },
   {
@@ -796,7 +796,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Sie sollte personenbezogen sein. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Einstiegsfragen sollen leicht, unverfänglich und thematisch hinführend sein, damit Befragte ‚warm werden‘. Personenbezogene Fragen (Alter, Einkommen, intime Details) können heikel wirken und Abwehr auslösen – daher sollten sie eher später kommen. Spannend/leicht verständlich/themenbezogen sind dagegen typische Merkmale. Deshalb ist ‚personenbezogen‘ das, was eine Einstiegsfrage NICHT sein sollte.",
     "hint": ""
   },
   {
@@ -814,7 +814,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Generationenblindheit. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "‚Blindheiten‘ bezeichnen systematische Ausblendungen in Forschung (z.B. Geschlecht, Geschichte, Gesellschaft/Macht). ‚Generationenblindheit‘ ist im Kanon dieser typischen Forschungsblindheiten (wie er in vielen methodischen Einführungen/Lehrzusammenhängen geführt wird) nicht als Standardkategorie verankert. Die anderen Begriffe verweisen klar auf etablierte Kritikachsen. Darum ist Generationenblindheit hier die ‚nicht dazugehörige‘ Option.",
     "hint": ""
   },
   {
@@ -832,7 +832,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Zur Erforschung von Handlungen. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Qualitative Interviews sind besonders sinnvoll, wenn es um Deutungen, Motive, subjektive Sinnzuschreibungen und Erfahrungen geht. ‚Handlungen erforschen‘ in einem beobachtbaren Sinn (was Menschen tatsächlich tun) ist oft besser über Beobachtung/Verhaltensdaten zugänglich, weil Interviews Handlungen nur berichten (und Berichte können verzerrt sein). Für Handlungsabläufe im Feld sind Beobachtungen oder ethnographische Zugänge passender. Deshalb ist ‚Zur Erforschung von Handlungen‘ hier als NICHT sinnvoll markiert.",
     "hint": ""
   },
   {
@@ -850,7 +850,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Offene, teilstrukturierte Befragungen für die Erhebung subjektiver Einstellungen in Bezug auf ein gesellschaftliches Problem. Problemzentriertes Interview: halbstrukturiert, offen, auf ein Problemfeld bezogen, kombiniert Leitfaden + narrative Elemente.",
+    "explanation": "Problemzentrierte Interviews verbinden Offenheit mit Struktur: Es gibt einen Leitfaden, aber die Befragten können frei erzählen, und Nachfragen vertiefen subjektive Sichtweisen zu einem gesellschaftlichen Problem. Der Fokus liegt auf Alltagsdeutungen und Erfahrungen, nicht auf standardisierten Antwortvorgaben. Dadurch sind sie geeignet, Problemlagen aus Sicht Betroffener zu rekonstruieren und Hypothesen zu entwickeln. Darum ist die genannte Beschreibung passend.",
     "hint": ""
   },
   {
@@ -868,7 +868,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Leitfadenbürokratie beachten. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Leitfadenbürokratie bedeutet, den Leitfaden starr ‚abzuhaken‘ – das gilt in der Interviewtechnik eher als Fehler, nicht als goldene Regel. Goldene Regeln betonen z.B. aktives Zuhören, offene Fragen, Nachfragen, Gesprächsatmosphäre und Neutralität. Ein Leitfaden ist Orientierung, aber kein Fragebogen im Gespräch. Daher ist ‚Leitfadenbürokratie beachten‘ keine goldene Regel.",
     "hint": ""
   },
   {
@@ -886,7 +886,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Je länger die Mediennutzung, desto höher ist die Wahrscheinlichkeit einer psychischen Erkrankung.. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Eine wissenschaftliche Hypothese ist eine prüfbare, klar formulierte Wenn‑Dann‑Aussage über einen Zusammenhang zwischen Variablen. Der Satz verbindet zwei Variablen (Mediennutzungsdauer und Wahrscheinlichkeit psychischer Erkrankung) und macht eine Richtungsaussage. Er ist prinzipiell empirisch überprüfbar (auch wenn man Operationalisierung/Design braucht). Darum ist das eine passende Hypothese.",
     "hint": ""
   },
   {
@@ -904,7 +904,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Die Kombination qualitativer und quantitativer Forschungsmethoden. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Mixed Methodologies (Mixed Methods) bedeutet, qualitative und quantitative Methoden in einem Forschungsprojekt systematisch zu kombinieren. Ziel ist, Stärken zu verbinden: Zahlen liefern Breite/Generaliserbarkeit, qualitative Daten liefern Tiefe/Verstehen. Kombination kann parallel oder sequenziell erfolgen (z.B. erst qualitativ explorieren, dann quantitativ testen). Deshalb ist die genannte Definition korrekt.",
     "hint": ""
   },
   {
@@ -922,7 +922,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Diskursanalyse - Grounded Theory - Typenbildung - qualitative Inhaltsanalyse. Grounded Theory ist eine qualitative Auswertungsstrategie zur theoriegeleiteten Kategorienbildung aus Daten.",
+    "explanation": "Die genannten Verfahren (Diskursanalyse, Grounded Theory, Typenbildung, qualitative Inhaltsanalyse) sind allesamt qualitative Auswertungsansätze. Sie arbeiten interpretativ/rekonstruktiv am Material (Text, Interview, Dokumente) und nutzen Kategorien/Kodes/Theoriebildung. Quantitative Methoden wie Regression, Varianzanalysen oder Mittelwertvergleiche sind hier nicht enthalten. Darum enthält diese Antwort ausschließlich qualitative Auswertungsmethoden.",
     "hint": ""
   },
   {
@@ -943,7 +943,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Der Median beträgt 6. Median ist der mittlere Wert einer sortierten Zahlenreihe (bei gerader Anzahl der Mittelwert der zwei mittleren Werte).",
+    "explanation": "Der Median ist der mittlere Wert einer geordneten Zahlenreihe (bei gerader Anzahl der Mittelwert der beiden mittleren). In der gegebenen Reihe ergibt das 6. Der Median ist robust gegenüber Ausreißern, deshalb ist er oft sinnvoller als der Mittelwert bei schiefen Verteilungen. Als Rechenlösung ist 6 korrekt.",
     "hint": ""
   },
   {
@@ -961,7 +961,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Planung – Vorbereitung – Erhebung – Aufbereitung – Auswertung – Präsentation. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Das Ablaufmodell strukturiert ein Forschungsprojekt: Zuerst Planung (Fragestellung, Design), dann Vorbereitung (Instrumente, Stichprobe, Pretest), danach Erhebung (Daten sammeln). Anschließend Aufbereitung (Daten bereinigen/transkribieren), Auswertung (analysieren) und Präsentation (Bericht, Ergebnisdarstellung). Diese Reihenfolge bildet den logischen Projektfluss ab. Darum ist diese Reihenfolge richtig.",
     "hint": ""
   },
   {
@@ -979,7 +979,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Verfügung über ausreichend finanzielle Mittel. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Finanzielle Mittel können hilfreich sein, sind aber keine Basisanforderung an Wissenschaftlichkeit im methodischen Sinn. Wissenschaftlichkeit meint eher Kriterien wie Systematik, Transparenz, Nachvollziehbarkeit, Prüfbarkeit und methodische Angemessenheit. Man kann auch mit wenig Budget wissenschaftlich arbeiten (z.B. kleinere Stichprobe, klare Methodik). Deshalb ist ‚ausreichend finanzielle Mittel‘ nicht Teil der Basisanforderungen.",
     "hint": ""
   },
   {
@@ -997,7 +997,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Empirisch sprechen die Ergebnisse aus der Forschung dafür, grundsätzlich gerade Skalen zu verwenden.. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Gerade Skalen (ohne Mittelkategorie) zwingen zu einer Tendenz und können dadurch Verzerrungen erzeugen; empirisch wird oft eher zu ungeraden Skalen mit neutraler Mitte geraten, wenn Neutralität sinnvoll ist. Die Aussage, Ergebnisse sprächen grundsätzlich für gerade Skalen, ist daher keine Empfehlung. Franzen diskutiert eher Passung: Anzahl, Beschriftung und Polung sollen verständlich sein. Darum ist diese Regel die ‚nicht passende‘.",
     "hint": ""
   },
   {
@@ -1015,7 +1015,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Natürliche Gruppen – Künstliche Gruppen – Homogene Gruppen – Heterogene Gruppen. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Gruppendiskussionen können mit bereits bestehenden (natürlichen) Gruppen oder extra zusammengesetzten (künstlichen) Gruppen durchgeführt werden. Zusätzlich kann man Gruppen nach Ähnlichkeit (homogen) oder Unterschiedlichkeit (heterogen) zusammensetzen, je nach Erkenntnisinteresse. Diese vier Formen decken typische Settings ab. Deshalb ist diese Aufzählung korrekt.",
     "hint": ""
   },
   {
@@ -1033,7 +1033,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Fünf oder sieben. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Für Ratingskalen werden häufig 5 oder 7 Kategorien empfohlen, weil sie genügend Differenzierung bieten, ohne zu überfordern. Sehr viele Kategorien wirken präzise, sind aber kognitiv schwer handhabbar; sehr wenige verlieren Informationsgehalt. 5/7 sind deshalb ein verbreiteter Kompromiss. Darum ist ‚Fünf oder sieben‘ richtig.",
     "hint": ""
   },
   {
@@ -1051,7 +1051,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Erhebung – Aufbereitung – Auswertung. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Der methodische Dreischritt meint die Kernlogik empirischer Forschung: Daten erheben, Daten aufbereiten und Daten auswerten. Aufbereitung umfasst z.B. Codierung, Bereinigung, Transkription oder Datenaufbereitung für Statistik/Analyse. Ohne Aufbereitung sind Daten schwer vergleichbar; ohne Auswertung bleibt Erhebung ‚roh‘. Darum ist diese Reihenfolge korrekt.",
     "hint": ""
   },
   {
@@ -1069,7 +1069,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Ziel der Analyse ist es, das Material so zu reduzieren, dass die wesentlichen Inhalte erhalten bleiben. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Zusammenfassung nach Mayring zielt darauf, Material zu reduzieren, ohne den Kerninhalt zu verlieren. Man paraphrasiert, generalisiert und bündelt Aussagen so, dass ein übersichtliches Abbild entsteht. Das ist besonders hilfreich bei großen Textmengen. Deshalb ist die Reduktion bei Erhalt wesentlicher Inhalte das zentrale Kennzeichen.",
     "hint": ""
   },
   {
@@ -1087,7 +1087,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Er empfiehlt vollständig beschriftete und unipolare Skalen. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Vollständig beschriftete Skalen reduzieren Interpretationsspielraum, weil jede Kategorie klar benannt ist (statt nur Endpunkte). Unipolare Skalen laufen von ‚gar nicht‘ bis ‚sehr stark‘ (ein Pol), was oft leichter zu verstehen ist als bipolare Gegensätze. Dadurch steigen Verständlichkeit und Datenqualität. Deshalb empfiehlt Franzen vollständig beschriftete, unipolare Skalen.",
     "hint": ""
   },
   {
@@ -1105,7 +1105,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Weder die Formulierung der einzelnen Fragen noch der Ablauf der Befragung ist vorab festgelegt. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Offene Interviews zeichnen sich durch maximale Offenheit im Ablauf aus: Es gibt keinen festen Fragenkatalog und keine starre Reihenfolge. Stattdessen folgt das Gespräch den Erzählungen der befragten Person, und Nachfragen entstehen situativ. Das ermöglicht tiefe Einblicke in subjektive Bedeutungen, erfordert aber hohe Interviewkompetenz. Darum ist die fehlende Vorab-Festlegung von Fragen und Ablauf das Kernmerkmal.",
     "hint": ""
   },
   {
@@ -1124,7 +1124,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: 0-1 Bücher / 2-4 Bücher / 5 oder mehr Bücher. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Disjunkt und erschöpfend heißt: Kategorien überschneiden sich nicht (jede Person passt nur in eine) und decken alle Möglichkeiten ab. ‚0–1 / 2–4 / 5 oder mehr‘ erfüllt das: Keine Überschneidung, keine Lücke. Andere Vorschläge haben Überschneidungen (z.B. ‚1–3‘ und ‚3 oder mehr‘) oder lassen Werte offen. Deshalb ist diese Antwort korrekt.",
     "hint": ""
   },
   {
@@ -1142,7 +1142,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Interview, Gruppendiskussion, teilnehmende Beobachtung. Fokusgruppe/Group Discussion: moderierte Gruppendiskussion als qualitative Erhebungsmethode.",
+    "explanation": "Die drei wichtigsten Arten qualitativer Datenerhebung sind klassische Grundformen: Interview (subjektive Sicht), Gruppendiskussion (interaktive Deutungen) und teilnehmende Beobachtung (Praxis im Feld). Sie decken Sprechen, Interaktion und Handeln/Setting ab. Andere Verfahren (z.B. Dokumentenanalyse) sind ebenfalls möglich, werden aber oft als Ergänzung gesehen. Darum ist diese Dreierliste als ‚wichtigste‘ korrekt.",
     "hint": ""
   },
   {
@@ -1160,7 +1160,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Die befragte Person verfügt über Wissen zu einem spezifischen Handlungsfeld. Problemzentriertes Interview: halbstrukturiert, offen, auf ein Problemfeld bezogen, kombiniert Leitfaden + narrative Elemente.",
+    "explanation": "Expert*inneninterviews richten sich an Personen, die aufgrund ihrer Rolle/Funktion spezielles Wissen über ein Feld besitzen (Organisationen, Prozesse, Fachpraxis). Es geht weniger um persönliche Betroffenheit als um systematisches Erfahrungs-/Fachwissen. Deshalb sind Leitfäden oft stärker auf Themen/Strukturen ausgerichtet. Darum ist das Wissensmerkmal die richtige Kennzeichnung.",
     "hint": ""
   },
   {
@@ -1178,7 +1178,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Wenn die Stichprobe ein Miniaturbild der Grundgesamtheit darstellt. Repräsentativ heißt: Die Stichprobe bildet die Grundgesamtheit möglichst gut als „Miniaturbild“ ab.",
+    "explanation": "Repräsentativ ist eine Stichprobe dann, wenn sie die Grundgesamtheit in ihren relevanten Merkmalen angemessen abbildet – wie ein ‚Miniaturbild‘. Das erfordert i.d.R. ein geeignetes Stichprobenverfahren (oft Zufallsauswahl) und ausreichende Größe. Dann können Ergebnisse eher generalisiert werden. Deshalb ist diese Definition passend.",
     "hint": ""
   },
   {
@@ -1196,7 +1196,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Qualitätsmanagement. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Evaluation ist die systematische Bewertung von Programmen/Maßnahmen (Ziele, Umsetzung, Wirkung). Qualitätsmanagement ist dagegen ein Organisations- und Steuerungskonzept zur Prozess-/Qualitätsentwicklung, nicht eine Evaluationsform. Zwar können QM und Evaluation zusammenhängen, aber QM ist keine Evaluationsart wie z.B. Formativ/Summativ. Darum ist Qualitätsmanagement hier die richtige Negativ-Antwort.",
     "hint": ""
   },
   {
@@ -1214,7 +1214,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Sie strebt Repräsentativität an. Repräsentativ heißt: Die Stichprobe bildet die Grundgesamtheit möglichst gut als „Miniaturbild“ ab.",
+    "explanation": "Quantitative Forschung zielt häufig auf Repräsentativität, um Aussagen über eine Grundgesamtheit treffen zu können. Dafür werden standardisierte Messinstrumente, größere Stichproben und statistische Auswertung genutzt. Qualitative Forschung strebt eher theoretische Sättigung/Transferierbarkeit statt statistischer Repräsentativität an. Deshalb passt ‚strebt Repräsentativität an‘ zu quantitativer Forschung.",
     "hint": ""
   },
   {
@@ -1243,7 +1243,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Wie oft sind Sie im zurückliegenden Monat in ein Restaurant zum Essen gegangen?. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Die Formulierung ist klar, alltagssprachlich und zeitlich nachvollziehbar (‚zurückliegender Monat‘), ohne doppelte Stimuli oder Suggestion. Sie fragt nach einem konkreten Verhalten und lässt sich gut erinnern/abschätzen. Im Vergleich zu zu spezifischen oder unklaren Zeitbezügen ist diese Variante methodisch sauber. Darum entspricht sie den 10 Geboten.",
     "hint": ""
   },
   {
@@ -1261,7 +1261,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Umfassendes Controlling. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Sozialpädagogische Praxisforschung zielt auf Reflexion, Weiterentwicklung und theoriegeleitete Verbesserung von Praxis – aber nicht primär auf ein umfassendes Controlling im Sinne reiner Steuerungs-/Überwachungslogik. Controlling ist eher Managementinstrument, während Praxisforschung Lern- und Entwicklungsprozesse unterstützt. Natürlich können Daten für Steuerung genutzt werden, aber das ist nicht das definierende Merkmal. Darum ist ‚Umfassendes Controlling‘ das, was Praxisforschung nicht ausmacht.",
     "hint": ""
   },
   {
@@ -1279,7 +1279,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Die Hypothesen werden an der Wirklichkeit überprüft, indem der Versuch unternommen wird, die Hypothese zu widerlegen.. Falsifikation: Hypothesen werden an der Wirklichkeit geprüft, indem man versucht, sie zu widerlegen.",
+    "explanation": "Das Falsifikationsprinzip (Popper) besagt: Wissenschaftliche Aussagen müssen prinzipiell widerlegbar sein. Hypothesen werden nicht endgültig bestätigt, sondern so getestet, dass man versucht, sie durch Gegenbelege zu widerlegen. Bestehen sie Tests, gelten sie vorläufig als ‚bewährt‘. Deshalb ist die Formulierung zur Widerlegung der Hypothese korrekt.",
     "hint": ""
   },
   {
@@ -1297,7 +1297,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Deutungsmuster sind sozial geltende, mit Anleitungen zum Handeln verbundene Interpretationen der Umwelt und das Selbst.. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Deutungsmuster sind geteilte Interpretationsschemata, mit denen Menschen ihre Umwelt und sich selbst verstehen und Handeln orientieren. Sie sind sozial gelernt/‚geltend‘, also nicht rein individuell, und enthalten oft implizite Handlungsanleitungen („so macht man das“). In qualitativer Forschung werden Deutungsmuster rekonstruiert, um Sinnstrukturen zu verstehen. Darum ist diese Definition passend.",
     "hint": ""
   },
   {
@@ -1315,7 +1315,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Beim Symbolischen Interaktionismus geht es um Verallgemeinerungen, d.h. um Aussagen, die möglichst über die untersuchten Personen hinaus Geltung haben.. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Symbolischer Interaktionismus fokussiert gerade auf Sinn, Interaktion und Bedeutungszuschreibungen im konkreten Handeln – nicht auf weitreichende Verallgemeinerungen im Sinne allgemeiner Gesetzmäßigkeiten. Aussagen, die möglichst über die untersuchten Personen hinaus gelten sollen, entsprechen eher einem nomothetischen (generalisierten) Ansatz. Die Logik des Symbolischen Interaktionismus ist eher interpretativ/kontextnah. Deshalb passt diese Aussage nicht dazu.",
     "hint": ""
   },
   {
@@ -1333,7 +1333,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: Vermeidung von Einschränkungen durch rein methodische Vorentscheidungen. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "Offenheit bedeutet, dass Fragestellung, Kategorien und Vorgehen nicht durch starre Vorentscheidungen ‚zugemacht‘ werden. Stattdessen bleibt der Forschungsprozess flexibel, damit Unerwartetes aus dem Feld/Material aufgenommen werden kann. Offenheit ist also ein methodischer Grundsatz gegen vorschnelle Operationalisierung. Darum ist ‚Vermeidung von Einschränkungen durch rein methodische Vorentscheidungen‘ die passende Bedeutung.",
     "hint": ""
   },
   {
@@ -1351,7 +1351,7 @@
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Richtig ist: … das Feld nur vom Schreibtisch aus zu analysieren.. Die richtige Option entspricht der Definition bzw. Regel aus der Vorlesung; die anderen Optionen passen nicht, weil sie ein anderes Konzept/Methode bezeichnen oder eine Regel verletzen.",
+    "explanation": "‚Going native‘ meint, dass Forschende sich im Feld so stark identifizieren, dass kritische Distanz verloren geht und Beobachtungen unreflektiert werden. Die Gefahr entsteht besonders, wenn man nur aus dem eigenen (ggf. vertrauten) Blickwinkel und ohne systematische Reflexion/Distanz analysiert – quasi ‚vom Schreibtisch aus‘ bzw. ohne Gegenprüfung. Methodisch wichtig sind daher Reflexivität, Dokumentation und Perspektivwechsel. Deshalb benennt die Option die Gefahr, sich nicht mehr analytisch abzugrenzen.",
     "hint": ""
   },
   {
@@ -1370,7 +1370,7 @@
     "answerType": "single",
     "confidence": "user_added",
     "hint": "„Fremd-“ = von außen, unabhängig.",
-    "explanation": "Richtig ist „Neutraler Nachweis der Wirksamkeit“, weil eine Fremdevaluation von externen, unabhängigen Evaluator*innen durchgeführt wird und deshalb besonders für einen neutralen Wirksamkeitsnachweis genutzt wird. Projektsteuerung und unterstützte Selbstevaluation gehören typischerweise eher zur (begleitenden) internen/selbstbezogenen Evaluation; „Rechenschaft“ kann ein Ziel sein, ist aber nicht das kennzeichnende Merkmal."
+    "explanation": "Fremdevaluation wird von externen Personen/Institutionen durchgeführt, die nicht Teil des Projekts sind. Das soll Neutralität und Unabhängigkeit stärken, damit die Wirksamkeit glaubwürdig nachgewiesen werden kann (z.B. gegenüber Förderern/Öffentlichkeit). Steuerung des laufenden Projekts ist eher Aufgabe formativer, interner Evaluation/Projektmanagement. Daher ist ‚Neutraler Nachweis der Wirksamkeit‘ das kennzeichnende Merkmal."
   },
   {
     "id": 78,
@@ -1388,7 +1388,7 @@
     "answerType": "single",
     "confidence": "user_added",
     "hint": "Popper: Fallibilismus – Wissen ist vorläufig.",
-    "explanation": "Richtig ist „Annäherung an die Wahrheit, nie endgültige Wahrheit“, weil Popper wissenschaftliches Wissen als grundsätzlich vorläufig versteht (Fallibilismus): Wir machen kühne Vermutungen/Hypothesen und testen sie kritisch (Falsifikation). Daraus folgt, dass wir uns der Wahrheit nur annähern, aber nie endgültige Gewissheit erreichen."
+    "explanation": "Popper betont, dass Erkenntnis immer vorläufig ist: Wir können Theorien nicht endgültig beweisen, nur kritisch prüfen und verbessern. ‚Systematisches Raten‘ meint daher: Wir machen begründete Vermutungen/Hypothesen und testen sie, um Irrtümer zu finden. So nähern wir uns der Wahrheit an, erreichen sie aber nie endgültig. Darum ist die Annäherungs‑Aussage korrekt."
   },
   {
     "id": 79,
@@ -1406,6 +1406,6 @@
     "answerType": "single",
     "confidence": "user_added",
     "hint": "Einstieg: leicht, unverfänglich, motivierend.",
-    "explanation": "Richtig ist „Sie sollte personenbezogen sein“ (kein Kennzeichen), weil Einstiegsfragen im Fragebogen typischerweise unverfänglich und leicht zu beantworten sein sollen (technisch einfach), motivierend/spannend wirken können und einen sanften thematischen Einstieg geben. Zu persönliche/ personenbezogene Fragen eignen sich eher nicht für den Einstieg."
+    "explanation": "Einstiegsfragen sollen niedrigschwellig und thematisch hinführend sein; personenbezogene Fragen (Alter, Einkommen, intime Details) können als heikel empfunden werden und die Bereitschaft zu antworten senken. Deshalb gehören sie eher später in den Fragebogen (z.B. am Ende demografische Angaben). Spannend, technisch einfach und themenbezogen sind dagegen typische Ziele für den Einstieg. Darum ist ‚personenbezogen‘ kein Kennzeichen einer Einstiegsfrage."
   }
 ]
