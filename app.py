@@ -9,7 +9,6 @@ import streamlit as st
 import sqlite3
 import csv
 import io
-import re
 
 try:
     from reportlab.lib.pagesizes import A4  # type: ignore
@@ -28,126 +27,6 @@ QUESTIONS_FILE = BASE_DIR / "questions.json"
 CUSTOM_FILE = BASE_DIR / "custom_questions.json"
 PROGRESS_DIR = BASE_DIR / "progress"
 PROGRESS_DIR.mkdir(exist_ok=True)
-
-
-# -----------------------------
-# Didaktik: Hinweise, Beispiele, Glossar
-# -----------------------------
-GLOSSARY_FILE = BASE_DIR / "glossary.json"
-
-# Du kannst diese Begriffsliste jederzeit erweitern (siehe glossary.json).
-DEFAULT_GLOSSARY = {
-    "Output": {
-        "definition": "Unmittelbares Ergebnis/Leistung einer Maßnahme (z.B. Anzahl Beratungen).",
-        "tip": "Denke an das, was direkt produziert/erbracht wird.",
-        "example": "Beispiel: 12 Beratungsgespräche wurden durchgeführt."},
-    "Outcome": {
-        "definition": "Kurz- bis mittelfristige Veränderungen bei Zielgruppen (z.B. verbessertes Wissen/Verhalten).",
-        "tip": "Was verändert sich bei den Klient*innen nach der Maßnahme?",
-        "example": "Beispiel: Teilnehmende können Konflikte häufiger deeskalieren."},
-    "Impact": {
-        "definition": "Langfristige gesellschaftliche Wirkung (breiter, oft schwerer messbar).",
-        "tip": "Denke an langfristige Folgen auf gesellschaftlicher Ebene.",
-        "example": "Beispiel: Langfristig sinkt Jugenddelinquenz in einer Region."},
-    "Validität": {
-        "definition": "Ein Messinstrument misst tatsächlich das, was es messen soll.",
-        "tip": "Frage dich: Treffen wir wirklich das Konstrukt – oder etwas anderes?",
-        "example": "Beispiel: Ein Depressions-Test misst nicht nur Stress."},
-    "Falsifikationsprinzip": {
-        "definition": "Wissenschaftliche Aussagen sollen so formuliert sein, dass sie prinzipiell widerlegt werden können.",
-        "tip": "Suche nach Beobachtungen, die deine Hypothese kippen würden.",
-        "example": "Beispiel: Eine Hypothese ist nur gut, wenn ein Gegenbeispiel denkbar ist."},
-    "Panel": {
-        "definition": "Gleiche Personen werden zu mehreren Zeitpunkten befragt (Längsschnitt).",
-        "tip": "Merke: Mehrere Messzeitpunkte – gleiche Stichprobe.",
-        "example": "Beispiel: Jährliche Befragung derselben Haushalte."},
-    "Spannweite": {
-        "definition": "Differenz zwischen größtem und kleinstem Wert einer Verteilung.",
-        "tip": "Max minus Min.",
-        "example": "Beispiel: 60–20=40."},
-}
-
-
-def load_glossary():
-    # glossary.json (optional) wird mit DEFAULT_GLOSSARY gemerged.
-    data = dict(DEFAULT_GLOSSARY)
-    try:
-        if GLOSSARY_FILE.exists():
-            raw = json.loads(GLOSSARY_FILE.read_text(encoding='utf-8'))
-            if isinstance(raw, dict):
-                for k, v in raw.items():
-                    if not isinstance(v, dict):
-                        continue
-                    base = data.get(k, {})
-                    merged = {**base, **v}
-                    data[k] = merged
-    except Exception:
-        pass
-    return data
-
-
-def find_glossary_terms(glossary: dict, *texts: str):
-    # Findet vorkommende Glossarbegriffe (case-insensitive, Wortgrenzen soweit sinnvoll)
-    joined = "\n".join([t or "" for t in texts])
-    found = []
-    for term in glossary.keys():
-        # very simple word-boundary match; allows terms with spaces
-        pattern = r"(?i)(?:^|[^\wäöüÄÖÜß])" + re.escape(term) + r"(?:$|[^\wäöüÄÖÜß])"
-        if re.search(pattern, joined):
-            found.append(term)
-    # längere Begriffe zuerst (besseres Matching / Anzeige)
-    found.sort(key=len, reverse=True)
-    return found
-
-
-def render_glossary(glossary: dict, terms: list[str]):
-    if not terms:
-        return
-    st.markdown("**Glossar (Begriffe in dieser Frage)**")
-    # Popover falls verfügbar, sonst Expander
-    has_popover = hasattr(st, 'popover')
-    cols = st.columns(min(3, len(terms))) if len(terms) > 1 else [st]
-    for i, term in enumerate(terms):
-        data = glossary.get(term, {})
-        definition = (data.get('definition') or '').strip()
-        tip = (data.get('tip') or '').strip()
-        example = (data.get('example') or '').strip()
-        target = cols[i % len(cols)]
-        if has_popover:
-            with target.popover(term):
-                if definition:
-                    st.write(definition)
-                if tip:
-                    st.caption(f"Tipp: {tip}")
-                if example:
-                    st.caption(f"Beispiel: {example}")
-        else:
-            with target.expander(term, expanded=False):
-                if definition:
-                    st.write(definition)
-                if tip:
-                    st.caption(f"Tipp: {tip}")
-                if example:
-                    st.caption(f"Beispiel: {example}")
-
-
-def derive_tip_and_example(q: dict, glossary: dict):
-    # 1) Erst das hinterlegte hint Feld
-    hint = (q.get('hint') or '').strip()
-    example = (q.get('example') or '').strip()
-
-    # 2) Falls leer: aus Glossar ableiten
-    terms = find_glossary_terms(glossary, str(q.get('question') or ''), str(q.get('explanation') or ''), str(q.get('solution') or ''))
-    for t in terms:
-        data = glossary.get(t, {})
-        if not hint:
-            hint = (data.get('tip') or '').strip()
-        if not example:
-            example = (data.get('example') or '').strip()
-        if hint and example:
-            break
-
-    return hint, example, terms
 
 """Leaderboards
 
@@ -918,19 +797,12 @@ with nav3:
 
 st.markdown(f"### {q['question']}")
 
-# Glossar + didaktischer Tipp/Beispiel (falls vorhanden)
-glossary = load_glossary()
-hint_text, example_text, gloss_terms = derive_tip_and_example(q, glossary)
-render_glossary(glossary, gloss_terms)
-
 answered_current = (active_answered or {}).get(str(qid))
 if answered_current:
     st.caption("✅ Diese Frage wurde bereits beantwortet. Du kannst die Erklärung erneut anzeigen oder mit \"Weiter\" navigieren.")
     cexp, _ = st.columns([1, 3])
     with cexp:
         if st.button("📌 Erklärung anzeigen", key=f"exp_{qid}"):
-            st.session_state.pop(f"reveal_{qid}", None)
-            st.session_state.pop(f"tipshow_{qid}", None)
             st.session_state["pending"] = {
                 "qid": qid,
                 "kind": "review",
@@ -1044,8 +916,6 @@ def persist_and_advance(result_dict):
 def show_feedback_modal(pending: dict):
     """Modal-style feedback after submitting or clicking 'weiß nicht'."""
     exp_text = safe_explanation(q)
-    glossary = load_glossary()
-    hint_text, example_text, gloss_terms = derive_tip_and_example(q, glossary)
 
     # Build solution text
     solution_lines = []
@@ -1078,38 +948,15 @@ def show_feedback_modal(pending: dict):
                 st.warning("🤷 Kein Problem – hier ist die Lösung + Erklärung.")
             else:
                 st.info("Gespeichert – hier ist die Lösung + Erklärung.")
-            # 1) Tipp vor der Lösung
-            if hint_text:
-                if st.button("💡 Tipp anzeigen", key=f"tipbtn_{qid}"):
-                    st.session_state[f"tipshow_{qid}"] = True
-                if st.session_state.get(f"tipshow_{qid}"):
-                    st.info(hint_text)
 
-            # 2) Lösung erst nach expliziter Freigabe anzeigen
-            # Streamlit speichert den Widget-Status automatisch unter dem Key.
-            # Wichtig: NICHT nach dem Erzeugen des Widgets st.session_state[Key] setzen,
-            # sonst wirft Streamlit eine StreamlitAPIException.
-            reveal_key = f"reveal_{qid}"
-            if reveal_key not in st.session_state:
-                st.session_state[reveal_key] = False
-            reveal = st.checkbox("✅ Lösung anzeigen", key=reveal_key)
+            if solution_lines:
+                st.markdown("**Lösung:**")
+                st.markdown("\n".join(solution_lines))
+            else:
+                st.markdown("**Lösung:** (nicht hinterlegt)")
 
-            if reveal:
-                if solution_lines:
-                    st.markdown("**Lösung:**")
-                    st.markdown("\n".join(solution_lines))
-                else:
-                    st.markdown("**Lösung:** (nicht hinterlegt)")
-
-                if example_text:
-                    st.caption(f"Beispiel/Anwendung: {example_text}")
-
-                # Glossar auch im Modal anbieten
-                if gloss_terms:
-                    render_glossary(glossary, gloss_terms)
-
-                st.markdown("**Erklärung:**")
-                st.write(exp_text)
+            st.markdown("**Erklärung:**")
+            st.write(exp_text)
 
             if no_advance:
                 if st.button("Schließen"):
@@ -1126,31 +973,12 @@ def show_feedback_modal(pending: dict):
             st.toast("Richtig ✅" if pending.get("correct") else "Falsch ❌")
         elif pending.get("kind") == "skip":
             st.toast("Ich weiß nicht 🤷 – Lösung angezeigt")
-        st.info("Deine Streamlit-Version unterstützt keine echten Pop-ups.")
-        if hint_text:
-            if st.button("💡 Tipp anzeigen", key=f"tipbtn_fb_{qid}"):
-                st.session_state[f"tipshow_{qid}"] = True
-            if st.session_state.get(f"tipshow_{qid}"):
-                st.info(hint_text)
-
-        reveal_key = f"reveal_{qid}"
-        if reveal_key not in st.session_state:
-            st.session_state[reveal_key] = False
-        reveal = st.checkbox("✅ Lösung anzeigen", key=reveal_key)
-
-        if reveal:
-            st.markdown("### ✅ Lösung")
-            if solution_lines:
-                st.markdown("\n".join(solution_lines))
-            else:
-                st.markdown('(nicht hinterlegt)')
-            if example_text:
-                st.caption(f"Beispiel/Anwendung: {example_text}")
-            if gloss_terms:
-                render_glossary(glossary, gloss_terms)
-            st.markdown("### 📌 Erklärung")
-            st.write(exp_text)
-
+        st.info("Deine Streamlit-Version unterstützt keine echten Pop-ups. Lösung/Erklärung werden unten angezeigt.")
+        st.markdown("### ✅ Lösung")
+        if solution_lines:
+            st.markdown("\n".join(solution_lines))
+        st.markdown("### 📌 Erklärung")
+        st.write(exp_text)
         if no_advance:
             if st.button("Schließen"):
                 st.session_state["pending"] = None
@@ -1220,40 +1048,37 @@ if q["type"] == "mc":
         with col1:
             if st.button("Antwort abgeben", disabled=(not selected) or locked):
                 correct = is_correct_mc(q, selected)
-                # Reveal-state zurücksetzen (damit Tipp/Lösung pro Frage sauber sind)
-                st.session_state.pop(f"reveal_{qid}", None)
-                st.session_state.pop(f"tipshow_{qid}", None)
                 st.session_state["pending"] = {
                     "qid": qid,
                     "kind": "submit",
                     "title": "Ergebnis",
                     "correct": bool(correct),
                     "payload": {
-                        "ts": datetime.now().isoformat(timespec="seconds"),
-                        "correct": bool(correct),
-                        "selected": selected,
-                        "unsure": bool(unsure_flag),
-                    },
+                    "ts": datetime.now().isoformat(timespec="seconds"),
+                    "correct": bool(correct),
+                    "selected": selected,
+                    "unsure": bool(unsure_flag),
+                    }
                 }
                 st.rerun()
         with col2:
             if st.button("Ich weiß nicht 🤷", disabled=locked):
-                st.session_state.pop(f"reveal_{qid}", None)
-                st.session_state.pop(f"tipshow_{qid}", None)
                 st.session_state["pending"] = {
                     "qid": qid,
                     "kind": "skip",
                     "title": "Lösung + Erklärung",
                     "payload": {
-                        "ts": datetime.now().isoformat(timespec="seconds"),
-                        "correct": False,
-                        "selected": None,
-                        "skipped": True,
-                    },
+                    "ts": datetime.now().isoformat(timespec="seconds"),
+                    "correct": False,
+                    "selected": None,
+                    "skipped": True,
+                    }
                 }
                 st.rerun()
         with col3:
             st.write("")
+
+
 
 elif q["type"] == "open":
     st.caption("Offene Frage: tippe deine Antwort (Stichpunkte reichen). Danach bekommst du Lösung + Hinweise.")
@@ -1268,8 +1093,6 @@ elif q["type"] == "open":
     col1, col2 = st.columns([1,1])
     with col1:
         if st.button("Antwort speichern & Lösung anzeigen", disabled=locked):
-            st.session_state.pop(f"reveal_{qid}", None)
-            st.session_state.pop(f"tipshow_{qid}", None)
             st.session_state["pending"] = {
                 "qid": qid,
                 "kind": "open",
@@ -1284,8 +1107,6 @@ elif q["type"] == "open":
             st.rerun()
     with col2:
         if st.button("Ich weiß nicht 🤷", disabled=locked):
-            st.session_state.pop(f"reveal_{qid}", None)
-            st.session_state.pop(f"tipshow_{qid}", None)
             st.session_state["pending"] = {
                 "qid": qid,
                 "kind": "skip",
