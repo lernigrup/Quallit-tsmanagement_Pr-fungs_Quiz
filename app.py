@@ -720,11 +720,27 @@ if cursor_pos >= len(order) or all_answered:
 
     with colB:
         if st.button("🎲 Alle von vorne (neu gemischt)", use_container_width=True):
+            # Komplett neuer Durchlauf:
+            # 1) Fortschritt dieses Durchlaufs zurücksetzen (sonst bleibt all_answered=True)
+            state["answered"] = {}
+
+            # 2) Heutige Zähler zurücksetzen (damit die Endübersicht nicht sofort wieder erscheint)
+            today_key = str(date.today())
+            state.setdefault("daily", {})
+            state["daily"][today_key] = {"correct": 0, "wrong": 0, "skipped": 0, "unsure": 0, "total": 0}
+
+            # 3) Aus Spezial-Modi raus (falls vorhanden)
+            state["mode"] = "normal"
             state["practice_mode"] = "all"
+            state.pop("focus_order", None)
+            state.pop("focus_cursor", None)
+            state.pop("resume_cursor", None)
+
+            # 4) Neue Mischung erzwingen (gleicher Tag -> anderer Shuffle)
             state["shuffle_nonce"] = int(state.get("shuffle_nonce", 0) or 0) + 1
-            # Reset daily order for the new nonce
             ensure_daily_order(state, player, questions)
             state["cursor"] = 0
+
             save_json(player_file(player), state)
             st.rerun()
 
