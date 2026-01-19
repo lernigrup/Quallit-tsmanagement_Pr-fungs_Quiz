@@ -474,18 +474,97 @@ cursor_pos = int(state.get("cursor", 0))
 # cursor may be == len(order) to indicate "finished"
 cursor_pos = max(0, min(cursor_pos, len(order)))
 
-# Optional: nur unbeantwortete Fragen üben (springt zur nächsten unbeantworteten in der heutigen Reihenfolge)
-only_unanswered = st.toggle("Nur unbeantwortete Fragen", value=False)
-if only_unanswered:
-    for i, qid0 in enumerate(order):
-        if str(qid0) not in state["answered"]:
-            cursor_pos = i
-            break
-    else:
-        st.success("Du hast alle Fragen einmal beantwortet 🎉")
+# --- Focus mode: practice only wrong/unsure/skipped from what you've answered so far ---
+if "mode" not in state:
+    state["mode"] = "normal"  # normal | focus_wrong
+
+def compute_focus_list():
+    """IDs to practice again (wrong OR skipped OR unsure) excluding those already mastered."""
+    out = []
+    for qid0 in state.get("order") or []:
+        a = state.get("answered", {}).get(str(qid0)) or {}
+        if a.get("mastered") is True:
+            continue
+        if a.get("skipped") is True or a.get("correct") is False or a.get("unsure") is True:
+            out.append(int(qid0))
+    # Also include any items scheduled later in the order (spaced repetition) that match the criteria
+    # while keeping uniqueness and preserving order.
+    seen = set()
+    uniq = []
+    for i in out:
+        if i not in seen:
+            uniq.append(i)
+            seen.add(i)
+    return uniq
+
+# One bottom button to jump into focus practice from the current progress.
+focus_candidates = compute_focus_list()
+if state.get("mode") == "normal" and focus_candidates:
+    if st.button("🎯 Ab jetzt nur Falsche / 'Ich weiß nicht' / Unsichere üben", use_container_width=True):
+        state["mode"] = "focus_wrong"
+        state["resume_cursor"] = int(state.get("cursor", 0))
+        state["focus_order"] = focus_candidates
+        state["focus_cursor"] = 0
+        save_json(player_file(player), state)
+        st.rerun()
+
+# If we are in focus mode, override the effective order/cursor for the UI.
+if state.get("mode") == "focus_wrong":
+    order = state.get("focus_order") or []
+    cursor_pos = int(state.get("focus_cursor", 0))
+    cursor_pos = max(0, min(cursor_pos, len(order)))
+
+# Optional: nur unbeantwortete Fragen üben
+# Wichtig: Suche NICHT immer ab Frage 1, sondern ab der aktuellen Position weiter,
+# damit du nach "Ich weiß nicht" / "unsicher" nicht wieder nach vorne springst.
+only_unanswered = False
+if state.get("mode") != "focus_wrong":
+    only_unanswered = st.toggle("Nur unbeantwortete Fragen", value=False)
+    if only_unanswered:
+        start = min(cursor_pos, max(len(order) - 1, 0))
+        found = None
+        # 1) Vorwärts ab aktueller Position
+        for i in range(start, len(order)):
+            if str(order[i]) not in state["answered"]:
+                found = i
+                break
+        # 2) Wenn keine mehr vorne, dann wrap zum Anfang
+        if found is None:
+            for i in range(0, start):
+                if str(order[i]) not in state["answered"]:
+                    found = i
+                    break
+        if found is not None:
+            cursor_pos = found
+        else:
+            st.success("Du hast alle Fragen einmal beantwortet 🎉")
 
 # Finished screen: show overview and next actions
 all_answered = all(str(qid0) in state.get("answered", {}) for qid0 in order)
+
+# Special finish screen for focus mode
+if state.get("mode") == "focus_wrong" and (cursor_pos >= len(order) or len(order) == 0):
+    st.success("🎯 Fokus-Übung abgeschlossen! Du hast alle aktuell falschen/unsicheren/\"Ich weiß nicht\" Fragen bearbeitet.")
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("➡️ Normal weiter machen", use_container_width=True):
+            state["mode"] = "normal"
+            state["cursor"] = int(state.get("resume_cursor", state.get("cursor", 0)) or 0)
+            state.pop("focus_order", None)
+            state.pop("focus_cursor", None)
+            state.pop("resume_cursor", None)
+            save_json(player_file(player), state)
+            st.rerun()
+    with col2:
+        # Rebuild focus list based on current answered status
+        if st.button("🔁 Fokus nochmal starten", use_container_width=True):
+            state["mode"] = "focus_wrong"
+            state["focus_order"] = compute_focus_list()
+            state["focus_cursor"] = 0
+            save_json(player_file(player), state)
+            st.rerun()
+    st.stop()
+
 if cursor_pos >= len(order) or all_answered:
     d = format_daily(state)
     st.success("🎉 Wow, du bist durch! Alle Fragen in diesem Durchlauf erledigt.")
@@ -680,7 +759,9 @@ def persist_and_advance(result_dict):
     # Count only the FIRST time a question is answered (prevents double counting when you navigate back).
     first_time = str(qid) not in state.get("answered", {})
 
-    # --- Spaced repetition scheduling ---
+    in_focus = state.get("mode") == "focus_wrong"
+
+    # --- Spaced repetition scheduling (normal mode only) ---
     # If a question was wrong OR marked as unsure OR skipped, schedule it to reappear later.
     # We do this only the first time the question is answered to avoid infinite duplication.
     def schedule_repeat_if_needed():
@@ -706,11 +787,26 @@ def persist_and_advance(result_dict):
         # Mark that we scheduled a repeat for this question
         result_dict["repeats"] = repeats + 1
 
-    schedule_repeat_if_needed()
+    if not in_focus:
+        schedule_repeat_if_needed()
 
-    state["answered"][str(qid)] = result_dict
-    # allow cursor == len(order) to represent "finished"
-    state["cursor"] = min(cursor_pos+1, len(order))
+    # Update answered record
+    prev = state.get("answered", {}).get(str(qid)) or {}
+    merged = {**prev, **result_dict}
+
+    # If we are re-practicing and now got it right (and not unsure), mark as mastered
+    if in_focus and merged.get("correct") is True and not merged.get("skipped") and not merged.get("unsure"):
+        merged["mastered"] = True
+
+    state["answered"][str(qid)] = merged
+
+    # Advance cursor depending on mode
+    if in_focus:
+        state["focus_cursor"] = min(int(state.get("focus_cursor", cursor_pos)) + 1, len(order))
+        # Do NOT change main cursor in focus mode
+    else:
+        # allow cursor == len(order) to represent "finished"
+        state["cursor"] = min(cursor_pos+1, len(order))
     save_json(player_file(player), state)
 
     if first_time:
