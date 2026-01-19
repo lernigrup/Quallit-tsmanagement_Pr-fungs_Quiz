@@ -539,6 +539,13 @@ if state.get("mode") == "focus_wrong":
     cursor_pos = int(state.get("focus_cursor", 0))
     cursor_pos = max(0, min(cursor_pos, len(order)))
 
+# Which answered-map is active?
+# - normal: state['answered'] (master progress)
+# - wrong-only practice: state['practice_answered'] (so questions are answerable again)
+active_answered = state.get('answered', {})
+if state.get('practice_mode') == 'wrong_only':
+    active_answered = state.setdefault('practice_answered', {})
+
 # Optional: nur unbeantwortete Fragen üben
 # Wichtig: Suche NICHT immer ab Frage 1, sondern ab der aktuellen Position weiter,
 # damit du nach "Ich weiß nicht" / "unsicher" nicht wieder nach vorne springst.
@@ -550,13 +557,13 @@ if state.get("mode") != "focus_wrong":
         found = None
         # 1) Vorwärts ab aktueller Position
         for i in range(start, len(order)):
-            if str(order[i]) not in state["answered"]:
+            if str(order[i]) not in active_answered:
                 found = i
                 break
         # 2) Wenn keine mehr vorne, dann wrap zum Anfang
         if found is None:
             for i in range(0, start):
-                if str(order[i]) not in state["answered"]:
+                if str(order[i]) not in active_answered:
                     found = i
                     break
         if found is not None:
@@ -565,7 +572,7 @@ if state.get("mode") != "focus_wrong":
             st.success("Du hast alle Fragen einmal beantwortet 🎉")
 
 # Finished screen: show overview and next actions
-all_answered = all(str(qid0) in state.get("answered", {}) for qid0 in order)
+all_answered = all(str(qid0) in active_answered for qid0 in order)
 
 # Special finish screen for focus mode
 if state.get("mode") == "focus_wrong" and (cursor_pos >= len(order) or len(order) == 0):
@@ -578,6 +585,7 @@ if state.get("mode") == "focus_wrong" and (cursor_pos >= len(order) or len(order
             state.pop("focus_order", None)
             state.pop("focus_cursor", None)
             state.pop("resume_cursor", None)
+            state.pop("practice_answered", None)
             save_json(player_file(player), state)
             st.rerun()
     with col2:
@@ -592,7 +600,18 @@ if state.get("mode") == "focus_wrong" and (cursor_pos >= len(order) or len(order
 
 if cursor_pos >= len(order) or all_answered:
     d = format_daily(state)
-    st.success("🎉 Wow, du bist durch! Alle Fragen in diesem Durchlauf erledigt.")
+    if state.get('practice_mode') == 'wrong_only':
+        st.success('🎯 Übungsrunde (nur falsche/übersprungene) abgeschlossen.')
+        if st.button('↩️ Zurück zum normalen Quiz', use_container_width=True):
+            state['practice_mode'] = 'all'
+            state.pop('practice_answered', None)
+            ensure_daily_order(state, player, questions)
+            state['cursor'] = 0
+            save_json(player_file(player), state)
+            st.rerun()
+        st.caption('Hinweis: Tagesstatistik/Leaderboard bleibt unverändert – das ist nur Üben.')
+    else:
+        st.success("🎉 Wow, du bist durch! Alle Fragen in diesem Durchlauf erledigt.")
     st.markdown(
         f"**Heute:** ✅ {d['correct']}  ·  ❌ {d['wrong']}  ·  🟡 {d.get('unsure',0)}  ·  🤷 {d['skipped']}  ·  🧮 {d['total']}"
     )
@@ -711,6 +730,8 @@ if cursor_pos >= len(order) or all_answered:
         if st.button("🔁 Nur die Falschen üben", use_container_width=True, disabled=(len(wrong_ids) == 0)):
             # New session order based on wrong questions
             state["practice_mode"] = "wrong_only"
+            # Practice run should allow answering again -> separate answered map
+            state["practice_answered"] = {}
             state["order"] = deterministic_shuffle(player, state.get("order_date", str(date.today())) + "|wrong", wrong_ids)
             state["cursor"] = 0
             save_json(player_file(player), state)
@@ -735,6 +756,7 @@ if cursor_pos >= len(order) or all_answered:
             state.pop("focus_order", None)
             state.pop("focus_cursor", None)
             state.pop("resume_cursor", None)
+            state.pop("practice_answered", None)
 
             # 4) Neue Mischung erzwingen (gleicher Tag -> anderer Shuffle)
             state["shuffle_nonce"] = int(state.get("shuffle_nonce", 0) or 0) + 1
@@ -769,7 +791,7 @@ with nav3:
 
 st.markdown(f"### {q['question']}")
 
-answered_current = state.get("answered", {}).get(str(qid))
+answered_current = (active_answered or {}).get(str(qid))
 if answered_current:
     st.caption("✅ Diese Frage wurde bereits beantwortet. Du kannst die Erklärung erneut anzeigen oder mit \"Weiter\" navigieren.")
     cexp, _ = st.columns([1, 3])
@@ -798,7 +820,10 @@ if "pending" not in st.session_state:
 
 def persist_and_advance(result_dict):
     # Count only the FIRST time a question is answered (prevents double counting when you navigate back).
-    first_time = str(qid) not in state.get("answered", {})
+    # First-time within the CURRENT run (normal or wrong-only practice)
+    first_time = str(qid) not in (active_answered or {})
+    # First-time overall (master progress) – used for daily/leaderboard counting
+    first_time_master = str(qid) not in state.get("answered", {})
 
     in_focus = state.get("mode") == "focus_wrong"
 
@@ -841,6 +866,10 @@ def persist_and_advance(result_dict):
 
     state["answered"][str(qid)] = merged
 
+    # If we are in wrong-only practice, also track answered inside the practice run
+    if state.get('practice_mode') == 'wrong_only':
+        state.setdefault('practice_answered', {})[str(qid)] = merged
+
     # Advance cursor depending on mode
     if in_focus:
         state["focus_cursor"] = min(int(state.get("focus_cursor", cursor_pos)) + 1, len(order))
@@ -850,7 +879,9 @@ def persist_and_advance(result_dict):
         state["cursor"] = min(cursor_pos+1, len(order))
     save_json(player_file(player), state)
 
-    if first_time:
+    in_practice = state.get('practice_mode') == 'wrong_only'
+
+    if first_time_master and (not in_practice) and (not in_focus):
         skipped = bool(result_dict.get("skipped"))
         correct_val = result_dict.get("correct")
         bump_daily(state, correct=correct_val, skipped=skipped, unsure=bool(result_dict.get("unsure")))
