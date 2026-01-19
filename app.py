@@ -7,6 +7,15 @@ import random
 import hashlib
 import streamlit as st
 import sqlite3
+import csv
+import io
+
+try:
+    from reportlab.lib.pagesizes import A4  # type: ignore
+    from reportlab.pdfgen import canvas  # type: ignore
+except Exception:
+    A4 = None
+    canvas = None
 
 try:
     from supabase import create_client  # type: ignore
@@ -364,20 +373,23 @@ def ensure_daily_order(state: dict, player: str, questions: list[dict]):
         # Keep cursor in range
         state["cursor"] = max(0, min(int(state.get("cursor", 0)), len(order)))
 
-def bump_daily(state, correct=None, skipped=False):
+def bump_daily(state, correct=None, skipped=False, unsure=False):
     key = str(date.today())
-    d = state["daily"].setdefault(key, {"correct": 0, "wrong": 0, "skipped": 0, "total": 0})
+    d = state["daily"].setdefault(key, {"correct": 0, "wrong": 0, "skipped": 0, "unsure": 0, "total": 0})
     d["total"] += 1
     if skipped:
         d["skipped"] += 1
-    elif correct is True:
-        d["correct"] += 1
     else:
-        d["wrong"] += 1
+        if correct is True:
+            d["correct"] += 1
+        else:
+            d["wrong"] += 1
+        if unsure:
+            d["unsure"] += 1
 
 def format_daily(state):
     key = str(date.today())
-    d = state["daily"].get(key, {"correct": 0, "wrong": 0, "skipped": 0, "total": 0})
+    d = state["daily"].get(key, {"correct": 0, "wrong": 0, "skipped": 0, "unsure": 0, "total": 0})
     return d
 
 
@@ -416,6 +428,7 @@ with st.sidebar:
     st.markdown("### Heute")
     st.write(f"✅ richtig: **{d['correct']}**")
     st.write(f"❌ falsch: **{d['wrong']}**")
+    st.write(f"🟡 unsicher: **{d.get('unsure',0)}**")
     st.write(f"🤷 nicht gewusst: **{d['skipped']}**")
     st.write(f"🧮 gesamt: **{d['total']}**")
     st.divider()
@@ -477,7 +490,7 @@ if cursor_pos >= len(order) or all_answered:
     d = format_daily(state)
     st.success("🎉 Wow, du bist durch! Alle Fragen in diesem Durchlauf erledigt.")
     st.markdown(
-        f"**Heute:** ✅ {d['correct']}  ·  ❌ {d['wrong']}  ·  🤷 {d['skipped']}  ·  🧮 {d['total']}"
+        f"**Heute:** ✅ {d['correct']}  ·  ❌ {d['wrong']}  ·  🟡 {d.get('unsure',0)}  ·  🤷 {d['skipped']}  ·  🧮 {d['total']}"
     )
 
     # Collect wrong/unknown questions for a targeted session
@@ -485,8 +498,109 @@ if cursor_pos >= len(order) or all_answered:
     for qid0 in order:
         a = state.get("answered", {}).get(str(qid0)) or {}
         # Treat skipped as "to practice"; open questions (correct=None) are not counted as wrong
-        if a.get("skipped") is True or a.get("correct") is False:
+        if a.get("skipped") is True or a.get("correct") is False or a.get("unsure") is True:
             wrong_ids.append(int(qid0))
+
+    # --- Export (CSV / PDF) for wrong questions ---
+    by_id_finish = {int(qq["id"]): qq for qq in questions}
+    wrong_questions = [by_id_finish.get(int(i)) for i in wrong_ids]
+    wrong_questions = [w for w in wrong_questions if isinstance(w, dict)]
+
+    if wrong_questions:
+        st.markdown("#### 📤 Export deiner falschen/übersprungenen Fragen")
+
+        # CSV
+        csv_buf = io.StringIO()
+        writer = csv.writer(csv_buf)
+        writer.writerow(["id", "type", "question", "options", "correct", "explanation"])
+        for w in wrong_questions:
+            opts = w.get("options") or []
+            corr = w.get("correct") or []
+            writer.writerow([
+                w.get("id"),
+                w.get("type"),
+                w.get("question"),
+                " | ".join([str(x) for x in opts]),
+                ",".join([str(x) for x in corr]),
+                (w.get("explanation") or w.get("solution") or ""),
+            ])
+        csv_bytes = csv_buf.getvalue().encode("utf-8")
+        st.download_button(
+            "⬇️ Falsche Fragen als CSV",
+            data=csv_bytes,
+            file_name=f"falsche_fragen_{date.today().isoformat()}.csv",
+            mime="text/csv",
+            use_container_width=True,
+        )
+
+        # PDF (optional; requires reportlab)
+        if canvas is not None and A4 is not None:
+            pdf_buffer = io.BytesIO()
+            c = canvas.Canvas(pdf_buffer, pagesize=A4)
+            width, height = A4
+            x = 40
+            y = height - 50
+            c.setFont("Helvetica-Bold", 14)
+            c.drawString(x, y, f"Falsche/übersprungene Fragen – {player}")
+            y -= 25
+            c.setFont("Helvetica", 10)
+            c.drawString(x, y, f"Datum: {date.today().isoformat()}   Anzahl: {len(wrong_questions)}")
+            y -= 30
+
+            def write_wrapped(text: str, y_pos: float, font="Helvetica", size=10, max_width=90):
+                c.setFont(font, size)
+                # Very simple wrapping by words
+                words = (text or "").split()
+                line = ""
+                for w0 in words:
+                    test = (line + " " + w0).strip()
+                    if len(test) > max_width:
+                        c.drawString(x, y_pos, line)
+                        y_pos -= 14
+                        line = w0
+                    else:
+                        line = test
+                if line:
+                    c.drawString(x, y_pos, line)
+                    y_pos -= 14
+                return y_pos
+
+            for idx, w in enumerate(wrong_questions, start=1):
+                if y < 120:
+                    c.showPage()
+                    y = height - 50
+                c.setFont("Helvetica-Bold", 11)
+                c.drawString(x, y, f"{idx}. (ID {w.get('id')})")
+                y -= 16
+                y = write_wrapped(str(w.get("question") or ""), y, font="Helvetica", size=10)
+
+                if w.get("type") == "mc":
+                    opts = w.get("options") or []
+                    corr = set(w.get("correct") or [])
+                    for oi, opt in enumerate(opts):
+                        prefix = "✅" if oi in corr else "•"
+                        y = write_wrapped(f"{prefix} {opt}", y, font="Helvetica", size=9)
+                else:
+                    sol = (w.get("solution") or "").strip()
+                    if sol:
+                        y = write_wrapped(f"Lösung: {sol}", y, font="Helvetica", size=9)
+
+                exp = (w.get("explanation") or "").strip()
+                if exp:
+                    y = write_wrapped(f"Erklärung: {exp}", y, font="Helvetica", size=9)
+                y -= 8
+
+            c.save()
+            pdf_bytes = pdf_buffer.getvalue()
+            st.download_button(
+                "⬇️ Falsche Fragen als PDF",
+                data=pdf_bytes,
+                file_name=f"falsche_fragen_{date.today().isoformat()}.pdf",
+                mime="application/pdf",
+                use_container_width=True,
+            )
+        else:
+            st.caption("(PDF-Export nicht verfügbar – reportlab fehlt in requirements.txt.)")
 
     colA, colB = st.columns(2)
     with colA:
@@ -566,6 +680,34 @@ def persist_and_advance(result_dict):
     # Count only the FIRST time a question is answered (prevents double counting when you navigate back).
     first_time = str(qid) not in state.get("answered", {})
 
+    # --- Spaced repetition scheduling ---
+    # If a question was wrong OR marked as unsure OR skipped, schedule it to reappear later.
+    # We do this only the first time the question is answered to avoid infinite duplication.
+    def schedule_repeat_if_needed():
+        if not first_time:
+            return
+        should_repeat = bool(result_dict.get("skipped")) or (result_dict.get("correct") is False) or bool(result_dict.get("unsure"))
+        if not should_repeat:
+            return
+
+        # Avoid too many repeats of the same question
+        repeats = int((result_dict.get("repeats") or 0))
+        if repeats >= 2:
+            return
+
+        gap = int(state.get("sr_gap", 7) or 7)
+        insert_at = min(cursor_pos + gap, len(order))
+
+        # Don't schedule if it's already present ahead in the order
+        if qid in order[cursor_pos+1:]:
+            return
+
+        state["order"] = order[:insert_at] + [qid] + order[insert_at:]
+        # Mark that we scheduled a repeat for this question
+        result_dict["repeats"] = repeats + 1
+
+    schedule_repeat_if_needed()
+
     state["answered"][str(qid)] = result_dict
     # allow cursor == len(order) to represent "finished"
     state["cursor"] = min(cursor_pos+1, len(order))
@@ -574,7 +716,7 @@ def persist_and_advance(result_dict):
     if first_time:
         skipped = bool(result_dict.get("skipped"))
         correct_val = result_dict.get("correct")
-        bump_daily(state, correct=correct_val, skipped=skipped)
+        bump_daily(state, correct=correct_val, skipped=skipped, unsure=bool(result_dict.get("unsure")))
         save_json(player_file(player), state)
 
         # Update shared leaderboard (Supabase if configured; else local sqlite)
@@ -721,6 +863,9 @@ if q["type"] == "mc":
             )
             selected = [] if selected_one is None else [selected_one]
 
+        # Optional: mark as "unsicher" (will be scheduled for repetition)
+        unsure_flag = st.checkbox("🟡 Ich bin mir unsicher (kommt später nochmal)", value=False, disabled=locked)
+
         col1, col2, col3 = st.columns([1,1,1])
         with col1:
             if st.button("Antwort abgeben", disabled=(not selected) or locked):
@@ -734,6 +879,7 @@ if q["type"] == "mc":
                     "ts": datetime.now().isoformat(timespec="seconds"),
                     "correct": bool(correct),
                     "selected": selected,
+                    "unsure": bool(unsure_flag),
                     }
                 }
                 st.rerun()
@@ -764,6 +910,8 @@ elif q["type"] == "open":
     locked = bool(answered_current)
     user_answer = st.text_area("Deine Antwort", height=140, value=prev_txt, disabled=locked)
 
+    unsure_flag = st.checkbox("🟡 Ich bin mir unsicher (kommt später nochmal)", value=False, disabled=locked)
+
     col1, col2 = st.columns([1,1])
     with col1:
         if st.button("Antwort speichern & Lösung anzeigen", disabled=locked):
@@ -775,6 +923,7 @@ elif q["type"] == "open":
                     "ts": datetime.now().isoformat(timespec="seconds"),
                     "correct": None,
                     "freeText": user_answer,
+                    "unsure": bool(unsure_flag),
                 },
             }
             st.rerun()
