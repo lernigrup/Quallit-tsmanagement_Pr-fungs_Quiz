@@ -1,13 +1,3 @@
-# app.py
-# Streamlit Lernquiz (MC) mit:
-# - stabiler Fragenreihenfolge (kein Zurückspringen durch Reruns)  ✅ Bugfix
-# - Antwortstatus: richtig / falsch / nicht gewusst / unsicher
-# - Navigation Weiter / Zurück
-# - Beim Zurückgehen: Antwort bleibt markiert, Erklärung bleibt abrufbar, Frage ist gesperrt (keine neue Wertung)
-# - Fokus-Modus: übt nur falsch/unsicher/nicht gewusst
-# - Abschlussansicht + Export (CSV + PDF via reportlab)
-# - Supabase Rangliste (quiz_scores_daily, PK: player+day)
-# - Lokaler SQLite-Fallback nur informativ
 
 import json
 import os
