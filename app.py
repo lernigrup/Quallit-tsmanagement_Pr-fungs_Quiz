@@ -1,645 +1,1121 @@
 
 import json
 import os
+from pathlib import Path
+from datetime import date, datetime
 import random
-import sqlite3
-from datetime import date
-from io import BytesIO
-from typing import Dict, Any, List, Optional
-
+import hashlib
 import streamlit as st
+import sqlite3
+import csv
+import io
 
-# Supabase: python client (supabase)
 try:
-    from supabase import create_client
+    from reportlab.lib.pagesizes import A4  # type: ignore
+    from reportlab.pdfgen import canvas  # type: ignore
+except Exception:
+    A4 = None
+    canvas = None
+
+try:
+    from supabase import create_client  # type: ignore
 except Exception:
     create_client = None
 
-# PDF Export (reportlab)
-from reportlab.lib.pagesizes import A4
-from reportlab.lib.units import cm
-from reportlab.pdfgen import canvas
+BASE_DIR = Path(__file__).parent
+QUESTIONS_FILE = BASE_DIR / "questions.json"
+CUSTOM_FILE = BASE_DIR / "custom_questions.json"
+PROGRESS_DIR = BASE_DIR / "progress"
+PROGRESS_DIR.mkdir(exist_ok=True)
 
+"""Leaderboards
 
-# -----------------------------
-# Konfiguration
-# -----------------------------
-QUESTIONS_FILE = "questions.json"
-SQLITE_FILE = "local_progress.sqlite3"
+If you deploy the app (e.g., Streamlit Community Cloud) and want a shared leaderboard
+between friends, configure Supabase credentials in Streamlit secrets.
 
+Fallback: local SQLite leaderboard (works only for users on the same machine).
+"""
 
-# -----------------------------
-# Helpers: Laden / Identität
-# -----------------------------
-def load_questions(path: str) -> List[Dict[str, Any]]:
-    with open(path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-    if not isinstance(data, list):
-        raise ValueError("questions.json muss eine LISTE von Fragen sein.")
-    # Erwartetes Minimalformat:
-    # {
-    #   "id": "q1",
-    #   "question": "…",
-    #   "options": ["A", "B", "C", "D"],
-    #   "answer_index": 2,
-    #   "explanation": "…"
-    # }
-    return data
+LEADERBOARD_DB = BASE_DIR / "leaderboard.db"  # local fallback
 
+LB_TABLE = "quiz_scores_daily"  # Supabase table name
 
-def qid(q: Dict[str, Any], idx_fallback: int) -> str:
-    # stabile ID – wenn keine vorhanden ist, fallback
-    return str(q.get("id") or f"idx_{idx_fallback}")
+def supabase_client():
+    """Create a Supabase client if secrets are configured, else return None."""
+    if create_client is None:
+        return None
+    try:
+        url = st.secrets.get("SUPABASE_URL", "").strip()
+        key = st.secrets.get("SUPABASE_SERVICE_KEY", "").strip()
+    except Exception:
+        return None
+    if not url or not key:
+        return None
+    return create_client(url, key)
 
-
-# -----------------------------
-# SQLite Fallback (nur informativ)
-# -----------------------------
-def sqlite_init():
-    con = sqlite3.connect(SQLITE_FILE)
-    cur = con.cursor()
-    cur.execute(
+def lb_connect():
+    """Local fallback DB for leaderboard when Supabase isn't configured."""
+    conn = sqlite3.connect(str(LEADERBOARD_DB))
+    conn.execute(
         """
-        CREATE TABLE IF NOT EXISTS progress (
-            player TEXT,
-            qid TEXT,
-            status TEXT,
-            selected_index INTEGER,
-            updated_at TEXT,
-            PRIMARY KEY (player, qid)
+        CREATE TABLE IF NOT EXISTS scores_daily (
+          player TEXT NOT NULL,
+          day TEXT NOT NULL,
+          correct INTEGER NOT NULL DEFAULT 0,
+          wrong INTEGER NOT NULL DEFAULT 0,
+          skipped INTEGER NOT NULL DEFAULT 0,
+          updated_at TEXT NOT NULL,
+          PRIMARY KEY (player, day)
         )
         """
     )
-    con.commit()
-    con.close()
+    return conn
 
+def lb_upsert_daily(player: str, day: str, delta_correct=0, delta_wrong=0, delta_skipped=0):
+    """Upsert daily score (shared via Supabase if configured; else local sqlite)."""
+    player = player.strip()
+    if not player:
+        return
+    now = datetime.now().isoformat(timespec="seconds")
 
-def sqlite_upsert(player: str, qid_: str, status: str, selected_index: Optional[int]):
-    con = sqlite3.connect(SQLITE_FILE)
-    cur = con.cursor()
-    cur.execute(
-        """
-        INSERT INTO progress(player, qid, status, selected_index, updated_at)
-        VALUES(?,?,?,?, datetime('now'))
-        ON CONFLICT(player, qid) DO UPDATE SET
-            status=excluded.status,
-            selected_index=excluded.selected_index,
-            updated_at=datetime('now')
-        """,
-        (player, qid_, status, selected_index if selected_index is not None else None),
-    )
-    con.commit()
-    con.close()
-
-
-# -----------------------------
-# Supabase: Scores daily
-# -----------------------------
-def supabase_client():
-    # Streamlit Secrets:
-    # SUPABASE_URL
-    # SUPABASE_SERVICE_KEY
-    url = st.secrets.get("SUPABASE_URL", None)
-    key = st.secrets.get("SUPABASE_SERVICE_KEY", None)
-    if not url or not key or create_client is None:
-        return None
-    try:
-        return create_client(url, key)
-    except Exception:
-        return None
-
-
-def supabase_upsert_daily_score(player: str, score: int, total: int):
     sb = supabase_client()
-    if sb is None:
-        return False, "Supabase nicht konfiguriert/erreichbar."
-    day = date.today().isoformat()
-    try:
-        # Tabelle: quiz_scores_daily
-        # PK: (player, day)
+    if sb is not None:
+        # Upsert into Supabase table quiz_scores_daily with PK (player, day)
         payload = {
             "player": player,
             "day": day,
-            "score": score,
-            "total": total,
+            "correct": int(delta_correct),
+            "wrong": int(delta_wrong),
+            "skipped": int(delta_skipped),
+            "updated_at": now,
         }
-        # upsert (conflict target hängt vom Schema ab; Supabase python client upsert nutzt on_conflict optional)
-        # Wir versuchen robust:
-        res = sb.table("quiz_scores_daily").upsert(payload, on_conflict="player,day").execute()
-        _ = res  # silence
-        return True, "Score gespeichert."
-    except Exception as e:
-        return False, f"Supabase Fehler: {e}"
+        # We need to add deltas, not overwrite. Fetch row first.
+        try:
+            existing = sb.table(LB_TABLE).select("correct,wrong,skipped").eq("player", player).eq("day", day).execute()
+            rows = getattr(existing, "data", None) or []
+            if rows:
+                c = int(rows[0].get("correct", 0)) + int(delta_correct)
+                w = int(rows[0].get("wrong", 0)) + int(delta_wrong)
+                s = int(rows[0].get("skipped", 0)) + int(delta_skipped)
+                sb.table(LB_TABLE).update({"correct": c, "wrong": w, "skipped": s, "updated_at": now}).eq("player", player).eq("day", day).execute()
+            else:
+                sb.table(LB_TABLE).insert(payload).execute()
+        except Exception:
+            # If anything goes wrong, fail silently (quiz should still work)
+            return
+        return
+
+    # Local fallback
+    conn = lb_connect()
+    cur = conn.cursor()
+    cur.execute("SELECT correct, wrong, skipped FROM scores_daily WHERE player=? AND day=?", (player, day))
+    row = cur.fetchone()
+    if row:
+        c, w, s = row
+        c += int(delta_correct)
+        w += int(delta_wrong)
+        s += int(delta_skipped)
+        cur.execute(
+            "UPDATE scores_daily SET correct=?, wrong=?, skipped=?, updated_at=? WHERE player=? AND day=?",
+            (c, w, s, now, player, day),
+        )
+    else:
+        cur.execute(
+            "INSERT INTO scores_daily(player, day, correct, wrong, skipped, updated_at) VALUES (?,?,?,?,?,?)",
+            (player, day, int(delta_correct), int(delta_wrong), int(delta_skipped), now),
+        )
+    conn.commit()
+    conn.close()
 
 
-def supabase_fetch_leaderboard(limit: int = 20):
+def lb_get_leaderboards(day: str, n: int = 20):
+    """Return (today_rows, total_rows).
+
+    Each row: {player, correct, wrong, skipped, updated_at}
+    """
     sb = supabase_client()
-    if sb is None:
-        return None
-    day = date.today().isoformat()
+    if sb is not None:
+        try:
+            # Today
+            today_resp = sb.table(LB_TABLE).select("player,correct,wrong,skipped,updated_at").eq("day", day).execute()
+            today = getattr(today_resp, "data", None) or []
+            today.sort(key=lambda r: (-int(r.get("correct", 0)), int(r.get("wrong", 0)), int(r.get("skipped", 0))))
+            today = today[: int(n)]
+
+            # Total: fetch all and aggregate per player (simple & fine for small groups)
+            all_resp = sb.table(LB_TABLE).select("player,correct,wrong,skipped").execute()
+            rows = getattr(all_resp, "data", None) or []
+            agg = {}
+            for r in rows:
+                p = r.get("player")
+                if not p:
+                    continue
+                a = agg.setdefault(p, {"player": p, "correct": 0, "wrong": 0, "skipped": 0, "updated_at": ""})
+                a["correct"] += int(r.get("correct", 0))
+                a["wrong"] += int(r.get("wrong", 0))
+                a["skipped"] += int(r.get("skipped", 0))
+            total = list(agg.values())
+            total.sort(key=lambda r: (-r["correct"], r["wrong"], r["skipped"]))
+            total = total[: int(n)]
+            return today, total
+        except Exception:
+            return [], []
+
+    # Local fallback
+    conn = lb_connect()
+    cur = conn.cursor()
+
+    cur.execute(
+        """
+        SELECT player, correct, wrong, skipped, updated_at
+        FROM scores_daily
+        WHERE day=?
+        ORDER BY correct DESC, wrong ASC, skipped ASC
+        LIMIT ?
+        """,
+        (day, int(n)),
+    )
+    today = [
+        {"player": r[0], "correct": r[1], "wrong": r[2], "skipped": r[3], "updated_at": r[4]}
+        for r in cur.fetchall()
+    ]
+
+    cur.execute(
+        """
+        SELECT player,
+               SUM(correct) AS correct,
+               SUM(wrong) AS wrong,
+               SUM(skipped) AS skipped
+        FROM scores_daily
+        GROUP BY player
+        ORDER BY correct DESC, wrong ASC, skipped ASC
+        LIMIT ?
+        """,
+        (int(n),),
+    )
+    total = [
+        {"player": r[0], "correct": r[1], "wrong": r[2], "skipped": r[3], "updated_at": ""}
+        for r in cur.fetchall()
+    ]
+    conn.close()
+    return today, total
+
+def lb_top_total(n=20):
+    """Return Top N by total correct (sum over all days)."""
+    sb = supabase_client()
+    if sb is not None:
+        try:
+            res = sb.table(LB_TABLE).select("player,correct,wrong,skipped").execute()
+            rows = getattr(res, "data", None) or []
+            agg = {}
+            for r in rows:
+                p = r.get("player")
+                if not p:
+                    continue
+                a = agg.setdefault(p, {"player": p, "correct": 0, "wrong": 0, "skipped": 0})
+                a["correct"] += int(r.get("correct", 0))
+                a["wrong"] += int(r.get("wrong", 0))
+                a["skipped"] += int(r.get("skipped", 0))
+            out = list(agg.values())
+            out.sort(key=lambda x: (-x["correct"], x["wrong"], x["skipped"], x["player"].lower()))
+            return out[: int(n)]
+        except Exception:
+            return []
+
+    conn = lb_connect()
+    cur = conn.cursor()
+    cur.execute(
+        """
+        SELECT player,
+               SUM(correct) AS correct,
+               SUM(wrong)   AS wrong,
+               SUM(skipped) AS skipped,
+               MAX(updated_at) AS updated_at
+        FROM scores_daily
+        GROUP BY player
+        ORDER BY correct DESC, wrong ASC, skipped ASC
+        LIMIT ?
+        """,
+        (int(n),),
+    )
+    rows = cur.fetchall()
+    conn.close()
+    return [
+        {"player": r[0], "correct": r[1], "wrong": r[2], "skipped": r[3], "updated_at": r[4]}
+        for r in rows
+    ]
+
+def lb_top_today(day: str, n=20):
+    """Return Top N for a specific day."""
+    sb = supabase_client()
+    if sb is not None:
+        try:
+            res = sb.table(LB_TABLE).select("player,correct,wrong,skipped,updated_at").eq("day", day).execute()
+            rows = getattr(res, "data", None) or []
+            rows.sort(key=lambda r: (-int(r.get("correct", 0)), int(r.get("wrong", 0)), int(r.get("skipped", 0)), (r.get("player") or "").lower()))
+            return rows[: int(n)]
+        except Exception:
+            return []
+
+    conn = lb_connect()
+    cur = conn.cursor()
+    cur.execute(
+        """
+        SELECT player, correct, wrong, skipped, updated_at
+        FROM scores_daily
+        WHERE day=?
+        ORDER BY correct DESC, wrong ASC, skipped ASC
+        LIMIT ?
+        """,
+        (day, int(n)),
+    )
+    rows = cur.fetchall()
+    conn.close()
+    return [
+        {"player": r[0], "correct": r[1], "wrong": r[2], "skipped": r[3], "updated_at": r[4]}
+        for r in rows
+    ]
+
+def safe_explanation(q: dict) -> str:
+    """Return a user-friendly explanation. If none exists, provide a placeholder."""
+    exp = (q.get("explanation") or "").strip()
+    if exp:
+        return exp
+    # Placeholder: still useful, but makes it explicit the explanation is missing.
+    if q.get("type") == "mc":
+        correct_idxs = q.get("correct", [])
+        opts = q.get("options", [])
+        if correct_idxs and opts:
+            labels = []
+            for i in correct_idxs:
+                if 0 <= i < len(opts):
+                    labels.append(opts[i])
+            if labels:
+                return "Noch keine ausführliche Erklärung hinterlegt. Richtige Antwort(en): " + "; ".join(labels)
+    sol = (q.get("solution") or "").strip()
+    if sol:
+        return "Noch keine ausführliche Erklärung hinterlegt. Lösungsvorschlag: " + sol
+    return "Noch keine Erklärung hinterlegt. (Du kannst unten im Bereich „Neue Frage hinzufügen“ eine Erklärung ergänzen.)"
+
+def load_json(path, default):
+    if path.exists():
+        return json.loads(path.read_text(encoding="utf-8"))
+    return default
+
+def save_json(path, obj):
+    path.write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
+
+def load_questions():
+    base = load_json(QUESTIONS_FILE, [])
+    custom = load_json(CUSTOM_FILE, [])
+    # custom questions get ids after base max
+    if custom:
+        max_id = max(q["id"] for q in base) if base else 0
+        normalized = []
+        for i,q in enumerate(custom, start=1):
+            q2 = dict(q)
+            if "id" not in q2:
+                q2["id"] = max_id + i
+            normalized.append(q2)
+        custom = normalized
+    return base + custom
+
+def player_file(player: str) -> Path:
+    safe = "".join(ch for ch in player.strip() if ch.isalnum() or ch in ("-","_")).strip()
+    if not safe:
+        safe = "player"
+    return PROGRESS_DIR / f"{safe.lower()}.json"
+
+def load_player_state(player: str):
+    path = player_file(player)
+    return load_json(path, {
+        "player": player,
+        "cursor": 0,        # position within today's shuffled order
+        "order_date": "",   # YYYY-MM-DD
+        "order": [],        # list of question IDs in the order shown today
+        "answered": {},      # qid -> {"ts": iso, "correct": bool, "selected": ...}
+        "daily": {},         # "YYYY-MM-DD" -> {"correct": int, "wrong": int, "skipped": int, "total": int}
+    })
+
+
+def deterministic_shuffle(player: str, day: str, items: list[int]) -> list[int]:
+    """Stable shuffle per player+day, so you get variety but can continue where you stopped."""
+    seed_bytes = hashlib.sha256((player + "|" + day).encode("utf-8")).digest()
+    seed = int.from_bytes(seed_bytes[:8], "big", signed=False)
+    rng = random.Random(seed)
+    out = list(items)
+    rng.shuffle(out)
+    return out
+
+
+def ensure_daily_order(state: dict, player: str, questions: list[dict]):
+    """Ensure state has a shuffled order for today.
+
+    IMPORTANT: state['order'] may contain duplicates (spaced repetition).
+    We must NOT force len(order) == len(ids) or set(order) == ids_set.
+    """
+    today = str(date.today())
+    ids = [int(q["id"]) for q in questions]
+    ids_set = set(ids)
+
+    # A nonce lets us restart "from the beginning" with a different shuffle on the same day.
+    nonce = int(state.get("shuffle_nonce", 0) or 0)
+    mix_key = f"{today}#{nonce}"
+
+    order = state.get("order") or []
+    order_date = state.get("order_date") or ""
+
+    # Regenerate if new day / missing order
+    if order_date != mix_key or not order:
+        state["order_date"] = mix_key
+        state["order"] = deterministic_shuffle(player, mix_key, ids)
+        state["cursor"] = 0
+        return
+
+    # Normalize stored order to ints
     try:
-        res = (
-            sb.table("quiz_scores_daily")
-            .select("player,score,total,day")
-            .eq("day", day)
-            .order("score", desc=True)
-            .limit(limit)
-            .execute()
-        )
-        return res.data
+        order_ints = [int(x) for x in order]
     except Exception:
-        return None
+        order_ints = []
+
+    # If order contains IDs that no longer exist -> regenerate
+    if not set(order_ints).issubset(ids_set):
+        state["order_date"] = mix_key
+        state["order"] = deterministic_shuffle(player, mix_key, ids)
+        state["cursor"] = 0
+        return
+
+    # If new questions were added since last time, append them (keep existing order!)
+    order_set = set(order_ints)
+    missing = [i for i in ids if i not in order_set]
+    if missing:
+        missing_shuffled = deterministic_shuffle(player, mix_key + "|new", missing)
+        order_ints = order_ints + missing_shuffled
+        state["order"] = order_ints
+    else:
+        state["order"] = order_ints
+
+    # Keep cursor in range. NOTE: order can be longer than ids because of repeats.
+    state["cursor"] = max(0, min(int(state.get("cursor", 0)), len(state["order"])))
+
+def bump_daily(state, correct=None, skipped=False, unsure=False):
+    key = str(date.today())
+    d = state["daily"].setdefault(key, {"correct": 0, "wrong": 0, "skipped": 0, "unsure": 0, "total": 0})
+    d["total"] += 1
+    if skipped:
+        d["skipped"] += 1
+    else:
+        if correct is True:
+            d["correct"] += 1
+        else:
+            d["wrong"] += 1
+        if unsure:
+            d["unsure"] += 1
+
+def format_daily(state):
+    key = str(date.today())
+    d = state["daily"].get(key, {"correct": 0, "wrong": 0, "skipped": 0, "unsure": 0, "total": 0})
+    return d
 
 
-# -----------------------------
-# Export: CSV / PDF
-# -----------------------------
-def build_export_rows(questions: List[Dict[str, Any]], answers: Dict[str, Any]) -> List[Dict[str, Any]]:
-    rows = []
-    for i, q in enumerate(questions):
-        q_id = qid(q, i)
-        a = answers.get(q_id)
-        if not a:
-            continue
-        if a["status"] not in ("falsch", "unsicher", "nicht gewusst"):
-            continue
-        rows.append(
-            {
-                "qid": q_id,
-                "question": q.get("question", ""),
-                "your_status": a["status"],
-                "your_answer": a.get("selected_text") or "",
-                "correct_answer": q["options"][q["answer_index"]] if "answer_index" in q else "",
-                "explanation": q.get("explanation", ""),
-            }
-        )
-    return rows
+def is_correct_mc(q, selected):
+    correct = set(q.get("correct", []))
+    if q.get("answerType", "single") == "multi":
+        return set(selected) == correct
+    return len(selected) == 1 and selected[0] in correct
 
+HAS_DIALOG = hasattr(st, "dialog")
 
-def export_csv_bytes(rows: List[Dict[str, Any]]) -> bytes:
-    # einfache CSV-Erzeugung ohne pandas
-    import csv
+st.set_page_config(page_title="Lern-Quiz", layout="centered")
 
-    buf = BytesIO()
-    # excel-friendly: utf-8-sig
-    buf.write("\ufeff".encode("utf-8"))
-    writer = csv.DictWriter(buf, fieldnames=list(rows[0].keys()) if rows else ["qid"])
-    writer.writeheader()
-    for r in rows:
-        writer.writerow(r)
-    return buf.getvalue()
+st.title("📚 Lern-Quiz (aus deinem Lernzettel)")
+st.caption("Speichert deinen Fortschritt pro Spielername lokal im Ordner „quiz_app/progress“.")
 
-
-def export_pdf_bytes(rows: List[Dict[str, Any]], title: str = "Falsche/Unsichere Fragen Export") -> bytes:
-    buf = BytesIO()
-    c = canvas.Canvas(buf, pagesize=A4)
-    width, height = A4
-
-    x = 2 * cm
-    y = height - 2 * cm
-
-    c.setFont("Helvetica-Bold", 14)
-    c.drawString(x, y, title)
-    y -= 1.0 * cm
-
-    c.setFont("Helvetica", 10)
-    c.drawString(x, y, f"Datum: {date.today().isoformat()}")
-    y -= 1.0 * cm
-
-    if not rows:
-        c.drawString(x, y, "Keine falschen/unsicheren Fragen vorhanden. ✅")
-        c.showPage()
-        c.save()
-        return buf.getvalue()
-
-    def draw_wrapped(text: str, x0: float, y0: float, max_width: float, line_height: float) -> float:
-        # sehr simples wrapping
-        import textwrap
-
-        # Näherung: 95 Zeichen ~ Zeilenbreite (je nach Font)
-        wrapped = textwrap.wrap(text, width=100)
-        y_curr = y0
-        for line in wrapped:
-            if y_curr < 2 * cm:
-                c.showPage()
-                c.setFont("Helvetica", 10)
-                y_curr = height - 2 * cm
-            c.drawString(x0, y_curr, line)
-            y_curr -= line_height
-        return y_curr
-
-    for idx, r in enumerate(rows, start=1):
-        if y < 3 * cm:
-            c.showPage()
-            y = height - 2 * cm
-
-        c.setFont("Helvetica-Bold", 11)
-        c.drawString(x, y, f"{idx}. {r['your_status'].upper()}")
-        y -= 0.6 * cm
-
-        c.setFont("Helvetica-Bold", 10)
-        c.drawString(x, y, "Frage:")
-        y -= 0.5 * cm
-        c.setFont("Helvetica", 10)
-        y = draw_wrapped(r["question"], x, y, width - 4 * cm, 0.45 * cm)
-        y -= 0.2 * cm
-
-        c.setFont("Helvetica-Bold", 10)
-        c.drawString(x, y, f"Deine Antwort: {r['your_answer']}")
-        y -= 0.5 * cm
-
-        c.setFont("Helvetica-Bold", 10)
-        c.drawString(x, y, f"Richtige Antwort: {r['correct_answer']}")
-        y -= 0.6 * cm
-
-        if r.get("explanation"):
-            c.setFont("Helvetica-Bold", 10)
-            c.drawString(x, y, "Erklärung:")
-            y -= 0.5 * cm
-            c.setFont("Helvetica", 10)
-            y = draw_wrapped(r["explanation"], x, y, width - 4 * cm, 0.45 * cm)
-            y -= 0.4 * cm
-
-        # Trennlinie
-        c.line(x, y, width - 2 * cm, y)
-        y -= 0.6 * cm
-
-    c.showPage()
-    c.save()
-    return buf.getvalue()
-
-
-# -----------------------------
-# Session-State Setup (KRITISCH für Bugfix)
-# -----------------------------
-def init_state():
-    sqlite_init()
-
-    if "player" not in st.session_state:
-        st.session_state.player = ""
-
-    # Antworten: qid -> dict(status, selected_index, selected_text, locked)
-    if "answers" not in st.session_state:
-        st.session_state.answers = {}
-
-    if "q_idx" not in st.session_state:
-        st.session_state.q_idx = 0
-
-    # Stabiler Fragenpool + stabile Reihenfolge: NUR EINMAL mischen
-    if "questions_order" not in st.session_state:
-        qs = load_questions(QUESTIONS_FILE)
-        random.shuffle(qs)
-        st.session_state.questions_order = qs
-
-    # Fokus-Mode
-    if "focus_mode" not in st.session_state:
-        st.session_state.focus_mode = False
-
-    if "focus_ids" not in st.session_state:
-        st.session_state.focus_ids = []
-
-    # Erklärung-UI pro Frage (toggle)
-    if "show_expl" not in st.session_state:
-        st.session_state.show_expl = {}  # qid -> bool
-
-    # Abschlussansicht
-    if "finished" not in st.session_state:
-        st.session_state.finished = False
-
-
-def get_active_questions() -> List[Dict[str, Any]]:
-    qs = st.session_state.questions_order
-    if not st.session_state.focus_mode:
-        return qs
-
-    # Fokus: nur markierte IDs
-    ids = set(st.session_state.focus_ids)
-    filtered = []
-    for i, q in enumerate(qs):
-        if qid(q, i) in ids:
-            filtered.append(q)
-    return filtered
-
-
-def current_question() -> Optional[Dict[str, Any]]:
-    qs = get_active_questions()
-    if st.session_state.q_idx < 0:
-        st.session_state.q_idx = 0
-    if st.session_state.q_idx >= len(qs):
-        return None
-    return qs[st.session_state.q_idx]
-
-
-def mark_for_focus(q_id: str, status: str):
-    if status in ("falsch", "unsicher", "nicht gewusst"):
-        if q_id not in st.session_state.focus_ids:
-            st.session_state.focus_ids.append(q_id)
-
-
-def compute_score_all() -> (int, int):
-    # Score nur über "richtig"
-    qs = st.session_state.questions_order
-    total = len(qs)
-    correct = 0
-    for i, q in enumerate(qs):
-        q_id = qid(q, i)
-        a = st.session_state.answers.get(q_id)
-        if a and a.get("status") == "richtig":
-            correct += 1
-    return correct, total
-
-
-def reset_all_questions_new_shuffle():
-    qs = load_questions(QUESTIONS_FILE)
-    random.shuffle(qs)
-    st.session_state.questions_order = qs
-
-    st.session_state.answers = {}
-    st.session_state.q_idx = 0
-    st.session_state.focus_mode = False
-    st.session_state.focus_ids = []
-    st.session_state.show_expl = {}
-    st.session_state.finished = False
-
-
-def start_focus_mode_from_marked():
-    st.session_state.focus_mode = True
-    st.session_state.q_idx = 0
-    st.session_state.finished = False
-
-
-def exit_focus_mode():
-    st.session_state.focus_mode = False
-    st.session_state.q_idx = 0
-    st.session_state.finished = False
-
-
-# -----------------------------
-# UI
-# -----------------------------
-st.set_page_config(page_title="Lernquiz", layout="centered")
-init_state()
-
-st.title("📘 Lernquiz")
+questions = load_questions()
+if not questions:
+    st.error("Keine Fragen gefunden. questions.json fehlt oder ist leer.")
+    st.stop()
 
 with st.sidebar:
     st.subheader("Spieler")
-    st.session_state.player = st.text_input("Name", value=st.session_state.player, placeholder="z.B. Max")
-
-    st.divider()
-    st.subheader("Modus")
-    if not st.session_state.focus_mode:
-        st.caption("Normalmodus: alle Fragen")
-        if st.button("🎯 Fokus-Modus: nur falsch/unsicher üben", use_container_width=True):
-            # Fokus-IDs müssen existieren, sonst macht’s keinen Sinn – aber wir lassen es zu, endet dann schnell.
-            start_focus_mode_from_marked()
-            st.rerun()
+    player = st.text_input("Spielername", value=st.session_state.get("player",""))
+    if player:
+        st.session_state["player"] = player
+        state = load_player_state(player)
+        # Ensure a deterministic shuffled order for today.
+        ensure_daily_order(state, player, questions)
+        save_json(player_file(player), state)
     else:
-        st.caption("Fokus-Modus aktiv")
-        if st.button("↩️ Zurück zum Normalmodus", use_container_width=True):
-            exit_focus_mode()
-            st.rerun()
+        st.info("Gib einen Spielernamen ein, damit Fortschritt gespeichert werden kann.")
+        st.stop()
+
+    d = format_daily(state)
+    st.markdown("### Heute")
+    st.write(f"✅ richtig: **{d['correct']}**")
+    st.write(f"❌ falsch: **{d['wrong']}**")
+    st.write(f"🟡 unsicher: **{d.get('unsure',0)}**")
+    st.write(f"🤷 nicht gewusst: **{d['skipped']}**")
+    st.write(f"🧮 gesamt: **{d['total']}**")
+    st.divider()
+
+    show_lb = st.toggle("🏁 Vergleich / Leaderboard", value=False)
+    if show_lb:
+        st.caption("Für Freunde-Vergleich: deployen + Supabase einrichten. Lokal vergleicht es nur auf diesem PC.")
+        today_rows, total_rows = lb_get_leaderboards(str(date.today()), n=20)
+        st.write("**Heute (Top 20)**")
+        if today_rows:
+            st.dataframe(
+                [{"Spieler": r["player"], "✅": r["correct"], "❌": r["wrong"], "🤷": r["skipped"], "Update": r.get("updated_at","")} for r in today_rows],
+                hide_index=True,
+                use_container_width=True,
+            )
+        else:
+            st.info("Noch keine Einträge für heute.")
+
+        st.write("**Gesamt (Top 20)**")
+        if total_rows:
+            st.dataframe(
+                [{"Spieler": r["player"], "✅": r["correct"], "❌": r["wrong"], "🤷": r["skipped"], "Update": r.get("updated_at","")} for r in total_rows],
+                hide_index=True,
+                use_container_width=True,
+            )
+        else:
+            st.info("Noch keine Gesamteinträge.")
 
     st.divider()
-    st.subheader("Rangliste (heute)")
-    lb = supabase_fetch_leaderboard(limit=15)
-    if lb:
-        for row in lb:
-            st.write(f"**{row['player']}**: {row['score']}/{row['total']}")
-    else:
-        st.caption("Keine Rangliste (Supabase nicht aktiv oder keine Daten).")
+    if st.button("Fortschritt zurücksetzen (nur Cursor)"):
+        state["cursor"] = 0
+        save_json(player_file(player), state)
+        st.success("Cursor zurückgesetzt. (Antwort-Historie bleibt erhalten.)")
+    if st.button("Alles zurücksetzen (Cursor + Historie)"):
+        state = {
+            "player": player, "cursor": 0, "order_date": "", "order": [], "answered": {}, "daily": {}
+        }
+        save_json(player_file(player), state)
+        st.success("Alles zurückgesetzt.")
 
-    st.divider()
-    if st.button("🔄 Alles neu starten (neu mischen)", use_container_width=True):
-        reset_all_questions_new_shuffle()
+order = state.get("order") or [int(q["id"]) for q in questions]
+cursor_pos = int(state.get("cursor", 0))
+# cursor may be == len(order) to indicate "finished"
+cursor_pos = max(0, min(cursor_pos, len(order)))
+
+# --- Focus mode: practice only wrong/unsure/skipped from what you've answered so far ---
+if "mode" not in state:
+    state["mode"] = "normal"  # normal | focus_wrong
+
+def compute_focus_list():
+    """IDs to practice again (wrong OR skipped OR unsure) excluding those already mastered."""
+    out = []
+    for qid0 in state.get("order") or []:
+        a = state.get("answered", {}).get(str(qid0)) or {}
+        if a.get("mastered") is True:
+            continue
+        if a.get("skipped") is True or a.get("correct") is False or a.get("unsure") is True:
+            out.append(int(qid0))
+    # Also include any items scheduled later in the order (spaced repetition) that match the criteria
+    # while keeping uniqueness and preserving order.
+    seen = set()
+    uniq = []
+    for i in out:
+        if i not in seen:
+            uniq.append(i)
+            seen.add(i)
+    return uniq
+
+# One bottom button to jump into focus practice from the current progress.
+focus_candidates = compute_focus_list()
+if state.get("mode") == "normal" and focus_candidates:
+    if st.button("🎯 Ab jetzt nur Falsche / 'Ich weiß nicht' / Unsichere üben", use_container_width=True):
+        state["mode"] = "focus_wrong"
+        state["resume_cursor"] = int(state.get("cursor", 0))
+        state["focus_order"] = focus_candidates
+        state["focus_cursor"] = 0
+        save_json(player_file(player), state)
         st.rerun()
 
+# If we are in focus mode, override the effective order/cursor for the UI.
+if state.get("mode") == "focus_wrong":
+    order = state.get("focus_order") or []
+    cursor_pos = int(state.get("focus_cursor", 0))
+    cursor_pos = max(0, min(cursor_pos, len(order)))
 
-# -----------------------------
-# Abschlussansicht
-# -----------------------------
-qs_active = get_active_questions()
-q = current_question()
+# Optional: nur unbeantwortete Fragen üben
+# Wichtig: Suche NICHT immer ab Frage 1, sondern ab der aktuellen Position weiter,
+# damit du nach "Ich weiß nicht" / "unsicher" nicht wieder nach vorne springst.
+only_unanswered = False
+if state.get("mode") != "focus_wrong":
+    only_unanswered = st.toggle("Nur unbeantwortete Fragen", value=False)
+    if only_unanswered:
+        start = min(cursor_pos, max(len(order) - 1, 0))
+        found = None
+        # 1) Vorwärts ab aktueller Position
+        for i in range(start, len(order)):
+            if str(order[i]) not in state["answered"]:
+                found = i
+                break
+        # 2) Wenn keine mehr vorne, dann wrap zum Anfang
+        if found is None:
+            for i in range(0, start):
+                if str(order[i]) not in state["answered"]:
+                    found = i
+                    break
+        if found is not None:
+            cursor_pos = found
+        else:
+            st.success("Du hast alle Fragen einmal beantwortet 🎉")
 
-if q is None:
-    # Ende des aktuellen Modus erreicht
-    st.session_state.finished = True
+# Finished screen: show overview and next actions
+all_answered = all(str(qid0) in state.get("answered", {}) for qid0 in order)
 
-if st.session_state.finished:
-    st.success("Wow, du bist durch ✅")
-
-    # Score speichern (nur wenn Playername gesetzt)
-    score, total = compute_score_all()
-    if st.session_state.player.strip():
-        ok, msg = supabase_upsert_daily_score(st.session_state.player.strip(), score, total)
-        st.caption(msg if ok else msg)
-
-    st.write(f"Dein Score (gesamt): **{score}/{total}**")
-
-    # Export falsch/unsicher/nicht gewusst
-    export_rows = build_export_rows(st.session_state.questions_order, st.session_state.answers)
-
-    colA, colB = st.columns(2)
-    with colA:
-        if st.button("🎯 Nur falsche/unsichere Fragen üben", use_container_width=True):
-            # Fokus-IDs aus allen Fragen generieren (falls noch nicht vollständig)
-            st.session_state.focus_ids = [r["qid"] for r in export_rows]
-            start_focus_mode_from_marked()
+# Special finish screen for focus mode
+if state.get("mode") == "focus_wrong" and (cursor_pos >= len(order) or len(order) == 0):
+    st.success("🎯 Fokus-Übung abgeschlossen! Du hast alle aktuell falschen/unsicheren/\"Ich weiß nicht\" Fragen bearbeitet.")
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("➡️ Normal weiter machen", use_container_width=True):
+            state["mode"] = "normal"
+            state["cursor"] = int(state.get("resume_cursor", state.get("cursor", 0)) or 0)
+            state.pop("focus_order", None)
+            state.pop("focus_cursor", None)
+            state.pop("resume_cursor", None)
+            save_json(player_file(player), state)
             st.rerun()
-    with colB:
-        if st.button("🔁 Alle Fragen von vorne (neu gemischt)", use_container_width=True):
-            reset_all_questions_new_shuffle()
+    with col2:
+        # Rebuild focus list based on current answered status
+        if st.button("🔁 Fokus nochmal starten", use_container_width=True):
+            state["mode"] = "focus_wrong"
+            state["focus_order"] = compute_focus_list()
+            state["focus_cursor"] = 0
+            save_json(player_file(player), state)
             st.rerun()
+    st.stop()
 
-    st.divider()
-    st.subheader("Export (falsch/unsicher/nicht gewusst)")
+if cursor_pos >= len(order) or all_answered:
+    d = format_daily(state)
+    st.success("🎉 Wow, du bist durch! Alle Fragen in diesem Durchlauf erledigt.")
+    st.markdown(
+        f"**Heute:** ✅ {d['correct']}  ·  ❌ {d['wrong']}  ·  🟡 {d.get('unsure',0)}  ·  🤷 {d['skipped']}  ·  🧮 {d['total']}"
+    )
 
-    if export_rows:
-        csv_bytes = export_csv_bytes(export_rows)
+    # Collect wrong/unknown questions for a targeted session
+    wrong_ids = []
+    for qid0 in order:
+        a = state.get("answered", {}).get(str(qid0)) or {}
+        # Treat skipped as "to practice"; open questions (correct=None) are not counted as wrong
+        if a.get("skipped") is True or a.get("correct") is False or a.get("unsure") is True:
+            wrong_ids.append(int(qid0))
+
+    # --- Export (CSV / PDF) for wrong questions ---
+    by_id_finish = {int(qq["id"]): qq for qq in questions}
+    wrong_questions = [by_id_finish.get(int(i)) for i in wrong_ids]
+    wrong_questions = [w for w in wrong_questions if isinstance(w, dict)]
+
+    if wrong_questions:
+        st.markdown("#### 📤 Export deiner falschen/übersprungenen Fragen")
+
+        # CSV
+        csv_buf = io.StringIO()
+        writer = csv.writer(csv_buf)
+        writer.writerow(["id", "type", "question", "options", "correct", "explanation"])
+        for w in wrong_questions:
+            opts = w.get("options") or []
+            corr = w.get("correct") or []
+            writer.writerow([
+                w.get("id"),
+                w.get("type"),
+                w.get("question"),
+                " | ".join([str(x) for x in opts]),
+                ",".join([str(x) for x in corr]),
+                (w.get("explanation") or w.get("solution") or ""),
+            ])
+        csv_bytes = csv_buf.getvalue().encode("utf-8")
         st.download_button(
-            "⬇️ CSV herunterladen",
+            "⬇️ Falsche Fragen als CSV",
             data=csv_bytes,
-            file_name="lernquiz_export.csv",
+            file_name=f"falsche_fragen_{date.today().isoformat()}.csv",
             mime="text/csv",
             use_container_width=True,
         )
 
-        pdf_bytes = export_pdf_bytes(export_rows, title="Lernquiz – Falsche/Unsichere Fragen")
-        st.download_button(
-            "⬇️ PDF herunterladen",
-            data=pdf_bytes,
-            file_name="lernquiz_export.pdf",
-            mime="application/pdf",
-            use_container_width=True,
-        )
-    else:
-        st.info("Es gibt aktuell nichts zu exportieren.")
+        # PDF (optional; requires reportlab)
+        if canvas is not None and A4 is not None:
+            pdf_buffer = io.BytesIO()
+            c = canvas.Canvas(pdf_buffer, pagesize=A4)
+            width, height = A4
+            x = 40
+            y = height - 50
+            c.setFont("Helvetica-Bold", 14)
+            c.drawString(x, y, f"Falsche/übersprungene Fragen – {player}")
+            y -= 25
+            c.setFont("Helvetica", 10)
+            c.drawString(x, y, f"Datum: {date.today().isoformat()}   Anzahl: {len(wrong_questions)}")
+            y -= 30
+
+            def write_wrapped(text: str, y_pos: float, font="Helvetica", size=10, max_width=90):
+                c.setFont(font, size)
+                # Very simple wrapping by words
+                words = (text or "").split()
+                line = ""
+                for w0 in words:
+                    test = (line + " " + w0).strip()
+                    if len(test) > max_width:
+                        c.drawString(x, y_pos, line)
+                        y_pos -= 14
+                        line = w0
+                    else:
+                        line = test
+                if line:
+                    c.drawString(x, y_pos, line)
+                    y_pos -= 14
+                return y_pos
+
+            for idx, w in enumerate(wrong_questions, start=1):
+                if y < 120:
+                    c.showPage()
+                    y = height - 50
+                c.setFont("Helvetica-Bold", 11)
+                c.drawString(x, y, f"{idx}. (ID {w.get('id')})")
+                y -= 16
+                y = write_wrapped(str(w.get("question") or ""), y, font="Helvetica", size=10)
+
+                if w.get("type") == "mc":
+                    opts = w.get("options") or []
+                    corr = set(w.get("correct") or [])
+                    for oi, opt in enumerate(opts):
+                        prefix = "✅" if oi in corr else "•"
+                        y = write_wrapped(f"{prefix} {opt}", y, font="Helvetica", size=9)
+                else:
+                    sol = (w.get("solution") or "").strip()
+                    if sol:
+                        y = write_wrapped(f"Lösung: {sol}", y, font="Helvetica", size=9)
+
+                exp = (w.get("explanation") or "").strip()
+                if exp:
+                    y = write_wrapped(f"Erklärung: {exp}", y, font="Helvetica", size=9)
+                y -= 8
+
+            c.save()
+            pdf_bytes = pdf_buffer.getvalue()
+            st.download_button(
+                "⬇️ Falsche Fragen als PDF",
+                data=pdf_bytes,
+                file_name=f"falsche_fragen_{date.today().isoformat()}.pdf",
+                mime="application/pdf",
+                use_container_width=True,
+            )
+        else:
+            st.caption("(PDF-Export nicht verfügbar – reportlab fehlt in requirements.txt.)")
+
+    colA, colB = st.columns(2)
+    with colA:
+        if st.button("🔁 Nur die Falschen üben", use_container_width=True, disabled=(len(wrong_ids) == 0)):
+            # New session order based on wrong questions
+            state["practice_mode"] = "wrong_only"
+            state["order"] = deterministic_shuffle(player, state.get("order_date", str(date.today())) + "|wrong", wrong_ids)
+            state["cursor"] = 0
+            save_json(player_file(player), state)
+            st.rerun()
+        if len(wrong_ids) == 0:
+            st.caption("Keine falschen/übersprungenen Fragen — stark! 💪")
+
+    with colB:
+        if st.button("🎲 Alle von vorne (neu gemischt)", use_container_width=True):
+            state["practice_mode"] = "all"
+            state["shuffle_nonce"] = int(state.get("shuffle_nonce", 0) or 0) + 1
+            # Reset daily order for the new nonce
+            ensure_daily_order(state, player, questions)
+            state["cursor"] = 0
+            save_json(player_file(player), state)
+            st.rerun()
 
     st.stop()
 
+# Build quick lookup
+by_id = {int(q["id"]): q for q in questions}
+qid = int(order[cursor_pos])
+q = by_id[qid]
 
-# -----------------------------
-# Quiz-Ansicht
-# -----------------------------
-# current question id
-# Wichtig: qid muss zur ORIGINAL-Reihenfolge stabil sein.
-# Wir erzeugen qid anhand des Original-Questions-Orders Index:
-# Dazu suchen wir q im originalen Pool, damit idx_fallback stabil bleibt.
-orig_list = st.session_state.questions_order
-orig_index = None
-for i, qq in enumerate(orig_list):
-    if qq is q:  # gleiche Objektinstanz
-        orig_index = i
-        break
-if orig_index is None:
-    # Fallback: per content match (notfalls)
-    for i, qq in enumerate(orig_list):
-        if qq.get("question") == q.get("question"):
-            orig_index = i
-            break
-if orig_index is None:
-    orig_index = 0
+st.progress((cursor_pos+1)/len(order))
+nav1, nav2, nav3 = st.columns([1, 4, 1])
+with nav1:
+    if st.button("⬅ Zurück", disabled=(cursor_pos <= 0)):
+        state["cursor"] = max(0, cursor_pos - 1)
+        save_json(player_file(player), state)
+        st.rerun()
+with nav2:
+    st.write(f"**Frage {cursor_pos+1} von {len(order)}**  ·  ID: **{qid}**")
+with nav3:
+    # Small helper button to go forward without changing the answer (useful when reviewing)
+    if st.button("Weiter ➡", disabled=(cursor_pos >= len(order)-1)):
+        state["cursor"] = min(cursor_pos + 1, len(order))
+        save_json(player_file(player), state)
+        st.rerun()
 
-q_id = qid(q, orig_index)
+st.markdown(f"### {q['question']}")
 
-# progress
-st.caption(
-    f"Modus: **{'Fokus' if st.session_state.focus_mode else 'Normal'}**  |  "
-    f"Frage **{st.session_state.q_idx + 1}/{len(qs_active)}**"
-)
+answered_current = state.get("answered", {}).get(str(qid))
+if answered_current:
+    st.caption("✅ Diese Frage wurde bereits beantwortet. Du kannst die Erklärung erneut anzeigen oder mit \"Weiter\" navigieren.")
+    cexp, _ = st.columns([1, 3])
+    with cexp:
+        if st.button("📌 Erklärung anzeigen", key=f"exp_{qid}"):
+            st.session_state["pending"] = {
+                "qid": qid,
+                "kind": "review",
+                "title": "Lösung + Erklärung",
+                "no_advance": True,
+                # reuse stored payload so selected answers stay consistent
+                "payload": answered_current,
+            }
+            st.rerun()
 
-st.subheader(q.get("question", ""))
+# Session state per question (to allow explanation popup after submit)
+key_prefix = f"q{qid}"
+if f"{key_prefix}_done" not in st.session_state:
+    st.session_state[f"{key_prefix}_done"] = False
+if f"{key_prefix}_result" not in st.session_state:
+    st.session_state[f"{key_prefix}_result"] = None
 
-options = q.get("options", [])
-correct_index = q.get("answer_index", None)
-explanation = q.get("explanation", "")
+# Pending modal state
+if "pending" not in st.session_state:
+    st.session_state["pending"] = None
 
-# Antwortstatus aus State
-a = st.session_state.answers.get(q_id)
-locked = bool(a.get("locked")) if a else False
-selected_index = a.get("selected_index") if a else None
-status = a.get("status") if a else None
+def persist_and_advance(result_dict):
+    # Count only the FIRST time a question is answered (prevents double counting when you navigate back).
+    first_time = str(qid) not in state.get("answered", {})
 
-# Anzeige der Optionen (als Radio), aber gesperrt, wenn schon beantwortet (locked)
-# Streamlit radio braucht einen key, der pro Frage einzigartig ist, damit selection stabil bleibt.
-radio_key = f"radio_{q_id}"
+    in_focus = state.get("mode") == "focus_wrong"
 
-# Initialwert für Radio:
-# Wenn schon beantwortet: die gewählte Option
-# sonst: None -> wir nutzen index=0 nicht, sondern erzwingen keine Vorauswahl über workaround
-# Streamlit radio erlaubt kein None-index sauber; wir bieten deshalb zusätzlich Buttons an.
-st.write("Wähle eine Antwort:")
+    # --- Spaced repetition scheduling (normal mode only) ---
+    # If a question was wrong OR marked as unsure OR skipped, schedule it to reappear later.
+    # We do this only the first time the question is answered to avoid infinite duplication.
+    def schedule_repeat_if_needed():
+        if not first_time:
+            return
+        should_repeat = bool(result_dict.get("skipped")) or (result_dict.get("correct") is False) or bool(result_dict.get("unsure"))
+        if not should_repeat:
+            return
 
-# Darstellung als Buttons (stabil, besser steuerbar)
-cols = st.columns(2) if len(options) <= 6 else st.columns(1)
+        # Avoid too many repeats of the same question
+        repeats = int((result_dict.get("repeats") or 0))
+        if repeats >= 2:
+            return
 
-# wir zeigen Markierung ✅/❌ neben den Optionen, wenn beantwortet
-def option_label(i: int, text: str) -> str:
-    if not a:
-        return text
-    # Wenn beantwortet: markiere gewählte + richtige
-    if correct_index is not None and i == correct_index:
-        return f"{text} ✅"
-    if selected_index is not None and i == selected_index and status != "richtig":
-        return f"{text} ❌"
-    return text
+        gap = int(state.get("sr_gap", 7) or 7)
+        insert_at = min(cursor_pos + gap, len(order))
 
+        # Don't schedule if it's already present ahead in the order
+        if qid in order[cursor_pos+1:]:
+            return
 
-# Antwort-Handler (KRITISCH: hier darf KEIN q_idx=0 passieren!)
-def submit_answer(chosen_index: int, mode_status: str):
-    # mode_status: "richtig"/"falsch"/"unsicher"
-    # Sperren, damit beim Zurückgehen keine neue Wertung entsteht
-    chosen_text = options[chosen_index] if 0 <= chosen_index < len(options) else ""
-    st.session_state.answers[q_id] = {
-        "status": mode_status,
-        "selected_index": chosen_index,
-        "selected_text": chosen_text,
-        "locked": True,
-    }
-    sqlite_upsert(st.session_state.player.strip() or "anon", q_id, mode_status, chosen_index)
-    mark_for_focus(q_id, mode_status)
+        state["order"] = order[:insert_at] + [qid] + order[insert_at:]
+        # Mark that we scheduled a repeat for this question
+        result_dict["repeats"] = repeats + 1
 
-    # ✅ Bugfix: NICHT auf 0 setzen, sondern sauber weiter
-    st.session_state.q_idx = min(st.session_state.q_idx + 1, len(get_active_questions()))
-    st.rerun()
+    if not in_focus:
+        schedule_repeat_if_needed()
 
+    # Update answered record
+    prev = state.get("answered", {}).get(str(qid)) or {}
+    merged = {**prev, **result_dict}
 
-def submit_dont_know():
-    st.session_state.answers[q_id] = {
-        "status": "nicht gewusst",
-        "selected_index": None,
-        "selected_text": "Ich weiß nicht",
-        "locked": True,
-    }
-    sqlite_upsert(st.session_state.player.strip() or "anon", q_id, "nicht gewusst", None)
-    mark_for_focus(q_id, "nicht gewusst")
+    # If we are re-practicing and now got it right (and not unsure), mark as mastered
+    if in_focus and merged.get("correct") is True and not merged.get("skipped") and not merged.get("unsure"):
+        merged["mastered"] = True
 
-    # ✅ Bugfix: sauber weiter, kein Reset
-    st.session_state.q_idx = min(st.session_state.q_idx + 1, len(get_active_questions()))
-    st.rerun()
+    state["answered"][str(qid)] = merged
 
+    # Advance cursor depending on mode
+    if in_focus:
+        state["focus_cursor"] = min(int(state.get("focus_cursor", cursor_pos)) + 1, len(order))
+        # Do NOT change main cursor in focus mode
+    else:
+        # allow cursor == len(order) to represent "finished"
+        state["cursor"] = min(cursor_pos+1, len(order))
+    save_json(player_file(player), state)
 
-# Optionen + Buttons
-for i, opt in enumerate(options):
-    # pro option eine Zeile: Button
-    # Wenn locked: Buttons deaktivieren
-    if st.button(option_label(i, opt), disabled=locked, key=f"opt_{q_id}_{i}", use_container_width=True):
-        # wenn unsicher-Mode: user kann "unsicher" separat wählen
-        # Standard: wir prüfen richtig/falsch
-        if correct_index is None:
-            submit_answer(i, "richtig")  # falls keine korrekte Lösung hinterlegt
+    if first_time:
+        skipped = bool(result_dict.get("skipped"))
+        correct_val = result_dict.get("correct")
+        bump_daily(state, correct=correct_val, skipped=skipped, unsure=bool(result_dict.get("unsure")))
+        save_json(player_file(player), state)
+
+        # Update shared leaderboard (Supabase if configured; else local sqlite)
+        day = str(date.today())
+        if skipped:
+            lb_upsert_daily(player, day, delta_skipped=1)
         else:
-            submit_answer(i, "richtig" if i == correct_index else "falsch")
+            if correct_val is True:
+                lb_upsert_daily(player, day, delta_correct=1)
+            elif correct_val is False:
+                lb_upsert_daily(player, day, delta_wrong=1)
+
+    st.session_state[f"{key_prefix}_done"] = True
+    st.session_state[f"{key_prefix}_result"] = result_dict
+    st.session_state["pending"] = None
+    st.rerun()
+
+
+def show_feedback_modal(pending: dict):
+    """Modal-style feedback after submitting or clicking 'weiß nicht'."""
+    exp_text = safe_explanation(q)
+
+    # Build solution text
+    solution_lines = []
+    if q.get("type") == "mc":
+        opts = q.get("options", [])
+        corr = q.get("correct", [])
+        if corr and opts:
+            for i in corr:
+                if 0 <= i < len(opts):
+                    solution_lines.append(f"- {opts[i]}")
+    else:
+        sol = (q.get("solution") or "").strip()
+        if sol:
+            solution_lines.append(sol)
+
+    title = pending.get("title", "Feedback")
+
+    no_advance = bool(pending.get("no_advance"))
+
+    if HAS_DIALOG:
+        @st.dialog(title)
+        def _dlg():
+            kind = pending.get("kind")
+            if kind == "submit":
+                if pending.get("correct") is True:
+                    st.success("✅ Richtig!")
+                else:
+                    st.error("❌ Falsch.")
+            elif kind == "skip":
+                st.warning("🤷 Kein Problem – hier ist die Lösung + Erklärung.")
+            else:
+                st.info("Gespeichert – hier ist die Lösung + Erklärung.")
+
+            if solution_lines:
+                st.markdown("**Lösung:**")
+                st.markdown("\n".join(solution_lines))
+            else:
+                st.markdown("**Lösung:** (nicht hinterlegt)")
+
+            st.markdown("**Erklärung:**")
+            st.write(exp_text)
+
+            if no_advance:
+                if st.button("Schließen"):
+                    st.session_state["pending"] = None
+                    st.rerun()
+            else:
+                if st.button("Weiter"):
+                    persist_and_advance(pending["payload"])
+
+        _dlg()
+    else:
+        # Fallback (older Streamlit): toast + inline explanation
+        if pending.get("kind") == "submit":
+            st.toast("Richtig ✅" if pending.get("correct") else "Falsch ❌")
+        elif pending.get("kind") == "skip":
+            st.toast("Ich weiß nicht 🤷 – Lösung angezeigt")
+        st.info("Deine Streamlit-Version unterstützt keine echten Pop-ups. Lösung/Erklärung werden unten angezeigt.")
+        st.markdown("### ✅ Lösung")
+        if solution_lines:
+            st.markdown("\n".join(solution_lines))
+        st.markdown("### 📌 Erklärung")
+        st.write(exp_text)
+        if no_advance:
+            if st.button("Schließen"):
+                st.session_state["pending"] = None
+                st.rerun()
+        else:
+            if st.button("Weiter"):
+                persist_and_advance(pending["payload"])
+
+
+# If a modal is pending for THIS question, render it now and stop.
+pending = st.session_state.get("pending")
+if isinstance(pending, dict) and pending.get("qid") == qid:
+    show_feedback_modal(pending)
+    st.stop()
+
+if q["type"] == "mc":
+    multi = (q.get("answerType","single") == "multi")
+    opts = q.get("options", [])
+    if not opts:
+        st.warning("Diese Frage hat keine Antwortoptionen (Datenproblem).")
+    else:
+        prev_selected = []
+        if answered_current and isinstance(answered_current.get("selected"), list):
+            prev_selected = answered_current.get("selected") or []
+        locked = bool(answered_current)
+
+        # When reviewing an already-answered question, visually mark:
+        # ✅ correct options, ❌ options the user selected that were wrong.
+        correct_set = set(int(i) for i in (q.get("correct") or []) if isinstance(i, int))
+        selected_set = set(int(i) for i in (prev_selected or []) if isinstance(i, int))
+
+        def option_label(i: int) -> str:
+            base = opts[i]
+            if not locked:
+                return base
+            # Review mode (locked)
+            if i in correct_set:
+                return f"✅ {base}"
+            if i in selected_set and i not in correct_set:
+                return f"❌ {base}"
+            # Unselected + incorrect: keep neutral (still readable, but no icon)
+            return f"   {base}"
+
+        if multi:
+            selected = st.multiselect(
+                "Wähle alle zutreffenden Antworten:",
+                list(range(len(opts))),
+                format_func=option_label,
+                default=[i for i in prev_selected if isinstance(i, int)],
+                disabled=locked,
+            )
+        else:
+            prev_index = prev_selected[0] if (prev_selected and isinstance(prev_selected[0], int)) else None
+            selected_one = st.radio(
+                "Wähle eine Antwort:",
+                list(range(len(opts))),
+                format_func=option_label,
+                index=prev_index,
+                disabled=locked,
+            )
+            selected = [] if selected_one is None else [selected_one]
+
+        # Optional: mark as "unsicher" (will be scheduled for repetition)
+        unsure_flag = st.checkbox("🟡 Ich bin mir unsicher (kommt später nochmal)", value=False, disabled=locked)
+
+        col1, col2, col3 = st.columns([1,1,1])
+        with col1:
+            if st.button("Antwort abgeben", disabled=(not selected) or locked):
+                correct = is_correct_mc(q, selected)
+                st.session_state["pending"] = {
+                    "qid": qid,
+                    "kind": "submit",
+                    "title": "Ergebnis",
+                    "correct": bool(correct),
+                    "payload": {
+                    "ts": datetime.now().isoformat(timespec="seconds"),
+                    "correct": bool(correct),
+                    "selected": selected,
+                    "unsure": bool(unsure_flag),
+                    }
+                }
+                st.rerun()
+        with col2:
+            if st.button("Ich weiß nicht 🤷", disabled=locked):
+                st.session_state["pending"] = {
+                    "qid": qid,
+                    "kind": "skip",
+                    "title": "Lösung + Erklärung",
+                    "payload": {
+                    "ts": datetime.now().isoformat(timespec="seconds"),
+                    "correct": False,
+                    "selected": None,
+                    "skipped": True,
+                    }
+                }
+                st.rerun()
+        with col3:
+            st.write("")
+
+
+
+elif q["type"] == "open":
+    st.caption("Offene Frage: tippe deine Antwort (Stichpunkte reichen). Danach bekommst du Lösung + Hinweise.")
+    prev_txt = ""
+    if answered_current and answered_current.get("freeText") is not None:
+        prev_txt = str(answered_current.get("freeText") or "")
+    locked = bool(answered_current)
+    user_answer = st.text_area("Deine Antwort", height=140, value=prev_txt, disabled=locked)
+
+    unsure_flag = st.checkbox("🟡 Ich bin mir unsicher (kommt später nochmal)", value=False, disabled=locked)
+
+    col1, col2 = st.columns([1,1])
+    with col1:
+        if st.button("Antwort speichern & Lösung anzeigen", disabled=locked):
+            st.session_state["pending"] = {
+                "qid": qid,
+                "kind": "open",
+                "title": "Lösung + Erklärung",
+                "payload": {
+                    "ts": datetime.now().isoformat(timespec="seconds"),
+                    "correct": None,
+                    "freeText": user_answer,
+                    "unsure": bool(unsure_flag),
+                },
+            }
+            st.rerun()
+    with col2:
+        if st.button("Ich weiß nicht 🤷", disabled=locked):
+            st.session_state["pending"] = {
+                "qid": qid,
+                "kind": "skip",
+                "title": "Lösung + Erklärung",
+                "payload": {
+                    "ts": datetime.now().isoformat(timespec="seconds"),
+                    "correct": None,
+                    "freeText": None,
+                    "skipped": True,
+                },
+            }
+            st.rerun()
+
+else:
+    st.warning("Unbekannter Fragetyp im Datensatz.")
 
 st.divider()
-
-# Extra-Buttons: "unsicher" nur, wenn noch nicht locked und eine Option gewählt werden soll:
-# Da wir via Buttons wählen, ist "unsicher" am besten als eigener Modus:
-# -> User klickt erst Option? Das wäre zwei Schritte.
-# Wir machen es einfacher: "Ich bin mir nicht sicher" markiert die Frage als unsicher
-# ohne Antwortwertung (oder mit der zuletzt gewählten?). Da wir keinen Radiowert haben,
-# erlauben wir "unsicher" als Status ohne konkrete Option.
-col1, col2, col3 = st.columns(3)
-
-with col1:
-    if st.button("🤷 Ich weiß nicht", disabled=locked, use_container_width=True):
-        submit_dont_know()
-
-with col2:
-    if st.button("😬 Ich bin mir nicht sicher", disabled=locked, use_container_width=True):
-        # Status unsicher (ohne selected_index)
-        st.session_state.answers[q_id] = {
-            "status": "unsicher",
-            "selected_index": None,
-            "selected_text": "unsicher",
-            "locked": True,
-        }
-        sqlite_upsert(st.session_state.player.strip() or "anon", q_id, "unsicher", None)
-        mark_for_focus(q_id, "unsicher")
-        st.session_state.q_idx = min(st.session_state.q_idx + 1, len(get_active_questions()))
-        st.rerun()
-
-with col3:
-    # Erklärung jederzeit einblendbar (auch wenn locked)
-    show = st.session_state.show_expl.get(q_id, False)
-    label = "📌 Erklärung ausblenden" if show else "📌 Erklärung anzeigen"
-    if st.button(label, use_container_width=True):
-        st.session_state.show_expl[q_id] = not show
-        st.rerun()
-
-if st.session_state.show_expl.get(q_id, False) and explanation:
-    st.info(explanation)
-
-# Navigation unten: Zurück / Weiter
-nav1, nav2 = st.columns(2)
-
-with nav1:
-    if st.button("⬅️ Zurück", disabled=(st.session_state.q_idx <= 0), use_container_width=True):
-        # Beim Zurückgehen: keine Neubewertung, weil locked True bleibt.
-        st.session_state.q_idx = max(0, st.session_state.q_idx - 1)
-        st.rerun()
-
-with nav2:
-    if st.button("➡️ Weiter", disabled=(st.session_state.q_idx >= len(qs_active) - 1), use_container_width=True):
-        st.session_state.q_idx = min(st.session_state.q_idx + 1, len(qs_active) - 1)
-        st.rerun()
+st.subheader("➕ Neue Frage hinzufügen")
+with st.expander("Neue Frage erstellen (wird dauerhaft gespeichert)"):
+    new_type = st.selectbox("Typ", ["mc (Single Choice)", "mc (Multiple Choice)", "open"])
+    new_question = st.text_area("Fragentext")
+    if new_type.startswith("mc"):
+        raw_opts = st.text_area("Antwortoptionen (eine pro Zeile)")
+        correct_line = st.text_input("Richtige Option(en) – Indizes (0-basiert), z.B. 2 oder 0,3")
+        new_hint = st.text_area("Hinweis (optional)")
+        new_exp = st.text_area("Erklärung (optional)")
+        if st.button("Speichern"):
+            opts = [l.strip() for l in raw_opts.splitlines() if l.strip()]
+            if not new_question.strip() or len(opts) < 2:
+                st.error("Bitte Fragentext + mindestens 2 Optionen angeben.")
+            else:
+                try:
+                    correct = [int(x.strip()) for x in correct_line.split(",") if x.strip() != ""]
+                except Exception:
+                    st.error("Konnte richtige Indizes nicht lesen. Beispiel: 2 oder 0,3")
+                    st.stop()
+                qobj = {
+                    "type": "mc",
+                    "question": new_question.strip(),
+                    "options": opts,
+                    "correct": correct,
+                    "answerType": "multi" if "Multiple" in new_type else "single",
+                    "hint": new_hint.strip(),
+                    "explanation": new_exp.strip(),
+                    "confidence": "user_added"
+                }
+                custom = load_json(CUSTOM_FILE, [])
+                custom.append(qobj)
+                save_json(CUSTOM_FILE, custom)
+                st.success("Gespeichert! Starte die App neu oder aktualisiere die Seite.")
+    else:
+        sol = st.text_area("Lösungsvorschlag (optional)")
+        hint = st.text_area("Hinweise (optional)")
+        if st.button("Speichern"):
+            if not new_question.strip():
+                st.error("Bitte Fragentext angeben.")
+            else:
+                qobj = {
+                    "type": "open",
+                    "question": new_question.strip(),
+                    "options": [],
+                    "solution": sol.strip(),
+                    "hint": hint.strip(),
+                    "source": "user_added"
+                }
+                custom = load_json(CUSTOM_FILE, [])
+                custom.append(qobj)
+                save_json(CUSTOM_FILE, custom)
+                st.success("Gespeichert! Starte die App neu oder aktualisiere die Seite.")
