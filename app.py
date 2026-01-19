@@ -1086,8 +1086,13 @@ def show_feedback_modal(pending: dict):
                     st.info(hint_text)
 
             # 2) Lösung erst nach expliziter Freigabe anzeigen
-            reveal = st.checkbox("✅ Lösung anzeigen", value=bool(st.session_state.get(f"reveal_{qid}", False)), key=f"reveal_{qid}")
-            st.session_state[f"reveal_{qid}"] = reveal
+            # Streamlit speichert den Widget-Status automatisch unter dem Key.
+            # Wichtig: NICHT nach dem Erzeugen des Widgets st.session_state[Key] setzen,
+            # sonst wirft Streamlit eine StreamlitAPIException.
+            reveal_key = f"reveal_{qid}"
+            if reveal_key not in st.session_state:
+                st.session_state[reveal_key] = False
+            reveal = st.checkbox("✅ Lösung anzeigen", key=reveal_key)
 
             if reveal:
                 if solution_lines:
@@ -1128,8 +1133,10 @@ def show_feedback_modal(pending: dict):
             if st.session_state.get(f"tipshow_{qid}"):
                 st.info(hint_text)
 
-        reveal = st.checkbox("✅ Lösung anzeigen", value=bool(st.session_state.get(f"reveal_{qid}", False)), key=f"reveal_{qid}")
-        st.session_state[f"reveal_{qid}"] = reveal
+        reveal_key = f"reveal_{qid}"
+        if reveal_key not in st.session_state:
+            st.session_state[reveal_key] = False
+        reveal = st.checkbox("✅ Lösung anzeigen", key=reveal_key)
 
         if reveal:
             st.markdown("### ✅ Lösung")
