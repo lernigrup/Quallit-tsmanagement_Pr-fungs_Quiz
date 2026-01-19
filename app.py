@@ -814,25 +814,14 @@ with nav1:
 with nav2:
     st.write(f"**Frage {cursor_pos+1} von {len(order)}**  ·  ID: **{qid}**")
 with nav3:
-    # Small helper buttons to navigate without changing answers
-    c_next, c_end = st.columns(2)
-    with c_next:
-        if st.button("Weiter ➡", disabled=(cursor_pos >= len(order)-1)):
-            if state.get('mode') == 'focus_wrong':
-                state["focus_cursor"] = min(cursor_pos + 1, len(order))
-            else:
-                state["cursor"] = min(cursor_pos + 1, len(order))
-            save_json(player_file(player), state)
-            st.rerun()
-    with c_end:
-        # Jump straight to the end/overview
-        if st.button("⏭ Ende", help="Springt zur Abschlussansicht"):
-            if state.get('mode') == 'focus_wrong':
-                state["focus_cursor"] = len(order)
-            else:
-                state["cursor"] = len(order)
-            save_json(player_file(player), state)
-            st.rerun()
+    # Navigation ohne Antworten zu verändern
+    if st.button("Weiter ➡", disabled=(cursor_pos >= len(order)-1)):
+        if state.get('mode') == 'focus_wrong':
+            state["focus_cursor"] = min(cursor_pos + 1, len(order))
+        else:
+            state["cursor"] = min(cursor_pos + 1, len(order))
+        save_json(player_file(player), state)
+        st.rerun()
 
 # Label repetitions clearly
 q_title = str(q.get('question') or '')
@@ -1173,11 +1162,13 @@ st.subheader("➕ Neue Frage hinzufügen")
 with st.expander("Neue Frage erstellen (wird dauerhaft gespeichert)"):
     new_type = st.selectbox("Typ", ["mc (Single Choice)", "mc (Multiple Choice)", "open"])
     new_question = st.text_area("Fragentext")
+
     if new_type.startswith("mc"):
         raw_opts = st.text_area("Antwortoptionen (eine pro Zeile)")
         correct_line = st.text_input("Richtige Option(en) – Indizes (0-basiert), z.B. 2 oder 0,3")
         new_hint = st.text_area("Hinweis (optional)")
         new_exp = st.text_area("Erklärung (optional)")
+
         if st.button("Speichern"):
             opts = [l.strip() for l in raw_opts.splitlines() if l.strip()]
             if not new_question.strip() or len(opts) < 2:
@@ -1188,6 +1179,7 @@ with st.expander("Neue Frage erstellen (wird dauerhaft gespeichert)"):
                 except Exception:
                     st.error("Konnte richtige Indizes nicht lesen. Beispiel: 2 oder 0,3")
                     st.stop()
+
                 qobj = {
                     "type": "mc",
                     "question": new_question.strip(),
@@ -1196,7 +1188,7 @@ with st.expander("Neue Frage erstellen (wird dauerhaft gespeichert)"):
                     "answerType": "multi" if "Multiple" in new_type else "single",
                     "hint": new_hint.strip(),
                     "explanation": new_exp.strip(),
-                    "confidence": "user_added"
+                    "confidence": "user_added",
                 }
                 custom = load_json(CUSTOM_FILE, [])
                 custom.append(qobj)
@@ -1215,9 +1207,19 @@ with st.expander("Neue Frage erstellen (wird dauerhaft gespeichert)"):
                     "options": [],
                     "solution": sol.strip(),
                     "hint": hint.strip(),
-                    "source": "user_added"
+                    "source": "user_added",
                 }
                 custom = load_json(CUSTOM_FILE, [])
                 custom.append(qobj)
                 save_json(CUSTOM_FILE, custom)
                 st.success("Gespeichert! Starte die App neu oder aktualisiere die Seite.")
+
+# --- Quick navigation: jump to end/overview (unter "Neue Frage") ---
+st.caption("Schnellnavigation")
+if st.button("⏭ Zum Ende springen", help="Springt direkt zur Abschlussansicht / Endübersicht."):
+    if state.get("mode") == "focus_wrong":
+        state["focus_cursor"] = len(order)
+    else:
+        state["cursor"] = len(order)
+    save_json(player_file(player), state)
+    st.rerun()
