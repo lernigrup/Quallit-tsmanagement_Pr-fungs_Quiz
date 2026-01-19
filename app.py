@@ -597,9 +597,23 @@ if state.get("mode") == "focus_wrong" and (cursor_pos >= len(order) or len(order
     with col2:
         # Rebuild focus list based on current answered status
         if st.button("🔁 Fokus nochmal starten", use_container_width=True):
+            focus_order = compute_focus_list()
+            if not focus_order:
+                st.info('Aktuell gibt es keine falschen/unsicheren/Ich weiß nicht Fragen mehr für den Fokus-Modus.')
+                # zurück in den Normalmodus
+                state["mode"] = "normal"
+                state["cursor"] = int(state.get("resume_cursor", state.get("cursor", 0)) or 0)
+                state.pop("focus_order", None)
+                state.pop("focus_cursor", None)
+                state.pop("resume_cursor", None)
+                state.pop("focus_answered", None)
+                save_json(player_file(player), state)
+                st.rerun()
             state["mode"] = "focus_wrong"
-            state["focus_order"] = compute_focus_list()
+            state["focus_order"] = focus_order
             state["focus_cursor"] = 0
+            # WICHTIG: Restart muss die Fokus-Antworten leeren, sonst bleibt alles "erledigt"
+            state["focus_answered"] = {}
             save_json(player_file(player), state)
             st.rerun()
     st.stop()
