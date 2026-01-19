@@ -9,6 +9,7 @@ import streamlit as st
 import sqlite3
 import csv
 import io
+from collections import Counter
 
 try:
     from reportlab.lib.pagesizes import A4  # type: ignore
@@ -793,6 +794,16 @@ by_id = {int(q["id"]): q for q in questions}
 qid = int(order[cursor_pos])
 q = by_id[qid]
 
+# --- Repetition detection (spaced repetition in normal mode) ---
+# If a question appears again later in the current order, it would normally be
+# "locked" because it is already present in state['answered'].
+# We want repetitions to be answerable again.
+try:
+    _occ = sum(1 for x in order[: cursor_pos + 1] if int(x) == int(qid))
+except Exception:
+    _occ = 1
+is_repetition = (_occ > 1) and (state.get('mode') != 'focus_wrong') and (state.get('practice_mode') != 'wrong_only')
+
 st.progress((cursor_pos+1)/len(order))
 nav1, nav2, nav3 = st.columns([1, 4, 1])
 with nav1:
@@ -803,15 +814,35 @@ with nav1:
 with nav2:
     st.write(f"**Frage {cursor_pos+1} von {len(order)}**  ·  ID: **{qid}**")
 with nav3:
-    # Small helper button to go forward without changing the answer (useful when reviewing)
-    if st.button("Weiter ➡", disabled=(cursor_pos >= len(order)-1)):
-        state["cursor"] = min(cursor_pos + 1, len(order))
-        save_json(player_file(player), state)
-        st.rerun()
+    # Small helper buttons to navigate without changing answers
+    c_next, c_end = st.columns(2)
+    with c_next:
+        if st.button("Weiter ➡", disabled=(cursor_pos >= len(order)-1)):
+            if state.get('mode') == 'focus_wrong':
+                state["focus_cursor"] = min(cursor_pos + 1, len(order))
+            else:
+                state["cursor"] = min(cursor_pos + 1, len(order))
+            save_json(player_file(player), state)
+            st.rerun()
+    with c_end:
+        # Jump straight to the end/overview
+        if st.button("⏭ Ende", help="Springt zur Abschlussansicht"):
+            if state.get('mode') == 'focus_wrong':
+                state["focus_cursor"] = len(order)
+            else:
+                state["cursor"] = len(order)
+            save_json(player_file(player), state)
+            st.rerun()
 
-st.markdown(f"### {q['question']}")
+# Label repetitions clearly
+q_title = str(q.get('question') or '')
+if is_repetition:
+    q_title += " (Wiederholung)"
 
-answered_current = (active_answered or {}).get(str(qid))
+st.markdown(f"### {q_title}")
+
+_prev_answer = (active_answered or {}).get(str(qid))
+answered_current = None if is_repetition else _prev_answer
 if answered_current:
     st.caption("✅ Diese Frage wurde bereits beantwortet. Du kannst die Erklärung erneut anzeigen oder mit \"Weiter\" navigieren.")
     cexp, _ = st.columns([1, 3])
