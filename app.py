@@ -530,6 +530,9 @@ if state.get("mode") == "normal" and focus_candidates:
         state["resume_cursor"] = int(state.get("cursor", 0))
         state["focus_order"] = focus_candidates
         state["focus_cursor"] = 0
+        # IMPORTANT: In focus mode, questions must be answerable again.
+        # We therefore track focus-run answers separately (do NOT reuse master answered-map).
+        state["focus_answered"] = {}
         save_json(player_file(player), state)
         st.rerun()
 
@@ -541,9 +544,12 @@ if state.get("mode") == "focus_wrong":
 
 # Which answered-map is active?
 # - normal: state['answered'] (master progress)
-# - wrong-only practice: state['practice_answered'] (so questions are answerable again)
+# - wrong-only practice (end-screen button): state['practice_answered']
+# - focus mode (bottom focus button): state['focus_answered']
 active_answered = state.get('answered', {})
-if state.get('practice_mode') == 'wrong_only':
+if state.get('mode') == 'focus_wrong':
+    active_answered = state.setdefault('focus_answered', {})
+elif state.get('practice_mode') == 'wrong_only':
     active_answered = state.setdefault('practice_answered', {})
 
 # Optional: nur unbeantwortete Fragen üben
@@ -585,7 +591,7 @@ if state.get("mode") == "focus_wrong" and (cursor_pos >= len(order) or len(order
             state.pop("focus_order", None)
             state.pop("focus_cursor", None)
             state.pop("resume_cursor", None)
-            state.pop("practice_answered", None)
+            state.pop("focus_answered", None)
             save_json(player_file(player), state)
             st.rerun()
     with col2:
@@ -866,8 +872,12 @@ def persist_and_advance(result_dict):
 
     state["answered"][str(qid)] = merged
 
-    # If we are in wrong-only practice, also track answered inside the practice run
-    if state.get('practice_mode') == 'wrong_only':
+    # Track answered inside practice runs so questions are answerable again.
+    # - focus mode uses focus_answered
+    # - end-screen "Nur die Falschen üben" uses practice_answered
+    if in_focus:
+        state.setdefault('focus_answered', {})[str(qid)] = merged
+    elif state.get('practice_mode') == 'wrong_only':
         state.setdefault('practice_answered', {})[str(qid)] = merged
 
     # Advance cursor depending on mode
