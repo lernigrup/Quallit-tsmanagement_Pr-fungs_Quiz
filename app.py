@@ -685,11 +685,28 @@ if q["type"] == "mc":
             prev_selected = answered_current.get("selected") or []
         locked = bool(answered_current)
 
+        # When reviewing an already-answered question, visually mark:
+        # ✅ correct options, ❌ options the user selected that were wrong.
+        correct_set = set(int(i) for i in (q.get("correct") or []) if isinstance(i, int))
+        selected_set = set(int(i) for i in (prev_selected or []) if isinstance(i, int))
+
+        def option_label(i: int) -> str:
+            base = opts[i]
+            if not locked:
+                return base
+            # Review mode (locked)
+            if i in correct_set:
+                return f"✅ {base}"
+            if i in selected_set and i not in correct_set:
+                return f"❌ {base}"
+            # Unselected + incorrect: keep neutral (still readable, but no icon)
+            return f"   {base}"
+
         if multi:
             selected = st.multiselect(
                 "Wähle alle zutreffenden Antworten:",
                 list(range(len(opts))),
-                format_func=lambda i: opts[i],
+                format_func=option_label,
                 default=[i for i in prev_selected if isinstance(i, int)],
                 disabled=locked,
             )
@@ -698,7 +715,7 @@ if q["type"] == "mc":
             selected_one = st.radio(
                 "Wähle eine Antwort:",
                 list(range(len(opts))),
-                format_func=lambda i: opts[i],
+                format_func=option_label,
                 index=prev_index,
                 disabled=locked,
             )
