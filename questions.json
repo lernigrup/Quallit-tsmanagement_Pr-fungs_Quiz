@@ -678,8 +678,7 @@
       "Das arithmetische Mittel beträgt 6",
       "Das arithmetische Mittel beträgt 10",
       "Das arithmetische Mittel beträgt 9",
-      "Das arithmetische Mittel beträgt 5",
-      "Erklärung: alles addieren und durch die Anzahl der Zahlen dividieren"
+      "Das arithmetische Mittel beträgt 5"
     ],
     "correct": [
       4
@@ -752,16 +751,14 @@
       "Der Modus beträgt 5",
       "Der Modus beträgt 8",
       "Der Modus beträgt 3",
-      "Der Modus beträgt 2",
-      "Erklärung: Um den Modus zu bestimmen, schauen wir uns an, welche Zahl am häufigsten in der Zahlenreihe vorkommt. In diesem Fall ist die Zahl 8 am häufigsten (dreimal), also ist der Modus der Zahlenreihe 8.",
-      "Also lautet die richtige Antwort: Der Modus beträgt 8."
+      "Der Modus beträgt 2"
     ],
     "correct": [
       2
     ],
     "answerType": "single",
     "confidence": "from_docx_highlight",
-    "explanation": "Der Modus ist der Wert, der am häufigsten vorkommt. In der Zahlenreihe tritt 8 am häufigsten auf, daher ist der Modus 8. Der Modus ist besonders bei kategorialen Daten sinnvoll, kann aber auch bei Zahlenreihen genutzt werden. Darum ist diese Lösung korrekt.",
+    "explanation": "Um den Modus zu bestimmen, schauen wir uns an, welche Zahl am häufigsten in der Zahlenreihe vorkommt. In diesem Fall ist die Zahl 8 am häufigsten (dreimal), also ist der Modus der Zahlenreihe 8.. Der Modus ist besonders bei kategorialen Daten sinnvoll, kann aber auch bei Zahlenreihen genutzt werden.",
     "hint": ""
   },
   {
@@ -1206,18 +1203,7 @@
       "Wie oft sind Sie im zurückliegenden Monat in ein Restaurant zum Essen gegangen?",
       "Wie oft gehen Sie ins Kino und ins Theater?",
       "Sicherlich gehen Sie bei der nächsten Bundestagswahl wählen, welche Partei wählen Sie?",
-      "Was wissen Sie über Extinktion?",
-      "Erklärung der 10 Gebote:",
-      "Stelle nur eine Frage auf einmal.",
-      "Vermeide Doppelte Verneinung.",
-      "Verwende klare und präzise Sprache.",
-      "Vermeide führende oder suggestive Fragen.",
-      "Vermeide Doppelte Fragen.",
-      "Vermeide Ambiguität (Mehrdeutigkeit).",
-      "Wähle passende Antwortoptionen.",
-      "Vermeide Überforderung der Befragten.",
-      "Vermeide Vorannahmen.",
-      "Achte auf die Reihenfolge der Fragen."
+      "Was wissen Sie über Extinktion?"
     ],
     "correct": [
       0
