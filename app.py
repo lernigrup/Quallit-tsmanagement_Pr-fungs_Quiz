@@ -9,6 +9,7 @@ import streamlit as st
 import sqlite3
 import csv
 import io
+import re
 
 try:
     from reportlab.lib.pagesizes import A4  # type: ignore
