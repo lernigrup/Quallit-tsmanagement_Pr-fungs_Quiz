@@ -1094,8 +1094,7 @@
       "0 Bücher / 1-3 Bücher / 3 Bücher oder mehr",
       "0 Bücher / 1-2 Bücher / 3 Bücher",
       "0-1 Bücher / 2-4 Bücher / 5 oder mehr Bücher",
-      "1-2 Bücher / 3-4 Bücher / 5 Bücher",
-      "Erklärung: Diese Antwortoptionen sind disjunkt, da sich die Kategorien nicht überschneiden, und erschöpfend, da alle möglichen Fälle von 0 Büchern bis zu 5 oder mehr Büchern abgedeckt sind."
+      "1-2 Bücher / 3-4 Bücher / 5 Bücher"
     ],
     "correct": [
       2
