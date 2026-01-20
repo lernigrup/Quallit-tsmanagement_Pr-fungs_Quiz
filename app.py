@@ -9,7 +9,6 @@ import streamlit as st
 import sqlite3
 import csv
 import io
-from collections import Counter
 
 try:
     from reportlab.lib.pagesizes import A4  # type: ignore
@@ -28,6 +27,37 @@ QUESTIONS_FILE = BASE_DIR / "questions.json"
 CUSTOM_FILE = BASE_DIR / "custom_questions.json"
 PROGRESS_DIR = BASE_DIR / "progress"
 PROGRESS_DIR.mkdir(exist_ok=True)
+
+
+# --- Multiple quiz datasets (select at start) ---
+QUIZ_SOURCES = {
+    "Altklausuren Quiz": "questions_altklausuren.json",
+    "Probeklausur 1 - Generiert": "questions_probeklausur_1.json",
+    "Probeklausur 2 - Generiert": "questions_probeklausur_2.json",
+}
+
+# Fallback (if you keep using a single questions.json)
+DEFAULT_QUESTIONS_FILE = QUESTIONS_FILE
+
+def get_selected_quiz_label() -> str:
+    label = st.session_state.get("quiz_label")
+    if label in QUIZ_SOURCES:
+        return label
+    return "Altklausuren Quiz"
+
+def get_questions_file() -> Path:
+    label = get_selected_quiz_label()
+    fname = QUIZ_SOURCES.get(label) or "questions_altklausuren.json"
+    path = BASE_DIR / fname
+    # Backwards compatibility: if the chosen file doesn't exist, fall back to questions.json
+    if not path.exists():
+        path = DEFAULT_QUESTIONS_FILE
+    return path
+
+def get_custom_file() -> Path:
+    # One custom file per quiz dataset to avoid mixing user-added questions
+    base = get_questions_file().stem
+    return BASE_DIR / f"custom_{base}.json"
 
 """Leaderboards
 
@@ -307,25 +337,34 @@ def save_json(path, obj):
     path.write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
 
 def load_questions():
-    base = load_json(QUESTIONS_FILE, [])
-    custom = load_json(CUSTOM_FILE, [])
+    # Load from the selected dataset
+    q_file = get_questions_file()
+    c_file = get_custom_file()
+
+    base = load_json(q_file, [])
+    custom = load_json(c_file, [])
+
     # custom questions get ids after base max
     if custom:
         max_id = max(q["id"] for q in base) if base else 0
         normalized = []
-        for i,q in enumerate(custom, start=1):
+        for i, q in enumerate(custom, start=1):
             q2 = dict(q)
             if "id" not in q2:
                 q2["id"] = max_id + i
             normalized.append(q2)
         custom = normalized
+
     return base + custom
 
 def player_file(player: str) -> Path:
     safe = "".join(ch for ch in player.strip() if ch.isalnum() or ch in ("-","_")).strip()
     if not safe:
         safe = "player"
-    return PROGRESS_DIR / f"{safe.lower()}.json"
+
+    # Keep progress per selected quiz dataset
+    quiz_slug = get_questions_file().stem
+    return PROGRESS_DIR / f"{safe.lower()}__{quiz_slug}.json"
 
 def load_player_state(player: str):
     path = player_file(player)
@@ -429,6 +468,25 @@ HAS_DIALOG = hasattr(st, "dialog")
 
 st.set_page_config(page_title="Lern-Quiz", layout="centered")
 
+
+# --- Quiz selection (must happen before loading questions/state) ---
+if "quiz_label" not in st.session_state:
+    st.session_state["quiz_label"] = None
+
+if st.session_state.get("quiz_label") is None:
+    st.title("📚 Lern-Quiz")
+    st.subheader("Was möchtest du üben?")
+
+    for label in ["Altklausuren Quiz", "Probeklausur 1 - Generiert", "Probeklausur 2 - Generiert"]:
+        if st.button(label, use_container_width=True):
+            st.session_state["quiz_label"] = label
+            # When switching quiz, also forget cached player in this session to force reload
+            st.session_state["player"] = st.session_state.get("player", "")
+            st.rerun()
+
+    st.caption("Hinweis: Lege dazu passende JSON-Dateien ins Repo: questions_altklausuren.json, questions_probeklausur_1.json, questions_probeklausur_2.json. Falls eine fehlt, wird auf questions.json zurückgefallen.")
+    st.stop()
+
 st.title("📚 Lern-Quiz (aus deinem Lernzettel)")
 st.caption("Speichert deinen Fortschritt pro Spielername lokal im Ordner „quiz_app/progress“.")
 
@@ -438,6 +496,13 @@ if not questions:
     st.stop()
 
 with st.sidebar:
+    st.subheader("Quiz")
+    st.write(f"Aktives Quiz: **{get_selected_quiz_label()}**")
+    if st.button("🔁 Quiz wechseln", use_container_width=True):
+        # reset quiz selection in this browser session
+        st.session_state["quiz_label"] = None
+        st.rerun()
+
     st.subheader("Spieler")
     player = st.text_input("Spielername", value=st.session_state.get("player",""))
     if player:
@@ -794,16 +859,6 @@ by_id = {int(q["id"]): q for q in questions}
 qid = int(order[cursor_pos])
 q = by_id[qid]
 
-# --- Repetition detection (spaced repetition in normal mode) ---
-# If a question appears again later in the current order, it would normally be
-# "locked" because it is already present in state['answered'].
-# We want repetitions to be answerable again.
-try:
-    _occ = sum(1 for x in order[: cursor_pos + 1] if int(x) == int(qid))
-except Exception:
-    _occ = 1
-is_repetition = (_occ > 1) and (state.get('mode') != 'focus_wrong') and (state.get('practice_mode') != 'wrong_only')
-
 st.progress((cursor_pos+1)/len(order))
 nav1, nav2, nav3 = st.columns([1, 4, 1])
 with nav1:
@@ -814,24 +869,15 @@ with nav1:
 with nav2:
     st.write(f"**Frage {cursor_pos+1} von {len(order)}**  ·  ID: **{qid}**")
 with nav3:
-    # Navigation ohne Antworten zu verändern
+    # Small helper button to go forward without changing the answer (useful when reviewing)
     if st.button("Weiter ➡", disabled=(cursor_pos >= len(order)-1)):
-        if state.get('mode') == 'focus_wrong':
-            state["focus_cursor"] = min(cursor_pos + 1, len(order))
-        else:
-            state["cursor"] = min(cursor_pos + 1, len(order))
+        state["cursor"] = min(cursor_pos + 1, len(order))
         save_json(player_file(player), state)
         st.rerun()
 
-# Label repetitions clearly
-q_title = str(q.get('question') or '')
-if is_repetition:
-    q_title += " (Wiederholung)"
+st.markdown(f"### {q['question']}")
 
-st.markdown(f"### {q_title}")
-
-_prev_answer = (active_answered or {}).get(str(qid))
-answered_current = None if is_repetition else _prev_answer
+answered_current = (active_answered or {}).get(str(qid))
 if answered_current:
     st.caption("✅ Diese Frage wurde bereits beantwortet. Du kannst die Erklärung erneut anzeigen oder mit \"Weiter\" navigieren.")
     cexp, _ = st.columns([1, 3])
@@ -1162,13 +1208,11 @@ st.subheader("➕ Neue Frage hinzufügen")
 with st.expander("Neue Frage erstellen (wird dauerhaft gespeichert)"):
     new_type = st.selectbox("Typ", ["mc (Single Choice)", "mc (Multiple Choice)", "open"])
     new_question = st.text_area("Fragentext")
-
     if new_type.startswith("mc"):
         raw_opts = st.text_area("Antwortoptionen (eine pro Zeile)")
         correct_line = st.text_input("Richtige Option(en) – Indizes (0-basiert), z.B. 2 oder 0,3")
         new_hint = st.text_area("Hinweis (optional)")
         new_exp = st.text_area("Erklärung (optional)")
-
         if st.button("Speichern"):
             opts = [l.strip() for l in raw_opts.splitlines() if l.strip()]
             if not new_question.strip() or len(opts) < 2:
@@ -1179,7 +1223,6 @@ with st.expander("Neue Frage erstellen (wird dauerhaft gespeichert)"):
                 except Exception:
                     st.error("Konnte richtige Indizes nicht lesen. Beispiel: 2 oder 0,3")
                     st.stop()
-
                 qobj = {
                     "type": "mc",
                     "question": new_question.strip(),
@@ -1188,11 +1231,11 @@ with st.expander("Neue Frage erstellen (wird dauerhaft gespeichert)"):
                     "answerType": "multi" if "Multiple" in new_type else "single",
                     "hint": new_hint.strip(),
                     "explanation": new_exp.strip(),
-                    "confidence": "user_added",
+                    "confidence": "user_added"
                 }
-                custom = load_json(CUSTOM_FILE, [])
+                custom = load_json(get_custom_file(), [])
                 custom.append(qobj)
-                save_json(CUSTOM_FILE, custom)
+                save_json(get_custom_file(), custom)
                 st.success("Gespeichert! Starte die App neu oder aktualisiere die Seite.")
     else:
         sol = st.text_area("Lösungsvorschlag (optional)")
@@ -1207,19 +1250,9 @@ with st.expander("Neue Frage erstellen (wird dauerhaft gespeichert)"):
                     "options": [],
                     "solution": sol.strip(),
                     "hint": hint.strip(),
-                    "source": "user_added",
+                    "source": "user_added"
                 }
-                custom = load_json(CUSTOM_FILE, [])
+                custom = load_json(get_custom_file(), [])
                 custom.append(qobj)
-                save_json(CUSTOM_FILE, custom)
+                save_json(get_custom_file(), custom)
                 st.success("Gespeichert! Starte die App neu oder aktualisiere die Seite.")
-
-# --- Quick navigation: jump to end/overview (unter "Neue Frage") ---
-st.caption("Schnellnavigation")
-if st.button("⏭ Zum Ende springen", help="Springt direkt zur Abschlussansicht / Endübersicht."):
-    if state.get("mode") == "focus_wrong":
-        state["focus_cursor"] = len(order)
-    else:
-        state["cursor"] = len(order)
-    save_json(player_file(player), state)
-    st.rerun()
