@@ -1,340 +1,578 @@
-{
-  "version": "1.0",
-  "title": "M10fs Probeklausur – Quiz-Import",
-  "module": "M10fs Qualitätssicherung & Evaluation Sozialer Dienste (WiSe 25/26)",
-  "language": "de",
-  "questionCount": 23,
-  "questions": [
-    {
-      "id": "m10fs_001",
-      "type": "single_choice",
-      "prompt": "Was bezeichnet Segregation im sozialwissenschaftlichen Kontext am treffendsten?",
-      "choices": [
-        {"id": "A", "text": "Freiwillige Trennung sozialer Gruppen aufgrund individueller Vorlieben"},
-        {"id": "B", "text": "Räumliche Trennung sozialer Gruppen als Folge sozialer Ungleichheit"},
-        {"id": "C", "text": "Unterschiedliche kulturelle Lebensstile innerhalb eines Stadtteils"},
-        {"id": "D", "text": "Verwaltungstechnische Einteilung von Stadtgebieten"}
-      ],
-      "answer": "B",
-      "explanation": "Segregation meint die räumliche Trennung sozialer Gruppen, die häufig Folge (und teils Ursache) sozialer Ungleichheit ist.",
-      "tags": ["Sozialraum", "Segregation"],
-      "difficulty": 1
+[
+  {
+    "id": "m10fs_001",
+    "type": "mc",
+    "question": "Was bezeichnet Segregation im sozialwissenschaftlichen Kontext am treffendsten?",
+    "options": [
+      "Freiwillige Trennung sozialer Gruppen aufgrund individueller Vorlieben",
+      "Räumliche Trennung sozialer Gruppen als Folge sozialer Ungleichheit",
+      "Unterschiedliche kulturelle Lebensstile innerhalb eines Stadtteils",
+      "Verwaltungstechnische Einteilung von Stadtgebieten"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Segregation meint die räumliche Trennung sozialer Gruppen, die häufig Folge (und teils Ursache) sozialer Ungleichheit ist.",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Sozialraum",
+      "Segregation"
+    ],
+    "difficulty": 1,
+    "solution": "Räumliche Trennung sozialer Gruppen als Folge sozialer Ungleichheit"
+  },
+  {
+    "id": "m10fs_002",
+    "type": "mc",
+    "question": "Welche Form gehört NICHT zu den klassischen Segregationsformen?",
+    "options": [
+      "Soziale Segregation",
+      "Ethnische Segregation",
+      "Ökonomische Segregation",
+      "Politische Segregation"
+    ],
+    "correct": [
+      3
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Klassisch werden soziale, ethnische und ökonomische Segregation unterschieden. Politische Segregation ist hier kein Standardbegriff.",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Sozialraum",
+      "Segregation"
+    ],
+    "difficulty": 1,
+    "solution": "Politische Segregation"
+  },
+  {
+    "id": "m10fs_003",
+    "type": "mc",
+    "question": "Was ist das zentrale Ziel einer Sozialraumanalyse?",
+    "options": [
+      "Die Bewertung individueller Lebensführung",
+      "Die Messung subjektiver Zufriedenheit",
+      "Die Analyse räumlich verteilter sozialer Ungleichheiten",
+      "Die statistische Erfassung einzelner Haushalte"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Sozialraumanalyse zielt auf räumliche Muster (Ressourcen/Belastungen/Chancen) und damit auf räumlich verteilte soziale Ungleichheiten.",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Sozialraum",
+      "Sozialraumanalyse"
+    ],
+    "difficulty": 1,
+    "solution": "Die Analyse räumlich verteilter sozialer Ungleichheiten"
+  },
+  {
+    "id": "m10fs_004",
+    "type": "mc",
+    "question": "Welche Methode zählt zur qualitativen Sozialraumanalyse?",
+    "options": [
+      "Armutsquote",
+      "GIS-Kartierung",
+      "Experteninterviews",
+      "Bevölkerungsstatistik"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Experteninterviews sind qualitative Methoden (Deutungen/Erfahrungen). Armutsquote, GIS und Statistik sind primär quantitative/strukturierende Verfahren.",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Sozialraum",
+      "Sozialraumanalyse",
+      "Qualitativ"
+    ],
+    "difficulty": 1,
+    "solution": "Experteninterviews"
+  },
+  {
+    "id": "m10fs_005",
+    "type": "mc",
+    "question": "Was versteht man unter Triangulation?",
+    "options": [
+      "Die ausschließliche Nutzung qualitativer Methoden",
+      "Die Kombination qualitativer und quantitativer Methoden",
+      "Die statistische Überprüfung qualitativer Daten",
+      "Die Wiederholung einer Erhebung"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Triangulation meint die Kombination verschiedener Methoden/Datenquellen/Perspektiven (oft quali+quanti), um Aussagekraft/Validität zu erhöhen.",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Methoden",
+      "Triangulation"
+    ],
+    "difficulty": 1,
+    "solution": "Die Kombination qualitativer und quantitativer Methoden"
+  },
+  {
+    "id": "m10fs_006",
+    "type": "mc",
+    "question": "Welches Gebot der Frageformulierung nach Porst wird hier verletzt? \"Finden Sie, dass Sozialarbeiter empathisch und fachlich kompetent sein sollten?\"",
+    "options": [
+      "Hypothetische Frage",
+      "Unklarer Begriff",
+      "Doppelter Stimulus",
+      "Fehlender Zeitbezug"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Die Frage enthält zwei Inhalte (empathisch UND fachlich kompetent). Nach Porst: ein Item sollte nur einen Stimulus enthalten.",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Fragebogen",
+      "Porst",
+      "Frageformulierung"
+    ],
+    "difficulty": 2,
+    "solution": "Doppelter Stimulus"
+  },
+  {
+    "id": "m10fs_007",
+    "type": "mc",
+    "question": "Warum sollen hypothetische Fragen vermieden werden?",
+    "options": [
+      "Sie verlängern den Fragebogen",
+      "Sie sind statistisch nicht auswertbar",
+      "Befragte können zukünftiges Verhalten kaum zuverlässig einschätzen",
+      "Sie erhöhen soziale Erwünschtheit"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Hypothetische Fragen verlangen Einschätzungen zu nicht erlebten Situationen; Antworten sind daher oft wenig belastbar.",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Fragebogen",
+      "Porst",
+      "Frageformulierung"
+    ],
+    "difficulty": 1,
+    "solution": "Befragte können zukünftiges Verhalten kaum zuverlässig einschätzen"
+  },
+  {
+    "id": "m10fs_008",
+    "type": "mc",
+    "question": "Welche Antwortskala ist disjunkt und erschöpfend?",
+    "options": [
+      "0 Bücher / 1–3 Bücher / 3 Bücher oder mehr",
+      "0–1 Bücher / 2–4 Bücher / 5 oder mehr Bücher",
+      "1–2 Bücher / 3–4 Bücher / 4–6 Bücher",
+      "keine Bücher / einige Bücher / viele Bücher"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Disjunkt = keine Überschneidungen, erschöpfend = alle Fälle abgedeckt. B erfüllt beides; A und C überschneiden sich, D ist unpräzise.",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Antwortskalen",
+      "Porst"
+    ],
+    "difficulty": 2,
+    "solution": "0–1 Bücher / 2–4 Bücher / 5 oder mehr Bücher"
+  },
+  {
+    "id": "m10fs_009",
+    "type": "mc",
+    "question": "Was beschreibt Operationalisierung am besten?",
+    "options": [
+      "Die statistische Auswertung von Daten",
+      "Die Übersetzung theoretischer Begriffe in messbare Indikatoren",
+      "Die Auswahl einer Stichprobe",
+      "Die Interpretation qualitativer Interviews"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Operationalisierung übersetzt abstrakte Konzepte (z. B. Stress) in messbare Indikatoren (z. B. Schlaf, Puls, Selbstauskunft).",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Operationalisierung",
+      "Methoden"
+    ],
+    "difficulty": 1,
+    "solution": "Die Übersetzung theoretischer Begriffe in messbare Indikatoren"
+  },
+  {
+    "id": "m10fs_010",
+    "type": "mc",
+    "question": "Welches Erkenntnisziel verfolgt der kritische Rationalismus?",
+    "options": [
+      "Verstehen subjektiver Sinnzusammenhänge",
+      "Rekonstruktion sozialer Bedeutungen",
+      "Erklärung durch Hypothesen und Falsifikation",
+      "Exploration offener Fragestellungen"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Kritischer Rationalismus (Popper): Hypothesen formulieren und systematisch zu widerlegen versuchen (Falsifikationsprinzip) – Ziel: Erklären.",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Wissenschaftstheorie",
+      "Popper"
+    ],
+    "difficulty": 1,
+    "solution": "Erklärung durch Hypothesen und Falsifikation"
+  },
+  {
+    "id": "m10fs_011",
+    "type": "mc",
+    "question": "Welches Prinzip gehört NICHT zu qualitativer Forschung?",
+    "options": [
+      "Offenheit",
+      "Kontextgebundenheit",
+      "Standardisierung",
+      "Prozesshaftigkeit"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Qualitative Forschung ist offen, flexibel und kontextbezogen. Standardisierung ist ein Kernmerkmal quantitativer Forschung.",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Qualitativ",
+      "Methoden"
+    ],
+    "difficulty": 1,
+    "solution": "Standardisierung"
+  },
+  {
+    "id": "m10fs_012",
+    "type": "mc",
+    "question": "Welche Interviewform ist besonders offen und biografisch orientiert?",
+    "options": [
+      "Experteninterview",
+      "Problemzentriertes Interview",
+      "Narratives Interview",
+      "Standardisiertes Interview"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Narrative Interviews geben der Erzählperson viel Raum und eignen sich besonders für biografische Rekonstruktionen und Deutungsmuster.",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Qualitativ",
+      "Interview"
+    ],
+    "difficulty": 1,
+    "solution": "Narratives Interview"
+  },
+  {
+    "id": "m10fs_013",
+    "type": "mc",
+    "question": "Wofür steht das SPSS-Prinzip nach Helfferich?",
+    "options": [
+      "Statistische Software",
+      "Sammeln – Prüfen – Sortieren – Subsumieren",
+      "Standardisierung qualitativer Interviews",
+      "Strukturierung quantitativer Fragebögen"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "SPSS nach Helfferich ist ein Leitfadenprinzip: Sammeln, Prüfen, Sortieren, Subsumieren (nicht SPSS-Software).",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Qualitativ",
+      "Interviewleitfaden",
+      "Helfferich"
+    ],
+    "difficulty": 2,
+    "solution": "Sammeln – Prüfen – Sortieren – Subsumieren"
+  },
+  {
+    "id": "m10fs_014",
+    "type": "mc",
+    "question": "Was ist Evaluation?",
+    "options": [
+      "Messung von Output",
+      "Subjektive Einschätzung eines Projekts",
+      "Systematische Bewertung von Konzept, Prozess und Ergebnissen",
+      "Reine Erfolgskontrolle"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Evaluation ist eine möglichst systematische Bewertung eines Projekts/Programms inkl. Konzeption, Umsetzung (Prozess) und Ergebnissen/Wirkungen.",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Evaluation"
+    ],
+    "difficulty": 1,
+    "solution": "Systematische Bewertung von Konzept, Prozess und Ergebnissen"
+  },
+  {
+    "id": "m10fs_015",
+    "type": "mc",
+    "question": "Welche Evaluationsform dient der laufenden Projektverbesserung?",
+    "options": [
+      "Summative Evaluation",
+      "Fremdevaluation",
+      "Formative Evaluation",
+      "Ex-post-Evaluation"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Formative Evaluation begleitet ein Projekt während der Laufzeit und dient der Steuerung/Verbesserung. Summativ ist eher abschließend.",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Evaluation"
+    ],
+    "difficulty": 2,
+    "solution": "Formative Evaluation"
+  },
+  {
+    "id": "m10fs_016",
+    "type": "mc",
+    "question": "Welche Ziele verfolgt Evaluation?",
+    "options": [
+      "Messung, Planung, Durchführung",
+      "Kontrolle, Erkenntnis, Entwicklung, Legitimation",
+      "Dokumentation und Statistik",
+      "Finanzierung und Steuerung"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Typische Evaluationsfunktionen: Kontrolle, Erkenntnisgewinn, Entwicklung/Verbesserung und Legitimation/Rechenschaft.",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Evaluation"
+    ],
+    "difficulty": 1,
+    "solution": "Kontrolle, Erkenntnis, Entwicklung, Legitimation"
+  },
+  {
+    "id": "m10fs_017",
+    "type": "mc",
+    "question": "Was gehört zu den Grundsätzen der DSGVO?",
+    "options": [
+      "Datenspeicherung ohne Zweckbindung",
+      "Datenmaximierung",
+      "Zweckbindung und Datenminimierung",
+      "Freiwillige Anonymisierung"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "DSGVO-Grundsätze u. a.: Zweckbindung und Datenminimierung (nur so viel wie nötig und nur für den festgelegten Zweck).",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Datenschutz",
+      "DSGVO"
+    ],
+    "difficulty": 1,
+    "solution": "Zweckbindung und Datenminimierung"
+  },
+  {
+    "id": "m10fs_018",
+    "type": "mc",
+    "question": "Was bedeutet Anonymisierung?",
+    "options": [
+      "Ersetzen von Namen durch Codes",
+      "Trennung von Daten und Schlüsseldatei",
+      "Vollständige Aufhebung des Personenbezugs",
+      "Interne Nutzung mit Zugriffsbeschränkung"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Anonymisierung bedeutet: kein Personenbezug mehr möglich. A und B beschreiben eher Pseudonymisierung (Re-Identifikation prinzipiell möglich).",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Datenschutz",
+      "DSGVO"
+    ],
+    "difficulty": 2,
+    "solution": "Vollständige Aufhebung des Personenbezugs"
+  },
+  {
+    "id": "m10fs_019",
+    "type": "mc",
+    "question": "Welche Aussage trifft auf quantitative Forschung zu?",
+    "options": [
+      "Kleine Stichproben",
+      "Offene Erhebungsinstrumente",
+      "Hypothesentestung",
+      "Rekonstruktion subjektiver Sinnstrukturen"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Quantitative Forschung arbeitet häufig deduktiv und prüft Hypothesen mittels standardisierter Messungen und Statistik.",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Quantitativ",
+      "Methoden"
+    ],
+    "difficulty": 1,
+    "solution": "Hypothesentestung"
+  },
+  {
+    "id": "m10fs_020",
+    "type": "mc",
+    "question": "Welche Kennzahl beschreibt die Streuung von Werten um den Mittelwert?",
+    "options": [
+      "Median",
+      "Modus",
+      "Standardabweichung",
+      "Spannweite"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Die Standardabweichung beschreibt, wie stark Werte im Durchschnitt um den Mittelwert streuen (Streuungsmaß).",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Statistik",
+      "Deskriptiv"
+    ],
+    "difficulty": 1,
+    "solution": "Standardabweichung"
+  },
+  {
+    "id": "m10fs_open_001",
+    "type": "open",
+    "question": "Nennen Sie zwei Ziele/Funktionen von Evaluation.",
+    "options": [],
+    "solution": "Zum Beispiel: Kontrolle, Erkenntnis, Entwicklung/Verbesserung, Legitimation/Rechenschaft (zwei reichen).",
+    "hint": "",
+    "source": "generated",
+    "explanation": "Zum Beispiel: Kontrolle, Erkenntnis, Entwicklung/Verbesserung, Legitimation/Rechenschaft (zwei reichen).",
+    "keyPoints": [
+      "Kontrolle",
+      "Erkenntnis",
+      "Entwicklung",
+      "Legitimation"
+    ],
+    "grading": {
+      "minKeyPoints": 2
     },
-    {
-      "id": "m10fs_002",
-      "type": "single_choice",
-      "prompt": "Welche Form gehört NICHT zu den klassischen Segregationsformen?",
-      "choices": [
-        {"id": "A", "text": "Soziale Segregation"},
-        {"id": "B", "text": "Ethnische Segregation"},
-        {"id": "C", "text": "Ökonomische Segregation"},
-        {"id": "D", "text": "Politische Segregation"}
-      ],
-      "answer": "D",
-      "explanation": "Klassisch werden soziale, ethnische und ökonomische Segregation unterschieden. Politische Segregation ist hier kein Standardbegriff.",
-      "tags": ["Sozialraum", "Segregation"],
-      "difficulty": 1
+    "tags": [
+      "Evaluation"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "m10fs_open_002",
+    "type": "open",
+    "question": "Erklären Sie kurz den Unterschied zwischen quantitativer und qualitativer Forschung (2–4 Sätze).",
+    "options": [],
+    "solution": "Quantitative Forschung misst und verarbeitet Daten standardisiert, oft mit größeren Stichproben und Hypothesentests. Qualitative Forschung zielt auf Verstehen, arbeitet offen/flexibel, nutzt meist kleinere Stichproben und rekonstruiert Bedeutungen/Sinn.",
+    "hint": "",
+    "source": "generated",
+    "explanation": "Quantitative Forschung misst und verarbeitet Daten standardisiert, oft mit größeren Stichproben und Hypothesentests. Qualitative Forschung zielt auf Verstehen, arbeitet offen/flexibel, nutzt meist kleinere Stichproben und rekonstruiert Bedeutungen/Sinn.",
+    "keyPoints": [
+      "Messen/Standardisierung",
+      "große Stichprobe",
+      "Hypothesentest",
+      "Verstehen/Offenheit",
+      "kleine Stichprobe",
+      "Bedeutungen/Sinn"
+    ],
+    "grading": {
+      "minKeyPoints": 2
     },
-    {
-      "id": "m10fs_003",
-      "type": "single_choice",
-      "prompt": "Was ist das zentrale Ziel einer Sozialraumanalyse?",
-      "choices": [
-        {"id": "A", "text": "Die Bewertung individueller Lebensführung"},
-        {"id": "B", "text": "Die Messung subjektiver Zufriedenheit"},
-        {"id": "C", "text": "Die Analyse räumlich verteilter sozialer Ungleichheiten"},
-        {"id": "D", "text": "Die statistische Erfassung einzelner Haushalte"}
-      ],
-      "answer": "C",
-      "explanation": "Sozialraumanalyse zielt auf räumliche Muster (Ressourcen/Belastungen/Chancen) und damit auf räumlich verteilte soziale Ungleichheiten.",
-      "tags": ["Sozialraum", "Sozialraumanalyse"],
-      "difficulty": 1
+    "tags": [
+      "Methoden",
+      "Quantitativ",
+      "Qualitativ"
+    ],
+    "difficulty": 2
+  },
+  {
+    "id": "m10fs_open_003",
+    "type": "open",
+    "question": "Warum sind Pretests bei Fragebögen wichtig?",
+    "options": [],
+    "solution": "Pretests helfen, Verständlichkeitsprobleme, unklare Begriffe, fehlerhafte Skalen (z. B. nicht disjunkt/erschöpfend) und Layout-/Dramaturgieprobleme früh zu erkennen und zu korrigieren.",
+    "hint": "",
+    "source": "generated",
+    "explanation": "Pretests helfen, Verständlichkeitsprobleme, unklare Begriffe, fehlerhafte Skalen (z. B. nicht disjunkt/erschöpfend) und Layout-/Dramaturgieprobleme früh zu erkennen und zu korrigieren.",
+    "keyPoints": [
+      "Verständlichkeit",
+      "unklare Begriffe",
+      "Skalenfehler",
+      "Dramaturgie/Layout",
+      "Fehler früh erkennen"
+    ],
+    "grading": {
+      "minKeyPoints": 2
     },
-    {
-      "id": "m10fs_004",
-      "type": "single_choice",
-      "prompt": "Welche Methode zählt zur qualitativen Sozialraumanalyse?",
-      "choices": [
-        {"id": "A", "text": "Armutsquote"},
-        {"id": "B", "text": "GIS-Kartierung"},
-        {"id": "C", "text": "Experteninterviews"},
-        {"id": "D", "text": "Bevölkerungsstatistik"}
-      ],
-      "answer": "C",
-      "explanation": "Experteninterviews sind qualitative Methoden (Deutungen/Erfahrungen). Armutsquote, GIS und Statistik sind primär quantitative/strukturierende Verfahren.",
-      "tags": ["Sozialraum", "Sozialraumanalyse", "Qualitativ"],
-      "difficulty": 1
-    },
-    {
-      "id": "m10fs_005",
-      "type": "single_choice",
-      "prompt": "Was versteht man unter Triangulation?",
-      "choices": [
-        {"id": "A", "text": "Die ausschließliche Nutzung qualitativer Methoden"},
-        {"id": "B", "text": "Die Kombination qualitativer und quantitativer Methoden"},
-        {"id": "C", "text": "Die statistische Überprüfung qualitativer Daten"},
-        {"id": "D", "text": "Die Wiederholung einer Erhebung"}
-      ],
-      "answer": "B",
-      "explanation": "Triangulation meint die Kombination verschiedener Methoden/Datenquellen/Perspektiven (oft quali+quanti), um Aussagekraft/Validität zu erhöhen.",
-      "tags": ["Methoden", "Triangulation"],
-      "difficulty": 1
-    },
-    {
-      "id": "m10fs_006",
-      "type": "single_choice",
-      "prompt": "Welches Gebot der Frageformulierung nach Porst wird hier verletzt? \"Finden Sie, dass Sozialarbeiter empathisch und fachlich kompetent sein sollten?\"",
-      "choices": [
-        {"id": "A", "text": "Hypothetische Frage"},
-        {"id": "B", "text": "Unklarer Begriff"},
-        {"id": "C", "text": "Doppelter Stimulus"},
-        {"id": "D", "text": "Fehlender Zeitbezug"}
-      ],
-      "answer": "C",
-      "explanation": "Die Frage enthält zwei Inhalte (empathisch UND fachlich kompetent). Nach Porst: ein Item sollte nur einen Stimulus enthalten.",
-      "tags": ["Fragebogen", "Porst", "Frageformulierung"],
-      "difficulty": 2
-    },
-    {
-      "id": "m10fs_007",
-      "type": "single_choice",
-      "prompt": "Warum sollen hypothetische Fragen vermieden werden?",
-      "choices": [
-        {"id": "A", "text": "Sie verlängern den Fragebogen"},
-        {"id": "B", "text": "Sie sind statistisch nicht auswertbar"},
-        {"id": "C", "text": "Befragte können zukünftiges Verhalten kaum zuverlässig einschätzen"},
-        {"id": "D", "text": "Sie erhöhen soziale Erwünschtheit"}
-      ],
-      "answer": "C",
-      "explanation": "Hypothetische Fragen verlangen Einschätzungen zu nicht erlebten Situationen; Antworten sind daher oft wenig belastbar.",
-      "tags": ["Fragebogen", "Porst", "Frageformulierung"],
-      "difficulty": 1
-    },
-    {
-      "id": "m10fs_008",
-      "type": "single_choice",
-      "prompt": "Welche Antwortskala ist disjunkt und erschöpfend?",
-      "choices": [
-        {"id": "A", "text": "0 Bücher / 1–3 Bücher / 3 Bücher oder mehr"},
-        {"id": "B", "text": "0–1 Bücher / 2–4 Bücher / 5 oder mehr Bücher"},
-        {"id": "C", "text": "1–2 Bücher / 3–4 Bücher / 4–6 Bücher"},
-        {"id": "D", "text": "keine Bücher / einige Bücher / viele Bücher"}
-      ],
-      "answer": "B",
-      "explanation": "Disjunkt = keine Überschneidungen, erschöpfend = alle Fälle abgedeckt. B erfüllt beides; A und C überschneiden sich, D ist unpräzise.",
-      "tags": ["Antwortskalen", "Porst"],
-      "difficulty": 2
-    },
-    {
-      "id": "m10fs_009",
-      "type": "single_choice",
-      "prompt": "Was beschreibt Operationalisierung am besten?",
-      "choices": [
-        {"id": "A", "text": "Die statistische Auswertung von Daten"},
-        {"id": "B", "text": "Die Übersetzung theoretischer Begriffe in messbare Indikatoren"},
-        {"id": "C", "text": "Die Auswahl einer Stichprobe"},
-        {"id": "D", "text": "Die Interpretation qualitativer Interviews"}
-      ],
-      "answer": "B",
-      "explanation": "Operationalisierung übersetzt abstrakte Konzepte (z. B. Stress) in messbare Indikatoren (z. B. Schlaf, Puls, Selbstauskunft).",
-      "tags": ["Operationalisierung", "Methoden"],
-      "difficulty": 1
-    },
-    {
-      "id": "m10fs_010",
-      "type": "single_choice",
-      "prompt": "Welches Erkenntnisziel verfolgt der kritische Rationalismus?",
-      "choices": [
-        {"id": "A", "text": "Verstehen subjektiver Sinnzusammenhänge"},
-        {"id": "B", "text": "Rekonstruktion sozialer Bedeutungen"},
-        {"id": "C", "text": "Erklärung durch Hypothesen und Falsifikation"},
-        {"id": "D", "text": "Exploration offener Fragestellungen"}
-      ],
-      "answer": "C",
-      "explanation": "Kritischer Rationalismus (Popper): Hypothesen formulieren und systematisch zu widerlegen versuchen (Falsifikationsprinzip) – Ziel: Erklären.",
-      "tags": ["Wissenschaftstheorie", "Popper"],
-      "difficulty": 1
-    },
-    {
-      "id": "m10fs_011",
-      "type": "single_choice",
-      "prompt": "Welches Prinzip gehört NICHT zu qualitativer Forschung?",
-      "choices": [
-        {"id": "A", "text": "Offenheit"},
-        {"id": "B", "text": "Kontextgebundenheit"},
-        {"id": "C", "text": "Standardisierung"},
-        {"id": "D", "text": "Prozesshaftigkeit"}
-      ],
-      "answer": "C",
-      "explanation": "Qualitative Forschung ist offen, flexibel und kontextbezogen. Standardisierung ist ein Kernmerkmal quantitativer Forschung.",
-      "tags": ["Qualitativ", "Methoden"],
-      "difficulty": 1
-    },
-    {
-      "id": "m10fs_012",
-      "type": "single_choice",
-      "prompt": "Welche Interviewform ist besonders offen und biografisch orientiert?",
-      "choices": [
-        {"id": "A", "text": "Experteninterview"},
-        {"id": "B", "text": "Problemzentriertes Interview"},
-        {"id": "C", "text": "Narratives Interview"},
-        {"id": "D", "text": "Standardisiertes Interview"}
-      ],
-      "answer": "C",
-      "explanation": "Narrative Interviews geben der Erzählperson viel Raum und eignen sich besonders für biografische Rekonstruktionen und Deutungsmuster.",
-      "tags": ["Qualitativ", "Interview"],
-      "difficulty": 1
-    },
-    {
-      "id": "m10fs_013",
-      "type": "single_choice",
-      "prompt": "Wofür steht das SPSS-Prinzip nach Helfferich?",
-      "choices": [
-        {"id": "A", "text": "Statistische Software"},
-        {"id": "B", "text": "Sammeln – Prüfen – Sortieren – Subsumieren"},
-        {"id": "C", "text": "Standardisierung qualitativer Interviews"},
-        {"id": "D", "text": "Strukturierung quantitativer Fragebögen"}
-      ],
-      "answer": "B",
-      "explanation": "SPSS nach Helfferich ist ein Leitfadenprinzip: Sammeln, Prüfen, Sortieren, Subsumieren (nicht SPSS-Software).",
-      "tags": ["Qualitativ", "Interviewleitfaden", "Helfferich"],
-      "difficulty": 2
-    },
-    {
-      "id": "m10fs_014",
-      "type": "single_choice",
-      "prompt": "Was ist Evaluation?",
-      "choices": [
-        {"id": "A", "text": "Messung von Output"},
-        {"id": "B", "text": "Subjektive Einschätzung eines Projekts"},
-        {"id": "C", "text": "Systematische Bewertung von Konzept, Prozess und Ergebnissen"},
-        {"id": "D", "text": "Reine Erfolgskontrolle"}
-      ],
-      "answer": "C",
-      "explanation": "Evaluation ist eine möglichst systematische Bewertung eines Projekts/Programms inkl. Konzeption, Umsetzung (Prozess) und Ergebnissen/Wirkungen.",
-      "tags": ["Evaluation"],
-      "difficulty": 1
-    },
-    {
-      "id": "m10fs_015",
-      "type": "single_choice",
-      "prompt": "Welche Evaluationsform dient der laufenden Projektverbesserung?",
-      "choices": [
-        {"id": "A", "text": "Summative Evaluation"},
-        {"id": "B", "text": "Fremdevaluation"},
-        {"id": "C", "text": "Formative Evaluation"},
-        {"id": "D", "text": "Ex-post-Evaluation"}
-      ],
-      "answer": "C",
-      "explanation": "Formative Evaluation begleitet ein Projekt während der Laufzeit und dient der Steuerung/Verbesserung. Summativ ist eher abschließend.",
-      "tags": ["Evaluation"],
-      "difficulty": 2
-    },
-    {
-      "id": "m10fs_016",
-      "type": "single_choice",
-      "prompt": "Welche Ziele verfolgt Evaluation?",
-      "choices": [
-        {"id": "A", "text": "Messung, Planung, Durchführung"},
-        {"id": "B", "text": "Kontrolle, Erkenntnis, Entwicklung, Legitimation"},
-        {"id": "C", "text": "Dokumentation und Statistik"},
-        {"id": "D", "text": "Finanzierung und Steuerung"}
-      ],
-      "answer": "B",
-      "explanation": "Typische Evaluationsfunktionen: Kontrolle, Erkenntnisgewinn, Entwicklung/Verbesserung und Legitimation/Rechenschaft.",
-      "tags": ["Evaluation"],
-      "difficulty": 1
-    },
-    {
-      "id": "m10fs_017",
-      "type": "single_choice",
-      "prompt": "Was gehört zu den Grundsätzen der DSGVO?",
-      "choices": [
-        {"id": "A", "text": "Datenspeicherung ohne Zweckbindung"},
-        {"id": "B", "text": "Datenmaximierung"},
-        {"id": "C", "text": "Zweckbindung und Datenminimierung"},
-        {"id": "D", "text": "Freiwillige Anonymisierung"}
-      ],
-      "answer": "C",
-      "explanation": "DSGVO-Grundsätze u. a.: Zweckbindung und Datenminimierung (nur so viel wie nötig und nur für den festgelegten Zweck).",
-      "tags": ["Datenschutz", "DSGVO"],
-      "difficulty": 1
-    },
-    {
-      "id": "m10fs_018",
-      "type": "single_choice",
-      "prompt": "Was bedeutet Anonymisierung?",
-      "choices": [
-        {"id": "A", "text": "Ersetzen von Namen durch Codes"},
-        {"id": "B", "text": "Trennung von Daten und Schlüsseldatei"},
-        {"id": "C", "text": "Vollständige Aufhebung des Personenbezugs"},
-        {"id": "D", "text": "Interne Nutzung mit Zugriffsbeschränkung"}
-      ],
-      "answer": "C",
-      "explanation": "Anonymisierung bedeutet: kein Personenbezug mehr möglich. A und B beschreiben eher Pseudonymisierung (Re-Identifikation prinzipiell möglich).",
-      "tags": ["Datenschutz", "DSGVO"],
-      "difficulty": 2
-    },
-    {
-      "id": "m10fs_019",
-      "type": "single_choice",
-      "prompt": "Welche Aussage trifft auf quantitative Forschung zu?",
-      "choices": [
-        {"id": "A", "text": "Kleine Stichproben"},
-        {"id": "B", "text": "Offene Erhebungsinstrumente"},
-        {"id": "C", "text": "Hypothesentestung"},
-        {"id": "D", "text": "Rekonstruktion subjektiver Sinnstrukturen"}
-      ],
-      "answer": "C",
-      "explanation": "Quantitative Forschung arbeitet häufig deduktiv und prüft Hypothesen mittels standardisierter Messungen und Statistik.",
-      "tags": ["Quantitativ", "Methoden"],
-      "difficulty": 1
-    },
-    {
-      "id": "m10fs_020",
-      "type": "single_choice",
-      "prompt": "Welche Kennzahl beschreibt die Streuung von Werten um den Mittelwert?",
-      "choices": [
-        {"id": "A", "text": "Median"},
-        {"id": "B", "text": "Modus"},
-        {"id": "C", "text": "Standardabweichung"},
-        {"id": "D", "text": "Spannweite"}
-      ],
-      "answer": "C",
-      "explanation": "Die Standardabweichung beschreibt, wie stark Werte im Durchschnitt um den Mittelwert streuen (Streuungsmaß).",
-      "tags": ["Statistik", "Deskriptiv"],
-      "difficulty": 1
-    },
-
-    {
-      "id": "m10fs_open_001",
-      "type": "open",
-      "prompt": "Nennen Sie zwei Ziele/Funktionen von Evaluation.",
-      "sampleAnswer": "Zum Beispiel: Kontrolle, Erkenntnis, Entwicklung/Verbesserung, Legitimation/Rechenschaft (zwei reichen).",
-      "keyPoints": ["Kontrolle", "Erkenntnis", "Entwicklung", "Legitimation"],
-      "grading": {"minKeyPoints": 2},
-      "tags": ["Evaluation"],
-      "difficulty": 1
-    },
-    {
-      "id": "m10fs_open_002",
-      "type": "open",
-      "prompt": "Erklären Sie kurz den Unterschied zwischen quantitativer und qualitativer Forschung (2–4 Sätze).",
-      "sampleAnswer": "Quantitative Forschung misst und verarbeitet Daten standardisiert, oft mit größeren Stichproben und Hypothesentests. Qualitative Forschung zielt auf Verstehen, arbeitet offen/flexibel, nutzt meist kleinere Stichproben und rekonstruiert Bedeutungen/Sinn.",
-      "keyPoints": ["Messen/Standardisierung", "große Stichprobe", "Hypothesentest", "Verstehen/Offenheit", "kleine Stichprobe", "Bedeutungen/Sinn"],
-      "grading": {"minKeyPoints": 2},
-      "tags": ["Methoden", "Quantitativ", "Qualitativ"],
-      "difficulty": 2
-    },
-    {
-      "id": "m10fs_open_003",
-      "type": "open",
-      "prompt": "Warum sind Pretests bei Fragebögen wichtig?",
-      "sampleAnswer": "Pretests helfen, Verständlichkeitsprobleme, unklare Begriffe, fehlerhafte Skalen (z. B. nicht disjunkt/erschöpfend) und Layout-/Dramaturgieprobleme früh zu erkennen und zu korrigieren.",
-      "keyPoints": ["Verständlichkeit", "unklare Begriffe", "Skalenfehler", "Dramaturgie/Layout", "Fehler früh erkennen"],
-      "grading": {"minKeyPoints": 2},
-      "tags": ["Fragebogen", "Pretest"],
-      "difficulty": 2
-    }
-  ]
-}
+    "tags": [
+      "Fragebogen",
+      "Pretest"
+    ],
+    "difficulty": 2
+  }
+]
