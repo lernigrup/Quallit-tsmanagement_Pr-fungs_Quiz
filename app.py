@@ -336,24 +336,93 @@ def load_json(path, default):
 def save_json(path, obj):
     path.write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
 
+def load_questions_list(path: Path) -> list[dict]:
+    """Load a questions JSON file and always return a LIST of question dicts.
+
+    Accepts common shapes:
+    - [ {...}, {...} ]
+    - { "questions": [ ... ] }  (or "items"/"data")
+    Any other shape => [].
+    """
+    data = load_json(path, [])
+    if data is None:
+        return []
+    if isinstance(data, dict):
+        for k in ("questions", "items", "data"):
+            v = data.get(k)
+            if isinstance(v, list):
+                data = v
+                break
+        else:
+            return []
+    if not isinstance(data, list):
+        return []
+    return [q for q in data if isinstance(q, dict)]
+
+
+def normalize_ids(qs: list[dict]) -> list[dict]:
+    """Ensure every question has a unique int 'id'."""
+    out = []
+    used = set()
+    next_id = 1
+    # first pass: keep valid ids
+    for q in qs:
+        q2 = dict(q)
+        qid = q2.get("id", None)
+        try:
+            qid_int = int(qid)
+        except Exception:
+            qid_int = None
+        if qid_int is not None and qid_int > 0 and qid_int not in used:
+            q2["id"] = qid_int
+            used.add(qid_int)
+        else:
+            q2["id"] = None
+        out.append(q2)
+    # second pass: fill missing ids
+    for q2 in out:
+        if q2["id"] is None:
+            while next_id in used:
+                next_id += 1
+            q2["id"] = next_id
+            used.add(next_id)
+            next_id += 1
+    return out
+
 def load_questions():
-    # Load from the selected dataset
+    # Load from the selected dataset (one JSON per quiz)
     q_file = get_questions_file()
     c_file = get_custom_file()
 
-    base = load_json(q_file, [])
-    custom = load_json(c_file, [])
+    base = load_questions_list(q_file)
+    custom = load_questions_list(c_file)
 
-    # custom questions get ids after base max
+    # Ensure base questions have stable integer IDs
+    base = normalize_ids(base)
+
+    # Custom questions get ids after base max (stable per quiz)
     if custom:
-        max_id = max(q["id"] for q in base) if base else 0
-        normalized = []
-        for i, q in enumerate(custom, start=1):
+        base_max = max(int(q["id"]) for q in base) if base else 0
+        custom_norm = []
+        used = set(int(q["id"]) for q in base) if base else set()
+        next_id = base_max + 1
+        for q in custom:
             q2 = dict(q)
-            if "id" not in q2:
-                q2["id"] = max_id + i
-            normalized.append(q2)
-        custom = normalized
+            try:
+                qid = int(q2.get("id"))
+            except Exception:
+                qid = None
+            if qid is None or qid in used or qid <= 0:
+                while next_id in used:
+                    next_id += 1
+                q2["id"] = next_id
+                used.add(next_id)
+                next_id += 1
+            else:
+                q2["id"] = qid
+                used.add(qid)
+            custom_norm.append(q2)
+        custom = custom_norm
 
     return base + custom
 
