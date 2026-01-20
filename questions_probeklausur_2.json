@@ -1,675 +1,580 @@
-{
-  "version": 1,
-  "title": "M10fs Probeklausur 2 (Single Choice + offene Fragen)",
-  "module": "M10fs Qualitätssicherung und Evaluation Sozialer Dienste",
-  "language": "de",
-  "questionCount": 23,
-  "questions": [
-    {
-      "id": "m10fs2_001",
-      "type": "single_choice",
-      "prompt": "Was ist ein zentrales Ziel der Sozialberichterstattung (nach Zapf/Noll)?",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Regelmäßig, systematisch und autonom über soziale Strukturen/Prozesse informieren"
-        },
-        {
-          "id": "B",
-          "text": "Individuelle Biografien tiefenhermeneutisch rekonstruieren"
-        },
-        {
-          "id": "C",
-          "text": "Einzelfallberatung anhand professioneller Standards dokumentieren"
-        },
-        {
-          "id": "D",
-          "text": "Nur die Zufriedenheit der Klient*innen mit Angeboten messen"
-        }
-      ],
-      "answer": "A",
-      "explanation": "Sozialberichterstattung zielt auf regelmäßige, rechtzeitige, systematische Information über soziale Strukturen/Prozesse und Lebensbedingungen (Monitoring).",
-      "tags": [
-        "Sozialberichterstattung",
-        "Grundlagen"
-      ],
-      "difficulty": 1
+[
+  {
+    "id": "m10fs2_001",
+    "type": "mc",
+    "question": "Was ist ein zentrales Ziel der Sozialberichterstattung (nach Zapf/Noll)?",
+    "options": [
+      "Regelmäßig, systematisch und autonom über soziale Strukturen/Prozesse informieren",
+      "Individuelle Biografien tiefenhermeneutisch rekonstruieren",
+      "Einzelfallberatung anhand professioneller Standards dokumentieren",
+      "Nur die Zufriedenheit der Klient*innen mit Angeboten messen"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Sozialberichterstattung zielt auf regelmäßige, rechtzeitige, systematische Information über soziale Strukturen/Prozesse und Lebensbedingungen (Monitoring).",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Sozialberichterstattung",
+      "Grundlagen"
+    ],
+    "difficulty": 1,
+    "solution": "Regelmäßig, systematisch und autonom über soziale Strukturen/Prozesse informieren"
+  },
+  {
+    "id": "m10fs2_002",
+    "type": "mc",
+    "question": "Welche Aussage trifft auf quantitative Sozialraumanalysen besonders zu?",
+    "options": [
+      "Sie zielen primär auf subjektive Deutungen und Bewertungen einzelner Akteur*innen",
+      "Sie erfassen Unterschiede zwischen Sozialräumen über Kennziffern und statistische Verfahren",
+      "Sie verzichten bewusst auf Indikatoren, um Offenheit zu sichern",
+      "Sie bestehen ausschließlich aus teilnehmender Beobachtung"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Quantitative Sozialraumanalysen weisen sozialräumliche Unterschiede mithilfe von Indikatoren/Kennziffern und statistischen Verfahren aus.",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Sozialraum",
+      "Sozialraumanalyse"
+    ],
+    "difficulty": 1,
+    "solution": "Sie erfassen Unterschiede zwischen Sozialräumen über Kennziffern und statistische Verfahren"
+  },
+  {
+    "id": "m10fs2_003",
+    "type": "mc",
+    "question": "Segregation bezeichnet am treffendsten …",
+    "options": [
+      "die freiwillige Wahl ähnlicher Freizeitmilieus in einer Stadt",
+      "eine reine Verwaltungseinteilung von Quartieren",
+      "die Übertragung sozialer Ungleichheit in den Raum (Konzentration bestimmter Gruppen in Teilräumen)",
+      "eine kurzfristige Veränderung von Wohnpräferenzen durch Mode"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Segregation meint die räumliche Konzentration bestimmter sozialer Gruppen in Teilräumen – soziale Ungleichheit „im Raum“.",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Sozialraum",
+      "Segregation"
+    ],
+    "difficulty": 1,
+    "solution": "die Übertragung sozialer Ungleichheit in den Raum (Konzentration bestimmter Gruppen in Teilräumen)"
+  },
+  {
+    "id": "m10fs2_004",
+    "type": "mc",
+    "question": "Welche Kombination entspricht den drei klassischen Segregationsdimensionen im Skript?",
+    "options": [
+      "Politisch – religiös – sprachlich",
+      "Sozial – demografisch/familial – ethnisch",
+      "Kulturell – sportlich – bildungsbezogen",
+      "Historisch – ökologisch – ökonometrisch"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Im Skript werden soziale, demografische (familiale) und ethnische Segregation als zentrale Dimensionen genannt.",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Sozialraum",
+      "Segregation"
+    ],
+    "difficulty": 1,
+    "solution": "Sozial – demografisch/familial – ethnisch"
+  },
+  {
+    "id": "m10fs2_005",
+    "type": "mc",
+    "question": "Was ist bei der Interpretation von Aggregatdaten besonders zu beachten?",
+    "options": [
+      "Aggregatdaten erlauben immer sichere Aussagen über einzelne Personen",
+      "Wenn zwei Quoten gleich hoch sind, betrifft es automatisch dieselben Personen",
+      "Ökologische Fehlschlüsse: Zusammenhänge auf Gebietsebene sind nicht automatisch Individualzusammenhänge",
+      "Aggregatdaten sind grundsätzlich unbrauchbar und zu vermeiden"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Aggregatdaten sind nützlich, aber man darf nicht vom Stadtteil-Zusammenhang automatisch auf einzelne Personen schließen (ökologischer Fehlschluss).",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Sozialraum",
+      "Aggregatdaten"
+    ],
+    "difficulty": 2,
+    "solution": "Ökologische Fehlschlüsse: Zusammenhänge auf Gebietsebene sind nicht automatisch Individualzusammenhänge"
+  },
+  {
+    "id": "m10fs2_006",
+    "type": "mc",
+    "question": "Welches der folgenden Beispiele verletzt Porsts Gebot „Vermeidung doppelter Stimuli“ am deutlichsten?",
+    "options": [
+      "Wie häufig nehmen Sie aktiv an Gesprächen über politische Themen teil?",
+      "Hören Sie gerne Musik von Chopin und Wagner?",
+      "Wie alt sind Sie?",
+      "Sind Sie im letzten Monat in ein Restaurant gegangen?"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "„Chopin und Wagner“ fragt zwei Inhalte gleichzeitig ab (doppelter Stimulus).",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Fragebogen",
+      "Porst"
+    ],
+    "difficulty": 1,
+    "solution": "Hören Sie gerne Musik von Chopin und Wagner?"
+  },
+  {
+    "id": "m10fs2_007",
+    "type": "mc",
+    "question": "Welche Einstiegsfrage-Kennzeichnung nach Porst ist richtig?",
+    "options": [
+      "Einstiegsfragen sollten möglichst personenbezogen und technisch komplex sein, um zu sortieren",
+      "Einstiegsfragen sollten nicht themenbezogen sein, um Neutralität zu sichern",
+      "Einstiegsfragen sollten spannenderweise mit Filtern beginnen",
+      "Einstiegsfragen sollten spannend, themenbezogen, leicht und von allen beantwortbar sein"
+    ],
+    "correct": [
+      3
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Einstiegsfragen sollen motivieren (spannend), themenbezogen, technisch einfach und ohne Filter von allen beantwortbar sein.",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Fragebogen",
+      "Dramaturgie"
+    ],
+    "difficulty": 1,
+    "solution": "Einstiegsfragen sollten spannend, themenbezogen, leicht und von allen beantwortbar sein"
+  },
+  {
+    "id": "m10fs2_008",
+    "type": "mc",
+    "question": "Welche Aussage beschreibt den „Primacy-Effekt“ korrekt?",
+    "options": [
+      "Bei mündlichen Befragungen werden eher die zuletzt gehörten Antworten gewählt",
+      "Bei schriftlichen/visuellen Antwortlisten werden eher zuerst präsentierte Antworten gewählt",
+      "Primacy-Effekt tritt nur bei offenen Fragen auf",
+      "Primacy-Effekt ist identisch mit sozialer Erwünschtheit"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Bei visueller Präsentation (z.B. schriftlich) werden eher zuerst gelistete Antworten gewählt (Primacy).",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Fragebogen",
+      "Antwortreihenfolge"
+    ],
+    "difficulty": 2,
+    "solution": "Bei schriftlichen/visuellen Antwortlisten werden eher zuerst präsentierte Antworten gewählt"
+  },
+  {
+    "id": "m10fs2_009",
+    "type": "mc",
+    "question": "Welche Empfehlung wird im Skript zu Ratingskalen (geordneten Antwortvorgaben) häufiger genannt?",
+    "options": [
+      "1–2 Kategorien, um Befragte nicht zu überfordern",
+      "10–12 Kategorien, um fein zu differenzieren",
+      "5–7 Kategorien als guter Kompromiss",
+      "Nur Ja/Nein, weil Skalen unzuverlässig sind"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Für allgemeine Bevölkerungsbefragungen werden häufig 5- oder 7-stufige Skalen empfohlen (moderate Kategorienzahl).",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Skalen",
+      "Fragebogen"
+    ],
+    "difficulty": 2,
+    "solution": "5–7 Kategorien als guter Kompromiss"
+  },
+  {
+    "id": "m10fs2_010",
+    "type": "mc",
+    "question": "Was ist ein typischer Vorteil voll verbalisierter Skalen (alle Kategorien beschriftet)?",
+    "options": [
+      "Sie sind leichter interpretierbar, weil Kategorien klar benannt sind",
+      "Sie sind immer kürzer als endpunktbenannte Skalen",
+      "Sie vermeiden vollständig Primacy/Recency-Effekte",
+      "Sie sind nur bei ungeraden Skalen erlaubt"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Voll verbalisierte Skalen geben klare Bedeutungen der Skalenpunkte vor und reduzieren Interpretationsspielräume.",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Skalen",
+      "Fragebogen"
+    ],
+    "difficulty": 2,
+    "solution": "Sie sind leichter interpretierbar, weil Kategorien klar benannt sind"
+  },
+  {
+    "id": "m10fs2_011",
+    "type": "mc",
+    "question": "Welche Aussage beschreibt Evaluation am besten?",
+    "options": [
+      "Spontane subjektive Einschätzung „aus dem Bauch heraus“",
+      "Systematische und möglichst objektive Bewertung von Konzept, Umsetzung und Ergebnissen eines Projekts",
+      "Reine Messung von Outputs ohne Bezug zu Zielen",
+      "Ausschließlich qualitative Datenerhebung"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Evaluation ist eine systematische, möglichst objektive Beurteilung eines laufenden/abgeschlossenen Vorhabens inkl. Konzept, Prozess und Ergebnissen.",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Evaluation",
+      "Grundlagen"
+    ],
+    "difficulty": 1,
+    "solution": "Systematische und möglichst objektive Bewertung von Konzept, Umsetzung und Ergebnissen eines Projekts"
+  },
+  {
+    "id": "m10fs2_012",
+    "type": "mc",
+    "question": "Welche Funktion von Evaluation passt am ehesten zu „Rechenschaft gegenüber Geldgebern/Öffentlichkeit“?",
+    "options": [
+      "Legitimation",
+      "Erkenntnis",
+      "Entwicklung",
+      "Kontrolle"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Legitimation meint Rechtfertigung/Accountability (z.B. gegenüber Förderern, Politik, Öffentlichkeit).",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Evaluation",
+      "Ziele"
+    ],
+    "difficulty": 1,
+    "solution": "Legitimation"
+  },
+  {
+    "id": "m10fs2_013",
+    "type": "mc",
+    "question": "Welche Zuordnung trifft auf formative vs. summative Evaluation am ehesten zu?",
+    "options": [
+      "Formativ = abschließende Bewertung; Summativ = laufende Verbesserung",
+      "Formativ = laufende Verbesserung während der Laufzeit; Summativ = abschließende Bewertung (oft Vor/Nachher)",
+      "Formativ = nur quantitativ; Summativ = nur qualitativ",
+      "Formativ = nur Fremdevaluation; Summativ = nur Selbstevaluation"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Formative Evaluation begleitet und verbessert während der Laufzeit; summative bewertet am Ende (oft mit Vor/Nach-Messungen).",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Evaluation",
+      "Formen"
+    ],
+    "difficulty": 1,
+    "solution": "Formativ = laufende Verbesserung während der Laufzeit; Summativ = abschließende Bewertung (oft Vor/Nachher)"
+  },
+  {
+    "id": "m10fs2_014",
+    "type": "mc",
+    "question": "Welche der folgenden Angaben gehört NICHT zu den sechs Grundsätzen der DSGVO (Art. 5) im Skript?",
+    "options": [
+      "Zweckbindung",
+      "Datenminimierung",
+      "Datenmaximierung",
+      "Speicherbegrenzung"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "DSGVO fordert Datenminimierung – „Datenmaximierung“ ist das Gegenteil und kein Grundsatz.",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Datenschutz",
+      "DSGVO"
+    ],
+    "difficulty": 1,
+    "solution": "Datenmaximierung"
+  },
+  {
+    "id": "m10fs2_015",
+    "type": "mc",
+    "question": "Was bedeutet „informierte Einwilligung“ (informed consent) im Forschungskontext?",
+    "options": [
+      "Teilnehmende werden möglichst knapp informiert, um nicht zu beeinflussen",
+      "Einwilligung ist gültig nur, wenn Teilnehmende verständlich über Vorhaben und Datenverarbeitung aufgeklärt wurden",
+      "Einwilligung ist nur bei quantitativen Studien notwendig",
+      "Einwilligung ersetzt Anonymisierung immer vollständig"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Einwilligung ist rechtskonform nur bei ausreichender, verständlicher Aufklärung über Studie und Datenverarbeitung.",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Forschungsethik",
+      "Datenschutz"
+    ],
+    "difficulty": 2,
+    "solution": "Einwilligung ist gültig nur, wenn Teilnehmende verständlich über Vorhaben und Datenverarbeitung aufgeklärt wurden"
+  },
+  {
+    "id": "m10fs2_016",
+    "type": "mc",
+    "question": "Welche Aussage trifft auf Anonymisierung vs. Pseudonymisierung zu?",
+    "options": [
+      "Pseudonymisierung hebt den Personenbezug vollständig auf",
+      "Anonymisierung bedeutet Tilgung des Personenbezugs; bei Pseudonymisierung bleibt eine Zuordnung prinzipiell möglich (z.B. über Schlüsseldatei)",
+      "Beides ist identisch, nur unterschiedliche Begriffe",
+      "Anonymisierung bedeutet nur, Namen durch Codes zu ersetzen"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Anonymisierung entfernt den Personenbezug; Pseudonymisierung ersetzt Identifikatoren, lässt Re-Identifikation über Zusatzwissen/Schlüssel prinzipiell zu.",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Datenschutz",
+      "Begriffe"
+    ],
+    "difficulty": 2,
+    "solution": "Anonymisierung bedeutet Tilgung des Personenbezugs; bei Pseudonymisierung bleibt eine Zuordnung prinzipiell möglich (z.B. über Schlüsseldatei)"
+  },
+  {
+    "id": "m10fs2_017",
+    "type": "mc",
+    "question": "Welche Interviewform ist nach dem Skript besonders biografisch orientiert und im Hauptteil monologisch?",
+    "options": [
+      "Narratives Interview",
+      "Standardisiertes Interview",
+      "Telefonisches Kurzinterview",
+      "Fokusgruppenmoderation"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Narrative Interviews sind wenig strukturiert, biografisch, und geben der Erzählperson im Hauptteil das monologische Rederecht.",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Qualitative Interviews",
+      "Interviewformen"
+    ],
+    "difficulty": 1,
+    "solution": "Narratives Interview"
+  },
+  {
+    "id": "m10fs2_018",
+    "type": "mc",
+    "question": "Wofür steht das SPSS-Prinzip nach Helfferich beim Leitfadenbau?",
+    "options": [
+      "Software zur Datenauswertung",
+      "Sammeln – Prüfen – Sortieren – Subsumieren",
+      "Standardisieren – Präsentieren – Skalieren – Signieren",
+      "Stichprobe – Population – Signifikanz – Streuung"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "SPSS ist hier ein Merkschema zur Leitfadenentwicklung: Sammeln, Prüfen, Sortieren, Subsumieren.",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Qualitative Interviews",
+      "Leitfaden"
+    ],
+    "difficulty": 1,
+    "solution": "Sammeln – Prüfen – Sortieren – Subsumieren"
+  },
+  {
+    "id": "m10fs2_019",
+    "type": "mc",
+    "question": "Welche qualitative Erhebungsmethode wird im Skript ausdrücklich als „wichtig“ genannt?",
+    "options": [
+      "Teilnehmende Beobachtung",
+      "Standardisierte Online-Befragung",
+      "Registerdatenanalyse",
+      "Experiment im Labor"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Als zentrale qualitative Erhebungsmethoden werden u.a. Interview, Gruppendiskussion und teilnehmende Beobachtung genannt.",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Qualitative Methoden",
+      "Erhebung"
+    ],
+    "difficulty": 1,
+    "solution": "Teilnehmende Beobachtung"
+  },
+  {
+    "id": "m10fs2_020",
+    "type": "mc",
+    "question": "Welches Maß beschreibt am besten die Streuung um den Mittelwert?",
+    "options": [
+      "Median",
+      "Modus",
+      "Spannweite",
+      "Standardabweichung"
+    ],
+    "correct": [
+      3
+    ],
+    "answerType": "single",
+    "confidence": "from_generated",
+    "explanation": "Die Standardabweichung beschreibt die durchschnittliche Entfernung der Werte vom Mittelwert (Streuungsmaß).",
+    "hint": "",
+    "source": "generated",
+    "tags": [
+      "Statistik",
+      "Deskriptiv"
+    ],
+    "difficulty": 1,
+    "solution": "Standardabweichung"
+  },
+  {
+    "id": "m10fs2_open_001",
+    "type": "open",
+    "question": "Erläutern Sie kurz den Unterschied zwischen administrativen Räumen und Aktionsräumen (Sozialraumorientierung).",
+    "options": [],
+    "solution": "Administrative Räume sind politisch/verwaltungstechnisch abgegrenzte Gebiete (klare Grenzen, Nähe zur Steuerung). Aktionsräume beziehen sich auf die tatsächlich genutzten Lebensräume/Handlungsräume von Personen und Gruppen (oft unscharf). Sozialraumorientierung versucht eine Synthese und orientiert sich an der Perspektive der Zielgruppe.",
+    "hint": "",
+    "source": "generated",
+    "explanation": "Administrative Räume sind politisch/verwaltungstechnisch abgegrenzte Gebiete (klare Grenzen, Nähe zur Steuerung). Aktionsräume beziehen sich auf die tatsächlich genutzten Lebensräume/Handlungsräume von Personen und Gruppen (oft unscharf). Sozialraumorientierung versucht eine Synthese und orientiert sich an der Perspektive der Zielgruppe.",
+    "keyPoints": [
+      "administrative Abgrenzung/territorial",
+      "Aktionsraum = Handlungs- und Nutzungsraum der Menschen",
+      "Aktionsräume oft unscharf/diffus",
+      "Synthese/ Bewohnendenperspektive relevant"
+    ],
+    "grading": {
+      "minKeyPoints": 2
     },
-    {
-      "id": "m10fs2_002",
-      "type": "single_choice",
-      "prompt": "Welche Aussage trifft auf quantitative Sozialraumanalysen besonders zu?",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Sie zielen primär auf subjektive Deutungen und Bewertungen einzelner Akteur*innen"
-        },
-        {
-          "id": "B",
-          "text": "Sie erfassen Unterschiede zwischen Sozialräumen über Kennziffern und statistische Verfahren"
-        },
-        {
-          "id": "C",
-          "text": "Sie verzichten bewusst auf Indikatoren, um Offenheit zu sichern"
-        },
-        {
-          "id": "D",
-          "text": "Sie bestehen ausschließlich aus teilnehmender Beobachtung"
-        }
-      ],
-      "answer": "B",
-      "explanation": "Quantitative Sozialraumanalysen weisen sozialräumliche Unterschiede mithilfe von Indikatoren/Kennziffern und statistischen Verfahren aus.",
-      "tags": [
-        "Sozialraum",
-        "Sozialraumanalyse"
-      ],
-      "difficulty": 1
+    "tags": [
+      "Sozialraum",
+      "Grundbegriffe"
+    ],
+    "difficulty": 2
+  },
+  {
+    "id": "m10fs2_open_002",
+    "type": "open",
+    "question": "Nennen Sie vier Prinzipien/Aspekte der Forschungsethik und erläutern Sie eines davon in 1–2 Sätzen.",
+    "options": [],
+    "solution": "Mögliche Prinzipien: Freiwillige Teilnahme, informierte Einwilligung, Vertraulichkeit/Anonymisierung, Integrität/Schadensvermeidung, Transparenz, institutionalisierte Prüfverfahren. Erläuterung z.B.: Informierte Einwilligung bedeutet, dass Teilnehmende verständlich über Ziel, Ablauf und Datenverarbeitung aufgeklärt werden und dann freiwillig zustimmen.",
+    "hint": "",
+    "source": "generated",
+    "explanation": "Mögliche Prinzipien: Freiwillige Teilnahme, informierte Einwilligung, Vertraulichkeit/Anonymisierung, Integrität/Schadensvermeidung, Transparenz, institutionalisierte Prüfverfahren. Erläuterung z.B.: Informierte Einwilligung bedeutet, dass Teilnehmende verständlich über Ziel, Ablauf und Datenverarbeitung aufgeklärt werden und dann freiwillig zustimmen.",
+    "keyPoints": [
+      "Freiwilligkeit",
+      "informierte Einwilligung",
+      "Vertraulichkeit/Anonymisierung",
+      "Schadensvermeidung/Integrität",
+      "Transparenz"
+    ],
+    "grading": {
+      "minKeyPoints": 4
     },
-    {
-      "id": "m10fs2_003",
-      "type": "single_choice",
-      "prompt": "Segregation bezeichnet am treffendsten …",
-      "choices": [
-        {
-          "id": "A",
-          "text": "die freiwillige Wahl ähnlicher Freizeitmilieus in einer Stadt"
-        },
-        {
-          "id": "B",
-          "text": "eine reine Verwaltungseinteilung von Quartieren"
-        },
-        {
-          "id": "C",
-          "text": "die Übertragung sozialer Ungleichheit in den Raum (Konzentration bestimmter Gruppen in Teilräumen)"
-        },
-        {
-          "id": "D",
-          "text": "eine kurzfristige Veränderung von Wohnpräferenzen durch Mode"
-        }
-      ],
-      "answer": "C",
-      "explanation": "Segregation meint die räumliche Konzentration bestimmter sozialer Gruppen in Teilräumen – soziale Ungleichheit „im Raum“.",
-      "tags": [
-        "Sozialraum",
-        "Segregation"
-      ],
-      "difficulty": 1
+    "tags": [
+      "Forschungsethik",
+      "Datenschutz"
+    ],
+    "difficulty": 2
+  },
+  {
+    "id": "m10fs2_open_003",
+    "type": "open",
+    "question": "Beschreiben Sie kurz (in Stichpunkten), wie man bei der Entwicklung eines standardisierten Fragebogens typische Fehler nach Porst vermeiden kann.",
+    "options": [],
+    "solution": "Beispiel-Stichpunkte: einfache unzweideutige Begriffe; kurze klare Fragen; keine hypothetischen Fragen; keine doppelten Stimuli/Verneinungen; keine suggestiven Unterstellungen; nur nach Wissen fragen, das vorhanden ist; klarer Zeitbezug; Antwortkategorien disjunkt & erschöpfend; Kontext-/Reihenfolgeeffekte beachten; unklare Begriffe definieren.",
+    "hint": "",
+    "source": "generated",
+    "explanation": "Beispiel-Stichpunkte: einfache unzweideutige Begriffe; kurze klare Fragen; keine hypothetischen Fragen; keine doppelten Stimuli/Verneinungen; keine suggestiven Unterstellungen; nur nach Wissen fragen, das vorhanden ist; klarer Zeitbezug; Antwortkategorien disjunkt & erschöpfend; Kontext-/Reihenfolgeeffekte beachten; unklare Begriffe definieren.",
+    "keyPoints": [
+      "einfache Begriffe",
+      "kurze Fragen",
+      "keine hypothetischen Fragen",
+      "keine doppelten Stimuli/Verneinungen",
+      "keine Suggestivfragen",
+      "Zeitbezug",
+      "disjunkt & erschöpfend",
+      "Kontext-/Reihenfolgeeffekte",
+      "unklare Begriffe definieren"
+    ],
+    "grading": {
+      "minKeyPoints": 5
     },
-    {
-      "id": "m10fs2_004",
-      "type": "single_choice",
-      "prompt": "Welche Kombination entspricht den drei klassischen Segregationsdimensionen im Skript?",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Politisch – religiös – sprachlich"
-        },
-        {
-          "id": "B",
-          "text": "Sozial – demografisch/familial – ethnisch"
-        },
-        {
-          "id": "C",
-          "text": "Kulturell – sportlich – bildungsbezogen"
-        },
-        {
-          "id": "D",
-          "text": "Historisch – ökologisch – ökonometrisch"
-        }
-      ],
-      "answer": "B",
-      "explanation": "Im Skript werden soziale, demografische (familiale) und ethnische Segregation als zentrale Dimensionen genannt.",
-      "tags": [
-        "Sozialraum",
-        "Segregation"
-      ],
-      "difficulty": 1
-    },
-    {
-      "id": "m10fs2_005",
-      "type": "single_choice",
-      "prompt": "Was ist bei der Interpretation von Aggregatdaten besonders zu beachten?",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Aggregatdaten erlauben immer sichere Aussagen über einzelne Personen"
-        },
-        {
-          "id": "B",
-          "text": "Wenn zwei Quoten gleich hoch sind, betrifft es automatisch dieselben Personen"
-        },
-        {
-          "id": "C",
-          "text": "Ökologische Fehlschlüsse: Zusammenhänge auf Gebietsebene sind nicht automatisch Individualzusammenhänge"
-        },
-        {
-          "id": "D",
-          "text": "Aggregatdaten sind grundsätzlich unbrauchbar und zu vermeiden"
-        }
-      ],
-      "answer": "C",
-      "explanation": "Aggregatdaten sind nützlich, aber man darf nicht vom Stadtteil-Zusammenhang automatisch auf einzelne Personen schließen (ökologischer Fehlschluss).",
-      "tags": [
-        "Sozialraum",
-        "Aggregatdaten"
-      ],
-      "difficulty": 2
-    },
-    {
-      "id": "m10fs2_006",
-      "type": "single_choice",
-      "prompt": "Welches der folgenden Beispiele verletzt Porsts Gebot „Vermeidung doppelter Stimuli“ am deutlichsten?",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Wie häufig nehmen Sie aktiv an Gesprächen über politische Themen teil?"
-        },
-        {
-          "id": "B",
-          "text": "Hören Sie gerne Musik von Chopin und Wagner?"
-        },
-        {
-          "id": "C",
-          "text": "Wie alt sind Sie?"
-        },
-        {
-          "id": "D",
-          "text": "Sind Sie im letzten Monat in ein Restaurant gegangen?"
-        }
-      ],
-      "answer": "B",
-      "explanation": "„Chopin und Wagner“ fragt zwei Inhalte gleichzeitig ab (doppelter Stimulus).",
-      "tags": [
-        "Fragebogen",
-        "Porst"
-      ],
-      "difficulty": 1
-    },
-    {
-      "id": "m10fs2_007",
-      "type": "single_choice",
-      "prompt": "Welche Einstiegsfrage-Kennzeichnung nach Porst ist richtig?",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Einstiegsfragen sollten möglichst personenbezogen und technisch komplex sein, um zu sortieren"
-        },
-        {
-          "id": "B",
-          "text": "Einstiegsfragen sollten nicht themenbezogen sein, um Neutralität zu sichern"
-        },
-        {
-          "id": "C",
-          "text": "Einstiegsfragen sollten spannenderweise mit Filtern beginnen"
-        },
-        {
-          "id": "D",
-          "text": "Einstiegsfragen sollten spannend, themenbezogen, leicht und von allen beantwortbar sein"
-        }
-      ],
-      "answer": "D",
-      "explanation": "Einstiegsfragen sollen motivieren (spannend), themenbezogen, technisch einfach und ohne Filter von allen beantwortbar sein.",
-      "tags": [
-        "Fragebogen",
-        "Dramaturgie"
-      ],
-      "difficulty": 1
-    },
-    {
-      "id": "m10fs2_008",
-      "type": "single_choice",
-      "prompt": "Welche Aussage beschreibt den „Primacy-Effekt“ korrekt?",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Bei mündlichen Befragungen werden eher die zuletzt gehörten Antworten gewählt"
-        },
-        {
-          "id": "B",
-          "text": "Bei schriftlichen/visuellen Antwortlisten werden eher zuerst präsentierte Antworten gewählt"
-        },
-        {
-          "id": "C",
-          "text": "Primacy-Effekt tritt nur bei offenen Fragen auf"
-        },
-        {
-          "id": "D",
-          "text": "Primacy-Effekt ist identisch mit sozialer Erwünschtheit"
-        }
-      ],
-      "answer": "B",
-      "explanation": "Bei visueller Präsentation (z.B. schriftlich) werden eher zuerst gelistete Antworten gewählt (Primacy).",
-      "tags": [
-        "Fragebogen",
-        "Antwortreihenfolge"
-      ],
-      "difficulty": 2
-    },
-    {
-      "id": "m10fs2_009",
-      "type": "single_choice",
-      "prompt": "Welche Empfehlung wird im Skript zu Ratingskalen (geordneten Antwortvorgaben) häufiger genannt?",
-      "choices": [
-        {
-          "id": "A",
-          "text": "1–2 Kategorien, um Befragte nicht zu überfordern"
-        },
-        {
-          "id": "B",
-          "text": "10–12 Kategorien, um fein zu differenzieren"
-        },
-        {
-          "id": "C",
-          "text": "5–7 Kategorien als guter Kompromiss"
-        },
-        {
-          "id": "D",
-          "text": "Nur Ja/Nein, weil Skalen unzuverlässig sind"
-        }
-      ],
-      "answer": "C",
-      "explanation": "Für allgemeine Bevölkerungsbefragungen werden häufig 5- oder 7-stufige Skalen empfohlen (moderate Kategorienzahl).",
-      "tags": [
-        "Skalen",
-        "Fragebogen"
-      ],
-      "difficulty": 2
-    },
-    {
-      "id": "m10fs2_010",
-      "type": "single_choice",
-      "prompt": "Was ist ein typischer Vorteil voll verbalisierter Skalen (alle Kategorien beschriftet)?",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Sie sind leichter interpretierbar, weil Kategorien klar benannt sind"
-        },
-        {
-          "id": "B",
-          "text": "Sie sind immer kürzer als endpunktbenannte Skalen"
-        },
-        {
-          "id": "C",
-          "text": "Sie vermeiden vollständig Primacy/Recency-Effekte"
-        },
-        {
-          "id": "D",
-          "text": "Sie sind nur bei ungeraden Skalen erlaubt"
-        }
-      ],
-      "answer": "A",
-      "explanation": "Voll verbalisierte Skalen geben klare Bedeutungen der Skalenpunkte vor und reduzieren Interpretationsspielräume.",
-      "tags": [
-        "Skalen",
-        "Fragebogen"
-      ],
-      "difficulty": 2
-    },
-    {
-      "id": "m10fs2_011",
-      "type": "single_choice",
-      "prompt": "Welche Aussage beschreibt Evaluation am besten?",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Spontane subjektive Einschätzung „aus dem Bauch heraus“"
-        },
-        {
-          "id": "B",
-          "text": "Systematische und möglichst objektive Bewertung von Konzept, Umsetzung und Ergebnissen eines Projekts"
-        },
-        {
-          "id": "C",
-          "text": "Reine Messung von Outputs ohne Bezug zu Zielen"
-        },
-        {
-          "id": "D",
-          "text": "Ausschließlich qualitative Datenerhebung"
-        }
-      ],
-      "answer": "B",
-      "explanation": "Evaluation ist eine systematische, möglichst objektive Beurteilung eines laufenden/abgeschlossenen Vorhabens inkl. Konzept, Prozess und Ergebnissen.",
-      "tags": [
-        "Evaluation",
-        "Grundlagen"
-      ],
-      "difficulty": 1
-    },
-    {
-      "id": "m10fs2_012",
-      "type": "single_choice",
-      "prompt": "Welche Funktion von Evaluation passt am ehesten zu „Rechenschaft gegenüber Geldgebern/Öffentlichkeit“?",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Legitimation"
-        },
-        {
-          "id": "B",
-          "text": "Erkenntnis"
-        },
-        {
-          "id": "C",
-          "text": "Entwicklung"
-        },
-        {
-          "id": "D",
-          "text": "Kontrolle"
-        }
-      ],
-      "answer": "A",
-      "explanation": "Legitimation meint Rechtfertigung/Accountability (z.B. gegenüber Förderern, Politik, Öffentlichkeit).",
-      "tags": [
-        "Evaluation",
-        "Ziele"
-      ],
-      "difficulty": 1
-    },
-    {
-      "id": "m10fs2_013",
-      "type": "single_choice",
-      "prompt": "Welche Zuordnung trifft auf formative vs. summative Evaluation am ehesten zu?",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Formativ = abschließende Bewertung; Summativ = laufende Verbesserung"
-        },
-        {
-          "id": "B",
-          "text": "Formativ = laufende Verbesserung während der Laufzeit; Summativ = abschließende Bewertung (oft Vor/Nachher)"
-        },
-        {
-          "id": "C",
-          "text": "Formativ = nur quantitativ; Summativ = nur qualitativ"
-        },
-        {
-          "id": "D",
-          "text": "Formativ = nur Fremdevaluation; Summativ = nur Selbstevaluation"
-        }
-      ],
-      "answer": "B",
-      "explanation": "Formative Evaluation begleitet und verbessert während der Laufzeit; summative bewertet am Ende (oft mit Vor/Nach-Messungen).",
-      "tags": [
-        "Evaluation",
-        "Formen"
-      ],
-      "difficulty": 1
-    },
-    {
-      "id": "m10fs2_014",
-      "type": "single_choice",
-      "prompt": "Welche der folgenden Angaben gehört NICHT zu den sechs Grundsätzen der DSGVO (Art. 5) im Skript?",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Zweckbindung"
-        },
-        {
-          "id": "B",
-          "text": "Datenminimierung"
-        },
-        {
-          "id": "C",
-          "text": "Datenmaximierung"
-        },
-        {
-          "id": "D",
-          "text": "Speicherbegrenzung"
-        }
-      ],
-      "answer": "C",
-      "explanation": "DSGVO fordert Datenminimierung – „Datenmaximierung“ ist das Gegenteil und kein Grundsatz.",
-      "tags": [
-        "Datenschutz",
-        "DSGVO"
-      ],
-      "difficulty": 1
-    },
-    {
-      "id": "m10fs2_015",
-      "type": "single_choice",
-      "prompt": "Was bedeutet „informierte Einwilligung“ (informed consent) im Forschungskontext?",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Teilnehmende werden möglichst knapp informiert, um nicht zu beeinflussen"
-        },
-        {
-          "id": "B",
-          "text": "Einwilligung ist gültig nur, wenn Teilnehmende verständlich über Vorhaben und Datenverarbeitung aufgeklärt wurden"
-        },
-        {
-          "id": "C",
-          "text": "Einwilligung ist nur bei quantitativen Studien notwendig"
-        },
-        {
-          "id": "D",
-          "text": "Einwilligung ersetzt Anonymisierung immer vollständig"
-        }
-      ],
-      "answer": "B",
-      "explanation": "Einwilligung ist rechtskonform nur bei ausreichender, verständlicher Aufklärung über Studie und Datenverarbeitung.",
-      "tags": [
-        "Forschungsethik",
-        "Datenschutz"
-      ],
-      "difficulty": 2
-    },
-    {
-      "id": "m10fs2_016",
-      "type": "single_choice",
-      "prompt": "Welche Aussage trifft auf Anonymisierung vs. Pseudonymisierung zu?",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Pseudonymisierung hebt den Personenbezug vollständig auf"
-        },
-        {
-          "id": "B",
-          "text": "Anonymisierung bedeutet Tilgung des Personenbezugs; bei Pseudonymisierung bleibt eine Zuordnung prinzipiell möglich (z.B. über Schlüsseldatei)"
-        },
-        {
-          "id": "C",
-          "text": "Beides ist identisch, nur unterschiedliche Begriffe"
-        },
-        {
-          "id": "D",
-          "text": "Anonymisierung bedeutet nur, Namen durch Codes zu ersetzen"
-        }
-      ],
-      "answer": "B",
-      "explanation": "Anonymisierung entfernt den Personenbezug; Pseudonymisierung ersetzt Identifikatoren, lässt Re-Identifikation über Zusatzwissen/Schlüssel prinzipiell zu.",
-      "tags": [
-        "Datenschutz",
-        "Begriffe"
-      ],
-      "difficulty": 2
-    },
-    {
-      "id": "m10fs2_017",
-      "type": "single_choice",
-      "prompt": "Welche Interviewform ist nach dem Skript besonders biografisch orientiert und im Hauptteil monologisch?",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Narratives Interview"
-        },
-        {
-          "id": "B",
-          "text": "Standardisiertes Interview"
-        },
-        {
-          "id": "C",
-          "text": "Telefonisches Kurzinterview"
-        },
-        {
-          "id": "D",
-          "text": "Fokusgruppenmoderation"
-        }
-      ],
-      "answer": "A",
-      "explanation": "Narrative Interviews sind wenig strukturiert, biografisch, und geben der Erzählperson im Hauptteil das monologische Rederecht.",
-      "tags": [
-        "Qualitative Interviews",
-        "Interviewformen"
-      ],
-      "difficulty": 1
-    },
-    {
-      "id": "m10fs2_018",
-      "type": "single_choice",
-      "prompt": "Wofür steht das SPSS-Prinzip nach Helfferich beim Leitfadenbau?",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Software zur Datenauswertung"
-        },
-        {
-          "id": "B",
-          "text": "Sammeln – Prüfen – Sortieren – Subsumieren"
-        },
-        {
-          "id": "C",
-          "text": "Standardisieren – Präsentieren – Skalieren – Signieren"
-        },
-        {
-          "id": "D",
-          "text": "Stichprobe – Population – Signifikanz – Streuung"
-        }
-      ],
-      "answer": "B",
-      "explanation": "SPSS ist hier ein Merkschema zur Leitfadenentwicklung: Sammeln, Prüfen, Sortieren, Subsumieren.",
-      "tags": [
-        "Qualitative Interviews",
-        "Leitfaden"
-      ],
-      "difficulty": 1
-    },
-    {
-      "id": "m10fs2_019",
-      "type": "single_choice",
-      "prompt": "Welche qualitative Erhebungsmethode wird im Skript ausdrücklich als „wichtig“ genannt?",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Teilnehmende Beobachtung"
-        },
-        {
-          "id": "B",
-          "text": "Standardisierte Online-Befragung"
-        },
-        {
-          "id": "C",
-          "text": "Registerdatenanalyse"
-        },
-        {
-          "id": "D",
-          "text": "Experiment im Labor"
-        }
-      ],
-      "answer": "A",
-      "explanation": "Als zentrale qualitative Erhebungsmethoden werden u.a. Interview, Gruppendiskussion und teilnehmende Beobachtung genannt.",
-      "tags": [
-        "Qualitative Methoden",
-        "Erhebung"
-      ],
-      "difficulty": 1
-    },
-    {
-      "id": "m10fs2_020",
-      "type": "single_choice",
-      "prompt": "Welches Maß beschreibt am besten die Streuung um den Mittelwert?",
-      "choices": [
-        {
-          "id": "A",
-          "text": "Median"
-        },
-        {
-          "id": "B",
-          "text": "Modus"
-        },
-        {
-          "id": "C",
-          "text": "Spannweite"
-        },
-        {
-          "id": "D",
-          "text": "Standardabweichung"
-        }
-      ],
-      "answer": "D",
-      "explanation": "Die Standardabweichung beschreibt die durchschnittliche Entfernung der Werte vom Mittelwert (Streuungsmaß).",
-      "tags": [
-        "Statistik",
-        "Deskriptiv"
-      ],
-      "difficulty": 1
-    },
-    {
-      "id": "m10fs2_open_001",
-      "type": "open",
-      "prompt": "Erläutern Sie kurz den Unterschied zwischen administrativen Räumen und Aktionsräumen (Sozialraumorientierung).",
-      "sampleAnswer": "Administrative Räume sind politisch/verwaltungstechnisch abgegrenzte Gebiete (klare Grenzen, Nähe zur Steuerung). Aktionsräume beziehen sich auf die tatsächlich genutzten Lebensräume/Handlungsräume von Personen und Gruppen (oft unscharf). Sozialraumorientierung versucht eine Synthese und orientiert sich an der Perspektive der Zielgruppe.",
-      "keyPoints": [
-        "administrative Abgrenzung/territorial",
-        "Aktionsraum = Handlungs- und Nutzungsraum der Menschen",
-        "Aktionsräume oft unscharf/diffus",
-        "Synthese/ Bewohnendenperspektive relevant"
-      ],
-      "grading": {
-        "minKeyPoints": 2
-      },
-      "tags": [
-        "Sozialraum",
-        "Grundbegriffe"
-      ],
-      "difficulty": 2
-    },
-    {
-      "id": "m10fs2_open_002",
-      "type": "open",
-      "prompt": "Nennen Sie vier Prinzipien/Aspekte der Forschungsethik und erläutern Sie eines davon in 1–2 Sätzen.",
-      "sampleAnswer": "Mögliche Prinzipien: Freiwillige Teilnahme, informierte Einwilligung, Vertraulichkeit/Anonymisierung, Integrität/Schadensvermeidung, Transparenz, institutionalisierte Prüfverfahren. Erläuterung z.B.: Informierte Einwilligung bedeutet, dass Teilnehmende verständlich über Ziel, Ablauf und Datenverarbeitung aufgeklärt werden und dann freiwillig zustimmen.",
-      "keyPoints": [
-        "Freiwilligkeit",
-        "informierte Einwilligung",
-        "Vertraulichkeit/Anonymisierung",
-        "Schadensvermeidung/Integrität",
-        "Transparenz"
-      ],
-      "grading": {
-        "minKeyPoints": 4
-      },
-      "tags": [
-        "Forschungsethik",
-        "Datenschutz"
-      ],
-      "difficulty": 2
-    },
-    {
-      "id": "m10fs2_open_003",
-      "type": "open",
-      "prompt": "Beschreiben Sie kurz (in Stichpunkten), wie man bei der Entwicklung eines standardisierten Fragebogens typische Fehler nach Porst vermeiden kann.",
-      "sampleAnswer": "Beispiel-Stichpunkte: einfache unzweideutige Begriffe; kurze klare Fragen; keine hypothetischen Fragen; keine doppelten Stimuli/Verneinungen; keine suggestiven Unterstellungen; nur nach Wissen fragen, das vorhanden ist; klarer Zeitbezug; Antwortkategorien disjunkt & erschöpfend; Kontext-/Reihenfolgeeffekte beachten; unklare Begriffe definieren.",
-      "keyPoints": [
-        "einfache Begriffe",
-        "kurze Fragen",
-        "keine hypothetischen Fragen",
-        "keine doppelten Stimuli/Verneinungen",
-        "keine Suggestivfragen",
-        "Zeitbezug",
-        "disjunkt & erschöpfend",
-        "Kontext-/Reihenfolgeeffekte",
-        "unklare Begriffe definieren"
-      ],
-      "grading": {
-        "minKeyPoints": 5
-      },
-      "tags": [
-        "Fragebogen",
-        "Porst"
-      ],
-      "difficulty": 2
-    }
-  ]
-}
+    "tags": [
+      "Fragebogen",
+      "Porst"
+    ],
+    "difficulty": 2
+  }
+]
