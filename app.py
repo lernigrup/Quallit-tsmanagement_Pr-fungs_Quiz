@@ -404,10 +404,28 @@ def canonicalize_question(q: dict) -> dict:
             if isinstance(v, list):
                 opts = v
                 break
+
+    choice_ids = []
+    option_texts = []
+
     if isinstance(opts, list):
-        q2['options'] = [str(x) for x in opts]
+        # Many schemas use list[str], others use list[dict] like {id:'A', text:'...'}
+        if opts and isinstance(opts[0], dict):
+            for o in opts:
+                if not isinstance(o, dict):
+                    continue
+                cid = o.get('id') or o.get('key') or o.get('value') or o.get('label')
+                ctext = o.get('text') or o.get('label') or o.get('value') or o.get('option') or ''
+                choice_ids.append(str(cid) if cid is not None else '')
+                option_texts.append(str(ctext))
+        else:
+            option_texts = [str(x) for x in opts]
+    q2['options'] = option_texts
+    # store optional choice ids for mapping answers like 'A','B',...
+    if choice_ids:
+        q2['_choice_ids'] = choice_ids
     else:
-        q2['options'] = []
+        q2.pop('_choice_ids', None)
 
     # type
     t = (q2.get('type') or '').strip().lower()
@@ -417,8 +435,11 @@ def canonicalize_question(q: dict) -> dict:
 
     # correct answers
     corr = q2.get('correct', None)
+
+    # Support schemas where the correct answer is stored as a letter/id (e.g., "A") in q['answer']
+    # and choices carry IDs. We'll map that to an index in options.
     if corr is None:
-        # common alternatives
+        # common alternatives (index-based)
         if isinstance(q2.get('answer_index', None), int):
             corr = [q2['answer_index']]
         elif isinstance(q2.get('answer', None), int):
@@ -427,6 +448,40 @@ def canonicalize_question(q: dict) -> dict:
             corr = [q2['solution_index']]
         else:
             corr = []
+
+    # If corr is empty or non-index and we have an 'answer' like "A"/"B"/...
+    if (not corr) and isinstance(q2.get('answer', None), str):
+        ans = q2.get('answer').strip()
+        ids = q2.get('_choice_ids') or []
+        if ans and ids:
+            try:
+                corr = [ids.index(ans)]
+            except ValueError:
+                # sometimes lowercase or spaced
+                try:
+                    corr = [ids.index(ans.upper())]
+                except ValueError:
+                    corr = []
+    # Also accept corr like ["A"] coming from some generators
+    if isinstance(corr, list) and corr and isinstance(corr[0], str):
+        ids = q2.get('_choice_ids') or []
+        if ids:
+            mapped = []
+            for a in corr:
+                if not isinstance(a, str):
+                    continue
+                a2 = a.strip()
+                if not a2:
+                    continue
+                try:
+                    mapped.append(ids.index(a2))
+                except ValueError:
+                    try:
+                        mapped.append(ids.index(a2.upper()))
+                    except ValueError:
+                        pass
+            corr = mapped
+
     # normalize corr to list[int]
     if isinstance(corr, int):
         corr = [corr]
@@ -447,6 +502,16 @@ def canonicalize_question(q: dict) -> dict:
         q2['explanation'] = q2.get('rationale') or q2.get('reason') or q2.get('comment') or ''
     if 'solution' not in q2 or q2.get('solution') is None:
         q2['solution'] = q2.get('musterloesung') or q2.get('musterlösung') or q2.get('answer_text') or ''
+
+    # If it's a multiple-choice question and no explicit solution text is provided,
+    # derive a human-readable solution from the correct option.
+    if (not q2.get('solution')) and q2.get('type') == 'mc' and q2.get('options') and q2.get('correct'):
+        try:
+            idx0 = int(q2['correct'][0])
+            if 0 <= idx0 < len(q2['options']):
+                q2['solution'] = q2['options'][idx0]
+        except Exception:
+            pass
 
     return q2
 
