@@ -1071,12 +1071,15 @@ with nav1:
 with nav2:
     st.write(f"**Frage {cursor_pos+1} von {len(order)}**  ·  ID: **{qid}**")
 with nav3:
-    # Small helper button to go forward without changing the answer (useful when reviewing)
-    if st.button("Weiter ➡", disabled=(cursor_pos >= len(order)-1)):
-        state["cursor"] = min(cursor_pos + 1, len(order))
+    # Weiter / Fertig: am Ende soll man zur Abschlussseite kommen.
+    is_last = (cursor_pos >= len(order) - 1)
+    can_advance_last = (str(qid) in active_answered)
+    btn_label = "Fertig ✅" if is_last else "Weiter ➡"
+    btn_disabled = (is_last and not can_advance_last)
+    if st.button(btn_label, disabled=btn_disabled):
+        state["cursor"] = len(order) if is_last else (cursor_pos + 1)
         save_json(player_file(player), state)
         st.rerun()
-
 with nav4:
     # Jump straight to the end/overview (useful when you want to export or switch modes)
     if st.button("⏭ Ende"):
