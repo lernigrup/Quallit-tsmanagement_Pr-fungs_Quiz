@@ -1062,7 +1062,7 @@ qid = int(order[cursor_pos])
 q = by_id[qid]
 
 st.progress((cursor_pos+1)/len(order))
-nav1, nav2, nav3 = st.columns([1, 4, 1])
+nav1, nav2, nav3, nav4 = st.columns([1, 4, 1, 1])
 with nav1:
     if st.button("⬅ Zurück", disabled=(cursor_pos <= 0)):
         state["cursor"] = max(0, cursor_pos - 1)
@@ -1074,6 +1074,13 @@ with nav3:
     # Small helper button to go forward without changing the answer (useful when reviewing)
     if st.button("Weiter ➡", disabled=(cursor_pos >= len(order)-1)):
         state["cursor"] = min(cursor_pos + 1, len(order))
+        save_json(player_file(player), state)
+        st.rerun()
+
+with nav4:
+    # Jump straight to the end/overview (useful when you want to export or switch modes)
+    if st.button("⏭ Ende"):
+        state["cursor"] = len(order)
         save_json(player_file(player), state)
         st.rerun()
 
