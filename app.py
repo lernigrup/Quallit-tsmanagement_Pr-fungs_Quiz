@@ -389,6 +389,70 @@ def normalize_ids(qs: list[dict]) -> list[dict]:
             next_id += 1
     return out
 
+def canonicalize_question(q: dict) -> dict:
+    """Make question dict robust across different JSON schemas."""
+    q2 = dict(q) if isinstance(q, dict) else {}
+    # question text
+    text = (q2.get('question') or q2.get('frage') or q2.get('text') or q2.get('prompt') or q2.get('title') or '').strip()
+    q2['question'] = text if text else '(Fragetext fehlt – bitte JSON prüfen)'
+
+    # options / choices
+    opts = q2.get('options')
+    if not isinstance(opts, list):
+        for k in ('choices','answers','antworten','optionen'):
+            v = q2.get(k)
+            if isinstance(v, list):
+                opts = v
+                break
+    if isinstance(opts, list):
+        q2['options'] = [str(x) for x in opts]
+    else:
+        q2['options'] = []
+
+    # type
+    t = (q2.get('type') or '').strip().lower()
+    if t not in ('mc','open'):
+        t = 'mc' if q2['options'] else 'open'
+    q2['type'] = t
+
+    # correct answers
+    corr = q2.get('correct', None)
+    if corr is None:
+        # common alternatives
+        if isinstance(q2.get('answer_index', None), int):
+            corr = [q2['answer_index']]
+        elif isinstance(q2.get('answer', None), int):
+            corr = [q2['answer']]
+        elif isinstance(q2.get('solution_index', None), int):
+            corr = [q2['solution_index']]
+        else:
+            corr = []
+    # normalize corr to list[int]
+    if isinstance(corr, int):
+        corr = [corr]
+    if isinstance(corr, list):
+        norm = []
+        for x in corr:
+            try:
+                norm.append(int(x))
+            except Exception:
+                pass
+        corr = norm
+    else:
+        corr = []
+    q2['correct'] = corr
+
+    # explanation/solution fields
+    if 'explanation' not in q2 or q2.get('explanation') is None:
+        q2['explanation'] = q2.get('rationale') or q2.get('reason') or q2.get('comment') or ''
+    if 'solution' not in q2 or q2.get('solution') is None:
+        q2['solution'] = q2.get('musterloesung') or q2.get('musterlösung') or q2.get('answer_text') or ''
+
+    return q2
+
+def canonicalize_questions(qs: list[dict]) -> list[dict]:
+    return [canonicalize_question(q) for q in (qs or []) if isinstance(q, dict)]
+
 def load_questions():
     # Load from the selected dataset (one JSON per quiz)
     q_file = get_questions_file()
@@ -396,6 +460,10 @@ def load_questions():
 
     base = load_questions_list(q_file)
     custom = load_questions_list(c_file)
+    # Canonicalize schema so downstream code can rely on keys like 'question', 'type', 'options', 'correct'.
+    base = canonicalize_questions(base)
+    custom = canonicalize_questions(custom)
+
 
     # Ensure base questions have stable integer IDs
     base = normalize_ids(base)
@@ -944,7 +1012,7 @@ with nav3:
         save_json(player_file(player), state)
         st.rerun()
 
-st.markdown(f"### {q['question']}")
+st.markdown(f"### {q.get('question', '')}")
 
 answered_current = (active_answered or {}).get(str(qid))
 if answered_current:
