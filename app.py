@@ -9,6 +9,11 @@ import streamlit as st
 import sqlite3
 import csv
 import io
+APP_ACTIVE = False  
+
+if not APP_ACTIVE:
+    st.warning("🚧 Die App ist aktuell deaktiviert.")
+    st.stop()
 
 try:
     from reportlab.lib.pagesizes import A4  # type: ignore
