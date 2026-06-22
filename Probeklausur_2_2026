@@ -1,0 +1,885 @@
+[
+  {
+    "id": "M10_SOSE26_PK2_001",
+    "type": "mc",
+    "question": "Was kennzeichnet eine explorative quantitative Studie am treffendsten?",
+    "options": [
+      "Sie bewertet ausschließlich abgeschlossene Projekte",
+      "Sie entdeckt oder erschließt eher unbekannte Phänomene, Probleme oder soziale Felder",
+      "Sie verzichtet vollständig auf Daten",
+      "Sie ist identisch mit einer qualitativen Einzelfallanalyse"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Explorative Studien dienen dazu, neue oder bisher wenig erforschte Bereiche zu erschließen. Sie sind besonders sinnvoll, wenn über ein Phänomen noch wenig bekannt ist.",
+    "hint": "",
+    "solution": "Sie entdeckt oder erschließt eher unbekannte Phänomene, Probleme oder soziale Felder",
+    "tags": [
+      "Quantitative Forschung",
+      "Explorative Studien"
+    ],
+    "difficulty": 1,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "01_M10fs__Sitzung_3.pdf",
+        "pages": [
+          3,
+          4,
+          5,
+          9,
+          10,
+          11,
+          12,
+          14
+        ]
+      }
+    ],
+    "thema_sose2026": "Ziele quantitativer Sozialforschung",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_063",
+    "exam": "Probeklausur 2",
+    "exam_number": 1
+  },
+  {
+    "id": "M10_SOSE26_PK2_002",
+    "type": "mc",
+    "question": "Welche Zielrichtung passt zu hypothesenprüfenden Studien?",
+    "options": [
+      "Beschreiben, wer etwas tut",
+      "Erklären und Theorien oder Hypothesen überprüfen",
+      "Nur offene Erzählungen sammeln",
+      "Ausschließlich Texte interpretieren"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Hypothesenprüfende Studien prüfen wissenschaftliche Theorien und Hypothesen und können Prognosen ermöglichen. Sie sind stärker erklärend ausgerichtet.",
+    "hint": "",
+    "solution": "Erklären und Theorien oder Hypothesen überprüfen",
+    "tags": [
+      "Quantitative Forschung",
+      "Hypothesenprüfung"
+    ],
+    "difficulty": 1,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "01_M10fs__Sitzung_3.pdf",
+        "pages": [
+          3,
+          4,
+          5,
+          9,
+          10,
+          11,
+          12,
+          14
+        ]
+      }
+    ],
+    "thema_sose2026": "Ziele quantitativer Sozialforschung",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_064",
+    "exam": "Probeklausur 2",
+    "exam_number": 2
+  },
+  {
+    "id": "M10_SOSE26_PK2_003",
+    "type": "mc",
+    "question": "Was leisten Korrespondenzregeln in der Operationalisierung?",
+    "options": [
+      "Sie verbinden einen Indikator mit dem Sachverhalt, den er anzeigen soll",
+      "Sie legen fest, welche Literatur im Anhang steht",
+      "Sie ersetzen jede Datenerhebung",
+      "Sie dienen ausschließlich der grafischen Darstellung"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Korrespondenzregeln bestimmen, wie ein Indikator mit dem theoretischen Sachverhalt verbunden wird. Sie legen also fest, was als Hinweis auf den Sachverhalt gilt.",
+    "hint": "",
+    "solution": "Sie verbinden einen Indikator mit dem Sachverhalt, den er anzeigen soll",
+    "tags": [
+      "Operationalisierung",
+      "Korrespondenzregeln"
+    ],
+    "difficulty": 2,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "01_M10fs__Sitzung_3.pdf",
+        "pages": [
+          3,
+          4,
+          5,
+          9,
+          10,
+          11,
+          12,
+          14
+        ]
+      }
+    ],
+    "thema_sose2026": "Operationalisierung/Korrespondenzregeln",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_071",
+    "exam": "Probeklausur 2",
+    "exam_number": 3
+  },
+  {
+    "id": "M10_SOSE26_PK2_004",
+    "type": "mc",
+    "question": "Welches Beispiel passt am besten zu einer Korrespondenzregel?",
+    "options": [
+      "Wenn das Haushaltseinkommen unter einem festgelegten Wert liegt, gilt ein Haushalt in der Studie als arm",
+      "Alle Befragten werden nach Alphabet sortiert",
+      "Die Ergebnisgrafik wird in Farbe gedruckt",
+      "Die Forschungsfrage wird erst nach der Datenerhebung formuliert"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Die Korrespondenzregel legt fest, ab welchem Messwert ein theoretischer Sachverhalt angenommen wird, etwa Armut bei Einkommen unter einer bestimmten Grenze.",
+    "hint": "",
+    "solution": "Wenn das Haushaltseinkommen unter einem festgelegten Wert liegt, gilt ein Haushalt in der Studie als arm",
+    "tags": [
+      "Operationalisierung",
+      "Armut",
+      "Indikator"
+    ],
+    "difficulty": 2,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "01_M10fs__Sitzung_3.pdf",
+        "pages": [
+          3,
+          4,
+          5,
+          9,
+          10,
+          11,
+          12,
+          14
+        ]
+      }
+    ],
+    "thema_sose2026": "Operationalisierung/Korrespondenzregeln",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_072",
+    "exam": "Probeklausur 2",
+    "exam_number": 4
+  },
+  {
+    "id": "M10_SOSE26_PK2_005",
+    "type": "mc",
+    "question": "Was steht am Ende der Operationalisierung?",
+    "options": [
+      "Ein fertiges Erhebungsinstrument, das im Feld eingesetzt werden kann",
+      "Eine ausschließlich theoretische Diskussion ohne Messung",
+      "Eine zufällige Ideensammlung",
+      "Die endgültige Note der Studie"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Operationalisierung führt vom theoretischen Konstrukt zum messbaren Instrument. Am Ende liegt ein Erhebungsinstrument vor.",
+    "hint": "",
+    "solution": "Ein fertiges Erhebungsinstrument, das im Feld eingesetzt werden kann",
+    "tags": [
+      "Operationalisierung",
+      "Erhebungsinstrument"
+    ],
+    "difficulty": 1,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "01_M10fs__Sitzung_3.pdf",
+        "pages": [
+          3,
+          4,
+          5,
+          9,
+          10,
+          11,
+          12,
+          14
+        ]
+      }
+    ],
+    "thema_sose2026": "Operationalisierung",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_073",
+    "exam": "Probeklausur 2",
+    "exam_number": 5
+  },
+  {
+    "type": "mc",
+    "question": "Entsprechend der 10 Gebote von Porst zur Formulierung von Fragen, sollte…",
+    "options": [
+      "suggestive Fragen vermieden werden, falls sie zu lang und komplex sind",
+      "lange Fragen nur dann vermieden werden, wenn sie suggestiv sind",
+      "suggestive sowie lange und komplexe Fragen grundsätzlich vermieden werden",
+      "weder suggestive noch lange und komplexe Fragen grundsätzlich vermieden werden"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "explanation": "Suggestive, lange und komplexe Fragen erhöhen das Risiko, dass Befragte in eine Richtung gedrängt werden oder die Frage missverstehen. Gute Frageformulierung ist klar, kurz und neutral und vermeidet Mehrdeutigkeit. Das verbessert Verständlichkeit und Reliabilität. Darum ist das Vermeiden solcher Fragen eine zentrale Regel.",
+    "hint": "",
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_altklausuren.json",
+        "original_id": "13",
+        "sort_id": "ALT_13",
+        "old_id": "13"
+      }
+    ],
+    "thema_sose2026": "Fragebogen/10 Gebote nach Porst",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "M10_SOSE26_PK2_006",
+    "solution": "suggestive sowie lange und komplexe Fragen grundsätzlich vermieden werden",
+    "original_id": "M10_SOSE26_028",
+    "exam": "Probeklausur 2",
+    "exam_number": 6
+  },
+  {
+    "type": "mc",
+    "question": "Bei der Formulierung von Fragebogen-Fragen gilt es bestimmte Regeln zu beachten. Welche der folgenden Antwortmöglichkeiten stellt keines der 10 Gebote der Frageformulierung von Porst dar?",
+    "options": [
+      "Du sollst lange und komplexe Fragen vermeiden",
+      "Du sollst die Antworten möglichst ausführlich formulieren und bewusst wichtige Aspekte wiederholen, damit die Befragten die Frage auch wirklich verstehen",
+      "Du sollst Unterstellungen und suggestive Fragen vermeiden",
+      "Du sollst Antwortkategorien verwenden, die erschöpfend und disjunkt (überschneidungsfrei) sind"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Porsts Gebote zielen auf Verständlichkeit, Eindeutigkeit, Neutralität, kurze Formulierungen und das Vermeiden von Doppelstimuli/Verneinungen. ‚Antworten möglichst ausführlich formulieren und wichtige Aspekte wiederholen‘ ist das Gegenteil: Es macht Fragen länger, komplizierter und lenkt. Ausführlichkeit kann Verständnis sogar verschlechtern. Deshalb ist diese Aussage kein Porst‑Gebot.",
+    "hint": "",
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_altklausuren.json",
+        "original_id": "20",
+        "sort_id": "ALT_20",
+        "old_id": "20"
+      }
+    ],
+    "thema_sose2026": "Fragebogen/10 Gebote nach Porst",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "M10_SOSE26_PK2_007",
+    "solution": "Du sollst die Antworten möglichst ausführlich formulieren und bewusst wichtige Aspekte wiederholen, damit die Befragten die Frage auch wirklich verstehen",
+    "original_id": "M10_SOSE26_029",
+    "exam": "Probeklausur 2",
+    "exam_number": 7
+  },
+  {
+    "type": "mc",
+    "question": "Es gibt (nach Franzen) verschiedene Regeln zur Gestaltung von Antwortkategorien. Welche der folgenden Regeln gehört NICHT zu seinen Empfehlungen bzw. Zu den Empfehlungen aus dem Skript?",
+    "options": [
+      "Alles in allem sprechen die einschlägigen Ergebnisse dafür, in allgemeinen Bevölkerungsbefragungen fünfstufige oder siebenstufige Skalen zu verwenden.",
+      "Empirisch sprechen die Ergebnisse aus der Forschung dafür, grundsätzlich gerade Skalen zu verwenden.",
+      "Falls eine Beschriftung aufgrund der Abstufungen möglich ist, dann sollte sie auch gewählt werden.",
+      "Der Grundsatz, die Befragung für die Befragten möglichst einfach zu halten, spricht für die Verwendung von unipolaren Skalen."
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Gerade Skalen (ohne Mittelkategorie) zwingen zu einer Tendenz und können dadurch Verzerrungen erzeugen; empirisch wird oft eher zu ungeraden Skalen mit neutraler Mitte geraten, wenn Neutralität sinnvoll ist. Die Aussage, Ergebnisse sprächen grundsätzlich für gerade Skalen, ist daher keine Empfehlung. Franzen diskutiert eher Passung: Anzahl, Beschriftung und Polung sollen verständlich sein. Darum ist diese Regel die ‚nicht passende‘.",
+    "hint": "",
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_altklausuren.json",
+        "original_id": "57",
+        "sort_id": "ALT_57",
+        "old_id": "57"
+      }
+    ],
+    "thema_sose2026": "Antwortskalen/Franzen",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "M10_SOSE26_PK2_008",
+    "solution": "Empirisch sprechen die Ergebnisse aus der Forschung dafür, grundsätzlich gerade Skalen zu verwenden.",
+    "original_id": "M10_SOSE26_047",
+    "exam": "Probeklausur 2",
+    "exam_number": 8
+  },
+  {
+    "type": "mc",
+    "question": "Welche Anzahl an Antwortkategorien wird bei Ratingskalen in allgemeinen Befragungen häufig empfohlen?",
+    "options": [
+      "1 bis 2 Kategorien",
+      "5 bis 7 Kategorien",
+      "10 bis 12 Kategorien",
+      "Nur Ja/Nein-Kategorien"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Für Ratingskalen werden häufig fünf- oder siebenstufige Skalen empfohlen. Sie bieten genug Differenzierung, ohne Befragte unnötig zu überfordern.",
+    "hint": "",
+    "solution": "5 bis 7 Kategorien",
+    "tags": [
+      "Fragebogen",
+      "Antwortskalen",
+      "Ratingskalen"
+    ],
+    "difficulty": 2,
+    "source_pool": "alte_fragen_geprueft_sose2026_ueberarbeitet",
+    "source_refs": [
+      {
+        "original_file": "questions_altklausuren.json",
+        "original_id": "10",
+        "sort_id": "ALT_10",
+        "old_id": "10"
+      }
+    ],
+    "thema_sose2026": "Antwortskalen/Anzahl Kategorien",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "revision_note": "inhaltlich/sprachlich korrigiert für SoSe 2026",
+    "id": "M10_SOSE26_PK2_009",
+    "original_id": "M10_SOSE26_058",
+    "exam": "Probeklausur 2",
+    "exam_number": 9
+  },
+  {
+    "type": "mc",
+    "question": "Welche Empfehlung zur Gestaltung von Antwortskalen passt am besten zu den im Skript behandelten Regeln?",
+    "options": [
+      "Antwortskalen sollten nach Möglichkeit verständlich und vollständig beschriftet sein",
+      "Antwortskalen sollten möglichst viele Kategorien enthalten",
+      "Antwortskalen sollten grundsätzlich nur aus Zahlen bestehen",
+      "Antwortskalen sollten immer gerade sein"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Vollständig beschriftete Skalen sind für Befragte leichter verständlich, weil die Bedeutung jeder Kategorie klarer vorgegeben ist. Sehr viele Kategorien oder rein numerische Skalen können dagegen die Interpretation erschweren.",
+    "hint": "",
+    "solution": "Antwortskalen sollten nach Möglichkeit verständlich und vollständig beschriftet sein",
+    "tags": [
+      "Fragebogen",
+      "Antwortskalen",
+      "Ratingskalen"
+    ],
+    "difficulty": 2,
+    "source_pool": "alte_fragen_geprueft_sose2026_ueberarbeitet",
+    "source_refs": [
+      {
+        "original_file": "questions_altklausuren.json",
+        "original_id": "62",
+        "sort_id": "ALT_62",
+        "old_id": "62"
+      }
+    ],
+    "thema_sose2026": "Antwortskalen/Franzen",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "revision_note": "inhaltlich/sprachlich korrigiert für SoSe 2026",
+    "id": "M10_SOSE26_PK2_010",
+    "original_id": "M10_SOSE26_061",
+    "exam": "Probeklausur 2",
+    "exam_number": 10
+  },
+  {
+    "id": "M10_SOSE26_PK2_011",
+    "type": "mc",
+    "question": "Welche Aussage beschreibt den Recency-Effekt korrekt?",
+    "options": [
+      "Bei mündlicher oder telefonischer Präsentation werden eher zuletzt gehörte Antwortmöglichkeiten gewählt",
+      "Bei schriftlicher Präsentation werden ausschließlich die letzten Antworten gewählt",
+      "Der Recency-Effekt bedeutet, dass Befragte immer ehrlich antworten",
+      "Recency ist ein Gütekriterium qualitativer Forschung"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Beim Recency-Effekt bleiben zuletzt gehörte Optionen besser im Gedächtnis. Er ist besonders bei mündlicher oder telefonischer Präsentation von Antwortoptionen relevant.",
+    "hint": "",
+    "solution": "Bei mündlicher oder telefonischer Präsentation werden eher zuletzt gehörte Antwortmöglichkeiten gewählt",
+    "tags": [
+      "Fragebogen",
+      "Recency-Effekt"
+    ],
+    "difficulty": 2,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "01_M10fs__Sitzung_3.pdf",
+        "pages": [
+          17,
+          18,
+          20,
+          28,
+          29
+        ]
+      }
+    ],
+    "thema_sose2026": "Primacy und Recency",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_094",
+    "exam": "Probeklausur 2",
+    "exam_number": 11
+  },
+  {
+    "id": "M10_SOSE26_PK2_012",
+    "type": "mc",
+    "question": "Was ist ein punktueller Filter in einem Fragebogen?",
+    "options": [
+      "Nur Befragte mit einer bestimmten Antwort werden zu einer bestimmten Folgefrage weitergeleitet",
+      "Alle Befragten überspringen den gesamten Fragebogen",
+      "Der Fragebogen wird automatisch gelöscht",
+      "Alle Antworten werden alphabetisch sortiert"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Ein punktueller Filter betrifft nur Befragte, die eine bestimmte Antwort gegeben haben. Danach werden sie gezielt zu passenden Folgefragen geführt.",
+    "hint": "",
+    "solution": "Nur Befragte mit einer bestimmten Antwort werden zu einer bestimmten Folgefrage weitergeleitet",
+    "tags": [
+      "Fragebogen",
+      "Filterfragen"
+    ],
+    "difficulty": 2,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "01_M10fs__Sitzung_3.pdf",
+        "pages": [
+          17,
+          18,
+          20,
+          28,
+          29
+        ]
+      }
+    ],
+    "thema_sose2026": "Filterfragen",
+    "prioritaet": "mittel",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_095",
+    "exam": "Probeklausur 2",
+    "exam_number": 12
+  },
+  {
+    "id": "M10_SOSE26_PK2_013",
+    "type": "mc",
+    "question": "Warum sollte man bei Selbstausfüller*innen mit Filtern sparsam umgehen?",
+    "options": [
+      "Weil Filter die Bearbeitung komplizierter machen und Fehler beim Ausfüllen begünstigen können",
+      "Weil Filter grundsätzlich verboten sind",
+      "Weil Filter nur bei offenen Interviews erlaubt sind",
+      "Weil Filter die Stichprobe immer repräsentativ machen"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Filter können Befragte verwirren, wenn sie den Fragebogen selbst ausfüllen. Deshalb sollten sie sparsam und klar eingesetzt werden.",
+    "hint": "",
+    "solution": "Weil Filter die Bearbeitung komplizierter machen und Fehler beim Ausfüllen begünstigen können",
+    "tags": [
+      "Fragebogen",
+      "Filterfragen",
+      "Layout"
+    ],
+    "difficulty": 2,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "01_M10fs__Sitzung_3.pdf",
+        "pages": [
+          17,
+          18,
+          20,
+          28,
+          29
+        ]
+      }
+    ],
+    "thema_sose2026": "Filterfragen",
+    "prioritaet": "mittel",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_096",
+    "exam": "Probeklausur 2",
+    "exam_number": 13
+  },
+  {
+    "id": "M10_SOSE26_PK2_014",
+    "type": "mc",
+    "question": "Was meint Objektivität als Gütekriterium empirischer Forschung?",
+    "options": [
+      "Unterschiedliche Personen sollen bei Durchführung, Auswertung oder Interpretation möglichst zu denselben Ergebnissen kommen",
+      "Die Forschenden sollen ihre persönliche Meinung besonders deutlich einbringen",
+      "Die Untersuchung soll nur subjektiv nachvollziehbar sein",
+      "Das Ergebnis muss immer positiv ausfallen"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Objektivität zielt darauf, dass Ergebnisse nicht von persönlichen Vorlieben einzelner Forschender abhängen. Unterschiedliche Personen sollen möglichst gleiche Ergebnisse erzielen.",
+    "hint": "",
+    "solution": "Unterschiedliche Personen sollen bei Durchführung, Auswertung oder Interpretation möglichst zu denselben Ergebnissen kommen",
+    "tags": [
+      "Gütekriterien",
+      "Objektivität"
+    ],
+    "difficulty": 1,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "02_M10fs_Sozialforschung_und_Soziale_Arbeit.pdf",
+        "pages": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      }
+    ],
+    "thema_sose2026": "Gütekriterien",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_074",
+    "exam": "Probeklausur 2",
+    "exam_number": 14
+  },
+  {
+    "id": "M10_SOSE26_PK2_015",
+    "type": "mc",
+    "question": "Was bedeutet Transparenz als Gütekriterium?",
+    "options": [
+      "Forschung muss intersubjektiv nachvollziehbar sein",
+      "Alle Daten müssen öffentlich mit Namen veröffentlicht werden",
+      "Der Fragebogen muss bunt gestaltet sein",
+      "Die Hypothese darf erst nach dem Ergebnis bekannt werden"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Transparenz bedeutet, dass Forschungsprozesse und Entscheidungen nachvollziehbar dokumentiert werden. Andere sollen verstehen können, wie Ergebnisse zustande kamen.",
+    "hint": "",
+    "solution": "Forschung muss intersubjektiv nachvollziehbar sein",
+    "tags": [
+      "Gütekriterien",
+      "Transparenz"
+    ],
+    "difficulty": 1,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "02_M10fs_Sozialforschung_und_Soziale_Arbeit.pdf",
+        "pages": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      }
+    ],
+    "thema_sose2026": "Gütekriterien",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_075",
+    "exam": "Probeklausur 2",
+    "exam_number": 15
+  },
+  {
+    "id": "M10_SOSE26_PK2_016",
+    "type": "mc",
+    "question": "Welches Forschungsdesign erhebt Daten einmalig zu einem Zeitpunkt?",
+    "options": [
+      "Querschnittsstudie",
+      "Panelstudie",
+      "Experiment mit mehreren Messzeitpunkten",
+      "Meta-Analyse"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Eine Querschnittsstudie ist eine einmalige Erhebung. Sie kann standardisiert oder qualitativ durchgeführt werden.",
+    "hint": "",
+    "solution": "Querschnittsstudie",
+    "tags": [
+      "Forschungsdesign",
+      "Querschnitt"
+    ],
+    "difficulty": 1,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "02_M10fs_Sozialforschung_und_Soziale_Arbeit.pdf",
+        "pages": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      }
+    ],
+    "thema_sose2026": "Forschungsdesigns",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_080",
+    "exam": "Probeklausur 2",
+    "exam_number": 16
+  },
+  {
+    "id": "M10_SOSE26_PK2_017",
+    "type": "mc",
+    "question": "Welches Forschungsdesign eignet sich besonders zur Untersuchung von Ursache-Wirkungs-Zusammenhängen?",
+    "options": [
+      "Experiment",
+      "Offenes Brainstorming",
+      "Literaturverzeichnis",
+      "Titelseite eines Fragebogens"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Experimente dienen besonders der Prüfung von Ursache-Wirkungs-Zusammenhängen, weil Bedingungen gezielt variiert und kontrolliert werden können.",
+    "hint": "",
+    "solution": "Experiment",
+    "tags": [
+      "Forschungsdesign",
+      "Experiment"
+    ],
+    "difficulty": 1,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "02_M10fs_Sozialforschung_und_Soziale_Arbeit.pdf",
+        "pages": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      }
+    ],
+    "thema_sose2026": "Forschungsdesigns",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_082",
+    "exam": "Probeklausur 2",
+    "exam_number": 17
+  },
+  {
+    "id": "M10_SOSE26_PK2_018",
+    "type": "mc",
+    "question": "Was meint Strukturqualität?",
+    "options": [
+      "Rahmenbedingungen wie Ausstattung, Personal, Fallbelastung und Schnittstellenmanagement",
+      "Die direkte Wirkung einer Maßnahme auf das Verhalten der Klient*innen",
+      "Nur die Zufriedenheit der Befragten",
+      "Die Reihenfolge der Fragen im Fragebogen"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Strukturqualität beschreibt die Bedingungen, unter denen professionelle Arbeit stattfindet. Dazu gehören zum Beispiel Personal, Räume und Fallbelastung.",
+    "hint": "",
+    "solution": "Rahmenbedingungen wie Ausstattung, Personal, Fallbelastung und Schnittstellenmanagement",
+    "tags": [
+      "Qualitätsdimensionen",
+      "Strukturqualität"
+    ],
+    "difficulty": 1,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "Beitrag_Qualitätssicherung_und_Selbstevaluation_in_der_Bewährungshilfe_endgültig_mit_Abb.pdf",
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      }
+    ],
+    "thema_sose2026": "Qualitätsdimensionen",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_089",
+    "exam": "Probeklausur 2",
+    "exam_number": 18
+  },
+  {
+    "id": "M10_SOSE26_PK2_019",
+    "type": "open",
+    "question": "Nennen Sie drei Gütekriterien empirischer Forschung und erklären Sie eines davon kurz.",
+    "options": [],
+    "solution": "Mögliche Gütekriterien sind Validität, Reliabilität, Objektivität, Transparenz, Indikation/Adäquatheit, Reflexivität, Triangulation und Diskussion von Limitationen. Beispiel: Validität bedeutet, dass ein Messinstrument tatsächlich misst, was es messen soll.",
+    "hint": "",
+    "explanation": "Die Frage trainiert sowohl Begriffswissen als auch kurze Erläuterung, wie sie in offenen Klausurfragen vorkommen kann.",
+    "keyPoints": [
+      "Validität",
+      "Reliabilität",
+      "Objektivität",
+      "Transparenz",
+      "Indikation/Adäquatheit",
+      "Reflexivität",
+      "Triangulation",
+      "Limitationen",
+      "kurze Erklärung eines Kriteriums"
+    ],
+    "grading": {
+      "minKeyPoints": 4
+    },
+    "tags": [
+      "Gütekriterien"
+    ],
+    "difficulty": 2,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "02_M10fs_Sozialforschung_und_Soziale_Arbeit.pdf",
+        "pages": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      }
+    ],
+    "thema_sose2026": "Gütekriterien",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_100",
+    "exam": "Probeklausur 2",
+    "exam_number": 19
+  },
+  {
+    "id": "M10_SOSE26_PK2_020",
+    "type": "open",
+    "question": "Erklären Sie die drei Qualitätsdimensionen Strukturqualität, Prozessqualität und Ergebnisqualität in eigenen Worten.",
+    "options": [],
+    "solution": "Strukturqualität meint Rahmenbedingungen wie Personal, Räume, Ausstattung oder Fallbelastung. Prozessqualität meint die Art und Weise, wie professionelle Arbeit durchgeführt wird. Ergebnisqualität fragt danach, welche Ergebnisse oder Wirkungen erzielt werden.",
+    "hint": "",
+    "explanation": "Die drei Qualitätsdimensionen sind eine zentrale Grundlage für wirkungsorientiertes Qualitätsverständnis.",
+    "keyPoints": [
+      "Strukturqualität = Rahmenbedingungen",
+      "Prozessqualität = Durchführung/Arbeitsprozesse",
+      "Ergebnisqualität = Ergebnisse/Wirkungen",
+      "Zusammenhang zwischen den Dimensionen"
+    ],
+    "grading": {
+      "minKeyPoints": 4
+    },
+    "tags": [
+      "Qualitätsdimensionen",
+      "Strukturqualität",
+      "Prozessqualität",
+      "Ergebnisqualität"
+    ],
+    "difficulty": 2,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "Beitrag_Qualitätssicherung_und_Selbstevaluation_in_der_Bewährungshilfe_endgültig_mit_Abb.pdf",
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      }
+    ],
+    "thema_sose2026": "Qualitätsdimensionen",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_102",
+    "exam": "Probeklausur 2",
+    "exam_number": 20
+  }
+]
