@@ -36,9 +36,13 @@ PROGRESS_DIR.mkdir(exist_ok=True)
 
 # --- Multiple quiz datasets (select at start) ---
 QUIZ_SOURCES = {
-    "Altklausuren Quiz": "questions_altklausuren.json",
-    "Probeklausur 1 - Generiert": "questions_probeklausur_1.json",
-    "Probeklausur 2 - Generiert": "questions_probeklausur_2.json",
+    "Altklausuren 2025": "questions_altklausuren_2025.json",
+    "Probeklausur 1 2025": "questions_probeklausur_1_2025.json",
+    "Probeklausur 2 2025": "questions_probeklausur_2_2025.json",
+
+    "Probeklausur 1 2026": "questions_m10fs_sose2026_probeklausur_1.json",
+    "Probeklausur 2 2026": "questions_m10fs_sose2026_probeklausur_2.json",
+    "Probeklausur 3 2026": "questions_m10fs_sose2026_probeklausur_3.json",
 }
 
 # Fallback (if you keep using a single questions.json)
