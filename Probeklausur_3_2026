@@ -1,0 +1,806 @@
+[
+  {
+    "id": "M10_SOSE26_PK3_001",
+    "type": "mc",
+    "question": "Welche Aussage beschreibt Evaluationsstudien innerhalb quantitativer Forschung im Skript am besten?",
+    "options": [
+      "Sie dienen ausschließlich der Hypothesensuche ohne Bewertung",
+      "Sie bewerten Maßnahmen oder Projekte und gelten als Sonderfall beschreibender oder hypothesenprüfender Studien",
+      "Sie verzichten auf Operationalisierung",
+      "Sie sind immer rein qualitativ"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Evaluationsstudien haben eine Bewertungslogik. Im Skript werden sie als Sonderfall hypothesenprüfender oder beschreibender Studien eingeordnet.",
+    "hint": "",
+    "solution": "Sie bewerten Maßnahmen oder Projekte und gelten als Sonderfall beschreibender oder hypothesenprüfender Studien",
+    "tags": [
+      "Quantitative Forschung",
+      "Evaluation"
+    ],
+    "difficulty": 2,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "01_M10fs__Sitzung_3.pdf",
+        "pages": [
+          3,
+          4,
+          5,
+          9,
+          10,
+          11,
+          12,
+          14
+        ]
+      }
+    ],
+    "thema_sose2026": "Ziele quantitativer Sozialforschung",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_065",
+    "exam": "Probeklausur 3",
+    "exam_number": 1
+  },
+  {
+    "id": "M10_SOSE26_PK3_002",
+    "type": "mc",
+    "question": "Was gehört zur Präzisierung des Themas im quantitativen Forschungsprozess?",
+    "options": [
+      "Nur die Auswertung der erhobenen Daten",
+      "Dimensionen sammeln und systematisieren, Begriffe definieren und Hypothesen oder Forschungsfragen formulieren",
+      "Ausschließlich eine Stichprobengröße berechnen",
+      "Das Forschungsergebnis veröffentlichen"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Vor der Operationalisierung wird das Thema präzisiert. Dazu gehören Dimensionen, Begriffsdefinitionen und die Formulierung von Hypothesen oder Forschungsfragen.",
+    "hint": "",
+    "solution": "Dimensionen sammeln und systematisieren, Begriffe definieren und Hypothesen oder Forschungsfragen formulieren",
+    "tags": [
+      "Quantitativer Forschungsprozess",
+      "Themenpräzisierung"
+    ],
+    "difficulty": 2,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "01_M10fs__Sitzung_3.pdf",
+        "pages": [
+          3,
+          4,
+          5,
+          9,
+          10,
+          11,
+          12,
+          14
+        ]
+      }
+    ],
+    "thema_sose2026": "Quantitativer Forschungsprozess",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_067",
+    "exam": "Probeklausur 3",
+    "exam_number": 2
+  },
+  {
+    "type": "mc",
+    "question": "Was beschreibt Operationalisierung am besten?",
+    "options": [
+      "Die statistische Auswertung von Daten",
+      "Die Übersetzung theoretischer Begriffe in messbare Indikatoren",
+      "Die Auswahl einer Stichprobe",
+      "Die Interpretation qualitativer Interviews"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Operationalisierung übersetzt abstrakte Konzepte (z. B. Stress) in messbare Indikatoren (z. B. Schlaf, Puls, Selbstauskunft).",
+    "hint": "",
+    "solution": "Die Übersetzung theoretischer Begriffe in messbare Indikatoren",
+    "tags": [
+      "Operationalisierung",
+      "Methoden"
+    ],
+    "difficulty": 1,
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_probeklausur_1.json",
+        "original_id": "m10fs_009",
+        "sort_id": "PK1_009",
+        "old_id": "m10fs_009"
+      }
+    ],
+    "thema_sose2026": "Operationalisierung",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "M10_SOSE26_PK3_003",
+    "original_id": "M10_SOSE26_005",
+    "exam": "Probeklausur 3",
+    "exam_number": 3
+  },
+  {
+    "type": "mc",
+    "question": "Welches Erkenntnisziel verfolgt der kritische Rationalismus?",
+    "options": [
+      "Verstehen subjektiver Sinnzusammenhänge",
+      "Rekonstruktion sozialer Bedeutungen",
+      "Erklärung durch Hypothesen und Falsifikation",
+      "Exploration offener Fragestellungen"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "explanation": "Kritischer Rationalismus (Popper): Hypothesen formulieren und systematisch zu widerlegen versuchen (Falsifikationsprinzip) – Ziel: Erklären.",
+    "hint": "",
+    "solution": "Erklärung durch Hypothesen und Falsifikation",
+    "tags": [
+      "Wissenschaftstheorie",
+      "Popper"
+    ],
+    "difficulty": 1,
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_probeklausur_1.json",
+        "original_id": "m10fs_010",
+        "sort_id": "PK1_010",
+        "old_id": "m10fs_010"
+      }
+    ],
+    "thema_sose2026": "Kritischer Rationalismus/Falsifikation",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "M10_SOSE26_PK3_004",
+    "original_id": "M10_SOSE26_006",
+    "exam": "Probeklausur 3",
+    "exam_number": 4
+  },
+  {
+    "type": "mc",
+    "question": "Was meint das Falsifikationsprinzip (kritischer Rationalismus)?",
+    "options": [
+      "Die Hypothesen werden an einem Gedankenkonstrukt überprüft, indem der Versuch unternommen wird, die Hypothese zu widerlegen.",
+      "Die Hypothesen werden an der Wirklichkeit überprüft, indem der Versuch unternommen wird, die Hypothese zu bestätigen.",
+      "Die Hypothesen werden an der Wirklichkeit überprüft, indem der Versuch unternommen wird, die Hypothese zu widerlegen.",
+      "Die Theorie wird an der Wirklichkeit überprüft, indem der Versuch unternommen wird, die Theorie zu bestätigen."
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "explanation": "Das Falsifikationsprinzip (Popper) besagt: Wissenschaftliche Aussagen müssen prinzipiell widerlegbar sein. Hypothesen werden nicht endgültig bestätigt, sondern so getestet, dass man versucht, sie durch Gegenbelege zu widerlegen. Bestehen sie Tests, gelten sie vorläufig als ‚bewährt‘. Deshalb ist die Formulierung zur Widerlegung der Hypothese korrekt.",
+    "hint": "",
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_altklausuren.json",
+        "original_id": "72",
+        "sort_id": "ALT_72",
+        "old_id": "72"
+      }
+    ],
+    "thema_sose2026": "Kritischer Rationalismus/Falsifikationsprinzip",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "M10_SOSE26_PK3_005",
+    "solution": "Die Hypothesen werden an der Wirklichkeit überprüft, indem der Versuch unternommen wird, die Hypothese zu widerlegen.",
+    "original_id": "M10_SOSE26_053",
+    "exam": "Probeklausur 3",
+    "exam_number": 5
+  },
+  {
+    "type": "mc",
+    "question": "Was meint Karl Popper mit systematischem Raten?",
+    "options": [
+      "Es kann lediglich eine Annäherung an die Wahrheit erreicht werden, nie die Wahrheit selbst.",
+      "Vernünftiges Raten ist die Grundlage einer guten Theorie",
+      "Operationalisierung der Wirklichkeit lassen sich nur durch systematisches Raten erzielen",
+      "Eine Methode kann niemals objektiv sein, daher lassen sich auch keine verlässlichen Aussagen über die Wirklichkeit aufstellen"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Popper betont, dass Erkenntnis immer vorläufig ist: Wir können Theorien nicht endgültig beweisen, nur kritisch prüfen und verbessern. ‚Systematisches Raten‘ meint daher: Wir machen begründete Vermutungen/Hypothesen und testen sie, um Irrtümer zu finden. So nähern wir uns der Wahrheit an, erreichen sie aber nie endgültig. Darum ist die Annäherungs‑Aussage korrekt.",
+    "hint": "Popper: Fallibilismus – Wissen ist vorläufig.",
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_altklausuren.json",
+        "original_id": "78",
+        "sort_id": "ALT_78",
+        "old_id": "78"
+      }
+    ],
+    "thema_sose2026": "Kritischer Rationalismus/Popper",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "M10_SOSE26_PK3_006",
+    "solution": "Es kann lediglich eine Annäherung an die Wahrheit erreicht werden, nie die Wahrheit selbst.",
+    "original_id": "M10_SOSE26_056",
+    "exam": "Probeklausur 3",
+    "exam_number": 6
+  },
+  {
+    "type": "mc",
+    "question": "Welche der folgenden Aussagen passt nicht zur Logik des Symbolischen Interaktionismus?",
+    "options": [
+      "Menschen handeln „Dingen“ gegenüber aufgrund der Bedeutungen, die diese Dinge für sie besitzen, dabei sind „Dinge“ auch Menschen, Situationen und Institution",
+      "Beim Symbolischen Interaktionismus geht es um Verallgemeinerungen, d.h. um Aussagen, die möglichst über die untersuchten Personen hinaus Geltung haben.",
+      "Soziale Wirklichkeit gibt es nicht von sich aus, sondern nur durch das wechselseitig aneinander orientierte und interpretierte Handeln von Individuen.",
+      "Die Bedeutung von Dingen ist aus der sozialen Interaktion, dir man mit seinen Mitmenschen eingeht, abgeleitet, oder es entsteht aus ihr."
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Symbolischer Interaktionismus fokussiert gerade auf Sinn, Interaktion und Bedeutungszuschreibungen im konkreten Handeln – nicht auf weitreichende Verallgemeinerungen im Sinne allgemeiner Gesetzmäßigkeiten. Aussagen, die möglichst über die untersuchten Personen hinaus gelten sollen, entsprechen eher einem nomothetischen (generalisierten) Ansatz. Die Logik des Symbolischen Interaktionismus ist eher interpretativ/kontextnah. Deshalb passt diese Aussage nicht dazu.",
+    "hint": "",
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_altklausuren.json",
+        "original_id": "74",
+        "sort_id": "ALT_74",
+        "old_id": "74"
+      }
+    ],
+    "thema_sose2026": "Symbolischer Interaktionismus",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "M10_SOSE26_PK3_007",
+    "solution": "Beim Symbolischen Interaktionismus geht es um Verallgemeinerungen, d.h. um Aussagen, die möglichst über die untersuchten Personen hinaus Geltung haben.",
+    "original_id": "M10_SOSE26_054",
+    "exam": "Probeklausur 3",
+    "exam_number": 7
+  },
+  {
+    "type": "mc",
+    "question": "Was versteht man unter Triangulation?",
+    "options": [
+      "Die ausschließliche Nutzung qualitativer Methoden",
+      "Die Kombination qualitativer und quantitativer Methoden",
+      "Die statistische Überprüfung qualitativer Daten",
+      "Die Wiederholung einer Erhebung"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Triangulation meint die Kombination verschiedener Methoden/Datenquellen/Perspektiven (oft quali+quanti), um Aussagekraft/Validität zu erhöhen.",
+    "hint": "",
+    "solution": "Die Kombination qualitativer und quantitativer Methoden",
+    "tags": [
+      "Methoden",
+      "Triangulation"
+    ],
+    "difficulty": 1,
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_probeklausur_1.json",
+        "original_id": "m10fs_005",
+        "sort_id": "PK1_005",
+        "old_id": "m10fs_005"
+      }
+    ],
+    "thema_sose2026": "Gütekriterien/Triangulation",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "M10_SOSE26_PK3_008",
+    "original_id": "M10_SOSE26_001",
+    "exam": "Probeklausur 3",
+    "exam_number": 8
+  },
+  {
+    "type": "mc",
+    "question": "Welches Prinzip gehört NICHT zu qualitativer Forschung?",
+    "options": [
+      "Offenheit",
+      "Kontextgebundenheit",
+      "Standardisierung",
+      "Prozesshaftigkeit"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "explanation": "Qualitative Forschung ist offen, flexibel und kontextbezogen. Standardisierung ist ein Kernmerkmal quantitativer Forschung.",
+    "hint": "",
+    "solution": "Standardisierung",
+    "tags": [
+      "Qualitativ",
+      "Methoden"
+    ],
+    "difficulty": 1,
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_probeklausur_1.json",
+        "original_id": "m10fs_011",
+        "sort_id": "PK1_011",
+        "old_id": "m10fs_011"
+      }
+    ],
+    "thema_sose2026": "Qualitativ vs. quantitativ",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "M10_SOSE26_PK3_009",
+    "original_id": "M10_SOSE26_007",
+    "exam": "Probeklausur 3",
+    "exam_number": 9
+  },
+  {
+    "type": "mc",
+    "question": "Welche Aussage trifft auf quantitative Forschung zu?",
+    "options": [
+      "Kleine Stichproben",
+      "Offene Erhebungsinstrumente",
+      "Hypothesentestung",
+      "Rekonstruktion subjektiver Sinnstrukturen"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "explanation": "Quantitative Forschung arbeitet häufig deduktiv und prüft Hypothesen mittels standardisierter Messungen und Statistik.",
+    "hint": "",
+    "solution": "Hypothesentestung",
+    "tags": [
+      "Quantitativ",
+      "Methoden"
+    ],
+    "difficulty": 1,
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_probeklausur_1.json",
+        "original_id": "m10fs_019",
+        "sort_id": "PK1_019",
+        "old_id": "m10fs_019"
+      }
+    ],
+    "thema_sose2026": "Quantitative Forschung",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "M10_SOSE26_PK3_010",
+    "original_id": "M10_SOSE26_009",
+    "exam": "Probeklausur 3",
+    "exam_number": 10
+  },
+  {
+    "type": "mc",
+    "question": "Welche der folgenden begrifflichen Gegenüberstellungen bezieht sich auf einen Unterschied zwischen qualitativer und quantitativer Sozialforschung",
+    "options": [
+      "Forschungsdesign vs. Forschungsablauf",
+      "Theorie vs. Empirie",
+      "Triangulation vs. Generalisierung",
+      "Deduktive Forschungslogik vs. induktive Forschungslogik"
+    ],
+    "correct": [
+      3
+    ],
+    "answerType": "single",
+    "explanation": "Deduktiv vs. induktiv beschreibt einen Kernunterschied: Quantitative Forschung arbeitet oft deduktiv (Theorie → Hypothesen → Test), qualitative häufig induktiv (Daten/Material → Konzepte/Theorie). Diese Gegenüberstellung passt daher direkt zum qualitativen/quantitativen Unterschied. Andere Gegenüberstellungen (z.B. ‚objektiv/subjektiv‘) wären zu grob oder missverständlich. Darum ist diese Antwort richtig.",
+    "hint": "",
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_altklausuren.json",
+        "original_id": "24",
+        "sort_id": "ALT_24",
+        "old_id": "24"
+      }
+    ],
+    "thema_sose2026": "Qualitativ vs. quantitativ/deduktiv vs. induktiv",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "M10_SOSE26_PK3_011",
+    "solution": "Deduktive Forschungslogik vs. induktive Forschungslogik",
+    "original_id": "M10_SOSE26_033",
+    "exam": "Probeklausur 3",
+    "exam_number": 11
+  },
+  {
+    "type": "mc",
+    "question": "Welcher der folgenden Begrifflichkeiten benennt eine Methode zur Datenerhebung?",
+    "options": [
+      "Selegierung",
+      "Beobachtung",
+      "Dokumentarische Methode",
+      "Varianzanalyse"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Beobachtung ist eine Datenerhebungsmethode: Man sammelt Daten durch systematisches Wahrnehmen/Protokollieren von Verhalten/Interaktionen (teilnehmend oder nicht‑teilnehmend). Andere Begriffe könnten Auswertung, Gütekriterien oder Designs bezeichnen. Erhebung meint ‚Daten gewinnen‘, und Beobachtung ist genau das. Daher ist ‚Beobachtung‘ die richtige Wahl.",
+    "hint": "",
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_altklausuren.json",
+        "original_id": "25",
+        "sort_id": "ALT_25",
+        "old_id": "25"
+      }
+    ],
+    "thema_sose2026": "Methoden/Datenerhebung",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "M10_SOSE26_PK3_012",
+    "solution": "Beobachtung",
+    "original_id": "M10_SOSE26_034",
+    "exam": "Probeklausur 3",
+    "exam_number": 12
+  },
+  {
+    "type": "mc",
+    "question": "Welches der folgenden Forschungsdesigns sieht eine Befragung zu mehreren Zeitpunkten vor?",
+    "options": [
+      "Querschnittstudie",
+      "Einzelfallanalyse",
+      "Feldforschung",
+      "Panel"
+    ],
+    "correct": [
+      3
+    ],
+    "answerType": "single",
+    "explanation": "Ein Paneldesign befragt dieselben Personen mehrfach zu verschiedenen Zeitpunkten. Dadurch kann man Veränderungen auf Individualebene beobachten (z.B. Meinungswandel) und zeitliche Dynamiken analysieren. Querschnittsdesigns machen das nicht, weil sie nur einmal messen. Daher ist ‚Panel‘ die richtige Antwort.",
+    "hint": "",
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_altklausuren.json",
+        "original_id": "42",
+        "sort_id": "ALT_42",
+        "old_id": "42"
+      }
+    ],
+    "thema_sose2026": "Forschungsdesign/Längsschnitt Panel",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "M10_SOSE26_PK3_013",
+    "solution": "Panel",
+    "original_id": "M10_SOSE26_041",
+    "exam": "Probeklausur 3",
+    "exam_number": 13
+  },
+  {
+    "id": "M10_SOSE26_PK3_014",
+    "type": "mc",
+    "question": "Was ist eine Aufbereitungsmethode im empirischen Forschungsprozess?",
+    "options": [
+      "Transkription beziehungsweise Fixierung von Daten",
+      "Ergebnisbewertung durch Auftraggeber*innen",
+      "Theoriedimensionen",
+      "Auswahl der Prüfungsform"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Aufbereitungsmethoden bereiten Rohdaten für die Auswertung vor. Ein Beispiel ist die Transkription beziehungsweise Verschriftlichung von Daten.",
+    "hint": "",
+    "solution": "Transkription beziehungsweise Fixierung von Daten",
+    "tags": [
+      "Aufbereitungsmethoden",
+      "Transkription"
+    ],
+    "difficulty": 1,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "02_M10fs_Sozialforschung_und_Soziale_Arbeit.pdf",
+        "pages": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      }
+    ],
+    "thema_sose2026": "Methoden der empirischen Forschung",
+    "prioritaet": "mittel",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_084",
+    "exam": "Probeklausur 3",
+    "exam_number": 14
+  },
+  {
+    "type": "mc",
+    "question": "Welche Zuordnung trifft auf formative vs. summative Evaluation am ehesten zu?",
+    "options": [
+      "Formativ = abschließende Bewertung; Summativ = laufende Verbesserung",
+      "Formativ = laufende Verbesserung während der Laufzeit; Summativ = abschließende Bewertung (oft Vor/Nachher)",
+      "Formativ = nur quantitativ; Summativ = nur qualitativ",
+      "Formativ = nur Fremdevaluation; Summativ = nur Selbstevaluation"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Formative Evaluation begleitet und verbessert während der Laufzeit; summative bewertet am Ende (oft mit Vor/Nach-Messungen).",
+    "hint": "",
+    "solution": "Formativ = laufende Verbesserung während der Laufzeit; Summativ = abschließende Bewertung (oft Vor/Nachher)",
+    "tags": [
+      "Evaluation",
+      "Formen"
+    ],
+    "difficulty": 1,
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_probeklausur_2.json",
+        "original_id": "m10fs2_013",
+        "sort_id": "PK2_013",
+        "old_id": "m10fs2_013"
+      }
+    ],
+    "thema_sose2026": "Evaluation/formativ und summativ",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "M10_SOSE26_PK3_015",
+    "original_id": "M10_SOSE26_020",
+    "exam": "Probeklausur 3",
+    "exam_number": 15
+  },
+  {
+    "type": "mc",
+    "question": "Welche Funktion von Evaluation passt am ehesten zu „Rechenschaft gegenüber Geldgebern/Öffentlichkeit“?",
+    "options": [
+      "Legitimation",
+      "Erkenntnis",
+      "Entwicklung",
+      "Kontrolle"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Legitimation meint Rechtfertigung/Accountability (z.B. gegenüber Förderern, Politik, Öffentlichkeit).",
+    "hint": "",
+    "solution": "Legitimation",
+    "tags": [
+      "Evaluation",
+      "Ziele"
+    ],
+    "difficulty": 1,
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_probeklausur_2.json",
+        "original_id": "m10fs2_012",
+        "sort_id": "PK2_012",
+        "old_id": "m10fs2_012"
+      }
+    ],
+    "thema_sose2026": "Evaluation/Funktionen Legitimation",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "M10_SOSE26_PK3_016",
+    "original_id": "M10_SOSE26_019",
+    "exam": "Probeklausur 3",
+    "exam_number": 16
+  },
+  {
+    "id": "M10_SOSE26_PK3_017",
+    "type": "mc",
+    "question": "Warum reicht Klient*innenzufriedenheit allein nicht als Qualitätsmaßstab in der Sozialen Arbeit?",
+    "options": [
+      "Weil Soziale Arbeit komplexe Zielsysteme hat und auch Zielerreichung, Verhaltens- oder Einstellungsveränderungen relevant sein können",
+      "Weil Zufriedenheit grundsätzlich verboten ist",
+      "Weil Qualität nur durch Kosten bestimmt wird",
+      "Weil Adressat*innen niemals befragt werden dürfen"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Zufriedenheit kann wichtig sein, ist aber nicht automatisch die eigentliche Wirkung. In der Sozialen Arbeit müssen auch vereinbarte Ziele und Veränderungen betrachtet werden.",
+    "hint": "",
+    "solution": "Weil Soziale Arbeit komplexe Zielsysteme hat und auch Zielerreichung, Verhaltens- oder Einstellungsveränderungen relevant sein können",
+    "tags": [
+      "Qualität",
+      "Wirkung",
+      "Zufriedenheit"
+    ],
+    "difficulty": 2,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "Beitrag_Qualitätssicherung_und_Selbstevaluation_in_der_Bewährungshilfe_endgültig_mit_Abb.pdf",
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      }
+    ],
+    "thema_sose2026": "Wirkungsorientierung und Qualitätsmanagement",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_091",
+    "exam": "Probeklausur 3",
+    "exam_number": 17
+  },
+  {
+    "id": "M10_SOSE26_PK3_018",
+    "type": "mc",
+    "question": "Wofür steht der PDCA-Zyklus im Kontext von Qualitätsmanagement?",
+    "options": [
+      "Für einen Kreislauf ständiger Verbesserung",
+      "Für die einmalige Löschung alter Daten",
+      "Für eine rein zufällige Projektplanung",
+      "Für eine ausschließlich juristische Prüfung"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Der PDCA-Zyklus beziehungsweise Deming-Kreis ist auf ständige Verbesserung von Produkten und Prozessen ausgerichtet.",
+    "hint": "",
+    "solution": "Für einen Kreislauf ständiger Verbesserung",
+    "tags": [
+      "Qualitätsmanagement",
+      "PDCA"
+    ],
+    "difficulty": 2,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "Beitrag_Qualitätssicherung_und_Selbstevaluation_in_der_Bewährungshilfe_endgültig_mit_Abb.pdf",
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      }
+    ],
+    "thema_sose2026": "Wirkungsorientierung und Qualitätsmanagement",
+    "prioritaet": "mittel",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_093",
+    "exam": "Probeklausur 3",
+    "exam_number": 18
+  },
+  {
+    "id": "M10_SOSE26_PK3_019",
+    "type": "open",
+    "question": "Was ist Selbstevaluation und wozu dient sie in der Sozialen Arbeit?",
+    "options": [],
+    "solution": "Selbstevaluation bedeutet, dass Fachkräfte eigene Arbeit systematisch mit Daten erfassen, auswerten, interpretieren und reflektieren. Sie dient der kritischen Überprüfung eigener Leistungen, der Qualitätsentwicklung, der Steuerung von Arbeitsprozessen und der Professionalisierung.",
+    "hint": "",
+    "explanation": "Selbstevaluation war im Masterpool deutlich unterrepräsentiert, obwohl sie im aktuellen Material zur Qualitätssicherung zentral ist.",
+    "keyPoints": [
+      "systematische Datenerhebung",
+      "Auswertung/Interpretation/Reflexion",
+      "kritische Überprüfung eigener Leistungen",
+      "Qualitätsentwicklung",
+      "Professionalisierung/Steuerung"
+    ],
+    "grading": {
+      "minKeyPoints": 4
+    },
+    "tags": [
+      "Selbstevaluation",
+      "Qualitätsentwicklung"
+    ],
+    "difficulty": 2,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "Beitrag_Qualitätssicherung_und_Selbstevaluation_in_der_Bewährungshilfe_endgültig_mit_Abb.pdf",
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      }
+    ],
+    "thema_sose2026": "Selbstevaluation",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_101",
+    "exam": "Probeklausur 3",
+    "exam_number": 19
+  },
+  {
+    "id": "M10_SOSE26_PK3_020",
+    "type": "open",
+    "question": "Warum reicht Zufriedenheit von Adressat*innen nicht aus, um Qualität in der Sozialen Arbeit zu beurteilen?",
+    "options": [],
+    "solution": "Zufriedenheit kann wichtig sein und als Wirkungsvoraussetzung gelten, reicht aber nicht als alleiniger Maßstab. Soziale Arbeit hat komplexe Zielsysteme. Entscheidend können auch Zielerreichung, Verhaltensänderungen, Einstellungsänderungen oder soziale Teilhabe sein.",
+    "hint": "",
+    "explanation": "Diese Frage verbindet Qualität, Wirkung und Selbstevaluation und prüft, ob der Unterschied zwischen Wirkungsvoraussetzung und Wirkung verstanden wurde.",
+    "keyPoints": [
+      "Zufriedenheit wichtig, aber nicht alleiniger Maßstab",
+      "komplexe Zielsysteme",
+      "Wirkungsvoraussetzung",
+      "Zielerreichung/Verhaltensänderung/Einstellungsänderung"
+    ],
+    "grading": {
+      "minKeyPoints": 4
+    },
+    "tags": [
+      "Wirkung",
+      "Qualität",
+      "Zufriedenheit"
+    ],
+    "difficulty": 3,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "Beitrag_Qualitätssicherung_und_Selbstevaluation_in_der_Bewährungshilfe_endgültig_mit_Abb.pdf",
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      }
+    ],
+    "thema_sose2026": "Wirkungsorientierung und Qualitätsmanagement",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_103",
+    "exam": "Probeklausur 3",
+    "exam_number": 20
+  }
+]
