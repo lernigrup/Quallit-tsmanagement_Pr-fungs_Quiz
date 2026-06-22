@@ -9,7 +9,7 @@ import streamlit as st
 import sqlite3
 import csv
 import io
-APP_ACTIVE = False  
+APP_ACTIVE = True  
 
 if not APP_ACTIVE:
     st.warning("🚧 Die App ist aktuell deaktiviert.")
