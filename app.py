@@ -42,6 +42,7 @@ QUIZZES = {
     "Probeklausur 1 2026": "Probeklausur 1 2026.json",
     "Probeklausur 2 2026": "Probeklausur 2 2026.json",
     "Probeklausur 3 2026": "Probeklausur 3 2026.json",
+    "Alle Fragen 2026": "Alle Fragen 2026.json",
 }
 
 # Fallback (if you keep using a single questions.json)
