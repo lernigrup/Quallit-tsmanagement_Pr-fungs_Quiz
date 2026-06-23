@@ -1,0 +1,3258 @@
+[
+  {
+    "id": "probeklausur_1_2026_01",
+    "type": "mc",
+    "question": "Welches Ziel verfolgt eine deskriptive quantitative Studie vor allem?",
+    "options": [
+      "Neue soziale Felder explorieren",
+      "Gesellschaftliche Phänomene oder menschliches Verhalten beschreiben und quantifizieren",
+      "Ausschließlich subjektive Sinnzusammenhänge rekonstruieren",
+      "Theorien durch Gruppendiskussionen entwickeln"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Deskriptive Studien zielen auf Beschreibung und Quantifizierung. Sie fragen eher nach was, wer, wo oder wie und nicht primär nach kausaler Erklärung.",
+    "hint": "",
+    "solution": "Gesellschaftliche Phänomene oder menschliches Verhalten beschreiben und quantifizieren",
+    "tags": [
+      "Quantitative Forschung",
+      "Deskriptive Studien"
+    ],
+    "difficulty": 1,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "01_M10fs__Sitzung_3.pdf",
+        "pages": [
+          3,
+          4,
+          5,
+          9,
+          10,
+          11,
+          12,
+          14
+        ]
+      }
+    ],
+    "thema_sose2026": "Ziele quantitativer Sozialforschung",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK1_001",
+    "exam": "Probeklausur 1",
+    "exam_number": 1,
+    "source_exam": "Probeklausur 1 2026",
+    "source_exam_position": 1
+  },
+  {
+    "id": "probeklausur_1_2026_02",
+    "type": "mc",
+    "question": "Welche Reihenfolge entspricht dem quantitativen Forschungsprozess nach Burzan im Skript?",
+    "options": [
+      "Thema – Präzisierung – Operationalisierung – Pretest – Datenerhebung – Datenaufbereitung/Interpretation – Ergebnisveröffentlichung",
+      "Datenerhebung – Thema – Pretest – Operationalisierung – Veröffentlichung",
+      "Pretest – Thema – Ergebnisveröffentlichung – Datenerhebung – Operationalisierung",
+      "Interpretation – Thema – Erhebung – Präzisierung – Pretest"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Der quantitative Forschungsprozess beginnt mit Thema und Präzisierung, führt über Operationalisierung und Pretest zur Erhebung, Auswertung/Interpretation und Ergebnisveröffentlichung.",
+    "hint": "",
+    "solution": "Thema – Präzisierung – Operationalisierung – Pretest – Datenerhebung – Datenaufbereitung/Interpretation – Ergebnisveröffentlichung",
+    "tags": [
+      "Quantitativer Forschungsprozess",
+      "Burzan"
+    ],
+    "difficulty": 2,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "01_M10fs__Sitzung_3.pdf",
+        "pages": [
+          3,
+          4,
+          5,
+          9,
+          10,
+          11,
+          12,
+          14
+        ]
+      }
+    ],
+    "thema_sose2026": "Quantitativer Forschungsprozess",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK1_002",
+    "exam": "Probeklausur 1",
+    "exam_number": 2,
+    "source_exam": "Probeklausur 1 2026",
+    "source_exam_position": 2
+  },
+  {
+    "id": "probeklausur_1_2026_03",
+    "type": "mc",
+    "question": "Was bedeutet Operationalisierung im quantitativen Forschungsprozess?",
+    "options": [
+      "Theoretische Konstrukte werden in messbare Variablen und Erhebungsanweisungen übersetzt",
+      "Daten werden endgültig gelöscht",
+      "Offene Interviews werden frei erzählt",
+      "Forschungsergebnisse werden populärwissenschaftlich veröffentlicht"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Operationalisierung legt fest, wie eine Forschungsfrage empirisch beantwortet werden soll. Abstrakte Begriffe werden messbar gemacht.",
+    "hint": "",
+    "solution": "Theoretische Konstrukte werden in messbare Variablen und Erhebungsanweisungen übersetzt",
+    "tags": [
+      "Operationalisierung",
+      "Quantitative Forschung"
+    ],
+    "difficulty": 1,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "01_M10fs__Sitzung_3.pdf",
+        "pages": [
+          3,
+          4,
+          5,
+          9,
+          10,
+          11,
+          12,
+          14
+        ]
+      }
+    ],
+    "thema_sose2026": "Operationalisierung",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK1_003",
+    "exam": "Probeklausur 1",
+    "exam_number": 3,
+    "source_exam": "Probeklausur 1 2026",
+    "source_exam_position": 3
+  },
+  {
+    "id": "probeklausur_1_2026_04",
+    "type": "mc",
+    "question": "Was sind Indikatoren im Rahmen der Operationalisierung?",
+    "options": [
+      "Direkt wahrnehmbare Anzeiger für Sachverhalte, die selbst nicht unmittelbar beobachtbar sind",
+      "Beliebige Meinungen der Forschenden",
+      "Die fertige Ergebnisveröffentlichung",
+      "Nur die Namen der Befragten"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Indikatoren zeigen einen theoretischen Sachverhalt empirisch an. Zum Beispiel kann Haushaltseinkommen ein Indikator für Armut sein.",
+    "hint": "",
+    "solution": "Direkt wahrnehmbare Anzeiger für Sachverhalte, die selbst nicht unmittelbar beobachtbar sind",
+    "tags": [
+      "Operationalisierung",
+      "Indikatoren"
+    ],
+    "difficulty": 1,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "01_M10fs__Sitzung_3.pdf",
+        "pages": [
+          3,
+          4,
+          5,
+          9,
+          10,
+          11,
+          12,
+          14
+        ]
+      }
+    ],
+    "thema_sose2026": "Operationalisierung/Indikatoren",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK1_004",
+    "exam": "Probeklausur 1",
+    "exam_number": 4,
+    "source_exam": "Probeklausur 1 2026",
+    "source_exam_position": 4
+  },
+  {
+    "id": "probeklausur_1_2026_05",
+    "type": "mc",
+    "question": "Welche Aussage trifft auf wissenschaftliche Hypothesen zu?",
+    "options": [
+      "Sie müssen nicht empirisch untersuchbar sein",
+      "Sie beziehen sich nur auf einen Einzelfall",
+      "Sie enthalten zumindest implizit eine Wenn-dann- oder Je-desto-Struktur und müssen falsifizierbar sein",
+      "Sie dürfen nicht durch Daten widerlegt werden können"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "explanation": "Wissenschaftliche Hypothesen haben empirischen Gehalt, gehen über den Einzelfall hinaus, besitzen eine Konditionalstruktur und müssen prinzipiell widerlegbar sein.",
+    "hint": "",
+    "solution": "Sie enthalten zumindest implizit eine Wenn-dann- oder Je-desto-Struktur und müssen falsifizierbar sein",
+    "tags": [
+      "Hypothesen",
+      "Falsifizierbarkeit"
+    ],
+    "difficulty": 2,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "01_M10fs__Sitzung_3.pdf",
+        "pages": [
+          3,
+          4,
+          5,
+          9,
+          10,
+          11,
+          12,
+          14
+        ]
+      }
+    ],
+    "thema_sose2026": "Hypothesen",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK1_005",
+    "exam": "Probeklausur 1",
+    "exam_number": 5,
+    "source_exam": "Probeklausur 1 2026",
+    "source_exam_position": 5
+  },
+  {
+    "type": "mc",
+    "question": "Welches Gebot der Frageformulierung nach Porst wird hier verletzt? \"Finden Sie, dass Sozialarbeiter empathisch und fachlich kompetent sein sollten?\"",
+    "options": [
+      "Hypothetische Frage",
+      "Unklarer Begriff",
+      "Doppelter Stimulus",
+      "Fehlender Zeitbezug"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "explanation": "Die Frage enthält zwei Inhalte (empathisch UND fachlich kompetent). Nach Porst: ein Item sollte nur einen Stimulus enthalten.",
+    "hint": "",
+    "solution": "Doppelter Stimulus",
+    "tags": [
+      "Fragebogen",
+      "Porst",
+      "Frageformulierung"
+    ],
+    "difficulty": 2,
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_probeklausur_1.json",
+        "original_id": "m10fs_006",
+        "sort_id": "PK1_006",
+        "old_id": "m10fs_006"
+      }
+    ],
+    "thema_sose2026": "Fragebogen/10 Gebote nach Porst",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "probeklausur_1_2026_06",
+    "original_id": "M10_SOSE26_PK1_006",
+    "exam": "Probeklausur 1",
+    "exam_number": 6,
+    "source_exam": "Probeklausur 1 2026",
+    "source_exam_position": 6
+  },
+  {
+    "type": "mc",
+    "question": "Warum sollen hypothetische Fragen vermieden werden?",
+    "options": [
+      "Sie verlängern den Fragebogen",
+      "Sie sind statistisch nicht auswertbar",
+      "Befragte können zukünftiges Verhalten kaum zuverlässig einschätzen",
+      "Sie erhöhen soziale Erwünschtheit"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "explanation": "Hypothetische Fragen verlangen Einschätzungen zu nicht erlebten Situationen; Antworten sind daher oft wenig belastbar.",
+    "hint": "",
+    "solution": "Befragte können zukünftiges Verhalten kaum zuverlässig einschätzen",
+    "tags": [
+      "Fragebogen",
+      "Porst",
+      "Frageformulierung"
+    ],
+    "difficulty": 1,
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_probeklausur_1.json",
+        "original_id": "m10fs_007",
+        "sort_id": "PK1_007",
+        "old_id": "m10fs_007"
+      }
+    ],
+    "thema_sose2026": "Fragebogen/10 Gebote nach Porst",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "probeklausur_1_2026_07",
+    "original_id": "M10_SOSE26_PK1_007",
+    "exam": "Probeklausur 1",
+    "exam_number": 7,
+    "source_exam": "Probeklausur 1 2026",
+    "source_exam_position": 7
+  },
+  {
+    "type": "mc",
+    "question": "Welche Antwortskala ist disjunkt und erschöpfend?",
+    "options": [
+      "0 Bücher / 1–3 Bücher / 3 Bücher oder mehr",
+      "0–1 Bücher / 2–4 Bücher / 5 oder mehr Bücher",
+      "1–2 Bücher / 3–4 Bücher / 4–6 Bücher",
+      "keine Bücher / einige Bücher / viele Bücher"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Disjunkt = keine Überschneidungen, erschöpfend = alle Fälle abgedeckt. B erfüllt beides; A und C überschneiden sich, D ist unpräzise.",
+    "hint": "",
+    "solution": "0–1 Bücher / 2–4 Bücher / 5 oder mehr Bücher",
+    "tags": [
+      "Antwortskalen",
+      "Porst"
+    ],
+    "difficulty": 2,
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_probeklausur_1.json",
+        "original_id": "m10fs_008",
+        "sort_id": "PK1_008",
+        "old_id": "m10fs_008"
+      }
+    ],
+    "thema_sose2026": "Antwortkategorien/disjunkt und erschöpfend",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "probeklausur_1_2026_08",
+    "original_id": "M10_SOSE26_PK1_008",
+    "exam": "Probeklausur 1",
+    "exam_number": 8,
+    "source_exam": "Probeklausur 1 2026",
+    "source_exam_position": 8
+  },
+  {
+    "type": "mc",
+    "question": "Welche Einstiegsfrage-Kennzeichnung nach Porst ist richtig?",
+    "options": [
+      "Einstiegsfragen sollten möglichst personenbezogen und technisch komplex sein, um zu sortieren",
+      "Einstiegsfragen sollten nicht themenbezogen sein, um Neutralität zu sichern",
+      "Einstiegsfragen sollten spannenderweise mit Filtern beginnen",
+      "Einstiegsfragen sollten spannend, themenbezogen, leicht und von allen beantwortbar sein"
+    ],
+    "correct": [
+      3
+    ],
+    "answerType": "single",
+    "explanation": "Einstiegsfragen sollen motivieren (spannend), themenbezogen, technisch einfach und ohne Filter von allen beantwortbar sein.",
+    "hint": "",
+    "solution": "Einstiegsfragen sollten spannend, themenbezogen, leicht und von allen beantwortbar sein",
+    "tags": [
+      "Fragebogen",
+      "Dramaturgie"
+    ],
+    "difficulty": 1,
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_probeklausur_2.json",
+        "original_id": "m10fs2_007",
+        "sort_id": "PK2_007",
+        "old_id": "m10fs2_007"
+      }
+    ],
+    "thema_sose2026": "Fragebogen/Einstiegsfrage",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "probeklausur_1_2026_09",
+    "original_id": "M10_SOSE26_PK1_009",
+    "exam": "Probeklausur 1",
+    "exam_number": 9,
+    "source_exam": "Probeklausur 1 2026",
+    "source_exam_position": 9
+  },
+  {
+    "type": "mc",
+    "question": "Welche Aussage beschreibt den „Primacy-Effekt“ korrekt?",
+    "options": [
+      "Bei mündlichen Befragungen werden eher die zuletzt gehörten Antworten gewählt",
+      "Bei schriftlichen/visuellen Antwortlisten werden eher zuerst präsentierte Antworten gewählt",
+      "Primacy-Effekt tritt nur bei offenen Fragen auf",
+      "Primacy-Effekt ist identisch mit sozialer Erwünschtheit"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Bei visueller Präsentation (z.B. schriftlich) werden eher zuerst gelistete Antworten gewählt (Primacy).",
+    "hint": "",
+    "solution": "Bei schriftlichen/visuellen Antwortlisten werden eher zuerst präsentierte Antworten gewählt",
+    "tags": [
+      "Fragebogen",
+      "Antwortreihenfolge"
+    ],
+    "difficulty": 2,
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_probeklausur_2.json",
+        "original_id": "m10fs2_008",
+        "sort_id": "PK2_008",
+        "old_id": "m10fs2_008"
+      }
+    ],
+    "thema_sose2026": "Fragebogen/Primacy-Effekt",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "probeklausur_1_2026_10",
+    "original_id": "M10_SOSE26_PK1_010",
+    "exam": "Probeklausur 1",
+    "exam_number": 10,
+    "source_exam": "Probeklausur 1 2026",
+    "source_exam_position": 10
+  },
+  {
+    "type": "mc",
+    "question": "Welche Empfehlung wird im Skript zu Ratingskalen (geordneten Antwortvorgaben) häufiger genannt?",
+    "options": [
+      "1–2 Kategorien, um Befragte nicht zu überfordern",
+      "10–12 Kategorien, um fein zu differenzieren",
+      "5–7 Kategorien als guter Kompromiss",
+      "Nur Ja/Nein, weil Skalen unzuverlässig sind"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "explanation": "Für allgemeine Bevölkerungsbefragungen werden häufig 5- oder 7-stufige Skalen empfohlen (moderate Kategorienzahl).",
+    "hint": "",
+    "solution": "5–7 Kategorien als guter Kompromiss",
+    "tags": [
+      "Skalen",
+      "Fragebogen"
+    ],
+    "difficulty": 2,
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_probeklausur_2.json",
+        "original_id": "m10fs2_009",
+        "sort_id": "PK2_009",
+        "old_id": "m10fs2_009"
+      }
+    ],
+    "thema_sose2026": "Antwortskalen/Ratingskalen",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "probeklausur_1_2026_11",
+    "original_id": "M10_SOSE26_PK1_011",
+    "exam": "Probeklausur 1",
+    "exam_number": 11,
+    "source_exam": "Probeklausur 1 2026",
+    "source_exam_position": 11
+  },
+  {
+    "type": "mc",
+    "question": "Laut Klöckner und Friedrichs sollten die zentralen Fragen und Themenkomplexe…",
+    "options": [
+      "am Anfang eines Fragebogens stehen",
+      "in der Mitte eines Fragebogens stehen",
+      "am Ende eines Fragebogens stehen",
+      "am Anfang und am Ende eines Fragebogens stehen"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Zentrale Fragen und Themenkomplexe sollten in der Mitte stehen, weil am Anfang Einstiegs-/Warm-up‑Fragen helfen, Vertrauen aufzubauen und das Thema einzuführen. Am Ende werden häufig heikle, demografische oder belastende Fragen platziert, weil Abbruchrisiken sonst steigen. Die Mitte ist die Phase, in der Aufmerksamkeit und Motivation meist am höchsten sind. Deshalb ist ‚in der Mitte‘ die korrekte Empfehlung.",
+    "hint": "",
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_altklausuren.json",
+        "original_id": "11",
+        "sort_id": "ALT_11",
+        "old_id": "11"
+      }
+    ],
+    "thema_sose2026": "Fragebogen/Dramaturgie",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "probeklausur_1_2026_12",
+    "solution": "in der Mitte eines Fragebogens stehen",
+    "original_id": "M10_SOSE26_PK1_012",
+    "exam": "Probeklausur 1",
+    "exam_number": 12,
+    "source_exam": "Probeklausur 1 2026",
+    "source_exam_position": 12
+  },
+  {
+    "type": "mc",
+    "question": "Welche der folgenden Basisanforderungen an empirisches Forschen ist nicht korrekt?",
+    "options": [
+      "Anpassung der Vorgangsweise an Fragen, Ziele, Rahmenbedingungen",
+      "Begründete Auswahl eines Forschungsdesigns und passender Forschungsmethoden",
+      "Entwicklung professionsspezifischer Handlungstheorien",
+      "Beachtung der Gütekriterien"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "explanation": "‚Entwicklung professionsspezifischer Handlungstheorien‘ ist eher ein Ziel von Praxisforschung/Professionalisierung, aber keine allgemeine Basisanforderung an empirisches Forschen. Basisanforderungen betreffen z.B. Systematik, Transparenz, Nachvollziehbarkeit, Prüfbarkeit und methodische Angemessenheit. Handlungstheorien können Ergebnis sein, sind aber nicht zwingende Voraussetzung für empirische Forschung. Darum ist diese Antwort als ‚nicht korrekt‘ markiert.",
+    "hint": "",
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_altklausuren.json",
+        "original_id": "22",
+        "sort_id": "ALT_22",
+        "old_id": "22"
+      }
+    ],
+    "thema_sose2026": "Empirisch forschen/Basisanforderungen",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "probeklausur_1_2026_13",
+    "solution": "Entwicklung professionsspezifischer Handlungstheorien",
+    "original_id": "M10_SOSE26_PK1_013",
+    "exam": "Probeklausur 1",
+    "exam_number": 13,
+    "source_exam": "Probeklausur 1 2026",
+    "source_exam_position": 13
+  },
+  {
+    "type": "mc",
+    "question": "Welcher der folgenden Begriffe bezeichnet ein Gütekriterium in der empirischen Sozialforschung?",
+    "options": [
+      "Redundanz",
+      "Akzeptanz",
+      "Validität",
+      "Evidenz"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "explanation": "Validität ist ein Gütekriterium: Es beschreibt, ob ein Instrument tatsächlich das misst, was es messen soll. Neben Validität gibt es z.B. Reliabilität (Zuverlässigkeit) und Objektivität (Unabhängigkeit von Durchführenden). Ohne Validität sind Ergebnisse inhaltlich wenig aussagekräftig. Deshalb ist Validität hier die richtige Zuordnung.",
+    "hint": "",
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_altklausuren.json",
+        "original_id": "27",
+        "sort_id": "ALT_27",
+        "old_id": "27"
+      }
+    ],
+    "thema_sose2026": "Gütekriterien/Validität",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "probeklausur_1_2026_14",
+    "solution": "Validität",
+    "original_id": "M10_SOSE26_PK1_014",
+    "exam": "Probeklausur 1",
+    "exam_number": 14,
+    "source_exam": "Probeklausur 1 2026",
+    "source_exam_position": 14
+  },
+  {
+    "id": "probeklausur_1_2026_15",
+    "type": "mc",
+    "question": "Was ist ein Forschungsdesign?",
+    "options": [
+      "Die äußere Form beziehungsweise der Untersuchungsplan einer empirischen Studie",
+      "Eine einzelne Antwortkategorie im Fragebogen",
+      "Nur die grafische Gestaltung eines Berichts",
+      "Eine Methode der Transkription"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Ein Forschungsdesign beschreibt die Anlage einer Studie. Methoden sind konkrete Wege der Erhebung, Aufbereitung und Auswertung innerhalb dieses Designs.",
+    "hint": "",
+    "solution": "Die äußere Form beziehungsweise der Untersuchungsplan einer empirischen Studie",
+    "tags": [
+      "Forschungsdesign",
+      "Methoden"
+    ],
+    "difficulty": 1,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "02_M10fs_Sozialforschung_und_Soziale_Arbeit.pdf",
+        "pages": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      }
+    ],
+    "thema_sose2026": "Forschungsdesigns und Forschungsmethoden",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK1_015",
+    "exam": "Probeklausur 1",
+    "exam_number": 15,
+    "source_exam": "Probeklausur 1 2026",
+    "source_exam_position": 15
+  },
+  {
+    "id": "probeklausur_1_2026_16",
+    "type": "mc",
+    "question": "Welche drei Gruppen von Erhebungsmethoden werden im Skript genannt?",
+    "options": [
+      "Recherche/Dokumentenanalysen, Beobachtung und Befragung",
+      "Validität, Reliabilität und Objektivität",
+      "Pretest, Median und Modus",
+      "Falsifikation, Exposé und Literaturverzeichnis"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Im Skript werden Recherche/Dokumentenanalyse, Beobachtung und Befragung als Gruppen von Erhebungsmethoden aufgeführt.",
+    "hint": "",
+    "solution": "Recherche/Dokumentenanalysen, Beobachtung und Befragung",
+    "tags": [
+      "Erhebungsmethoden",
+      "Forschungsmethoden"
+    ],
+    "difficulty": 1,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "02_M10fs_Sozialforschung_und_Soziale_Arbeit.pdf",
+        "pages": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      }
+    ],
+    "thema_sose2026": "Methoden der empirischen Forschung",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK1_016",
+    "exam": "Probeklausur 1",
+    "exam_number": 16,
+    "source_exam": "Probeklausur 1 2026",
+    "source_exam_position": 16
+  },
+  {
+    "type": "mc",
+    "question": "Welche Aussage beschreibt Evaluation am besten?",
+    "options": [
+      "Spontane subjektive Einschätzung „aus dem Bauch heraus“",
+      "Systematische und möglichst objektive Bewertung von Konzept, Umsetzung und Ergebnissen eines Projekts",
+      "Reine Messung von Outputs ohne Bezug zu Zielen",
+      "Ausschließlich qualitative Datenerhebung"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Evaluation ist eine systematische, möglichst objektive Beurteilung eines laufenden/abgeschlossenen Vorhabens inkl. Konzept, Prozess und Ergebnissen.",
+    "hint": "",
+    "solution": "Systematische und möglichst objektive Bewertung von Konzept, Umsetzung und Ergebnissen eines Projekts",
+    "tags": [
+      "Evaluation",
+      "Grundlagen"
+    ],
+    "difficulty": 1,
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_probeklausur_2.json",
+        "original_id": "m10fs2_011",
+        "sort_id": "PK2_011",
+        "old_id": "m10fs2_011"
+      }
+    ],
+    "thema_sose2026": "Evaluation/Grundlagen",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "probeklausur_1_2026_17",
+    "original_id": "M10_SOSE26_PK1_017",
+    "exam": "Probeklausur 1",
+    "exam_number": 17,
+    "source_exam": "Probeklausur 1 2026",
+    "source_exam_position": 17
+  },
+  {
+    "id": "probeklausur_1_2026_18",
+    "type": "mc",
+    "question": "Was ist ein zentrales Ziel von Selbstevaluation in der Sozialen Arbeit?",
+    "options": [
+      "Systematisch Daten sammeln, auswerten, interpretieren und reflektieren, um eigene Leistungen zu überprüfen",
+      "Forschungsergebnisse grundsätzlich geheim halten",
+      "Nur externe Kontrolle ermöglichen",
+      "Zufällige Eindrücke ohne Dokumentation sammeln"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Selbstevaluation dient der systematischen Erhebung, Auswertung und Reflexion von Daten. Dadurch können eigene Leistungen kritisch überprüft und professionelle Entwicklung unterstützt werden.",
+    "hint": "",
+    "solution": "Systematisch Daten sammeln, auswerten, interpretieren und reflektieren, um eigene Leistungen zu überprüfen",
+    "tags": [
+      "Selbstevaluation",
+      "Qualität"
+    ],
+    "difficulty": 1,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "Beitrag_Qualitätssicherung_und_Selbstevaluation_in_der_Bewährungshilfe_endgültig_mit_Abb.pdf",
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      }
+    ],
+    "thema_sose2026": "Selbstevaluation",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK1_018",
+    "exam": "Probeklausur 1",
+    "exam_number": 18,
+    "source_exam": "Probeklausur 1 2026",
+    "source_exam_position": 18
+  },
+  {
+    "id": "probeklausur_1_2026_19",
+    "type": "open",
+    "question": "Nennen Sie die vier Ziele quantitativer Sozialforschung aus dem Skript und ordnen Sie jedem Ziel ein Stichwort zu.",
+    "options": [],
+    "solution": "Deskriptive Studien beschreiben und quantifizieren. Explorative Studien entdecken Neues. Hypothesenprüfende Studien erklären und prüfen Hypothesen oder Theorien. Evaluationsstudien bewerten Maßnahmen oder Projekte.",
+    "hint": "",
+    "explanation": "Die vier Zielrichtungen sind im Sitzung-3-Skript ausdrücklich unterschieden und eignen sich gut für offene Kurzfragen.",
+    "keyPoints": [
+      "deskriptiv = beschreiben/quantifizieren",
+      "explorativ = Neues entdecken",
+      "hypothesenprüfend = erklären/prüfen",
+      "Evaluation = bewerten"
+    ],
+    "grading": {
+      "minKeyPoints": 4
+    },
+    "tags": [
+      "Quantitative Forschung",
+      "Ziele"
+    ],
+    "difficulty": 2,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "01_M10fs__Sitzung_3.pdf",
+        "pages": [
+          3,
+          4,
+          5,
+          9,
+          10,
+          11,
+          12,
+          14
+        ]
+      }
+    ],
+    "thema_sose2026": "Ziele quantitativer Sozialforschung",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK1_019",
+    "exam": "Probeklausur 1",
+    "exam_number": 19,
+    "source_exam": "Probeklausur 1 2026",
+    "source_exam_position": 19
+  },
+  {
+    "id": "probeklausur_1_2026_20",
+    "type": "open",
+    "question": "Erklären Sie kurz, was Operationalisierung bedeutet. Verwenden Sie dabei die Begriffe Indikator und Korrespondenzregel.",
+    "options": [],
+    "solution": "Operationalisierung übersetzt theoretische Konstrukte in messbare Variablen und Erhebungsanweisungen. Indikatoren sind beobachtbare Anzeiger für nicht direkt beobachtbare Sachverhalte. Korrespondenzregeln legen fest, wie ein Indikator mit dem Sachverhalt verbunden ist.",
+    "hint": "",
+    "explanation": "Diese offene Frage deckt eine zentrale Lücke ab, weil Operationalisierung im quantitativen Forschungsprozess sehr prüfungsnah ist.",
+    "keyPoints": [
+      "theoretisches Konstrukt messbar machen",
+      "Indikator als Anzeiger",
+      "Korrespondenzregel verbindet Indikator und Sachverhalt",
+      "Erhebungsinstrument entsteht"
+    ],
+    "grading": {
+      "minKeyPoints": 4
+    },
+    "tags": [
+      "Operationalisierung",
+      "Indikator",
+      "Korrespondenzregel"
+    ],
+    "difficulty": 2,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "01_M10fs__Sitzung_3.pdf",
+        "pages": [
+          3,
+          4,
+          5,
+          9,
+          10,
+          11,
+          12,
+          14
+        ]
+      }
+    ],
+    "thema_sose2026": "Operationalisierung",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK1_020",
+    "exam": "Probeklausur 1",
+    "exam_number": 20,
+    "source_exam": "Probeklausur 1 2026",
+    "source_exam_position": 20
+  },
+  {
+    "id": "probeklausur_2_2026_01",
+    "type": "mc",
+    "question": "Was kennzeichnet eine explorative quantitative Studie am treffendsten?",
+    "options": [
+      "Sie bewertet ausschließlich abgeschlossene Projekte",
+      "Sie entdeckt oder erschließt eher unbekannte Phänomene, Probleme oder soziale Felder",
+      "Sie verzichtet vollständig auf Daten",
+      "Sie ist identisch mit einer qualitativen Einzelfallanalyse"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Explorative Studien dienen dazu, neue oder bisher wenig erforschte Bereiche zu erschließen. Sie sind besonders sinnvoll, wenn über ein Phänomen noch wenig bekannt ist.",
+    "hint": "",
+    "solution": "Sie entdeckt oder erschließt eher unbekannte Phänomene, Probleme oder soziale Felder",
+    "tags": [
+      "Quantitative Forschung",
+      "Explorative Studien"
+    ],
+    "difficulty": 1,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "01_M10fs__Sitzung_3.pdf",
+        "pages": [
+          3,
+          4,
+          5,
+          9,
+          10,
+          11,
+          12,
+          14
+        ]
+      }
+    ],
+    "thema_sose2026": "Ziele quantitativer Sozialforschung",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK2_001",
+    "exam": "Probeklausur 2",
+    "exam_number": 1,
+    "source_exam": "Probeklausur 2 2026",
+    "source_exam_position": 1
+  },
+  {
+    "id": "probeklausur_2_2026_02",
+    "type": "mc",
+    "question": "Welche Zielrichtung passt zu hypothesenprüfenden Studien?",
+    "options": [
+      "Beschreiben, wer etwas tut",
+      "Erklären und Theorien oder Hypothesen überprüfen",
+      "Nur offene Erzählungen sammeln",
+      "Ausschließlich Texte interpretieren"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Hypothesenprüfende Studien prüfen wissenschaftliche Theorien und Hypothesen und können Prognosen ermöglichen. Sie sind stärker erklärend ausgerichtet.",
+    "hint": "",
+    "solution": "Erklären und Theorien oder Hypothesen überprüfen",
+    "tags": [
+      "Quantitative Forschung",
+      "Hypothesenprüfung"
+    ],
+    "difficulty": 1,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "01_M10fs__Sitzung_3.pdf",
+        "pages": [
+          3,
+          4,
+          5,
+          9,
+          10,
+          11,
+          12,
+          14
+        ]
+      }
+    ],
+    "thema_sose2026": "Ziele quantitativer Sozialforschung",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK2_002",
+    "exam": "Probeklausur 2",
+    "exam_number": 2,
+    "source_exam": "Probeklausur 2 2026",
+    "source_exam_position": 2
+  },
+  {
+    "id": "probeklausur_2_2026_03",
+    "type": "mc",
+    "question": "Was leisten Korrespondenzregeln in der Operationalisierung?",
+    "options": [
+      "Sie verbinden einen Indikator mit dem Sachverhalt, den er anzeigen soll",
+      "Sie legen fest, welche Literatur im Anhang steht",
+      "Sie ersetzen jede Datenerhebung",
+      "Sie dienen ausschließlich der grafischen Darstellung"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Korrespondenzregeln bestimmen, wie ein Indikator mit dem theoretischen Sachverhalt verbunden wird. Sie legen also fest, was als Hinweis auf den Sachverhalt gilt.",
+    "hint": "",
+    "solution": "Sie verbinden einen Indikator mit dem Sachverhalt, den er anzeigen soll",
+    "tags": [
+      "Operationalisierung",
+      "Korrespondenzregeln"
+    ],
+    "difficulty": 2,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "01_M10fs__Sitzung_3.pdf",
+        "pages": [
+          3,
+          4,
+          5,
+          9,
+          10,
+          11,
+          12,
+          14
+        ]
+      }
+    ],
+    "thema_sose2026": "Operationalisierung/Korrespondenzregeln",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK2_003",
+    "exam": "Probeklausur 2",
+    "exam_number": 3,
+    "source_exam": "Probeklausur 2 2026",
+    "source_exam_position": 3
+  },
+  {
+    "id": "probeklausur_2_2026_04",
+    "type": "mc",
+    "question": "Welches Beispiel passt am besten zu einer Korrespondenzregel?",
+    "options": [
+      "Wenn das Haushaltseinkommen unter einem festgelegten Wert liegt, gilt ein Haushalt in der Studie als arm",
+      "Alle Befragten werden nach Alphabet sortiert",
+      "Die Ergebnisgrafik wird in Farbe gedruckt",
+      "Die Forschungsfrage wird erst nach der Datenerhebung formuliert"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Die Korrespondenzregel legt fest, ab welchem Messwert ein theoretischer Sachverhalt angenommen wird, etwa Armut bei Einkommen unter einer bestimmten Grenze.",
+    "hint": "",
+    "solution": "Wenn das Haushaltseinkommen unter einem festgelegten Wert liegt, gilt ein Haushalt in der Studie als arm",
+    "tags": [
+      "Operationalisierung",
+      "Armut",
+      "Indikator"
+    ],
+    "difficulty": 2,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "01_M10fs__Sitzung_3.pdf",
+        "pages": [
+          3,
+          4,
+          5,
+          9,
+          10,
+          11,
+          12,
+          14
+        ]
+      }
+    ],
+    "thema_sose2026": "Operationalisierung/Korrespondenzregeln",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK2_004",
+    "exam": "Probeklausur 2",
+    "exam_number": 4,
+    "source_exam": "Probeklausur 2 2026",
+    "source_exam_position": 4
+  },
+  {
+    "id": "probeklausur_2_2026_05",
+    "type": "mc",
+    "question": "Was steht am Ende der Operationalisierung?",
+    "options": [
+      "Ein fertiges Erhebungsinstrument, das im Feld eingesetzt werden kann",
+      "Eine ausschließlich theoretische Diskussion ohne Messung",
+      "Eine zufällige Ideensammlung",
+      "Die endgültige Note der Studie"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Operationalisierung führt vom theoretischen Konstrukt zum messbaren Instrument. Am Ende liegt ein Erhebungsinstrument vor.",
+    "hint": "",
+    "solution": "Ein fertiges Erhebungsinstrument, das im Feld eingesetzt werden kann",
+    "tags": [
+      "Operationalisierung",
+      "Erhebungsinstrument"
+    ],
+    "difficulty": 1,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "01_M10fs__Sitzung_3.pdf",
+        "pages": [
+          3,
+          4,
+          5,
+          9,
+          10,
+          11,
+          12,
+          14
+        ]
+      }
+    ],
+    "thema_sose2026": "Operationalisierung",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK2_005",
+    "exam": "Probeklausur 2",
+    "exam_number": 5,
+    "source_exam": "Probeklausur 2 2026",
+    "source_exam_position": 5
+  },
+  {
+    "type": "mc",
+    "question": "Entsprechend der 10 Gebote von Porst zur Formulierung von Fragen, sollte…",
+    "options": [
+      "suggestive Fragen vermieden werden, falls sie zu lang und komplex sind",
+      "lange Fragen nur dann vermieden werden, wenn sie suggestiv sind",
+      "suggestive sowie lange und komplexe Fragen grundsätzlich vermieden werden",
+      "weder suggestive noch lange und komplexe Fragen grundsätzlich vermieden werden"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "explanation": "Suggestive, lange und komplexe Fragen erhöhen das Risiko, dass Befragte in eine Richtung gedrängt werden oder die Frage missverstehen. Gute Frageformulierung ist klar, kurz und neutral und vermeidet Mehrdeutigkeit. Das verbessert Verständlichkeit und Reliabilität. Darum ist das Vermeiden solcher Fragen eine zentrale Regel.",
+    "hint": "",
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_altklausuren.json",
+        "original_id": "13",
+        "sort_id": "ALT_13",
+        "old_id": "13"
+      }
+    ],
+    "thema_sose2026": "Fragebogen/10 Gebote nach Porst",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "probeklausur_2_2026_06",
+    "solution": "suggestive sowie lange und komplexe Fragen grundsätzlich vermieden werden",
+    "original_id": "M10_SOSE26_PK2_006",
+    "exam": "Probeklausur 2",
+    "exam_number": 6,
+    "source_exam": "Probeklausur 2 2026",
+    "source_exam_position": 6
+  },
+  {
+    "type": "mc",
+    "question": "Bei der Formulierung von Fragebogen-Fragen gilt es bestimmte Regeln zu beachten. Welche der folgenden Antwortmöglichkeiten stellt keines der 10 Gebote der Frageformulierung von Porst dar?",
+    "options": [
+      "Du sollst lange und komplexe Fragen vermeiden",
+      "Du sollst die Antworten möglichst ausführlich formulieren und bewusst wichtige Aspekte wiederholen, damit die Befragten die Frage auch wirklich verstehen",
+      "Du sollst Unterstellungen und suggestive Fragen vermeiden",
+      "Du sollst Antwortkategorien verwenden, die erschöpfend und disjunkt (überschneidungsfrei) sind"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Porsts Gebote zielen auf Verständlichkeit, Eindeutigkeit, Neutralität, kurze Formulierungen und das Vermeiden von Doppelstimuli/Verneinungen. ‚Antworten möglichst ausführlich formulieren und wichtige Aspekte wiederholen‘ ist das Gegenteil: Es macht Fragen länger, komplizierter und lenkt. Ausführlichkeit kann Verständnis sogar verschlechtern. Deshalb ist diese Aussage kein Porst‑Gebot.",
+    "hint": "",
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_altklausuren.json",
+        "original_id": "20",
+        "sort_id": "ALT_20",
+        "old_id": "20"
+      }
+    ],
+    "thema_sose2026": "Fragebogen/10 Gebote nach Porst",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "probeklausur_2_2026_07",
+    "solution": "Du sollst die Antworten möglichst ausführlich formulieren und bewusst wichtige Aspekte wiederholen, damit die Befragten die Frage auch wirklich verstehen",
+    "original_id": "M10_SOSE26_PK2_007",
+    "exam": "Probeklausur 2",
+    "exam_number": 7,
+    "source_exam": "Probeklausur 2 2026",
+    "source_exam_position": 7
+  },
+  {
+    "type": "mc",
+    "question": "Es gibt (nach Franzen) verschiedene Regeln zur Gestaltung von Antwortkategorien. Welche der folgenden Regeln gehört NICHT zu seinen Empfehlungen bzw. Zu den Empfehlungen aus dem Skript?",
+    "options": [
+      "Alles in allem sprechen die einschlägigen Ergebnisse dafür, in allgemeinen Bevölkerungsbefragungen fünfstufige oder siebenstufige Skalen zu verwenden.",
+      "Empirisch sprechen die Ergebnisse aus der Forschung dafür, grundsätzlich gerade Skalen zu verwenden.",
+      "Falls eine Beschriftung aufgrund der Abstufungen möglich ist, dann sollte sie auch gewählt werden.",
+      "Der Grundsatz, die Befragung für die Befragten möglichst einfach zu halten, spricht für die Verwendung von unipolaren Skalen."
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Gerade Skalen (ohne Mittelkategorie) zwingen zu einer Tendenz und können dadurch Verzerrungen erzeugen; empirisch wird oft eher zu ungeraden Skalen mit neutraler Mitte geraten, wenn Neutralität sinnvoll ist. Die Aussage, Ergebnisse sprächen grundsätzlich für gerade Skalen, ist daher keine Empfehlung. Franzen diskutiert eher Passung: Anzahl, Beschriftung und Polung sollen verständlich sein. Darum ist diese Regel die ‚nicht passende‘.",
+    "hint": "",
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_altklausuren.json",
+        "original_id": "57",
+        "sort_id": "ALT_57",
+        "old_id": "57"
+      }
+    ],
+    "thema_sose2026": "Antwortskalen/Franzen",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "probeklausur_2_2026_08",
+    "solution": "Empirisch sprechen die Ergebnisse aus der Forschung dafür, grundsätzlich gerade Skalen zu verwenden.",
+    "original_id": "M10_SOSE26_PK2_008",
+    "exam": "Probeklausur 2",
+    "exam_number": 8,
+    "source_exam": "Probeklausur 2 2026",
+    "source_exam_position": 8
+  },
+  {
+    "type": "mc",
+    "question": "Welche Anzahl an Antwortkategorien wird bei Ratingskalen in allgemeinen Befragungen häufig empfohlen?",
+    "options": [
+      "1 bis 2 Kategorien",
+      "5 bis 7 Kategorien",
+      "10 bis 12 Kategorien",
+      "Nur Ja/Nein-Kategorien"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Für Ratingskalen werden häufig fünf- oder siebenstufige Skalen empfohlen. Sie bieten genug Differenzierung, ohne Befragte unnötig zu überfordern.",
+    "hint": "",
+    "solution": "5 bis 7 Kategorien",
+    "tags": [
+      "Fragebogen",
+      "Antwortskalen",
+      "Ratingskalen"
+    ],
+    "difficulty": 2,
+    "source_pool": "alte_fragen_geprueft_sose2026_ueberarbeitet",
+    "source_refs": [
+      {
+        "original_file": "questions_altklausuren.json",
+        "original_id": "10",
+        "sort_id": "ALT_10",
+        "old_id": "10"
+      }
+    ],
+    "thema_sose2026": "Antwortskalen/Anzahl Kategorien",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "revision_note": "inhaltlich/sprachlich korrigiert für SoSe 2026",
+    "id": "probeklausur_2_2026_09",
+    "original_id": "M10_SOSE26_PK2_009",
+    "exam": "Probeklausur 2",
+    "exam_number": 9,
+    "source_exam": "Probeklausur 2 2026",
+    "source_exam_position": 9
+  },
+  {
+    "type": "mc",
+    "question": "Welche Empfehlung zur Gestaltung von Antwortskalen passt am besten zu den im Skript behandelten Regeln?",
+    "options": [
+      "Antwortskalen sollten nach Möglichkeit verständlich und vollständig beschriftet sein",
+      "Antwortskalen sollten möglichst viele Kategorien enthalten",
+      "Antwortskalen sollten grundsätzlich nur aus Zahlen bestehen",
+      "Antwortskalen sollten immer gerade sein"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Vollständig beschriftete Skalen sind für Befragte leichter verständlich, weil die Bedeutung jeder Kategorie klarer vorgegeben ist. Sehr viele Kategorien oder rein numerische Skalen können dagegen die Interpretation erschweren.",
+    "hint": "",
+    "solution": "Antwortskalen sollten nach Möglichkeit verständlich und vollständig beschriftet sein",
+    "tags": [
+      "Fragebogen",
+      "Antwortskalen",
+      "Ratingskalen"
+    ],
+    "difficulty": 2,
+    "source_pool": "alte_fragen_geprueft_sose2026_ueberarbeitet",
+    "source_refs": [
+      {
+        "original_file": "questions_altklausuren.json",
+        "original_id": "62",
+        "sort_id": "ALT_62",
+        "old_id": "62"
+      }
+    ],
+    "thema_sose2026": "Antwortskalen/Franzen",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "revision_note": "inhaltlich/sprachlich korrigiert für SoSe 2026",
+    "id": "probeklausur_2_2026_10",
+    "original_id": "M10_SOSE26_PK2_010",
+    "exam": "Probeklausur 2",
+    "exam_number": 10,
+    "source_exam": "Probeklausur 2 2026",
+    "source_exam_position": 10
+  },
+  {
+    "id": "probeklausur_2_2026_11",
+    "type": "mc",
+    "question": "Welche Aussage beschreibt den Recency-Effekt korrekt?",
+    "options": [
+      "Bei mündlicher oder telefonischer Präsentation werden eher zuletzt gehörte Antwortmöglichkeiten gewählt",
+      "Bei schriftlicher Präsentation werden ausschließlich die letzten Antworten gewählt",
+      "Der Recency-Effekt bedeutet, dass Befragte immer ehrlich antworten",
+      "Recency ist ein Gütekriterium qualitativer Forschung"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Beim Recency-Effekt bleiben zuletzt gehörte Optionen besser im Gedächtnis. Er ist besonders bei mündlicher oder telefonischer Präsentation von Antwortoptionen relevant.",
+    "hint": "",
+    "solution": "Bei mündlicher oder telefonischer Präsentation werden eher zuletzt gehörte Antwortmöglichkeiten gewählt",
+    "tags": [
+      "Fragebogen",
+      "Recency-Effekt"
+    ],
+    "difficulty": 2,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "01_M10fs__Sitzung_3.pdf",
+        "pages": [
+          17,
+          18,
+          20,
+          28,
+          29
+        ]
+      }
+    ],
+    "thema_sose2026": "Primacy und Recency",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK2_011",
+    "exam": "Probeklausur 2",
+    "exam_number": 11,
+    "source_exam": "Probeklausur 2 2026",
+    "source_exam_position": 11
+  },
+  {
+    "id": "probeklausur_2_2026_12",
+    "type": "mc",
+    "question": "Was ist ein punktueller Filter in einem Fragebogen?",
+    "options": [
+      "Nur Befragte mit einer bestimmten Antwort werden zu einer bestimmten Folgefrage weitergeleitet",
+      "Alle Befragten überspringen den gesamten Fragebogen",
+      "Der Fragebogen wird automatisch gelöscht",
+      "Alle Antworten werden alphabetisch sortiert"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Ein punktueller Filter betrifft nur Befragte, die eine bestimmte Antwort gegeben haben. Danach werden sie gezielt zu passenden Folgefragen geführt.",
+    "hint": "",
+    "solution": "Nur Befragte mit einer bestimmten Antwort werden zu einer bestimmten Folgefrage weitergeleitet",
+    "tags": [
+      "Fragebogen",
+      "Filterfragen"
+    ],
+    "difficulty": 2,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "01_M10fs__Sitzung_3.pdf",
+        "pages": [
+          17,
+          18,
+          20,
+          28,
+          29
+        ]
+      }
+    ],
+    "thema_sose2026": "Filterfragen",
+    "prioritaet": "mittel",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK2_012",
+    "exam": "Probeklausur 2",
+    "exam_number": 12,
+    "source_exam": "Probeklausur 2 2026",
+    "source_exam_position": 12
+  },
+  {
+    "id": "probeklausur_2_2026_13",
+    "type": "mc",
+    "question": "Warum sollte man bei Selbstausfüller*innen mit Filtern sparsam umgehen?",
+    "options": [
+      "Weil Filter die Bearbeitung komplizierter machen und Fehler beim Ausfüllen begünstigen können",
+      "Weil Filter grundsätzlich verboten sind",
+      "Weil Filter nur bei offenen Interviews erlaubt sind",
+      "Weil Filter die Stichprobe immer repräsentativ machen"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Filter können Befragte verwirren, wenn sie den Fragebogen selbst ausfüllen. Deshalb sollten sie sparsam und klar eingesetzt werden.",
+    "hint": "",
+    "solution": "Weil Filter die Bearbeitung komplizierter machen und Fehler beim Ausfüllen begünstigen können",
+    "tags": [
+      "Fragebogen",
+      "Filterfragen",
+      "Layout"
+    ],
+    "difficulty": 2,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "01_M10fs__Sitzung_3.pdf",
+        "pages": [
+          17,
+          18,
+          20,
+          28,
+          29
+        ]
+      }
+    ],
+    "thema_sose2026": "Filterfragen",
+    "prioritaet": "mittel",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK2_013",
+    "exam": "Probeklausur 2",
+    "exam_number": 13,
+    "source_exam": "Probeklausur 2 2026",
+    "source_exam_position": 13
+  },
+  {
+    "id": "probeklausur_2_2026_14",
+    "type": "mc",
+    "question": "Was meint Objektivität als Gütekriterium empirischer Forschung?",
+    "options": [
+      "Unterschiedliche Personen sollen bei Durchführung, Auswertung oder Interpretation möglichst zu denselben Ergebnissen kommen",
+      "Die Forschenden sollen ihre persönliche Meinung besonders deutlich einbringen",
+      "Die Untersuchung soll nur subjektiv nachvollziehbar sein",
+      "Das Ergebnis muss immer positiv ausfallen"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Objektivität zielt darauf, dass Ergebnisse nicht von persönlichen Vorlieben einzelner Forschender abhängen. Unterschiedliche Personen sollen möglichst gleiche Ergebnisse erzielen.",
+    "hint": "",
+    "solution": "Unterschiedliche Personen sollen bei Durchführung, Auswertung oder Interpretation möglichst zu denselben Ergebnissen kommen",
+    "tags": [
+      "Gütekriterien",
+      "Objektivität"
+    ],
+    "difficulty": 1,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "02_M10fs_Sozialforschung_und_Soziale_Arbeit.pdf",
+        "pages": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      }
+    ],
+    "thema_sose2026": "Gütekriterien",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK2_014",
+    "exam": "Probeklausur 2",
+    "exam_number": 14,
+    "source_exam": "Probeklausur 2 2026",
+    "source_exam_position": 14
+  },
+  {
+    "id": "probeklausur_2_2026_15",
+    "type": "mc",
+    "question": "Was bedeutet Transparenz als Gütekriterium?",
+    "options": [
+      "Forschung muss intersubjektiv nachvollziehbar sein",
+      "Alle Daten müssen öffentlich mit Namen veröffentlicht werden",
+      "Der Fragebogen muss bunt gestaltet sein",
+      "Die Hypothese darf erst nach dem Ergebnis bekannt werden"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Transparenz bedeutet, dass Forschungsprozesse und Entscheidungen nachvollziehbar dokumentiert werden. Andere sollen verstehen können, wie Ergebnisse zustande kamen.",
+    "hint": "",
+    "solution": "Forschung muss intersubjektiv nachvollziehbar sein",
+    "tags": [
+      "Gütekriterien",
+      "Transparenz"
+    ],
+    "difficulty": 1,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "02_M10fs_Sozialforschung_und_Soziale_Arbeit.pdf",
+        "pages": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      }
+    ],
+    "thema_sose2026": "Gütekriterien",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK2_015",
+    "exam": "Probeklausur 2",
+    "exam_number": 15,
+    "source_exam": "Probeklausur 2 2026",
+    "source_exam_position": 15
+  },
+  {
+    "id": "probeklausur_2_2026_16",
+    "type": "mc",
+    "question": "Welches Forschungsdesign erhebt Daten einmalig zu einem Zeitpunkt?",
+    "options": [
+      "Querschnittsstudie",
+      "Panelstudie",
+      "Experiment mit mehreren Messzeitpunkten",
+      "Meta-Analyse"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Eine Querschnittsstudie ist eine einmalige Erhebung. Sie kann standardisiert oder qualitativ durchgeführt werden.",
+    "hint": "",
+    "solution": "Querschnittsstudie",
+    "tags": [
+      "Forschungsdesign",
+      "Querschnitt"
+    ],
+    "difficulty": 1,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "02_M10fs_Sozialforschung_und_Soziale_Arbeit.pdf",
+        "pages": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      }
+    ],
+    "thema_sose2026": "Forschungsdesigns",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK2_016",
+    "exam": "Probeklausur 2",
+    "exam_number": 16,
+    "source_exam": "Probeklausur 2 2026",
+    "source_exam_position": 16
+  },
+  {
+    "id": "probeklausur_2_2026_17",
+    "type": "mc",
+    "question": "Welches Forschungsdesign eignet sich besonders zur Untersuchung von Ursache-Wirkungs-Zusammenhängen?",
+    "options": [
+      "Experiment",
+      "Offenes Brainstorming",
+      "Literaturverzeichnis",
+      "Titelseite eines Fragebogens"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Experimente dienen besonders der Prüfung von Ursache-Wirkungs-Zusammenhängen, weil Bedingungen gezielt variiert und kontrolliert werden können.",
+    "hint": "",
+    "solution": "Experiment",
+    "tags": [
+      "Forschungsdesign",
+      "Experiment"
+    ],
+    "difficulty": 1,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "02_M10fs_Sozialforschung_und_Soziale_Arbeit.pdf",
+        "pages": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      }
+    ],
+    "thema_sose2026": "Forschungsdesigns",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK2_017",
+    "exam": "Probeklausur 2",
+    "exam_number": 17,
+    "source_exam": "Probeklausur 2 2026",
+    "source_exam_position": 17
+  },
+  {
+    "id": "probeklausur_2_2026_18",
+    "type": "mc",
+    "question": "Was meint Strukturqualität?",
+    "options": [
+      "Rahmenbedingungen wie Ausstattung, Personal, Fallbelastung und Schnittstellenmanagement",
+      "Die direkte Wirkung einer Maßnahme auf das Verhalten der Klient*innen",
+      "Nur die Zufriedenheit der Befragten",
+      "Die Reihenfolge der Fragen im Fragebogen"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Strukturqualität beschreibt die Bedingungen, unter denen professionelle Arbeit stattfindet. Dazu gehören zum Beispiel Personal, Räume und Fallbelastung.",
+    "hint": "",
+    "solution": "Rahmenbedingungen wie Ausstattung, Personal, Fallbelastung und Schnittstellenmanagement",
+    "tags": [
+      "Qualitätsdimensionen",
+      "Strukturqualität"
+    ],
+    "difficulty": 1,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "Beitrag_Qualitätssicherung_und_Selbstevaluation_in_der_Bewährungshilfe_endgültig_mit_Abb.pdf",
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      }
+    ],
+    "thema_sose2026": "Qualitätsdimensionen",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK2_018",
+    "exam": "Probeklausur 2",
+    "exam_number": 18,
+    "source_exam": "Probeklausur 2 2026",
+    "source_exam_position": 18
+  },
+  {
+    "id": "probeklausur_2_2026_19",
+    "type": "open",
+    "question": "Nennen Sie drei Gütekriterien empirischer Forschung und erklären Sie eines davon kurz.",
+    "options": [],
+    "solution": "Mögliche Gütekriterien sind Validität, Reliabilität, Objektivität, Transparenz, Indikation/Adäquatheit, Reflexivität, Triangulation und Diskussion von Limitationen. Beispiel: Validität bedeutet, dass ein Messinstrument tatsächlich misst, was es messen soll.",
+    "hint": "",
+    "explanation": "Die Frage trainiert sowohl Begriffswissen als auch kurze Erläuterung, wie sie in offenen Klausurfragen vorkommen kann.",
+    "keyPoints": [
+      "Validität",
+      "Reliabilität",
+      "Objektivität",
+      "Transparenz",
+      "Indikation/Adäquatheit",
+      "Reflexivität",
+      "Triangulation",
+      "Limitationen",
+      "kurze Erklärung eines Kriteriums"
+    ],
+    "grading": {
+      "minKeyPoints": 4
+    },
+    "tags": [
+      "Gütekriterien"
+    ],
+    "difficulty": 2,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "02_M10fs_Sozialforschung_und_Soziale_Arbeit.pdf",
+        "pages": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      }
+    ],
+    "thema_sose2026": "Gütekriterien",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK2_019",
+    "exam": "Probeklausur 2",
+    "exam_number": 19,
+    "source_exam": "Probeklausur 2 2026",
+    "source_exam_position": 19
+  },
+  {
+    "id": "probeklausur_2_2026_20",
+    "type": "open",
+    "question": "Erklären Sie die drei Qualitätsdimensionen Strukturqualität, Prozessqualität und Ergebnisqualität in eigenen Worten.",
+    "options": [],
+    "solution": "Strukturqualität meint Rahmenbedingungen wie Personal, Räume, Ausstattung oder Fallbelastung. Prozessqualität meint die Art und Weise, wie professionelle Arbeit durchgeführt wird. Ergebnisqualität fragt danach, welche Ergebnisse oder Wirkungen erzielt werden.",
+    "hint": "",
+    "explanation": "Die drei Qualitätsdimensionen sind eine zentrale Grundlage für wirkungsorientiertes Qualitätsverständnis.",
+    "keyPoints": [
+      "Strukturqualität = Rahmenbedingungen",
+      "Prozessqualität = Durchführung/Arbeitsprozesse",
+      "Ergebnisqualität = Ergebnisse/Wirkungen",
+      "Zusammenhang zwischen den Dimensionen"
+    ],
+    "grading": {
+      "minKeyPoints": 4
+    },
+    "tags": [
+      "Qualitätsdimensionen",
+      "Strukturqualität",
+      "Prozessqualität",
+      "Ergebnisqualität"
+    ],
+    "difficulty": 2,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "Beitrag_Qualitätssicherung_und_Selbstevaluation_in_der_Bewährungshilfe_endgültig_mit_Abb.pdf",
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      }
+    ],
+    "thema_sose2026": "Qualitätsdimensionen",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK2_020",
+    "exam": "Probeklausur 2",
+    "exam_number": 20,
+    "source_exam": "Probeklausur 2 2026",
+    "source_exam_position": 20
+  },
+  {
+    "id": "probeklausur_3_2026_01",
+    "type": "mc",
+    "question": "Welche Aussage beschreibt Evaluationsstudien innerhalb quantitativer Forschung im Skript am besten?",
+    "options": [
+      "Sie dienen ausschließlich der Hypothesensuche ohne Bewertung",
+      "Sie bewerten Maßnahmen oder Projekte und gelten als Sonderfall beschreibender oder hypothesenprüfender Studien",
+      "Sie verzichten auf Operationalisierung",
+      "Sie sind immer rein qualitativ"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Evaluationsstudien haben eine Bewertungslogik. Im Skript werden sie als Sonderfall hypothesenprüfender oder beschreibender Studien eingeordnet.",
+    "hint": "",
+    "solution": "Sie bewerten Maßnahmen oder Projekte und gelten als Sonderfall beschreibender oder hypothesenprüfender Studien",
+    "tags": [
+      "Quantitative Forschung",
+      "Evaluation"
+    ],
+    "difficulty": 2,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "01_M10fs__Sitzung_3.pdf",
+        "pages": [
+          3,
+          4,
+          5,
+          9,
+          10,
+          11,
+          12,
+          14
+        ]
+      }
+    ],
+    "thema_sose2026": "Ziele quantitativer Sozialforschung",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK3_001",
+    "exam": "Probeklausur 3",
+    "exam_number": 1,
+    "source_exam": "Probeklausur 3 2026",
+    "source_exam_position": 1
+  },
+  {
+    "id": "probeklausur_3_2026_02",
+    "type": "mc",
+    "question": "Was gehört zur Präzisierung des Themas im quantitativen Forschungsprozess?",
+    "options": [
+      "Nur die Auswertung der erhobenen Daten",
+      "Dimensionen sammeln und systematisieren, Begriffe definieren und Hypothesen oder Forschungsfragen formulieren",
+      "Ausschließlich eine Stichprobengröße berechnen",
+      "Das Forschungsergebnis veröffentlichen"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Vor der Operationalisierung wird das Thema präzisiert. Dazu gehören Dimensionen, Begriffsdefinitionen und die Formulierung von Hypothesen oder Forschungsfragen.",
+    "hint": "",
+    "solution": "Dimensionen sammeln und systematisieren, Begriffe definieren und Hypothesen oder Forschungsfragen formulieren",
+    "tags": [
+      "Quantitativer Forschungsprozess",
+      "Themenpräzisierung"
+    ],
+    "difficulty": 2,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "01_M10fs__Sitzung_3.pdf",
+        "pages": [
+          3,
+          4,
+          5,
+          9,
+          10,
+          11,
+          12,
+          14
+        ]
+      }
+    ],
+    "thema_sose2026": "Quantitativer Forschungsprozess",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK3_002",
+    "exam": "Probeklausur 3",
+    "exam_number": 2,
+    "source_exam": "Probeklausur 3 2026",
+    "source_exam_position": 2
+  },
+  {
+    "type": "mc",
+    "question": "Was beschreibt Operationalisierung am besten?",
+    "options": [
+      "Die statistische Auswertung von Daten",
+      "Die Übersetzung theoretischer Begriffe in messbare Indikatoren",
+      "Die Auswahl einer Stichprobe",
+      "Die Interpretation qualitativer Interviews"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Operationalisierung übersetzt abstrakte Konzepte (z. B. Stress) in messbare Indikatoren (z. B. Schlaf, Puls, Selbstauskunft).",
+    "hint": "",
+    "solution": "Die Übersetzung theoretischer Begriffe in messbare Indikatoren",
+    "tags": [
+      "Operationalisierung",
+      "Methoden"
+    ],
+    "difficulty": 1,
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_probeklausur_1.json",
+        "original_id": "m10fs_009",
+        "sort_id": "PK1_009",
+        "old_id": "m10fs_009"
+      }
+    ],
+    "thema_sose2026": "Operationalisierung",
+    "prioritaet": "sehr hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "probeklausur_3_2026_03",
+    "original_id": "M10_SOSE26_PK3_003",
+    "exam": "Probeklausur 3",
+    "exam_number": 3,
+    "source_exam": "Probeklausur 3 2026",
+    "source_exam_position": 3
+  },
+  {
+    "type": "mc",
+    "question": "Welches Erkenntnisziel verfolgt der kritische Rationalismus?",
+    "options": [
+      "Verstehen subjektiver Sinnzusammenhänge",
+      "Rekonstruktion sozialer Bedeutungen",
+      "Erklärung durch Hypothesen und Falsifikation",
+      "Exploration offener Fragestellungen"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "explanation": "Kritischer Rationalismus (Popper): Hypothesen formulieren und systematisch zu widerlegen versuchen (Falsifikationsprinzip) – Ziel: Erklären.",
+    "hint": "",
+    "solution": "Erklärung durch Hypothesen und Falsifikation",
+    "tags": [
+      "Wissenschaftstheorie",
+      "Popper"
+    ],
+    "difficulty": 1,
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_probeklausur_1.json",
+        "original_id": "m10fs_010",
+        "sort_id": "PK1_010",
+        "old_id": "m10fs_010"
+      }
+    ],
+    "thema_sose2026": "Kritischer Rationalismus/Falsifikation",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "probeklausur_3_2026_04",
+    "original_id": "M10_SOSE26_PK3_004",
+    "exam": "Probeklausur 3",
+    "exam_number": 4,
+    "source_exam": "Probeklausur 3 2026",
+    "source_exam_position": 4
+  },
+  {
+    "type": "mc",
+    "question": "Was meint das Falsifikationsprinzip (kritischer Rationalismus)?",
+    "options": [
+      "Die Hypothesen werden an einem Gedankenkonstrukt überprüft, indem der Versuch unternommen wird, die Hypothese zu widerlegen.",
+      "Die Hypothesen werden an der Wirklichkeit überprüft, indem der Versuch unternommen wird, die Hypothese zu bestätigen.",
+      "Die Hypothesen werden an der Wirklichkeit überprüft, indem der Versuch unternommen wird, die Hypothese zu widerlegen.",
+      "Die Theorie wird an der Wirklichkeit überprüft, indem der Versuch unternommen wird, die Theorie zu bestätigen."
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "explanation": "Das Falsifikationsprinzip (Popper) besagt: Wissenschaftliche Aussagen müssen prinzipiell widerlegbar sein. Hypothesen werden nicht endgültig bestätigt, sondern so getestet, dass man versucht, sie durch Gegenbelege zu widerlegen. Bestehen sie Tests, gelten sie vorläufig als ‚bewährt‘. Deshalb ist die Formulierung zur Widerlegung der Hypothese korrekt.",
+    "hint": "",
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_altklausuren.json",
+        "original_id": "72",
+        "sort_id": "ALT_72",
+        "old_id": "72"
+      }
+    ],
+    "thema_sose2026": "Kritischer Rationalismus/Falsifikationsprinzip",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "probeklausur_3_2026_05",
+    "solution": "Die Hypothesen werden an der Wirklichkeit überprüft, indem der Versuch unternommen wird, die Hypothese zu widerlegen.",
+    "original_id": "M10_SOSE26_PK3_005",
+    "exam": "Probeklausur 3",
+    "exam_number": 5,
+    "source_exam": "Probeklausur 3 2026",
+    "source_exam_position": 5
+  },
+  {
+    "type": "mc",
+    "question": "Was meint Karl Popper mit systematischem Raten?",
+    "options": [
+      "Es kann lediglich eine Annäherung an die Wahrheit erreicht werden, nie die Wahrheit selbst.",
+      "Vernünftiges Raten ist die Grundlage einer guten Theorie",
+      "Operationalisierung der Wirklichkeit lassen sich nur durch systematisches Raten erzielen",
+      "Eine Methode kann niemals objektiv sein, daher lassen sich auch keine verlässlichen Aussagen über die Wirklichkeit aufstellen"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Popper betont, dass Erkenntnis immer vorläufig ist: Wir können Theorien nicht endgültig beweisen, nur kritisch prüfen und verbessern. ‚Systematisches Raten‘ meint daher: Wir machen begründete Vermutungen/Hypothesen und testen sie, um Irrtümer zu finden. So nähern wir uns der Wahrheit an, erreichen sie aber nie endgültig. Darum ist die Annäherungs‑Aussage korrekt.",
+    "hint": "Popper: Fallibilismus – Wissen ist vorläufig.",
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_altklausuren.json",
+        "original_id": "78",
+        "sort_id": "ALT_78",
+        "old_id": "78"
+      }
+    ],
+    "thema_sose2026": "Kritischer Rationalismus/Popper",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "probeklausur_3_2026_06",
+    "solution": "Es kann lediglich eine Annäherung an die Wahrheit erreicht werden, nie die Wahrheit selbst.",
+    "original_id": "M10_SOSE26_PK3_006",
+    "exam": "Probeklausur 3",
+    "exam_number": 6,
+    "source_exam": "Probeklausur 3 2026",
+    "source_exam_position": 6
+  },
+  {
+    "type": "mc",
+    "question": "Welche der folgenden Aussagen passt nicht zur Logik des Symbolischen Interaktionismus?",
+    "options": [
+      "Menschen handeln „Dingen“ gegenüber aufgrund der Bedeutungen, die diese Dinge für sie besitzen, dabei sind „Dinge“ auch Menschen, Situationen und Institution",
+      "Beim Symbolischen Interaktionismus geht es um Verallgemeinerungen, d.h. um Aussagen, die möglichst über die untersuchten Personen hinaus Geltung haben.",
+      "Soziale Wirklichkeit gibt es nicht von sich aus, sondern nur durch das wechselseitig aneinander orientierte und interpretierte Handeln von Individuen.",
+      "Die Bedeutung von Dingen ist aus der sozialen Interaktion, dir man mit seinen Mitmenschen eingeht, abgeleitet, oder es entsteht aus ihr."
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Symbolischer Interaktionismus fokussiert gerade auf Sinn, Interaktion und Bedeutungszuschreibungen im konkreten Handeln – nicht auf weitreichende Verallgemeinerungen im Sinne allgemeiner Gesetzmäßigkeiten. Aussagen, die möglichst über die untersuchten Personen hinaus gelten sollen, entsprechen eher einem nomothetischen (generalisierten) Ansatz. Die Logik des Symbolischen Interaktionismus ist eher interpretativ/kontextnah. Deshalb passt diese Aussage nicht dazu.",
+    "hint": "",
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_altklausuren.json",
+        "original_id": "74",
+        "sort_id": "ALT_74",
+        "old_id": "74"
+      }
+    ],
+    "thema_sose2026": "Symbolischer Interaktionismus",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "probeklausur_3_2026_07",
+    "solution": "Beim Symbolischen Interaktionismus geht es um Verallgemeinerungen, d.h. um Aussagen, die möglichst über die untersuchten Personen hinaus Geltung haben.",
+    "original_id": "M10_SOSE26_PK3_007",
+    "exam": "Probeklausur 3",
+    "exam_number": 7,
+    "source_exam": "Probeklausur 3 2026",
+    "source_exam_position": 7
+  },
+  {
+    "type": "mc",
+    "question": "Was versteht man unter Triangulation?",
+    "options": [
+      "Die ausschließliche Nutzung qualitativer Methoden",
+      "Die Kombination qualitativer und quantitativer Methoden",
+      "Die statistische Überprüfung qualitativer Daten",
+      "Die Wiederholung einer Erhebung"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Triangulation meint die Kombination verschiedener Methoden/Datenquellen/Perspektiven (oft quali+quanti), um Aussagekraft/Validität zu erhöhen.",
+    "hint": "",
+    "solution": "Die Kombination qualitativer und quantitativer Methoden",
+    "tags": [
+      "Methoden",
+      "Triangulation"
+    ],
+    "difficulty": 1,
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_probeklausur_1.json",
+        "original_id": "m10fs_005",
+        "sort_id": "PK1_005",
+        "old_id": "m10fs_005"
+      }
+    ],
+    "thema_sose2026": "Gütekriterien/Triangulation",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "probeklausur_3_2026_08",
+    "original_id": "M10_SOSE26_PK3_008",
+    "exam": "Probeklausur 3",
+    "exam_number": 8,
+    "source_exam": "Probeklausur 3 2026",
+    "source_exam_position": 8
+  },
+  {
+    "type": "mc",
+    "question": "Welches Prinzip gehört NICHT zu qualitativer Forschung?",
+    "options": [
+      "Offenheit",
+      "Kontextgebundenheit",
+      "Standardisierung",
+      "Prozesshaftigkeit"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "explanation": "Qualitative Forschung ist offen, flexibel und kontextbezogen. Standardisierung ist ein Kernmerkmal quantitativer Forschung.",
+    "hint": "",
+    "solution": "Standardisierung",
+    "tags": [
+      "Qualitativ",
+      "Methoden"
+    ],
+    "difficulty": 1,
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_probeklausur_1.json",
+        "original_id": "m10fs_011",
+        "sort_id": "PK1_011",
+        "old_id": "m10fs_011"
+      }
+    ],
+    "thema_sose2026": "Qualitativ vs. quantitativ",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "probeklausur_3_2026_09",
+    "original_id": "M10_SOSE26_PK3_009",
+    "exam": "Probeklausur 3",
+    "exam_number": 9,
+    "source_exam": "Probeklausur 3 2026",
+    "source_exam_position": 9
+  },
+  {
+    "type": "mc",
+    "question": "Welche Aussage trifft auf quantitative Forschung zu?",
+    "options": [
+      "Kleine Stichproben",
+      "Offene Erhebungsinstrumente",
+      "Hypothesentestung",
+      "Rekonstruktion subjektiver Sinnstrukturen"
+    ],
+    "correct": [
+      2
+    ],
+    "answerType": "single",
+    "explanation": "Quantitative Forschung arbeitet häufig deduktiv und prüft Hypothesen mittels standardisierter Messungen und Statistik.",
+    "hint": "",
+    "solution": "Hypothesentestung",
+    "tags": [
+      "Quantitativ",
+      "Methoden"
+    ],
+    "difficulty": 1,
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_probeklausur_1.json",
+        "original_id": "m10fs_019",
+        "sort_id": "PK1_019",
+        "old_id": "m10fs_019"
+      }
+    ],
+    "thema_sose2026": "Quantitative Forschung",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "probeklausur_3_2026_10",
+    "original_id": "M10_SOSE26_PK3_010",
+    "exam": "Probeklausur 3",
+    "exam_number": 10,
+    "source_exam": "Probeklausur 3 2026",
+    "source_exam_position": 10
+  },
+  {
+    "type": "mc",
+    "question": "Welche der folgenden begrifflichen Gegenüberstellungen bezieht sich auf einen Unterschied zwischen qualitativer und quantitativer Sozialforschung",
+    "options": [
+      "Forschungsdesign vs. Forschungsablauf",
+      "Theorie vs. Empirie",
+      "Triangulation vs. Generalisierung",
+      "Deduktive Forschungslogik vs. induktive Forschungslogik"
+    ],
+    "correct": [
+      3
+    ],
+    "answerType": "single",
+    "explanation": "Deduktiv vs. induktiv beschreibt einen Kernunterschied: Quantitative Forschung arbeitet oft deduktiv (Theorie → Hypothesen → Test), qualitative häufig induktiv (Daten/Material → Konzepte/Theorie). Diese Gegenüberstellung passt daher direkt zum qualitativen/quantitativen Unterschied. Andere Gegenüberstellungen (z.B. ‚objektiv/subjektiv‘) wären zu grob oder missverständlich. Darum ist diese Antwort richtig.",
+    "hint": "",
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_altklausuren.json",
+        "original_id": "24",
+        "sort_id": "ALT_24",
+        "old_id": "24"
+      }
+    ],
+    "thema_sose2026": "Qualitativ vs. quantitativ/deduktiv vs. induktiv",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "probeklausur_3_2026_11",
+    "solution": "Deduktive Forschungslogik vs. induktive Forschungslogik",
+    "original_id": "M10_SOSE26_PK3_011",
+    "exam": "Probeklausur 3",
+    "exam_number": 11,
+    "source_exam": "Probeklausur 3 2026",
+    "source_exam_position": 11
+  },
+  {
+    "type": "mc",
+    "question": "Welcher der folgenden Begrifflichkeiten benennt eine Methode zur Datenerhebung?",
+    "options": [
+      "Selegierung",
+      "Beobachtung",
+      "Dokumentarische Methode",
+      "Varianzanalyse"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Beobachtung ist eine Datenerhebungsmethode: Man sammelt Daten durch systematisches Wahrnehmen/Protokollieren von Verhalten/Interaktionen (teilnehmend oder nicht‑teilnehmend). Andere Begriffe könnten Auswertung, Gütekriterien oder Designs bezeichnen. Erhebung meint ‚Daten gewinnen‘, und Beobachtung ist genau das. Daher ist ‚Beobachtung‘ die richtige Wahl.",
+    "hint": "",
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_altklausuren.json",
+        "original_id": "25",
+        "sort_id": "ALT_25",
+        "old_id": "25"
+      }
+    ],
+    "thema_sose2026": "Methoden/Datenerhebung",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "probeklausur_3_2026_12",
+    "solution": "Beobachtung",
+    "original_id": "M10_SOSE26_PK3_012",
+    "exam": "Probeklausur 3",
+    "exam_number": 12,
+    "source_exam": "Probeklausur 3 2026",
+    "source_exam_position": 12
+  },
+  {
+    "type": "mc",
+    "question": "Welches der folgenden Forschungsdesigns sieht eine Befragung zu mehreren Zeitpunkten vor?",
+    "options": [
+      "Querschnittstudie",
+      "Einzelfallanalyse",
+      "Feldforschung",
+      "Panel"
+    ],
+    "correct": [
+      3
+    ],
+    "answerType": "single",
+    "explanation": "Ein Paneldesign befragt dieselben Personen mehrfach zu verschiedenen Zeitpunkten. Dadurch kann man Veränderungen auf Individualebene beobachten (z.B. Meinungswandel) und zeitliche Dynamiken analysieren. Querschnittsdesigns machen das nicht, weil sie nur einmal messen. Daher ist ‚Panel‘ die richtige Antwort.",
+    "hint": "",
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_altklausuren.json",
+        "original_id": "42",
+        "sort_id": "ALT_42",
+        "old_id": "42"
+      }
+    ],
+    "thema_sose2026": "Forschungsdesign/Längsschnitt Panel",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "probeklausur_3_2026_13",
+    "solution": "Panel",
+    "original_id": "M10_SOSE26_PK3_013",
+    "exam": "Probeklausur 3",
+    "exam_number": 13,
+    "source_exam": "Probeklausur 3 2026",
+    "source_exam_position": 13
+  },
+  {
+    "id": "probeklausur_3_2026_14",
+    "type": "mc",
+    "question": "Was ist eine Aufbereitungsmethode im empirischen Forschungsprozess?",
+    "options": [
+      "Transkription beziehungsweise Fixierung von Daten",
+      "Ergebnisbewertung durch Auftraggeber*innen",
+      "Theoriedimensionen",
+      "Auswahl der Prüfungsform"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Aufbereitungsmethoden bereiten Rohdaten für die Auswertung vor. Ein Beispiel ist die Transkription beziehungsweise Verschriftlichung von Daten.",
+    "hint": "",
+    "solution": "Transkription beziehungsweise Fixierung von Daten",
+    "tags": [
+      "Aufbereitungsmethoden",
+      "Transkription"
+    ],
+    "difficulty": 1,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "02_M10fs_Sozialforschung_und_Soziale_Arbeit.pdf",
+        "pages": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ]
+      }
+    ],
+    "thema_sose2026": "Methoden der empirischen Forschung",
+    "prioritaet": "mittel",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK3_014",
+    "exam": "Probeklausur 3",
+    "exam_number": 14,
+    "source_exam": "Probeklausur 3 2026",
+    "source_exam_position": 14
+  },
+  {
+    "type": "mc",
+    "question": "Welche Zuordnung trifft auf formative vs. summative Evaluation am ehesten zu?",
+    "options": [
+      "Formativ = abschließende Bewertung; Summativ = laufende Verbesserung",
+      "Formativ = laufende Verbesserung während der Laufzeit; Summativ = abschließende Bewertung (oft Vor/Nachher)",
+      "Formativ = nur quantitativ; Summativ = nur qualitativ",
+      "Formativ = nur Fremdevaluation; Summativ = nur Selbstevaluation"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Formative Evaluation begleitet und verbessert während der Laufzeit; summative bewertet am Ende (oft mit Vor/Nach-Messungen).",
+    "hint": "",
+    "solution": "Formativ = laufende Verbesserung während der Laufzeit; Summativ = abschließende Bewertung (oft Vor/Nachher)",
+    "tags": [
+      "Evaluation",
+      "Formen"
+    ],
+    "difficulty": 1,
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_probeklausur_2.json",
+        "original_id": "m10fs2_013",
+        "sort_id": "PK2_013",
+        "old_id": "m10fs2_013"
+      }
+    ],
+    "thema_sose2026": "Evaluation/formativ und summativ",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "probeklausur_3_2026_15",
+    "original_id": "M10_SOSE26_PK3_015",
+    "exam": "Probeklausur 3",
+    "exam_number": 15,
+    "source_exam": "Probeklausur 3 2026",
+    "source_exam_position": 15
+  },
+  {
+    "type": "mc",
+    "question": "Welche Funktion von Evaluation passt am ehesten zu „Rechenschaft gegenüber Geldgebern/Öffentlichkeit“?",
+    "options": [
+      "Legitimation",
+      "Erkenntnis",
+      "Entwicklung",
+      "Kontrolle"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Legitimation meint Rechtfertigung/Accountability (z.B. gegenüber Förderern, Politik, Öffentlichkeit).",
+    "hint": "",
+    "solution": "Legitimation",
+    "tags": [
+      "Evaluation",
+      "Ziele"
+    ],
+    "difficulty": 1,
+    "source_pool": "alte_fragen_geprueft_sose2026",
+    "source_refs": [
+      {
+        "original_file": "questions_probeklausur_2.json",
+        "original_id": "m10fs2_012",
+        "sort_id": "PK2_012",
+        "old_id": "m10fs2_012"
+      }
+    ],
+    "thema_sose2026": "Evaluation/Funktionen Legitimation",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "id": "probeklausur_3_2026_16",
+    "original_id": "M10_SOSE26_PK3_016",
+    "exam": "Probeklausur 3",
+    "exam_number": 16,
+    "source_exam": "Probeklausur 3 2026",
+    "source_exam_position": 16
+  },
+  {
+    "id": "probeklausur_3_2026_17",
+    "type": "mc",
+    "question": "Warum reicht Klient*innenzufriedenheit allein nicht als Qualitätsmaßstab in der Sozialen Arbeit?",
+    "options": [
+      "Weil Soziale Arbeit komplexe Zielsysteme hat und auch Zielerreichung, Verhaltens- oder Einstellungsveränderungen relevant sein können",
+      "Weil Zufriedenheit grundsätzlich verboten ist",
+      "Weil Qualität nur durch Kosten bestimmt wird",
+      "Weil Adressat*innen niemals befragt werden dürfen"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Zufriedenheit kann wichtig sein, ist aber nicht automatisch die eigentliche Wirkung. In der Sozialen Arbeit müssen auch vereinbarte Ziele und Veränderungen betrachtet werden.",
+    "hint": "",
+    "solution": "Weil Soziale Arbeit komplexe Zielsysteme hat und auch Zielerreichung, Verhaltens- oder Einstellungsveränderungen relevant sein können",
+    "tags": [
+      "Qualität",
+      "Wirkung",
+      "Zufriedenheit"
+    ],
+    "difficulty": 2,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "Beitrag_Qualitätssicherung_und_Selbstevaluation_in_der_Bewährungshilfe_endgültig_mit_Abb.pdf",
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      }
+    ],
+    "thema_sose2026": "Wirkungsorientierung und Qualitätsmanagement",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK3_017",
+    "exam": "Probeklausur 3",
+    "exam_number": 17,
+    "source_exam": "Probeklausur 3 2026",
+    "source_exam_position": 17
+  },
+  {
+    "id": "probeklausur_3_2026_18",
+    "type": "mc",
+    "question": "Wofür steht der PDCA-Zyklus im Kontext von Qualitätsmanagement?",
+    "options": [
+      "Für einen Kreislauf ständiger Verbesserung",
+      "Für die einmalige Löschung alter Daten",
+      "Für eine rein zufällige Projektplanung",
+      "Für eine ausschließlich juristische Prüfung"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Der PDCA-Zyklus beziehungsweise Deming-Kreis ist auf ständige Verbesserung von Produkten und Prozessen ausgerichtet.",
+    "hint": "",
+    "solution": "Für einen Kreislauf ständiger Verbesserung",
+    "tags": [
+      "Qualitätsmanagement",
+      "PDCA"
+    ],
+    "difficulty": 2,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "Beitrag_Qualitätssicherung_und_Selbstevaluation_in_der_Bewährungshilfe_endgültig_mit_Abb.pdf",
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      }
+    ],
+    "thema_sose2026": "Wirkungsorientierung und Qualitätsmanagement",
+    "prioritaet": "mittel",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK3_018",
+    "exam": "Probeklausur 3",
+    "exam_number": 18,
+    "source_exam": "Probeklausur 3 2026",
+    "source_exam_position": 18
+  },
+  {
+    "id": "probeklausur_3_2026_19",
+    "type": "open",
+    "question": "Was ist Selbstevaluation und wozu dient sie in der Sozialen Arbeit?",
+    "options": [],
+    "solution": "Selbstevaluation bedeutet, dass Fachkräfte eigene Arbeit systematisch mit Daten erfassen, auswerten, interpretieren und reflektieren. Sie dient der kritischen Überprüfung eigener Leistungen, der Qualitätsentwicklung, der Steuerung von Arbeitsprozessen und der Professionalisierung.",
+    "hint": "",
+    "explanation": "Selbstevaluation war im Masterpool deutlich unterrepräsentiert, obwohl sie im aktuellen Material zur Qualitätssicherung zentral ist.",
+    "keyPoints": [
+      "systematische Datenerhebung",
+      "Auswertung/Interpretation/Reflexion",
+      "kritische Überprüfung eigener Leistungen",
+      "Qualitätsentwicklung",
+      "Professionalisierung/Steuerung"
+    ],
+    "grading": {
+      "minKeyPoints": 4
+    },
+    "tags": [
+      "Selbstevaluation",
+      "Qualitätsentwicklung"
+    ],
+    "difficulty": 2,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "Beitrag_Qualitätssicherung_und_Selbstevaluation_in_der_Bewährungshilfe_endgültig_mit_Abb.pdf",
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      }
+    ],
+    "thema_sose2026": "Selbstevaluation",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK3_019",
+    "exam": "Probeklausur 3",
+    "exam_number": 19,
+    "source_exam": "Probeklausur 3 2026",
+    "source_exam_position": 19
+  },
+  {
+    "id": "probeklausur_3_2026_20",
+    "type": "open",
+    "question": "Warum reicht Zufriedenheit von Adressat*innen nicht aus, um Qualität in der Sozialen Arbeit zu beurteilen?",
+    "options": [],
+    "solution": "Zufriedenheit kann wichtig sein und als Wirkungsvoraussetzung gelten, reicht aber nicht als alleiniger Maßstab. Soziale Arbeit hat komplexe Zielsysteme. Entscheidend können auch Zielerreichung, Verhaltensänderungen, Einstellungsänderungen oder soziale Teilhabe sein.",
+    "hint": "",
+    "explanation": "Diese Frage verbindet Qualität, Wirkung und Selbstevaluation und prüft, ob der Unterschied zwischen Wirkungsvoraussetzung und Wirkung verstanden wurde.",
+    "keyPoints": [
+      "Zufriedenheit wichtig, aber nicht alleiniger Maßstab",
+      "komplexe Zielsysteme",
+      "Wirkungsvoraussetzung",
+      "Zielerreichung/Verhaltensänderung/Einstellungsänderung"
+    ],
+    "grading": {
+      "minKeyPoints": 4
+    },
+    "tags": [
+      "Wirkung",
+      "Qualität",
+      "Zufriedenheit"
+    ],
+    "difficulty": 3,
+    "source_pool": "neu_generiert_luecken_sose2026",
+    "source_refs": [
+      {
+        "source_file": "Beitrag_Qualitätssicherung_und_Selbstevaluation_in_der_Bewährungshilfe_endgültig_mit_Abb.pdf",
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      }
+    ],
+    "thema_sose2026": "Wirkungsorientierung und Qualitätsmanagement",
+    "prioritaet": "hoch",
+    "status": "active",
+    "needs_review": false,
+    "original_id": "M10_SOSE26_PK3_020",
+    "exam": "Probeklausur 3",
+    "exam_number": 20,
+    "source_exam": "Probeklausur 3 2026",
+    "source_exam_position": 20
+  },
+  {
+    "id": "lernzettel_2026_001",
+    "type": "mc",
+    "question": "Wofür sind Kreativitätstechniken im Forschungsprozess vor allem hilfreich?",
+    "options": [
+      "Um Forschungsergebnisse statistisch auszuwerten",
+      "Um Ideen zu entwickeln, zu sammeln und zu strukturieren",
+      "Um bereits erhobene Daten zu anonymisieren",
+      "Um ausschließlich Hypothesen zu falsifizieren"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Kreativitätstechniken unterstützen die Ideenfindung. Sie regen Denken an, helfen Denkblockaden zu überwinden und strukturieren erste Gedanken zu möglichen Forschungsthemen.",
+    "hint": "Denke an Brainstorming, Brainwriting, Kärtchenmethode, Clustering und Mind Mapping.",
+    "solution": "Um Ideen zu entwickeln, zu sammeln und zu strukturieren",
+    "tags": [
+      "Ideenfindung",
+      "Kreativitätstechniken"
+    ],
+    "difficulty": 1,
+    "source": "lernzettel_ergaenzung_2026"
+  },
+  {
+    "id": "lernzettel_2026_002",
+    "type": "mc",
+    "question": "Welche Methode beschreibt das freie Sammeln von Ideen ohne sofortige Bewertung oder Zensur?",
+    "options": [
+      "Brainstorming",
+      "Signifikanztest",
+      "Korrelationsanalyse",
+      "Operationalisierung"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Brainstorming bedeutet, Ideen zunächst frei zu sammeln. Wichtig ist, dass Ideen nicht sofort bewertet, kritisiert oder zensiert werden.",
+    "hint": "Erst sammeln, dann bewerten.",
+    "solution": "Brainstorming",
+    "tags": [
+      "Ideenfindung",
+      "Kreativitätstechniken"
+    ],
+    "difficulty": 1,
+    "source": "lernzettel_ergaenzung_2026"
+  },
+  {
+    "id": "lernzettel_2026_003",
+    "type": "mc",
+    "question": "Was kennzeichnet Brainwriting im Unterschied zum Brainstorming besonders?",
+    "options": [
+      "Ideen werden ausschließlich statistisch geprüft",
+      "Ideen werden schriftlich gesammelt und weiterentwickelt",
+      "Es dürfen nur bereits belegte Forschungsergebnisse notiert werden",
+      "Es dient nur der Auswertung qualitativer Interviews"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Brainwriting ähnelt dem Brainstorming, legt aber den Fokus auf das schriftliche Festhalten und strukturierte Weiterentwickeln eigener oder fremder Ideen.",
+    "hint": "Writing = schriftlich.",
+    "solution": "Ideen werden schriftlich gesammelt und weiterentwickelt",
+    "tags": [
+      "Ideenfindung",
+      "Kreativitätstechniken"
+    ],
+    "difficulty": 1,
+    "source": "lernzettel_ergaenzung_2026"
+  },
+  {
+    "id": "lernzettel_2026_004",
+    "type": "mc",
+    "question": "Welche Kreativitätstechnik arbeitet besonders mit einem zentralen Begriff, um den herum Einfälle notiert und durch Linien verbunden werden?",
+    "options": [
+      "Clustering bzw. Assoziogramm",
+      "Falsifikationsprinzip",
+      "Varianzanalyse",
+      "Pretest"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Beim Clustering oder Assoziogramm steht ein zentraler Begriff in der Mitte. Weitere Ideen werden darum herum notiert und durch Linien verbunden, wenn Zusammenhänge bestehen.",
+    "hint": "Es sieht oft wie ein Ideen-Netz aus.",
+    "solution": "Clustering bzw. Assoziogramm",
+    "tags": [
+      "Ideenfindung",
+      "Kreativitätstechniken"
+    ],
+    "difficulty": 1,
+    "source": "lernzettel_ergaenzung_2026"
+  },
+  {
+    "id": "lernzettel_2026_005",
+    "type": "mc",
+    "question": "Welche Reihenfolge beschreibt den Weg zu einer wissenschaftlichen Fragestellung am besten?",
+    "options": [
+      "Forschungsfrage – Ergebnis – Idee – Thema",
+      "Idee – Thema – Forschungsfrage",
+      "Pretest – Datenerhebung – Thema",
+      "Antwortskala – Hypothese – Titelseite"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Eine wissenschaftliche Arbeit entwickelt sich typischerweise von einer ersten Idee über ein konkreteres Thema hin zu einer präzisen Forschungsfrage.",
+    "hint": "Erst der Einfall, dann die Eingrenzung, dann die konkrete Frage.",
+    "solution": "Idee – Thema – Forschungsfrage",
+    "tags": [
+      "Forschungsfrage",
+      "Themenentwicklung"
+    ],
+    "difficulty": 1,
+    "source": "lernzettel_ergaenzung_2026"
+  },
+  {
+    "id": "lernzettel_2026_006",
+    "type": "mc",
+    "question": "Wann ist eine Idee für ein Forschungsprojekt geeignet?",
+    "options": [
+      "Wenn sie möglichst allgemein und offen bleibt",
+      "Wenn sie wissenschaftlich bearbeitbar, nachvollziehbar und überprüfbar ist",
+      "Wenn sie nur aus persönlicher Alltagserfahrung stammt",
+      "Wenn sie keine Methode benötigt"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Eine Idee eignet sich für ein Forschungsprojekt, wenn sie mit wissenschaftlichen Methoden bearbeitet werden kann, das Vorgehen nachvollziehbar ist und Ergebnisse überprüfbar formuliert werden können.",
+    "hint": "Wissenschaftlich heißt nicht nur interessant, sondern methodisch bearbeitbar.",
+    "solution": "Wenn sie wissenschaftlich bearbeitbar, nachvollziehbar und überprüfbar ist",
+    "tags": [
+      "Ideenfindung",
+      "Wissenschaftlichkeit"
+    ],
+    "difficulty": 1,
+    "source": "lernzettel_ergaenzung_2026"
+  },
+  {
+    "id": "lernzettel_2026_007",
+    "type": "mc",
+    "question": "Was ist der Unterschied zwischen einer Hypothese und einer These?",
+    "options": [
+      "Eine Hypothese ist überprüfbar und vorläufig, eine These ist eher eine begründete Behauptung",
+      "Eine These muss immer empirisch falsifizierbar sein, eine Hypothese nie",
+      "Beide Begriffe bedeuten exakt dasselbe",
+      "Eine Hypothese ist nur eine Meinung ohne Begründung"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Eine Hypothese ist eine überprüfbare, vorläufige Annahme über einen Zusammenhang. Eine These ist eher eine begründete Behauptung oder Setzung.",
+    "hint": "Hypothese = überprüfbare Annahme. These = Behauptung/Lehrsatz.",
+    "solution": "Eine Hypothese ist überprüfbar und vorläufig, eine These ist eher eine begründete Behauptung",
+    "tags": [
+      "Hypothese",
+      "These",
+      "Annahme"
+    ],
+    "difficulty": 2,
+    "source": "lernzettel_ergaenzung_2026"
+  },
+  {
+    "id": "lernzettel_2026_008",
+    "type": "mc",
+    "question": "Was ist mit einer Annahme in einem Forschungsprojekt gemeint?",
+    "options": [
+      "Eine statistisch bewiesene Tatsache",
+      "Eine Vermutung oder Voraussetzung, die einer Untersuchung zugrunde liegt",
+      "Ein vollständig ausgearbeiteter Fragebogen",
+      "Eine Form der Ergebnisqualität"
+    ],
+    "correct": [
+      1
+    ],
+    "answerType": "single",
+    "explanation": "Annahmen können Vorvermutungen, Vorannahmen, Menschenbildannahmen oder Annahmen über Rahmenbedingungen sein. Sie liegen einer Untersuchung zugrunde, sind aber nicht automatisch schon überprüft.",
+    "hint": "Annahme = Voraussetzung oder Vermutung.",
+    "solution": "Eine Vermutung oder Voraussetzung, die einer Untersuchung zugrunde liegt",
+    "tags": [
+      "Hypothese",
+      "These",
+      "Annahme"
+    ],
+    "difficulty": 1,
+    "source": "lernzettel_ergaenzung_2026"
+  },
+  {
+    "id": "lernzettel_2026_009",
+    "type": "mc",
+    "question": "Welche drei Kriterien helfen besonders bei der Eingrenzung einer Forschungsfrage?",
+    "options": [
+      "Innovation, Relevanz und Machbarkeit",
+      "Reliabilität, Standardabweichung und Modus",
+      "Primacy, Recency und Filter",
+      "Output, Input und Layout"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Eine Forschungsfrage sollte danach eingegrenzt werden, ob sie etwas Neues beiträgt, relevant ist und mit den vorhandenen Mitteln bearbeitet werden kann.",
+    "hint": "Was bringt es? Warum ist es wichtig? Ist es machbar?",
+    "solution": "Innovation, Relevanz und Machbarkeit",
+    "tags": [
+      "Forschungsfrage",
+      "Themenentwicklung"
+    ],
+    "difficulty": 1,
+    "source": "lernzettel_ergaenzung_2026"
+  },
+  {
+    "id": "lernzettel_2026_010",
+    "type": "mc",
+    "question": "Was gehört typischerweise in ein Exposé?",
+    "options": [
+      "Thema, Fragestellung, Theorie, Methode und Zeitplan",
+      "Nur die fertigen Ergebnisse der Datenerhebung",
+      "Ausschließlich Tabellen und Diagramme",
+      "Nur persönliche Meinungen zum Thema"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Ein Exposé ist der Plan einer wissenschaftlichen Arbeit. Es enthält unter anderem Thema, Fragestellung, theoretischen Bezug, Methode und Arbeits- bzw. Zeitplanung.",
+    "hint": "Exposé = Bauplan.",
+    "solution": "Thema, Fragestellung, Theorie, Methode und Zeitplan",
+    "tags": [
+      "Exposé",
+      "Forschungsplanung"
+    ],
+    "difficulty": 1,
+    "source": "lernzettel_ergaenzung_2026"
+  },
+  {
+    "id": "lernzettel_2026_011",
+    "type": "mc",
+    "question": "Welche Aussage beschreibt die Kritische Theorie am besten?",
+    "options": [
+      "Gesellschaft soll nicht nur erklärt, sondern auch kritisch hinterfragt und verändert werden",
+      "Hypothesen sollen ausschließlich mathematisch bestätigt werden",
+      "Forschung darf keine Macht- oder Herrschaftsverhältnisse betrachten",
+      "Wissenschaft soll nur Alltagsmeinungen sammeln"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Kritische Theorie zielt darauf, gesellschaftliche Verhältnisse, Macht und Herrschaft nicht nur zu beschreiben, sondern kritisch zu reflektieren und Veränderungsperspektiven sichtbar zu machen.",
+    "hint": "Kritisch = Macht und Herrschaft mitdenken.",
+    "solution": "Gesellschaft soll nicht nur erklärt, sondern auch kritisch hinterfragt und verändert werden",
+    "tags": [
+      "Wissenschaftstheorie",
+      "Kritische Theorie"
+    ],
+    "difficulty": 2,
+    "source": "lernzettel_ergaenzung_2026"
+  },
+  {
+    "id": "lernzettel_2026_012",
+    "type": "mc",
+    "question": "Was ist eine Titelseite eines Fragebogens im Sinne der Fragebogengestaltung besonders wichtig?",
+    "options": [
+      "Sie kann die Teilnahmebereitschaft beeinflussen",
+      "Sie ersetzt die Auswertung der Daten",
+      "Sie macht Antwortskalen überflüssig",
+      "Sie dient nur der Codierung offener Antworten"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Eine gute Titelseite kann motivieren. Sie sollte zum Beispiel einen ansprechenden Titel, die Zielgruppe, die Institution und Ansprechpersonen erkennbar machen.",
+    "hint": "Der erste Eindruck zählt.",
+    "solution": "Sie kann die Teilnahmebereitschaft beeinflussen",
+    "tags": [
+      "Fragebogen",
+      "Titelseite"
+    ],
+    "difficulty": 1,
+    "source": "lernzettel_ergaenzung_2026"
+  },
+  {
+    "id": "lernzettel_2026_013",
+    "type": "mc",
+    "question": "Welche Angabe passt typischerweise auf die Titelseite eines Fragebogens?",
+    "options": [
+      "Institution und Ansprechpartner*in",
+      "Die vollständige Rohdatenmatrix",
+      "Nur die Auswertungsergebnisse",
+      "Eine Liste aller falsifizierten Hypothesen"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Auf einer Titelseite können unter anderem ein ansprechender Titel, die angesprochene Zielgruppe, die durchführende Institution und eine Ansprechperson stehen.",
+    "hint": "Was braucht eine befragte Person vor dem Ausfüllen?",
+    "solution": "Institution und Ansprechpartner*in",
+    "tags": [
+      "Fragebogen",
+      "Titelseite"
+    ],
+    "difficulty": 1,
+    "source": "lernzettel_ergaenzung_2026"
+  },
+  {
+    "id": "lernzettel_2026_014",
+    "type": "mc",
+    "question": "Wozu dient eine offene Abschlussfrage am Ende eines Fragebogens?",
+    "options": [
+      "Sie gibt Raum für Anmerkungen und zusätzliche Hinweise in eigenen Worten",
+      "Sie ersetzt alle geschlossenen Fragen",
+      "Sie verhindert grundsätzlich jede Verzerrung",
+      "Sie sorgt dafür, dass keine Auswertung mehr nötig ist"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Offene Abschlussfragen ermöglichen Kommentare, Ergänzungen und Anmerkungen, die durch geschlossene Fragen nicht erfasst wurden. Ihre Auswertung ist allerdings aufwendiger.",
+    "hint": "Am Ende noch Platz für eigene Worte.",
+    "solution": "Sie gibt Raum für Anmerkungen und zusätzliche Hinweise in eigenen Worten",
+    "tags": [
+      "Fragebogen",
+      "Offene Fragen",
+      "Abschlussseite"
+    ],
+    "difficulty": 1,
+    "source": "lernzettel_ergaenzung_2026"
+  },
+  {
+    "id": "lernzettel_2026_015",
+    "type": "mc",
+    "question": "Was ist ein Nachteil offener Fragen in standardisierten Fragebögen?",
+    "options": [
+      "Ihre Auswertung ist aufwendiger als bei geschlossenen Fragen",
+      "Sie ermöglichen keine eigenen Formulierungen",
+      "Sie lassen sich nur telefonisch einsetzen",
+      "Sie sind immer suggestiv"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Offene Fragen liefern zusätzliche Informationen in eigenen Worten der Befragten. Gleichzeitig sind Auswertung und Kategorisierung meist aufwendiger als bei geschlossenen Fragen.",
+    "hint": "Mehr Freiheit bedeutet mehr Auswertungsaufwand.",
+    "solution": "Ihre Auswertung ist aufwendiger als bei geschlossenen Fragen",
+    "tags": [
+      "Fragebogen",
+      "Offene Fragen"
+    ],
+    "difficulty": 2,
+    "source": "lernzettel_ergaenzung_2026"
+  },
+  {
+    "id": "lernzettel_2026_016",
+    "type": "mc",
+    "question": "Welche vier Standards werden im Zusammenhang mit Selbstevaluation besonders genannt?",
+    "options": [
+      "Nützlichkeit, Durchführbarkeit, Fairness und Genauigkeit",
+      "Primacy, Recency, Reliabilität und Modus",
+      "Input, Layout, Zufall und Meinung",
+      "Brainstorming, Clustering, Mind Mapping und Pretest"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Die Selbstevaluationsstandards orientieren sich an den DeGEval-Standards. Zentral genannt werden Nützlichkeit, Durchführbarkeit, Fairness und Genauigkeit.",
+    "hint": "Es geht um Qualität der Evaluation selbst.",
+    "solution": "Nützlichkeit, Durchführbarkeit, Fairness und Genauigkeit",
+    "tags": [
+      "Selbstevaluation",
+      "DeGEval",
+      "Standards"
+    ],
+    "difficulty": 2,
+    "source": "lernzettel_ergaenzung_2026"
+  },
+  {
+    "id": "lernzettel_2026_017",
+    "type": "mc",
+    "question": "Was bedeutet der Standard Nützlichkeit bei Selbstevaluation?",
+    "options": [
+      "Die Ergebnisse sollen für die Praxis verwendbar sein",
+      "Die Evaluation soll möglichst kompliziert sein",
+      "Nur externe Fachkräfte dürfen Ergebnisse nutzen",
+      "Die Ergebnisse müssen immer geheim bleiben"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Nützlichkeit bedeutet, dass Evaluationsergebnisse für Praxis, Steuerung und Verbesserung tatsächlich verwendbar sein sollen.",
+    "hint": "Evaluation soll etwas bringen.",
+    "solution": "Die Ergebnisse sollen für die Praxis verwendbar sein",
+    "tags": [
+      "Selbstevaluation",
+      "DeGEval",
+      "Nützlichkeit"
+    ],
+    "difficulty": 1,
+    "source": "lernzettel_ergaenzung_2026"
+  },
+  {
+    "id": "lernzettel_2026_018",
+    "type": "mc",
+    "question": "Was bedeutet der Standard Durchführbarkeit bei Selbstevaluation?",
+    "options": [
+      "Die Evaluation muss praktisch umsetzbar sein",
+      "Die Evaluation darf keine Ressourcen benötigen",
+      "Die Evaluation muss immer anonym ohne Auftrag erfolgen",
+      "Die Evaluation ersetzt jede Qualitätsentwicklung"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Durchführbarkeit meint, dass eine Evaluation unter den gegebenen Bedingungen praktisch realisierbar sein muss.",
+    "hint": "Kann man es realistisch durchführen?",
+    "solution": "Die Evaluation muss praktisch umsetzbar sein",
+    "tags": [
+      "Selbstevaluation",
+      "DeGEval",
+      "Durchführbarkeit"
+    ],
+    "difficulty": 1,
+    "source": "lernzettel_ergaenzung_2026"
+  },
+  {
+    "id": "lernzettel_2026_019",
+    "type": "mc",
+    "question": "Warum sind Doppelrollen bei Selbstevaluation besonders zu beachten?",
+    "options": [
+      "Weil Fachkräfte zugleich durchführen und bewerten können, wodurch Rollenkonflikte entstehen können",
+      "Weil Selbstevaluation immer von völlig fremden Personen durchgeführt wird",
+      "Weil dadurch keine Ergebnisse entstehen",
+      "Weil dadurch Fragebögen grundsätzlich verboten sind"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Bei Selbstevaluation bewerten Fachkräfte häufig eigene Arbeit oder eigene Projekte. Das kann Rollenkonflikte, Betriebsblindheit oder Akzeptanzprobleme auslösen.",
+    "hint": "Man bewertet die eigene Praxis.",
+    "solution": "Weil Fachkräfte zugleich durchführen und bewerten können, wodurch Rollenkonflikte entstehen können",
+    "tags": [
+      "Selbstevaluation",
+      "Doppelrollen"
+    ],
+    "difficulty": 2,
+    "source": "lernzettel_ergaenzung_2026"
+  },
+  {
+    "id": "lernzettel_2026_020",
+    "type": "mc",
+    "question": "Welche Herausforderung gehört besonders zu Selbstevaluation?",
+    "options": [
+      "Mögliche Betriebsblindheit durch Nähe zum eigenen Arbeitsfeld",
+      "Völlige Unkenntnis des Arbeitsfeldes",
+      "Fehlende Möglichkeit zur Datenerhebung",
+      "Keine Verbindung zur Qualitätsentwicklung"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Die Nähe zum eigenen Arbeitsfeld ist ein Vorteil, kann aber auch Betriebsblindheit begünstigen. Deshalb sind Reflexion und klare Standards wichtig.",
+    "hint": "Nähe ist Vorteil und Risiko zugleich.",
+    "solution": "Mögliche Betriebsblindheit durch Nähe zum eigenen Arbeitsfeld",
+    "tags": [
+      "Selbstevaluation",
+      "Herausforderungen"
+    ],
+    "difficulty": 1,
+    "source": "lernzettel_ergaenzung_2026"
+  },
+  {
+    "id": "lernzettel_2026_021",
+    "type": "mc",
+    "question": "Welche Aussage passt zur schriftlichen Befragung?",
+    "options": [
+      "Sie ist oft kostengünstig und bietet hohe Anonymität, aber der Antwortprozess ist schwer kontrollierbar",
+      "Sie erlaubt immer direkte Nachfragen durch Interviewer*innen",
+      "Sie ist nur bei sehr kleinen Stichproben sinnvoll",
+      "Sie verhindert grundsätzlich alle Verzerrungen"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Schriftliche Fragebögen sind häufig kostengünstig, organisatorisch einfach und anonym. Ein Nachteil ist, dass nicht kontrolliert werden kann, wie und unter welchen Bedingungen sie ausgefüllt wurden.",
+    "hint": "Vorteil: günstig/anonym. Nachteil: wenig Kontrolle.",
+    "solution": "Sie ist oft kostengünstig und bietet hohe Anonymität, aber der Antwortprozess ist schwer kontrollierbar",
+    "tags": [
+      "Datenerhebung",
+      "Fragebogen",
+      "Befragung"
+    ],
+    "difficulty": 2,
+    "source": "lernzettel_ergaenzung_2026"
+  },
+  {
+    "id": "lernzettel_2026_022",
+    "type": "mc",
+    "question": "Wann kann eine mündliche Befragung besonders sinnvoll sein?",
+    "options": [
+      "Bei kleinen Stichproben, wenn Nachfragen und Erklärungen möglich sein sollen",
+      "Wenn keinerlei Interaktion gewünscht ist",
+      "Wenn alle Antworten automatisch standardisiert vorliegen müssen",
+      "Wenn offene Kommunikation unbedingt ausgeschlossen werden soll"
+    ],
+    "correct": [
+      0
+    ],
+    "answerType": "single",
+    "explanation": "Mündliche Befragungen eignen sich besonders bei kleineren Stichproben, wenn Nachfragen, Erklärungen und ein flexiblerer Austausch wichtig sind.",
+    "hint": "Mündlich = Möglichkeit zum Nachfragen.",
+    "solution": "Bei kleinen Stichproben, wenn Nachfragen und Erklärungen möglich sein sollen",
+    "tags": [
+      "Datenerhebung",
+      "Befragung",
+      "Mündliche Befragung"
+    ],
+    "difficulty": 1,
+    "source": "lernzettel_ergaenzung_2026"
+  },
+  {
+    "id": "lernzettel_2026_open_001",
+    "type": "open",
+    "question": "Nennen Sie drei Kreativitätstechniken zur Entwicklung von Forschungsideen und erklären Sie eine davon kurz.",
+    "options": [],
+    "correct": [],
+    "answerType": "open",
+    "solution": "Mögliche Techniken sind Brainstorming, Brainwriting, Kärtchenmethode, Clustering/Assoziogramm und Mind Mapping. Beispiel: Beim Brainstorming werden zunächst frei und ohne Bewertung Ideen gesammelt; erst später werden sie sortiert und bewertet.",
+    "explanation": "Kreativitätstechniken helfen, Forschungsideen zu entwickeln, Denkblockaden zu überwinden und Gedanken zu strukturieren.",
+    "hint": "Denke an die Techniken aus dem Lernzettel.",
+    "tags": [
+      "Ideenfindung",
+      "Kreativitätstechniken"
+    ],
+    "difficulty": 2,
+    "source": "lernzettel_ergaenzung_2026"
+  },
+  {
+    "id": "lernzettel_2026_open_002",
+    "type": "open",
+    "question": "Erklären Sie kurz den Unterschied zwischen Hypothese, These und Annahme.",
+    "options": [],
+    "correct": [],
+    "answerType": "open",
+    "solution": "Eine Hypothese ist eine überprüfbare und vorläufige Annahme über einen Zusammenhang. Eine These ist eine begründete Behauptung oder Setzung. Eine Annahme ist eine Vermutung oder Voraussetzung, die einer Untersuchung zugrunde liegt und unterschiedlich stark begründet sein kann.",
+    "explanation": "Die Begriffe liegen nah beieinander, erfüllen aber unterschiedliche Funktionen im Forschungsprozess.",
+    "hint": "Hypothese = überprüfbar; These = Behauptung; Annahme = Voraussetzung/Vermutung.",
+    "tags": [
+      "Hypothese",
+      "These",
+      "Annahme"
+    ],
+    "difficulty": 2,
+    "source": "lernzettel_ergaenzung_2026"
+  },
+  {
+    "id": "lernzettel_2026_open_003",
+    "type": "open",
+    "question": "Nennen Sie die vier zentralen Selbstevaluationsstandards und erläutern Sie einen davon kurz.",
+    "options": [],
+    "correct": [],
+    "answerType": "open",
+    "solution": "Die vier zentralen Standards sind Nützlichkeit, Durchführbarkeit, Fairness und Genauigkeit. Beispiel: Nützlichkeit bedeutet, dass die Ergebnisse der Evaluation für die Praxis verwendbar sein sollen und zur Steuerung oder Verbesserung beitragen können.",
+    "explanation": "Selbstevaluation soll sich an Qualitätsstandards orientieren, damit Ergebnisse akzeptiert und sinnvoll genutzt werden können.",
+    "hint": "Nützlichkeit, Durchführbarkeit, Fairness, Genauigkeit.",
+    "tags": [
+      "Selbstevaluation",
+      "DeGEval",
+      "Standards"
+    ],
+    "difficulty": 2,
+    "source": "lernzettel_ergaenzung_2026"
+  },
+  {
+    "id": "lernzettel_2026_open_004",
+    "type": "open",
+    "question": "Nennen Sie zwei Vorteile und zwei Nachteile schriftlicher Fragebögen.",
+    "options": [],
+    "correct": [],
+    "answerType": "open",
+    "solution": "Vorteile sind zum Beispiel geringe Kosten, geringer organisatorischer Aufwand, hohe Anonymität und weniger direkte Interviewer-Einflüsse. Nachteile sind zum Beispiel fehlende Kontrolle des Antwortprozesses, unklarer Ausfüllkontext, mögliche Ablenkungen oder nicht beantwortete Rückfragen.",
+    "explanation": "Schriftliche Fragebögen sind praktisch, aber weniger kontrollierbar als mündliche Befragungen.",
+    "hint": "Vorteile: günstig/anonym. Nachteile: wenig Kontrolle.",
+    "tags": [
+      "Datenerhebung",
+      "Fragebogen",
+      "Schriftliche Befragung"
+    ],
+    "difficulty": 2,
+    "source": "lernzettel_ergaenzung_2026"
+  }
+]
